@@ -1,0 +1,10 @@
+name: juweliercoens
+recipe: drupal8
+config:
+  webroot: web
+  php: '8.1'
+services:
+  appserver:
+    overrides:
+      environment:
+        DRUSH_OPTIONS_URI: 'https://juweliercoens.lndo.site'
