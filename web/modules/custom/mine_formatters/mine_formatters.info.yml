@@ -1,0 +1,5 @@
+name: Mine formatters
+description: Custom field formatters
+package: Mine
+type: module
+core_version_requirement: ^10

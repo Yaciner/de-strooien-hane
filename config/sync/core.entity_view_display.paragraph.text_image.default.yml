@@ -1,0 +1,38 @@
+uuid: 1ab6451b-37b8-4f5b-b25b-cc89e569fcc8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_image.field_media
+    - field.field.paragraph.text_image.field_text
+    - image.style.wide
+    - paragraphs.paragraphs_type.text_image
+  module:
+    - mine_formatters
+    - text
+id: paragraph.text_image.default
+targetEntityType: paragraph
+bundle: text_image
+mode: default
+content:
+  field_media:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: wide
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

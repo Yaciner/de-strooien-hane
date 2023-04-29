@@ -16,6 +16,8 @@ module:
   devel_debug_log: 0
   devel_generate: 0
   disable_language: 0
+  dropzonejs: 0
+  dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   editor: 0
   entity_browser: 0
@@ -36,6 +38,7 @@ module:
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  mine_formatters: 0
   mysql: 0
   node: 0
   options: 0

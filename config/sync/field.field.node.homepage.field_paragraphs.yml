@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_paragraphs
     - node.type.homepage
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_image
   module:
     - entity_reference_revisions
 id: node.homepage.field_paragraphs
@@ -23,6 +24,7 @@ settings:
   handler_settings:
     target_bundles:
       text: text
+      text_image: text_image
     negate: 0
     target_bundles_drag_drop:
       text:
@@ -31,4 +33,7 @@ settings:
       text_column:
         weight: 4
         enabled: false
+      text_image:
+        weight: 6
+        enabled: true
 field_type: entity_reference_revisions

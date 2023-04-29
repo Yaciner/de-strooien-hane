@@ -1,0 +1,6 @@
+mine_formatters.vimeo_hls:
+  path: '/mine-formatters/vimeo/hls'
+  defaults:
+    _controller: '\Drupal\mine_formatters\Controller\VideoController::vimeoHls'
+  requirements:
+    _permission: 'access content'

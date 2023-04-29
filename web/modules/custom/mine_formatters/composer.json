@@ -1,0 +1,8 @@
+{
+  "name": "mine_formatters",
+  "type": "drupal-module",
+  "description": "Custom formatters",
+  "keywords": ["Drupal"],
+  "license": "proprietary",
+  "minimum-stability": "stable"
+}

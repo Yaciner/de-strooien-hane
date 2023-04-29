@@ -1,0 +1,32 @@
+video:
+  version: VERSION
+  css:
+    layout:
+      css/video.css: {}
+
+hls:
+  version: 1.2.4
+  js:
+    js/libs/hls/hls.min.js: {}
+
+video-embed--vimeo:
+  version: VERSION
+  js:
+    js/video-embed.vimeo.js: {}
+  dependencies:
+    - mine_formatters/hls
+    - mine_formatters/video
+
+wistia_video_player_api:
+  js:
+    //fast.wistia.com/assets/external/E-v1.js:
+      type: external
+      attributes:
+        async: true
+
+wistia_video_iframe_api:
+  js:
+    //fast.wistia.net/assets/external/iframe-api-v1.js:
+      type: external
+      attributes:
+        async: true

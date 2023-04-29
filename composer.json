@@ -23,6 +23,7 @@
         "drupal/devel": "^5.1",
         "drupal/devel_debug_log": "^2.0",
         "drupal/disable_language": "1.0-beta12",
+        "drupal/dropzonejs": "^2.8",
         "drupal/entity_browser": "^2.9",
         "drupal/field_group": "^3.4",
         "drupal/gin": "3.0-rc1",
@@ -32,7 +33,9 @@
         "drupal/paragraphs": "^1.15",
         "drupal/stable": "^2.0",
         "drupal/webform": "6.2.0-beta5",
-        "drush/drush": "^11.5"
+        "drush/drush": "^11.5",
+        "enyo/dropzone": "^5.7",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -45,7 +48,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
@@ -54,6 +58,11 @@
             "locations": {
                 "web-root": "web/"
             }
+        },
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/dropzonejs/composer.libraries.json"
+            ]
         },
         "installer-paths": {
             "web/core": [

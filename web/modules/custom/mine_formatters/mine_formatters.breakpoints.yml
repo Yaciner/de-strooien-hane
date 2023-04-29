@@ -1,0 +1,19 @@
+mine_formatters.s:
+  label: 's'
+  mediaQuery: 'all and (max-width: 425px)'
+  weight: 1
+  multipliers:
+    - 1x
+mine_formatters.m:
+  label: 'm'
+  mediaQuery: 'all and (max-width: 767px) and  (min-width: 426px)'
+  weight: 2
+  multipliers:
+    - 1x
+mine_formatters.l:
+  label: 'l'
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 3
+  multipliers:
+    - 1x
+
