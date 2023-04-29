@@ -1,0 +1,11 @@
+uuid: 0a10a3aa-c14f-4dba-b33c-711b3eb25b4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.text_column
+id: paragraph.text_column
+target_entity_type_id: paragraph
+target_bundle: text_column
+default_langcode: current_interface
+language_alterable: false
