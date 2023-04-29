@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Theme specific functionality.
+ */
+
+/**
+ * Implements hook_preprocess().
+ */
+function mine_preprocess(&$variables, $hook) {
+  $variables['url_base'] = \Drupal::request()->getSchemeAndHttpHost() . '/';
+}
+
+// Preprocessing functions split up per type.
+include 'theme-functions/preprocess-html.php';
+include 'theme-functions/preprocess-page.php';
+include 'theme-functions/preprocess-region.php';
+include 'theme-functions/preprocess-views.php';
+include 'theme-functions/preprocess-node.php';
+include 'theme-functions/preprocess-block.php';
+include 'theme-functions/preprocess-field.php';
+include 'theme-functions/preprocess-paragraph.php';
+include 'theme-functions/preprocess-custom.php';
+
+// Altering
+include 'theme-functions/alter-form.php';
+
+// Theme hooks
+include 'theme-functions/theme-hook-suggestions.php';

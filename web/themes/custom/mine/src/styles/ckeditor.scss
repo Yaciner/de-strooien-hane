@@ -1,0 +1,23 @@
+//------------------------------------------------------------------------------
+// CKEDITOR.SCSS
+// Basic styling to use in ckeditor.
+//------------------------------------------------------------------------------
+
+
+// Charset
+@charset "UTF-8";
+
+// Config file that contains centralized variables
+@import "config";
+
+// Utility functions
+@import "utilities/**/*";
+
+.ck-content {
+  // Styling needed for ckeditor
+  @import "base/base";
+  @import "base/typography";
+  @import "base/buttons";
+}
+
+// Specific styling

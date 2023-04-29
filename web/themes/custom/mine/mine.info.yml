@@ -1,0 +1,35 @@
+name: Mine
+type: theme
+description: 'Mine Theme'
+core_version_requirement: ^10
+base theme: stable
+
+libraries:
+  - mine/fonts
+  - mine/global_styles
+  - mine/global_scripts
+
+ckeditor5-stylesheets:
+  - dist/css/ckeditor.css
+
+libraries-override:
+  geysir/geysir:
+    css:
+      theme:
+        css/geysir.dialog.css: false
+
+  claro/claro.drupal.dialog:
+    css:
+      theme:
+        css/components/dialog.css: false
+
+regions:
+  top: 'Top'
+  header: 'Header'
+  system: 'System'
+  content: 'Content'
+  footer: 'Footer'
+  bottom: 'Bottom'
+  off_canvas: 'Off canvas'
+  paragraph_blocks: 'Blocks allowed for Paragraph UI embedding'
+  fixed: 'Fixed'

@@ -1,0 +1,30 @@
+mine.default:
+  label: default-mq
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+mine.s:
+  label: s
+  mediaQuery: 'all and (max-width: 479px)'
+  weight: 1
+  multipliers:
+    - 1x
+mine.m:
+  label: m
+  mediaQuery: 'all and (max-width: 767px)'
+  weight: 2
+  multipliers:
+    - 1x
+mine.l:
+  label: l
+  mediaQuery: 'all and (max-width: 959px)'
+  weight: 3
+  multipliers:
+    - 1x
+mine.xl:
+  label: xl
+  mediaQuery: 'all and (max-width: 1199px)'
+  weight: 4
+  multipliers:
+    - 1x

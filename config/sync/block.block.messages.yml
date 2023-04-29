@@ -1,0 +1,20 @@
+uuid: 817511eb-e915-4522-9188-bddb9b268fb8
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mine
+id: messages
+theme: mine
+region: system
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Drupal messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,12 @@
+{# 
+  @see: https://github.com/bradvin/social-share-urls 
+
+  @code
+    {% include '@mine/includes/share.html.twig' %}
+  @endcode
+#}
+<div class="share">
+  <a class="facebook" onclick="window.open('https://www.facebook.com/sharer.php?u={{ url('<current>') }}', 'facebook-share-dialog', 'width=600,height=400')" target="_blank" href="https://www.facebook.com/sharer.php?u={{ url('<current>') }}"></a>
+  <a class="linkedin" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url={{ url('<current>') }}', 'linkedin-share-dialog', 'width=600,height=400')" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url('<current>') }}"></a>
+  <a class="twitter" onclick="window.open('https://twitter.com/intent/tweet?url={{ url('<current>') }}', 'twitter-share-dialog', 'width=600,height=400')" target="_blank" href="https://twitter.com/intent/tweet?url={{ url('<current>') }}"></a>
+</div>

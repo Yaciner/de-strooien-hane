@@ -1,0 +1,35 @@
+{% set clr_white = '#fff' %}
+{% set clr_body = '#505050' %}
+{% set bg_mail = '#efefef' %}
+{% set bg_header = '#bbb' %}
+{% set bg_footer = '#bbb' %}
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {% if css %}
+    <style type="text/css">
+      {{ css }}
+    </style>
+    {% endif %}
+  </head>
+  <body style="background:{{ bg_mail }};padding:30px;">
+    <table cellpadding="0" cellspacing="0" width="600" align="center" style="background:{{ clr_white }};">
+      <tr>
+        <td style="background:{{ bg_header }};padding:30px;text-align:center;">
+          <img src="{{ url_base ~ active_theme_path() ~ '/logo.png' }}" alt="{{ site_name }}" />
+        </td>
+      </tr>
+      <tr>
+        <td style="background:{{ clr_white }};padding:30px;color:{{ clr_body }};font-size:16px;line-height:26px;">
+          {{ body|raw }}
+        </td>
+      </tr>
+      <tr>
+        <td style="background:{{ bg_footer }};padding:30px;color:{{ clr_white }};font-family:Arial;font-size:14px;line-height:30px;text-align:center;">
+          &copy; {{ "now"|date("Y") }} {{ site_name }}
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

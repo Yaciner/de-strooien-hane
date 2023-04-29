@@ -1,0 +1,14 @@
+//------------------------------------------------------------------------------
+// STRUCTURE.SCSS
+// Structure styling.
+//------------------------------------------------------------------------------
+
+.region-system {}
+
+#main {
+  margin: 0;
+}
+
+body:not(.path-node) .region-content {
+  @extend .container;
+}

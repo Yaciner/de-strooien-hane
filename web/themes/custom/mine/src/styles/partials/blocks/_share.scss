@@ -1,0 +1,13 @@
+.share {
+  .facebook {
+    @include iconize($facebook);
+  }
+
+  .linkedin {
+    @include iconize($linkedin);
+  }
+
+  .twitter {
+    @include iconize($twitter);
+  }
+}

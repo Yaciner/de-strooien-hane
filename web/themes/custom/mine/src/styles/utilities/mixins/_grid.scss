@@ -1,0 +1,19 @@
+// @Todo: add alignment?
+@mixin flexgrid($columns, $selector, $gutter) {
+  @if type-of($columns) != number { @error "$columns is not a number" };
+  @if type-of($selector) != string { @error "$selector is not a string" };
+  @if type-of($gutter) != number { @error "$gutter is not a number" };
+  // @if type-of($alignment) != string { @error "$alignment is not a string" };
+  
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-#{$gutter} / 2) -#{$gutter};
+  
+  #{$selector} {
+    flex: 0 0 calc(100% / #{$columns} - #{$gutter});
+    flex-basis: calc(100% / #{$columns} - #{$gutter});
+    width: calc(100% / #{$columns} - #{$gutter});
+    min-height: 1px;
+    margin: 0 calc(#{$gutter} / 2) #{$gutter};
+  }
+}

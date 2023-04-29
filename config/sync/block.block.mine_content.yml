@@ -1,0 +1,22 @@
+uuid: c594272e-e11f-4407-a9db-dd216a0efbd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mine
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: mine_content
+theme: mine
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

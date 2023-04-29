@@ -1,0 +1,23 @@
+uuid: 5cfce232-16e9-4f70-9b08-90087abd550a
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mine
+id: sitebranding
+theme: mine
+region: footer
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

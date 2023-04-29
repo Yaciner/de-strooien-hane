@@ -1,0 +1,40 @@
+//-----------------------
+//-- BREAKPOINT LABELS --
+//-----------------------
+
+body.breakpoint-labels {
+  &::before {
+    content: 'Default';
+    background: #ee1100;
+    padding: 0 rem(15);
+    color: #fff;
+    font-size: rem(16);
+    line-height: rem(40);
+    border-radius: 0 7px 0 0;
+    opacity: 0.75;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: z('mol');
+
+    @include mq(xl) {
+      content: 'Extra large';
+      background: #442299;
+    }
+
+    @include mq(l) {
+      content: 'Large';
+      background: #11aabb;
+    }
+
+    @include mq(m) {
+      content: 'Medium';
+      background: #aacc22;
+    }
+
+    @include mq(s) {
+      content: 'Small';
+      background: #ff9933;
+    }
+  }
+}
