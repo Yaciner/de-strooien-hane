@@ -21,7 +21,7 @@ mix
   })
   .sourceMaps(true, 'source-map')
   .browserSync({
-    proxy: 'd8defaultinstallation.localhost',
+    proxy: 'juweliercoens.lndo.site',
     files: ['dist/js/*.js', 'dist/css/*.css'],
     open: false,
   })

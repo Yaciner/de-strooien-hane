@@ -38,7 +38,7 @@
   background: white;
 }
 .ck-content .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
@@ -66,7 +66,7 @@
   max-width: 740px;
 }
 .ck-content .container.container-l, .ck-content .container.container-large {
-  max-width: 1400px;
+  max-width: 1600px;
 }
 .ck-content .container .container {
   padding: 0;

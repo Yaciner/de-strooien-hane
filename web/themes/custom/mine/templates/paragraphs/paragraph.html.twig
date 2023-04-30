@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ * Outputs a paragraph as a section within its parent article.
+ *
+ * @see template_preprocess_paragraph()
+ * @ingroup themeable
+ */
+#}
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }}>
+    <div class="container">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
+  </section>
+{% endblock paragraph %}

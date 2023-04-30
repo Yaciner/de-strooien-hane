@@ -5,9 +5,14 @@
 
 // MAIN MENU
 .main-menu {
-  .menu__list {}
-  .menu__item {
-    a {}
+  .menu__list {
+    @include reset-list();
+    
+    .menu__item {
+      a {
+
+      }
+    }
   }
 }
 
