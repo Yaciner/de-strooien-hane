@@ -1,0 +1,10 @@
+uuid: 7eb94ba7-e668-4c99-a5b3-f0324e04e506
+langcode: en
+status: true
+dependencies: {  }
+id: form
+label: Form
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
