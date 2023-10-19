@@ -1,0 +1,20 @@
+uuid: d651089d-0261-4329-9cd2-1ba8e71955a8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mine
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: mine_primary_admin_actions
+theme: mine
+region: top
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

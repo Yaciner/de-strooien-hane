@@ -1,7 +1,8 @@
 _core:
-  default_config_hash: 5iMAg55zVSTNmFTLPWW1HnFz4EepAhiWQDLes2K9iFI
+  default_config_hash: Gw_DjU53-aWorpAZwMrBB4BAbND70Lw7A9C0h2mh5Zg
 settings:
   default_status: open
+  default_categories: {  }
   default_page: true
   default_page_base_path: /form
   default_ajax: false
@@ -52,6 +53,7 @@ settings:
   default_draft_pending_multiple_message: 'You have pending drafts for this webform. <a href="#">View your pending drafts</a>.'
   default_confirmation_message: 'New submission added to [webform:title].'
   default_confirmation_back_label: 'Back to form'
+  default_confirmation_noindex: true
   default_submission_label: '[webform_submission:submitted-to]: Submission #[webform_submission:serial]'
   default_submission_access_denied_message: 'Please login to access this submission.'
   default_submission_exception_message: 'Unable to process this submission. Please contact the site administrator.'

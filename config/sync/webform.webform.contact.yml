@@ -1,4 +1,4 @@
-uuid: fe9e19ef-e6cf-48d6-adc9-3ccb471aea53
+uuid: e7ca014f-b43e-4ed2-8d4a-c4b0dc375f97
 langcode: en
 status: open
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - webform
 _core:
-  default_config_hash: CJr5U2B4if_Ff1SZfnNp_csPKwXIynmbUlBC-SmSOAE
+  default_config_hash: _je-MWeeJB6gfm6iECiqjcyNetfMFbn-YIInYwZ1gIk
 open: null
 close: null
 weight: 0
@@ -16,7 +16,7 @@ archive: false
 id: contact
 title: Contact
 description: 'Basic email contact webform.'
-category: ''
+categories: {  }
 elements: |
   name:
     '#title': 'Your Name'
@@ -129,6 +129,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

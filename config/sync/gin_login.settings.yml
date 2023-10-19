@@ -3,5 +3,4 @@ _core:
 logo:
   use_default: true
 brand_image:
-  use_default: false
-  path: 'public://EC1 macro coens soli halo.png'
+  use_default: true

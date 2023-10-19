@@ -1,29 +1,19 @@
-uuid: 8b49faea-7cb1-40a0-9481-91352e47f659
+uuid: e62c50a3-f950-4d47-bb6b-9429355297c0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.homepage.field_paragraphs
-    - field.field.node.homepage.field_seo
     - node.type.homepage
   module:
-    - entity_reference_revisions
     - user
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
 mode: default
 content:
-  field_paragraphs:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
+  links:
+    settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 100
     region: content
-hidden:
-  field_seo: true
-  langcode: true
-  links: true
+hidden: {  }

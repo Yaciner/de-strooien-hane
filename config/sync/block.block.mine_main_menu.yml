@@ -1,4 +1,4 @@
-uuid: c3f83350-105e-466d-88d2-bef593ba0727
+uuid: 8beae7f8-1061-485a-af8a-0bf944407244
 langcode: en
 status: true
 dependencies:
@@ -12,8 +12,8 @@ _core:
   default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
 id: mine_main_menu
 theme: mine
-region: header
-weight: -4
+region: top
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:

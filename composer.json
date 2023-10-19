@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "drupal/admin_toolbar": "^3.4",
         "drupal/block_class": "^2.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
@@ -31,9 +32,11 @@
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/metatag": "^1.22",
         "drupal/paragraphs": "^1.15",
+        "drupal/rabbit_hole": "2.0.0-alpha5",
+        "drupal/simple_sitemap": "^4.1",
         "drupal/stable": "^2.0",
         "drupal/twig_tweak": "^3.2",
-        "drupal/webform": "6.2.0-beta5",
+        "drupal/webform": "6.2.0-rc2",
         "drush/drush": "^11.5",
         "enyo/dropzone": "^5.7",
         "wikimedia/composer-merge-plugin": "^2.1"

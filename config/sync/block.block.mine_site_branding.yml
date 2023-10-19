@@ -1,4 +1,4 @@
-uuid: d015dfdb-169e-4f13-86cb-53b59e385561
+uuid: de3640ec-ccff-48cf-8dd8-cc13ceca295f
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: mine_site_branding
 theme: mine
 region: header
-weight: -5
+weight: 0
 provider: null
 plugin: system_branding_block
 settings:
