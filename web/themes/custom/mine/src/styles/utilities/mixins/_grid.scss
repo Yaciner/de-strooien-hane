@@ -1,5 +1,5 @@
 // @Todo: add alignment?
-@mixin flexgrid($columns, $selector, $gutter) {
+@mixin grid($columns, $selector, $gutter) {
   @if type-of($columns) != number { @error "$columns is not a number" };
   @if type-of($selector) != string { @error "$selector is not a string" };
   @if type-of($gutter) != number { @error "$gutter is not a number" };

@@ -1,4 +1,335 @@
 @charset "UTF-8";
+.geysir-button {
+  margin: 0 auto;
+}
+
+.geysir-field-paragraph-wrapper {
+  pointer-events: none;
+}
+.geysir-field-paragraph-wrapper > * {
+  pointer-events: all;
+}
+.geysir-field-paragraph-wrapper:hover {
+  z-index: 2;
+}
+.geysir-field-paragraph-wrapper:hover > .paragraph {
+  position: relative;
+  z-index: 1;
+}
+.geysir-field-paragraph-wrapper:hover::after {
+  background-color: transparent;
+}
+
+div[data-geysir-field-paragraph-field-wrapper=geysir-field-hero] {
+  background-color: #e5e5e5;
+  position: relative;
+  height: rem(100);
+}
+div[data-geysir-field-paragraph-field-wrapper=geysir-field-hero]::before {
+  content: "Click here to add a hero";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0.3;
+  translate: -50% -50%;
+  color: #5d5d5d;
+  font-weight: bold;
+  font-size: fluid(36px, 42px);
+}
+
+.editor-link-dialog {
+  width: rem(480);
+  min-height: rem(300);
+}
+.editor-link-dialog .editor-link-dialog {
+  min-height: rem(300);
+}
+.editor-link-dialog .linkit-ui-autocomplete {
+  max-height: rem(190);
+  box-shadow: 0 5px 10px 0 rgba(229, 229, 229, 0.75);
+}
+
+.geysir-dialog {
+  z-index: 100;
+}
+
+.media-image-edit-form .focal-point-wrapper .focal-point-preview-link {
+  background-color: #e5e5e5;
+  margin: rem(20) 0 0;
+  padding: rem(5);
+  color: #000000;
+  border: 1px solid #e5e5e5;
+  text-decoration: none;
+}
+.media-image-edit-form .focal-point-wrapper .focal-point-preview-link::before {
+  margin-right: rem(5);
+}
+.media-image-edit-form .focal-point-wrapper .focal-point-preview-link:hover {
+  background-color: #e5e5e5;
+  color: #000000;
+}
+.media-image-edit-form details[data-drupal-selector=edit-group-video] {
+  background-color: #e5e5e5;
+  margin: rem(20) 0;
+  padding: rem(10);
+  border: 1px solid #e5e5e5;
+}
+.media-image-edit-form details[data-drupal-selector=edit-group-video] > summary {
+  display: none;
+}
+.media-image-edit-form .js-form-type-vertical-tabs {
+  display: none;
+}
+
+.geysir-dialog .ui-dialog-content {
+  padding: rem(10);
+}
+.geysir-dialog .tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+.geysir-dialog details {
+  padding: rem(10) 0;
+}
+.geysir-dialog details > summary {
+  display: none;
+}
+.geysir-dialog .form-required::after {
+  content: "*";
+  display: inline-block;
+  margin-left: rem(3);
+}
+.geysir-dialog .field--type-link fieldset {
+  border: 1px solid #e5e5e5;
+}
+.geysir-dialog .horizontal-tabs {
+  margin: 0;
+}
+.geysir-dialog .horizontal-tabs-list {
+  font-size: 1rem;
+}
+.geysir-dialog .field-multiple-table {
+  width: 100%;
+}
+.geysir-dialog .field-multiple-table thead h4 {
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: rem(10) 0;
+  text-transform: uppercase;
+}
+.geysir-dialog .field-multiple-table td.field-multiple-drag {
+  width: rem(30);
+}
+.geysir-dialog .paragraphs-actions {
+  display: flex;
+  justify-content: flex-end;
+  float: none !important;
+  margin: 0 !important;
+  padding: rem(10) 0;
+  border-bottom: 1px dashed #e5e5e5;
+}
+.geysir-dialog .paragraphs-actions .paragraphs-dropdown {
+  margin: 0;
+}
+.geysir-dialog .paragraphs-actions .paragraphs-dropdown.open .paragraphs-dropdown-actions {
+  border: 0;
+  top: rem(37);
+}
+.geysir-dialog .paragraphs-actions .paragraphs-dropdown.open .paragraphs-dropdown-actions input[type=submit] {
+  background-color: #ffffff;
+}
+.geysir-dialog .paragraphs-actions .paragraphs-dropdown.open .paragraphs-dropdown-actions input[type=submit]:not(:first-child) {
+  margin-top: -1px;
+}
+.geysir-dialog .paragraphs-actions .paragraphs-dropdown.open .paragraphs-dropdown-actions input[type=submit]:hover {
+  background-color: #e5e5e5;
+}
+.geysir-dialog .paragraphs-actions .paragraphs-dropdown .paragraphs-dropdown-actions {
+  box-shadow: none;
+  border-radius: 0;
+}
+.geysir-dialog .paragraphs-actions .paragraphs-dropdown .paragraphs-dropdown-toggle {
+  background-color: #e5e5e5;
+  height: rem(38);
+  border: 1px solid #e5e5e5;
+  border-left: 0;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: none;
+}
+.geysir-dialog .paragraphs-actions .paragraphs-dropdown .paragraphs-dropdown-toggle:hover {
+  background-color: #e5e5e5;
+}
+.geysir-dialog a:hover {
+  color: #000000;
+}
+.geysir-dialog .paragraphs-subform {
+  margin-top: rem(10);
+}
+.geysir-dialog .tabledrag-handle .handle {
+  background-position: center;
+  width: 30px;
+  height: 24px;
+  margin: 0;
+}
+.geysir-dialog .dropbutton-multiple .dropbutton-toggle {
+  background-color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-left: 0;
+}
+.geysir-dialog .dropbutton-multiple.open .dropbutton-action {
+  margin-top: -1px;
+}
+.geysir-dialog .dropbutton-multiple.open .dropbutton-action .button {
+  width: 100%;
+}
+.geysir-dialog .dropbutton-multiple.open .dropbutton-action:first-child {
+  margin-top: 0;
+}
+.geysir-dialog .entities-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.geysir-dialog .entities-list .rendered-entity {
+  background-color: rgba(229, 229, 229, 0.5);
+  width: calc(33.333% - 20px);
+  padding: rem(10);
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+.geysir-dialog .entities-list .rendered-entity .field {
+  margin: 0 0 rem(10);
+}
+.geysir-dialog .entities-list .rendered-entity .remove-button {
+  margin-top: auto;
+}
+.geysir-dialog .entities-list .rendered-entity:hover {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  opacity: 1;
+}
+.geysir-dialog .entities-list .rendered-entity input[type=submit] {
+  padding: rem(0) rem(15);
+}
+.geysir-dialog.ui-dialog input[type=submit] {
+  display: inline-block;
+  background-color: #e5e5e5;
+  background-image: none;
+  padding: rem(4) rem(16);
+  font-size: 1rem;
+  color: #5d5d5d;
+  border: 1px solid #e5e5e5;
+  border-radius: 0;
+}
+.geysir-dialog.ui-dialog input[type=submit]:hover {
+  background-color: #e5e5e5;
+}
+.geysir-dialog .description {
+  font-size: 80%;
+  color: rgba(0, 0, 0, 0.5);
+}
+.geysir-dialog input[type=tel],
+.geysir-dialog input[type=text],
+.geysir-dialog input[type=email],
+.geysir-dialog input[type=url],
+.geysir-dialog input[type=date],
+.geysir-dialog input[type=search],
+.geysir-dialog input[type=number],
+.geysir-dialog input[type=password],
+.geysir-dialog select,
+.geysir-dialog textarea,
+.geysir-dialog .file-input-wrapper {
+  width: 100%;
+  height: rem(42);
+  padding: rem(6) rem(15);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 0;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.geysir-dialog input[type=tel].error,
+.geysir-dialog input[type=text].error,
+.geysir-dialog input[type=email].error,
+.geysir-dialog input[type=url].error,
+.geysir-dialog input[type=date].error,
+.geysir-dialog input[type=search].error,
+.geysir-dialog input[type=number].error,
+.geysir-dialog input[type=password].error,
+.geysir-dialog select.error,
+.geysir-dialog textarea.error,
+.geysir-dialog .file-input-wrapper.error {
+  border: 1px solid #ff0000;
+}
+.geysir-dialog input[type=tel].error:focus,
+.geysir-dialog input[type=text].error:focus,
+.geysir-dialog input[type=email].error:focus,
+.geysir-dialog input[type=url].error:focus,
+.geysir-dialog input[type=date].error:focus,
+.geysir-dialog input[type=search].error:focus,
+.geysir-dialog input[type=number].error:focus,
+.geysir-dialog input[type=password].error:focus,
+.geysir-dialog select.error:focus,
+.geysir-dialog textarea.error:focus,
+.geysir-dialog .file-input-wrapper.error:focus {
+  border-color: #ff0000;
+}
+.geysir-dialog input[type=tel]:focus,
+.geysir-dialog input[type=text]:focus,
+.geysir-dialog input[type=email]:focus,
+.geysir-dialog input[type=url]:focus,
+.geysir-dialog input[type=date]:focus,
+.geysir-dialog input[type=search]:focus,
+.geysir-dialog input[type=number]:focus,
+.geysir-dialog input[type=password]:focus,
+.geysir-dialog select:focus,
+.geysir-dialog textarea:focus,
+.geysir-dialog .file-input-wrapper:focus {
+  border: 1px solid #5d5d5d;
+}
+.geysir-dialog select {
+  padding-right: rem(40);
+  background-image: url("../dist/svg/icons/dropdown.svg");
+  background-size: rem(10) rem(10);
+  background-repeat: no-repeat;
+  background-position: right rem(15) center;
+}
+.geysir-dialog textarea {
+  min-height: rem(200);
+  font-size: 1rem;
+  resize: vertical;
+}
+.geysir-dialog .messages {
+  margin: rem(10) 0;
+  padding: rem(10);
+}
+.geysir-dialog .field-multiple-table {
+  border-collapse: collapse;
+}
+.geysir-dialog tr.drag-previous {
+  background-color: #ffd;
+}
+.geysir-dialog tr.draggable {
+  border-bottom: 1px dashed #e5e5e5;
+}
+.geysir-dialog tr.draggable .paragraphs-actions {
+  padding: 0;
+  border: 0;
+}
+.geysir-dialog tr.draggable:last-child {
+  border: 0;
+}
+.geysir-dialog tr.draggable.drag {
+  background-color: #e5e5e5;
+  opacity: 0.5;
+}
+
 .ck-content html,
 .ck-content body {
   width: 100%;
@@ -13,7 +344,7 @@
   margin: 0;
   padding: 0;
   background: white;
-  color: #000;
+  color: #000000;
   font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -75,16 +406,16 @@
   box-sizing: border-box;
 }
 .ck-content *::-moz-selection {
-  color: #FFF;
-  background-color: #000;
+  color: #ffffff;
+  background-color: #000000;
 }
 .ck-content *::selection {
-  color: #FFF;
-  background-color: #000;
+  color: #ffffff;
+  background-color: #000000;
 }
 .ck-content h1 {
   margin-top: 0;
-  color: #000;
+  color: #000000;
   font-size: clamp(2.25rem, 3.33vw + 1.25rem, 3.75rem);
   font-weight: 700;
   line-height: 1.2;
@@ -93,14 +424,14 @@
 .ck-content .menu__title,
 .ck-content .block__title {
   margin-top: 0;
-  color: #000;
+  color: #000000;
   line-height: 1.16;
   font-size: clamp(1.88rem, 2.5vw + 1.13rem, 3rem);
   font-weight: 700;
 }
 .ck-content h3 {
   margin-top: 0;
-  color: #000;
+  color: #000000;
   line-height: 1.2;
   font-size: clamp(1.5rem, 0.83vw + 1.25rem, 1.88rem);
   font-weight: 400;

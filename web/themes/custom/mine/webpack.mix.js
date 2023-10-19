@@ -25,3 +25,4 @@ mix
     files: ['dist/js/*.js', 'dist/css/*.css'],
     open: false,
   })
+  .disableNotifications()

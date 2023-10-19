@@ -22,7 +22,7 @@ body {
 
   background: white;
 
-  color: $defaultcolor;
+  color: $body;
   font-family: $base-font-family;
   font-weight: 400;
   font-size: rem(16);
@@ -94,6 +94,6 @@ details > * {
 }
 
 *::selection {
-  color: #FFF;
-  background-color: $defaultcolor;
+  color: $white;;
+  background-color: $body;
 }

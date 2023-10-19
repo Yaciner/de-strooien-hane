@@ -8,6 +8,7 @@ dependencies:
   module:
     - file
     - filter
+    - media
     - search
     - shortcut
     - system
@@ -24,3 +25,4 @@ permissions:
   - 'search content'
   - 'use text format basic_html'
   - 'use text format webform_default'
+  - 'view media'

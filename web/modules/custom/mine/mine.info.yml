@@ -1,0 +1,6 @@
+name: 'Mine'
+type: module
+description: 'DMS Theming snippets'
+package: DMS
+
+core_version_requirement: ^10

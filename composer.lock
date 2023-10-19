@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32a8a093994cc1b9197725eba2612169",
+    "content-hash": "1d766c9c8089ccdd4aff6f084b693804",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2423,6 +2423,87 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/field_group",
                 "issues": "https://www.drupal.org/project/issues/field_group"
+            }
+        },
+        {
+            "name": "drupal/geysir",
+            "version": "2.1.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/geysir.git",
+                "reference": "2.1.0-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geysir-2.1.0-rc1.zip",
+                "reference": "2.1.0-rc1",
+                "shasum": "34224c9a100f625392c3afaef54ee62e9083f916"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10",
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0-rc1",
+                    "datestamp": "1687977608",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "AMPLEXOR",
+                    "homepage": "https://www.drupal.org/user/213049"
+                },
+                {
+                    "name": "gpietrzak",
+                    "homepage": "https://www.drupal.org/user/427946"
+                },
+                {
+                    "name": "grzegorz.bartman",
+                    "homepage": "https://www.drupal.org/user/363120"
+                },
+                {
+                    "name": "jover",
+                    "homepage": "https://www.drupal.org/user/310720"
+                },
+                {
+                    "name": "KevinVanRansbeeck",
+                    "homepage": "https://www.drupal.org/user/2195874"
+                },
+                {
+                    "name": "Maciej Lukianski",
+                    "homepage": "https://www.drupal.org/user/400060"
+                },
+                {
+                    "name": "sayco",
+                    "homepage": "https://www.drupal.org/user/3517832"
+                },
+                {
+                    "name": "sikora.dm",
+                    "homepage": "https://www.drupal.org/user/3059645"
+                },
+                {
+                    "name": "tudor.vlas",
+                    "homepage": "https://www.drupal.org/user/3398476"
+                },
+                {
+                    "name": "vollepeer",
+                    "homepage": "https://www.drupal.org/user/628398"
+                }
+            ],
+            "description": "Enhancing the Drupal Author Experience.",
+            "homepage": "https://www.drupal.org/project/geysir",
+            "support": {
+                "source": "https://git.drupalcode.org/project/geysir"
             }
         },
         {
@@ -7796,6 +7877,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "drupal/disable_language": 10,
+        "drupal/geysir": 5,
         "drupal/gin": 5,
         "drupal/gin_toolbar": 5,
         "drupal/rabbit_hole": 15,

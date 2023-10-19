@@ -1,6 +1,4 @@
 {
     "/dist/js/scripts.js": "/dist/js/scripts.js",
-    "/dist/css/ckeditor.css": "/dist/css/ckeditor.css",
-    "/dist/css/print.css": "/dist/css/print.css",
-    "/dist/css/styles.css": "/dist/css/styles.css"
+    "/dist/css/print.css": "/dist/css/print.css"
 }

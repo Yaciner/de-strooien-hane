@@ -1,0 +1,428 @@
+// General geysir button styling
+.geysir-button {
+  margin: 0 auto;
+}
+
+// Fix for default geysir behavior where elements in the paragraph are no longer clickable
+.geysir-field-paragraph-wrapper {
+  pointer-events: none;
+
+  > * {
+    pointer-events: all;
+  }
+
+  &:hover {
+    z-index: 2;
+
+    > .paragraph {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      background-color: transparent;
+    }
+  }
+}
+
+div[data-geysir-field-paragraph-field-wrapper="geysir-field-hero"] {
+  background-color: $gray-light;
+  position: relative;
+  height: rem(100);
+  
+  &::before {
+    content:'Click here to add a hero';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: .3;
+    translate: -50% -50%;
+    color: $gray-dark;
+    font-weight: bold;
+    font-size: fluid(36px, 42px);
+  }
+}
+
+
+// Linkit
+.editor-link-dialog {
+  width: rem(480);
+  min-height: rem(300);
+
+
+  .editor-link-dialog {
+    min-height: rem(300);
+  }
+  .linkit-ui-autocomplete {
+    max-height: rem(190);
+    box-shadow: 0 5px 10px 0 rgba($gray-light,.75);
+  }
+}
+
+.geysir-dialog {
+  z-index: 100;
+}
+
+
+// Image edit modal
+.media-image-edit-form {
+  .focal-point-wrapper {
+    .focal-point-preview-link {
+      background-color: $gray-light;
+      margin: rem(20) 0 0;
+      padding: rem(5);
+      color: $black;
+      border: 1px solid $gray-light;
+      text-decoration: none;
+
+      &::before {
+        margin-right: rem(5);
+      }
+
+      &:hover {
+        background-color: $gray-light;
+        color: $black;
+      }
+    }
+  }
+
+  details[data-drupal-selector="edit-group-video"] {
+    background-color: $gray-light;
+    margin: rem(20) 0;
+    padding: rem(10);
+    border: 1px solid $gray-light;
+    > summary {
+      display: none;
+    }
+  }
+
+  .js-form-type-vertical-tabs {
+    display: none;
+  }
+}
+
+
+// Geysir modal specific styling
+.geysir-dialog {
+
+  .ui-dialog-content {
+    padding: rem(10);
+  }
+
+  .tabledrag-toggle-weight-wrapper {
+    display: none;
+  }
+
+  details {
+    padding: rem(10) 0;
+    > summary {
+      display: none;
+    }
+  }
+
+  .form-required {
+    &::after {
+      content: '*';
+      display: inline-block;
+      margin-left: rem(3);
+    }
+  }
+
+  .field--type-link {
+    fieldset {
+      border: 1px solid $gray-light;
+    }
+  }
+
+  .horizontal-tabs {
+    margin: 0;
+  }
+
+  //
+  .horizontal-tabs-list {
+    font-size: 1rem;
+  }
+
+  .field-multiple-table {
+    width: 100%;
+    thead {
+      h4 {
+        background-color: $gray-light;
+        margin: 0;
+        padding: rem(10) 0;
+        text-transform: uppercase;
+      }
+    }
+    td.field-multiple-drag {
+      width: rem(30);
+    }
+  }
+
+  .paragraphs-actions {
+    display: flex;
+    justify-content: flex-end;
+    float: none!important;
+    margin: 0!important;
+    padding: rem(10) 0;
+    border-bottom: 1px dashed $gray-light;
+
+    .paragraphs-dropdown {
+      margin: 0;
+
+      &.open {
+        .paragraphs-dropdown-actions {
+          border: 0;
+          top: rem(37);
+
+          input[type="submit"] {
+            background-color: $white;
+            &:not(:first-child) {
+              margin-top: -1px;
+            }
+            &:hover {
+              background-color: $gray-light;
+            }
+          }
+        }
+      }
+
+      .paragraphs-dropdown-actions {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .paragraphs-dropdown-toggle {
+        background-color: $gray-light;
+        height: rem(38);
+        border: 1px solid $gray-light;
+        border-left: 0;
+        border-radius: 0;
+        cursor: pointer;
+        box-shadow: none;
+
+        &:hover {
+          background-color: $gray-light;
+        }
+      }
+    }
+  }
+
+  a:hover {
+    color: $black;;
+  }
+
+  .paragraphs-subform {
+    margin-top: rem(10);
+  }
+
+  .tabledrag-handle {
+    .handle {
+      background-position: center;
+      width: 30px;
+      height: 24px;
+      margin: 0;
+    }
+  }
+
+  .dropbutton-multiple {
+    .dropbutton-toggle {
+      background-color: $gray-light;
+      border: 1px solid $gray-light;
+      border-left: 0;
+    }
+
+    &.open {
+      .dropbutton-action {
+        margin-top: -1px;
+        .button {
+          width: 100%;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .entities-list {
+    display: flex;
+    flex-wrap: wrap;
+    // padding: rem(20);
+    .rendered-entity {
+      background-color: rgba($gray-light,.5);
+      // width: rem(260);
+      // max-width: calc(20% - 20px);
+      width: calc(33.333% - 20px);
+      // margin: rem(10);
+      padding: rem(10);
+      overflow: hidden;
+      text-align: center;
+      border: 1px solid transparent;
+
+      display: flex;
+      flex-direction: column;
+
+      .field {
+        margin: 0 0 rem(10);
+      }
+      .remove-button {
+        margin-top: auto;
+      }
+
+      &:hover {
+        background-color: $gray-light;
+        border-color: $gray-light;
+        opacity: 1;
+      }
+      input[type="submit"] {
+        padding: rem(0) rem(15);
+      }
+    }
+  }
+
+
+
+  // Form elements
+  &.ui-dialog input[type="submit"] {
+    display: inline-block;
+    background-color: $gray-light;
+    background-image: none;
+    padding: rem(4) rem(16);
+    font-size: 1rem;
+    color: $gray-dark;
+    border: 1px solid $gray-light;
+    border-radius: 0;
+    &:hover {
+      background-color: $gray-light;
+    }
+  }
+  .description {
+    font-size: 80%;
+    color: rgba(black,0.5);
+  }
+
+  input[type="tel"],
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="date"],
+  input[type="search"],
+  input[type="number"],
+  input[type="password"],
+  select,
+  textarea,
+  .file-input-wrapper{
+    width: 100%;
+    height: rem(42);
+    padding: rem(6) rem(15);
+    appearance: none;
+
+    border: 1px solid $gray-light;
+    border-radius: 0;
+
+    background-color: $white;
+
+    color: $black;
+    font-size: 1rem;
+    line-height: 1.75;
+
+    &.error {
+      border: 1px solid $red;
+
+      &:focus {
+        border-color: $red;
+      }
+    }
+
+    &:focus {
+      border: 1px solid $gray-dark;
+    }
+  }
+
+  select{
+    padding-right: rem(40);
+    background-image: url('../dist/svg/icons/dropdown.svg');
+    background-size: rem(10) rem(10);
+    background-repeat: no-repeat;
+    background-position: right rem(15) center;
+  }
+
+  textarea {
+    min-height: rem(200);
+    font-size: 1rem;
+    resize: vertical;
+  }
+
+  .messages {
+    margin: rem(10) 0;
+    padding: rem(10);
+  }
+
+  .field-multiple-table {
+    border-collapse: collapse;
+  }
+
+
+
+  // Drag stuff
+  tr.drag-previous {
+    background-color: #ffd;
+  }
+  tr.draggable {
+    border-bottom: 1px dashed $gray-light;
+
+    .paragraphs-actions {
+      padding: 0;
+      border: 0;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+    &.drag {
+      background-color: $gray-light;
+      opacity: .5;
+    }
+  }
+
+}
+
+.geysir-modal-add-select-type-form {
+  @include grid(5, '.geysir-add-type', 2%);
+  padding: rem(35) 0;
+
+  .geysir-add-type {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid color('none');
+    min-width: auto;
+
+    input {
+      width: 100%;
+      margin-bottom: auto;
+    }
+
+    span {
+      margin-top: rem(5);
+    }
+  }
+
+  @include mq('l') {
+    @include flexgrid(4, '.geysir-add-type', 3%);
+  }
+
+  @include mq('m') {
+    @include flexgrid(3, '.geysir-add-type', 3%);
+  }
+
+  @include mq('s') {
+    @include flexgrid(2, '.geysir-add-type', 3%);
+  }
+}
+
+.geysir-modal-add-select-type-form .geysir-add-type:hover {
+  border: 1px solid color('dms-blue');
+}

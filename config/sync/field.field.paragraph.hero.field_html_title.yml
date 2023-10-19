@@ -1,0 +1,22 @@
+uuid: 4b191f88-a0a2-47d7-a1b4-64bd19855b39
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_html_title
+    - paragraphs.paragraphs_type.hero
+  module:
+    - text
+id: paragraph.hero.field_html_title
+field_name: field_html_title
+entity_type: paragraph
+bundle: hero
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

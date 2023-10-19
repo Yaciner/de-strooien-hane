@@ -1,0 +1,56 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+
+/**
+ * Implements hook_entity_view_mode_alter().
+ */
+function dms_theming_entity_view_mode_alter(string &$view_mode, EntityInterface $entity): void {
+  if ($entity instanceof \Drupal\paragraphs\ParagraphInterface) {
+    if ($style = $entity->field_style->target_id ?? NULL) {
+      $style_entity = EntityViewDisplay::load($style);
+
+      if (!empty($style_entity)) {
+        $view_mode = $style_entity->getMode();
+      }
+    }
+  }
+}
+
+function dms_theming_form_paragraph_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $entity = $form_state->getFormObject()->getEntity();
+  $viewmodes = \Drupal::service('entity_display.repository')->getViewModeOptionsByBundle('paragraph', $entity->bundle());
+
+  $excluded_viewmodes = [
+    'preview',
+  ];
+
+  $options = [];
+  foreach ($viewmodes as $key => $label) {
+    if (!in_array($key, $excluded_viewmodes)) {
+      $options['paragraph.' . $entity->bundle() . '.' . $key] = $label;
+    }
+  }
+
+  $form['field_style']['widget']['#options'] = $options;
+}
+
+function dms_theming_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+  if (isset($element['subform']['field_style'])) {
+    $viewmodes = \Drupal::service('entity_display.repository')->getViewModeOptionsByBundle('paragraph', $element['#paragraph_type']);
+
+    $excluded_viewmodes = [
+      'preview',
+    ];
+
+    $options = [];
+    foreach ($viewmodes as $key => $label) {
+      if (!in_array($key, $excluded_viewmodes)) {
+        $options['paragraph.' . $element['#paragraph_type'] . '.' . $key] = $label;
+      }
+    }
+
+    $element['subform']['field_style']['widget']['#options'] = $options;
+  }
+}
