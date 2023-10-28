@@ -1,0 +1,19 @@
+uuid: c3e0a535-20a6-49f6-aa23-8e67dfb53012
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_id
+    - media.type.remote_video
+id: media.remote_video.field_video_id
+field_name: field_video_id
+entity_type: media
+bundle: remote_video
+label: 'Video: ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

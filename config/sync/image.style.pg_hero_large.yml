@@ -1,0 +1,17 @@
+uuid: 12c12547-0179-4af1-b538-8767ff3643f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: pg_hero_large
+label: 'PG: Hero: Large'
+effects:
+  fe946910-e8ca-4b67-a3bc-efdc44feef0f:
+    uuid: fe946910-e8ca-4b67-a3bc-efdc44feef0f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 860
+      crop_type: focal_point

@@ -12,6 +12,7 @@ module:
   ckeditor5: 0
   config: 0
   contextual: 0
+  crop: 0
   datetime: 0
   dblog: 0
   disable_language: 0
@@ -23,6 +24,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  focal_point: 0
   geysir: 0
   gin_login: 0
   gin_toolbar: 0
@@ -35,6 +37,9 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
+  mine_dev: 0
+  mine_formatters: 0
   mysql: 0
   node: 0
   options: 0
@@ -50,6 +55,7 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   user: 0

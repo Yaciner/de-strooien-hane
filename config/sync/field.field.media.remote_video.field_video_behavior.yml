@@ -1,0 +1,21 @@
+uuid: 0d01f41d-8215-4056-9f6d-aa0b0327909f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_behavior
+    - media.type.remote_video
+  module:
+    - options
+id: media.remote_video.field_video_behavior
+field_name: field_video_behavior
+entity_type: media
+bundle: remote_video
+label: 'Video: Behavior'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

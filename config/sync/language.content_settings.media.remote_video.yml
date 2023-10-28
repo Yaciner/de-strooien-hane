@@ -1,0 +1,11 @@
+uuid: 967c0d3a-de72-4242-b019-20152fc75bc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media.remote_video
+target_entity_type_id: media
+target_bundle: remote_video
+default_langcode: nl
+language_alterable: false

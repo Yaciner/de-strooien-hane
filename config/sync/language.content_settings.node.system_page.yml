@@ -7,5 +7,5 @@ dependencies:
 id: node.system_page
 target_entity_type_id: node
 target_bundle: system_page
-default_langcode: current_interface
+default_langcode: nl
 language_alterable: true

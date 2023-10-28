@@ -1,10 +1,12 @@
 uuid: b52d73d4-b7d2-423a-b10e-4441b3313767
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.homepage.field_hero
     - field.field.node.homepage.field_paragraphs
+    - field.field.node.homepage.field_seo
     - node.type.homepage
   module:
     - user
@@ -19,5 +21,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_hero: true
   field_paragraphs: true
+  field_seo: true
   langcode: true

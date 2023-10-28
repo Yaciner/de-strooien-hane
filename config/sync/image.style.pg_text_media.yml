@@ -1,0 +1,15 @@
+uuid: 9be2f1d1-e565-443b-bfb2-2e79863d869a
+langcode: en
+status: true
+dependencies: {  }
+name: pg_text_media
+label: 'PG: Text & Media'
+effects:
+  e03f6c16-2bbd-4056-aa21-fe8dda42640c:
+    uuid: e03f6c16-2bbd-4056-aa21-fe8dda42640c
+    id: image_scale
+    weight: 1
+    data:
+      width: 960
+      height: null
+      upscale: true

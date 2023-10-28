@@ -1,0 +1,27 @@
+uuid: e7e2dc45-e7b5-4d50-8686-7b5c905c70db
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - options
+id: media.field_video_service
+field_name: field_video_service
+entity_type: media
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: vimeo
+      label: Vimeo
+    -
+      value: youtube
+      label: Youtube
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

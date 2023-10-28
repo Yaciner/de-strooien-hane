@@ -1,63 +1,53 @@
-uuid: 3bb5ce8c-d305-42da-af5a-70951d33226a
+uuid: d967004f-6eec-4f88-8e78-9eb050b16530
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_media_image
+    - field.field.media.remote_video.field_video_behavior
+    - field.field.media.remote_video.field_video_id
+    - field.field.media.remote_video.field_video_service
+    - image.style.thumbnail
     - media.type.remote_video
   module:
-    - media
-    - path
-_core:
-  default_config_hash: pM8mGlwfpvfG_y5tZn0lGAXFLXz2_yKkL7MvWZsRqdA
+    - image
 id: media.remote_video.default
 targetEntityType: media
 bundle: remote_video
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_media_oembed_video:
-    type: oembed_textfield
+  field_media_image:
+    type: image_image
     weight: 0
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
+  field_video_behavior:
+    type: options_select
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 100
+  field_video_id:
+    type: string_textfield
+    weight: 2
     region: content
     settings:
-      display_label: true
-    third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_video_service:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  created: true
+  langcode: true
   name: true
+  path: true
+  status: true
+  uid: true

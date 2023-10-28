@@ -1,0 +1,10 @@
+uuid: c5999538-52ac-4e82-9cf7-8fc19730d991
+langcode: en
+status: true
+dependencies:
+  module:
+    - tour
+id: tour.token
+label: Token
+targetEntityType: tour
+cache: true

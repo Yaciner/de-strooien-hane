@@ -1,0 +1,17 @@
+uuid: 00262711-6184-4ce3-95e8-549c5e7a394d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: pg_hero_default
+label: 'PG: Hero: Default'
+effects:
+  d793ec9c-a726-4feb-8d44-19fb22180a86:
+    uuid: d793ec9c-a726-4feb-8d44-19fb22180a86
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 600
+      crop_type: focal_point

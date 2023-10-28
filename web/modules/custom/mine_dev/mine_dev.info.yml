@@ -1,6 +1,6 @@
-name: 'Mine'
+name: 'Mine dev'
 type: module
-description: 'DMS Theming snippets'
+description: 'Mine snippets'
 package: DMS
 
 core_version_requirement: ^10

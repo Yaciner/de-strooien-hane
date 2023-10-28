@@ -6,7 +6,7 @@ use Drupal\Core\Entity\Entity\EntityViewDisplay;
 /**
  * Implements hook_entity_view_mode_alter().
  */
-function dms_theming_entity_view_mode_alter(string &$view_mode, EntityInterface $entity): void {
+function mine_dev_entity_view_mode_alter(string &$view_mode, EntityInterface $entity): void {
   if ($entity instanceof \Drupal\paragraphs\ParagraphInterface) {
     if ($style = $entity->field_style->target_id ?? NULL) {
       $style_entity = EntityViewDisplay::load($style);
@@ -18,7 +18,7 @@ function dms_theming_entity_view_mode_alter(string &$view_mode, EntityInterface 
   }
 }
 
-function dms_theming_form_paragraph_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function mine_dev_form_paragraph_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   $entity = $form_state->getFormObject()->getEntity();
   $viewmodes = \Drupal::service('entity_display.repository')->getViewModeOptionsByBundle('paragraph', $entity->bundle());
 
@@ -36,7 +36,7 @@ function dms_theming_form_paragraph_form_alter(&$form, \Drupal\Core\Form\FormSta
   $form['field_style']['widget']['#options'] = $options;
 }
 
-function dms_theming_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+function mine_dev_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
   if (isset($element['subform']['field_style'])) {
     $viewmodes = \Drupal::service('entity_display.repository')->getViewModeOptionsByBundle('paragraph', $element['#paragraph_type']);
 

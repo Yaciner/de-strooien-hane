@@ -3,29 +3,44 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.homepage.field_hero
     - field.field.node.homepage.field_paragraphs
+    - field.field.node.homepage.field_seo
     - node.type.homepage
   module:
     - entity_reference_revisions
+    - metatag
     - user
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
 mode: default
 content:
-  field_paragraphs:
+  field_hero:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 101
+    weight: 0
     region: content
-  links:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_seo:
+    type: metatag_empty_formatter
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
 hidden:
   langcode: true
+  links: true
