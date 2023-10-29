@@ -16,30 +16,12 @@
 
     > .paragraph {
       position: relative;
-      z-index: 1;
+      // z-index: 1;
     }
 
     &::after {
       background-color: transparent;
     }
-  }
-}
-
-div[data-geysir-field-paragraph-field-wrapper="geysir-field-hero"] {
-  background-color: $gray-light;
-  position: relative;
-  height: rem(100);
-  
-  &::before {
-    content:'Click here to add a hero';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    opacity: .3;
-    translate: -50% -50%;
-    color: $gray-dark;
-    font-weight: bold;
-    font-size: fluid(36px, 42px);
   }
 }
 

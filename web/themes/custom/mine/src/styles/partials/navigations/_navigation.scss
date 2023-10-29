@@ -7,15 +7,30 @@
 .main-menu {
   .menu__list {
     @include reset-list();
+    display: flex;
+    align-items: center;
+    gap: 3rem;
     
     .menu__item {
-      a {
-
+      a:not(.btn) {
+        font-weight: 600;
+        text-decoration: none;
       }
     }
   }
 }
 
+body:not(.logged-in).has-hero {
+  .main-menu {
+    .menu__list {
+      .menu__item {
+        a:not(.btn) {
+          color: $white;
+        }
+      }
+    }
+  }
+}
 
 // BOTTOM MENU
 .bottom-menu {

@@ -9,6 +9,7 @@ dependencies:
     - file
     - filter
     - media
+    - paragraphs_type_permissions
     - search
     - shortcut
     - system
@@ -26,3 +27,8 @@ permissions:
   - 'use text format basic_html'
   - 'use text format webform_default'
   - 'view media'
+  - 'view paragraph content cta'
+  - 'view paragraph content form'
+  - 'view paragraph content hero'
+  - 'view paragraph content text'
+  - 'view paragraph content text_media'

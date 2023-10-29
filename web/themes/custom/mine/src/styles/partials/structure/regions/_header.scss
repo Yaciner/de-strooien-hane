@@ -4,9 +4,29 @@
 //------------------------------------------------------------------------------
 
 .region-header {
+  position: relative;
+  z-index: 10;
+  padding: 2rem 0;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+body.loading {
+  .region-header .container {
+    translate: 0% -100%;
+    opacity: 0;
+    transition: all 1s $cubic-bezier;
+    transition-delay: 1s;
+  }
+}
+
+body.loaded {
+  .region-header .container {
+    translate: 0% 0%;
+    opacity: 1;
   }
 }

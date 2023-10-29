@@ -25,6 +25,7 @@ settings:
       - drupalInsertImage
       - '|'
       - heading
+      - style
       - code
       - '|'
       - sourceEditing
@@ -56,6 +57,21 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
+        - '<span>'
+    ckeditor5_style:
+      styles:
+        -
+          label: Subtitle
+          element: '<span class="subtitle">'
+        -
+          label: 'Black button'
+          element: '<a class="btn">'
+        -
+          label: 'White button'
+          element: '<a class="btn btn--white">'
+        -
+          label: 'Arrowed button'
+          element: '<a class="btn btn--arrowed">'
 image_upload:
   status: true
   scheme: public

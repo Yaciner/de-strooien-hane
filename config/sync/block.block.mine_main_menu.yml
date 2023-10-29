@@ -5,15 +5,19 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - block_class
     - system
   theme:
     - mine
+third_party_settings:
+  block_class:
+    classes: main-menu
 _core:
   default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
 id: mine_main_menu
 theme: mine
-region: top
-weight: 0
+region: header
+weight: -4
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -25,7 +25,7 @@ body {
   color: $body;
   font-family: $base-font-family;
   font-weight: 400;
-  font-size: rem(16);
+  font-size: rem(18);
   line-height: 1.5;
   overflow-y: auto;
 
@@ -60,15 +60,7 @@ body {
   margin: 0 auto;
   padding: 0 rem(20);
 
-  @include mq(xl) {
-    padding: 0 rem(120);
-  }
-  
   @include mq(l){
-    padding: 0 rem(80);
-  }
-
-  @include mq(m){
     padding: 0 rem(40);
   }
 
@@ -96,4 +88,43 @@ details > * {
 *::selection {
   color: $white;;
   background-color: $body;
+}
+
+body.logged-out {
+  .region-header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    z-index: 1000;
+    background-color: color('white');
+    max-width: $container-max;
+    translate: -50% 0%;
+  }
+
+
+  .headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+  }
+  
+  
+  .headroom--pinned {
+    transform: translateY(0%);
+    color: color('body');
+    background-color: $white;
+  }
+  
+  .headroom--unpinned {
+    transform: translateY(-100%);
+  }
+
+  &.has-hero {
+    .headroom--pinned {
+
+      &.headroom--top {
+        background-color: transparent;
+      }
+    }
+  }
 }

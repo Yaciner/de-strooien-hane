@@ -7,6 +7,7 @@ dependencies:
   module:
     - filter
     - media
+    - paragraphs_type_permissions
     - search
     - system
 _core:
@@ -20,3 +21,8 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view media'
+  - 'view paragraph content cta'
+  - 'view paragraph content form'
+  - 'view paragraph content hero'
+  - 'view paragraph content text'
+  - 'view paragraph content text_media'

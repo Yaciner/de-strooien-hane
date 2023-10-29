@@ -1,6 +1,6 @@
 uuid: ae04b9b7-9d34-4b75-a58a-e2a116954b30
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - mine
@@ -8,8 +8,8 @@ _core:
   default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
 id: mine_primary_local_tasks
 theme: mine
-region: top
-weight: -4
+region: header
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:

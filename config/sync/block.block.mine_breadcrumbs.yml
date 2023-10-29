@@ -10,8 +10,8 @@ _core:
   default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
 id: mine_breadcrumbs
 theme: mine
-region: top
-weight: 0
+region: system
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:

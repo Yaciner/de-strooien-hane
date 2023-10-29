@@ -6,7 +6,7 @@
 h1 {
   margin-top: 0;
   color: $body;
-  font-size: fluid(36px, 60px);
+  font-size: fluid(36px, 80px);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -29,6 +29,9 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: $heading;
+  font-weight: 900;
+  
   &:first-child {
     margin-top: 0;
   }
@@ -61,5 +64,5 @@ p {
 }
 
 a {
-
+  color: $primary;
 }

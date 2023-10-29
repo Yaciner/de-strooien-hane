@@ -54,3 +54,22 @@ function mine_dev_field_widget_paragraphs_form_alter(&$element, &$form_state, $c
     $element['subform']['field_style']['widget']['#options'] = $options;
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function mine_dev_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (($form_id != 'node_page_edit_form' && $form_id != 'node_page_form') || !isset($form['field_paragraphs'])) return;
+  $repo = \Drupal::service('entity_display.repository');
+  foreach ($form['field_paragraphs']['widget'] as &$item) {
+    if (!isset($item['subform']['field_style'])) continue;
+    
+    $type = $item['#paragraph_type'];
+    $viewmodes = $repo->getViewModeOptionsByBundle('paragraph', $type);
+    $options = [];
+    foreach ($viewmodes as $key => $label) {
+      $options["paragraph.$type.$key"] = $label;
+    }
+    $item['subform']['field_style']['widget']['#options'] = $options;
+  }
+}

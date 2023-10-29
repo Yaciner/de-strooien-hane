@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.field.paragraph.text_media.field_background_color
     - field.field.paragraph.text_media.field_media
+    - field.field.paragraph.text_media.field_media_alignment
     - field.field.paragraph.text_media.field_text
+    - field.field.paragraph.text_media.field_vertical_alignment
     - paragraphs.paragraphs_type.text_media
   module:
     - text
@@ -32,3 +34,5 @@ content:
     region: content
 hidden:
   field_background_color: true
+  field_media_alignment: true
+  field_vertical_alignment: true

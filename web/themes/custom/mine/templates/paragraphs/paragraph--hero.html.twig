@@ -7,35 +7,19 @@
 
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }}>
-    {% if show_html_id %}
-      <span class="html-id" data-id="{{ attributes.id }}">#</span>
-    {% endif %}
+    <div class="hero__images">
+      {{ content.field_media }}
+    </div>
 
-    {% if custom.boxed %}
+    <div class="hero__content">
       <div class="container">
-    {% endif %}
-
-      <div class="hero__wrapper">
-
-        <div class="hero__images">
-          {{ content.field_media }}
-        </div>
-
-        <div class="hero__content">
-          <div class="container">
-            <div class="hero__content-wrapper">
-              <div class="hero__content-text">
-                <h1>{{ content.field_html_title }}</h1>
-                {{ content.field_text }}
-              </div>
-            </div>
+        <div class="hero__content-wrapper">
+          <div class="hero__content-text">
+            <h1>{{ content.field_html_title }}</h1>
+            {{ content.field_text }}
           </div>
         </div>
-
       </div>
-
-    {% if custom.boxed %}
-      </div>
-    {% endif %}
+    </div>
   </section>
 {% endblock paragraph %}

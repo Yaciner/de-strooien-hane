@@ -28,10 +28,13 @@
     "svg:watch": "chokidar \"src/svg\" -c \"yarn svg:dev\"",
     "svg:dev": "yarn svg:clean && yarn svg:build",
     "svg:clean": "rm -f src/svg/icons/._* && rm -rf dist/svg/* && truncate -s 0 src/styles/config/_icons.scss",
-    "svg:build": "gulp svg && for file in dist/svg/icons/*.svg; do echo \"$\"\"$(basename \"$file\" .svg): '$(cat \"$file\" | base64 -w 0)';\" >> src/styles/config/_icons.scss; done",
+    "svg:build": "gulp svg && for file in dist/svg/icons/*.svg; do echo \"$\"\"$(basename \"$file\" .svg): '$(cat \"$file\" | base64)';\" >> src/styles/config/_icons.scss; done",
     "mix": "yarn mix:watch",
     "mix:dev": "mix",
     "mix:watch": "mix watch",
     "mix:production": "mix --production"
+  },
+  "dependencies": {
+    "headroom.js": "^0.12.0"
   }
 }

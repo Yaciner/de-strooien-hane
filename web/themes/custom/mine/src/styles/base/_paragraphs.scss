@@ -1,0 +1,73 @@
+.paragraph {
+  position: relative;
+
+  .paragraph {
+    padding: 0;
+  }
+}
+
+.paragraph:not(.paragraph--type--hero) {
+  padding: $p_vertical_gutter 0;
+}
+
+.pg-bg--primary {
+  background-color: $primary;
+  color: $white;
+
+  a:not(.btn) {
+    color: inherit;
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      color: inherit;
+    }
+  }
+}
+
+.pg-bg--secondary {
+  background-color: $secondary;
+  color: $primary;
+
+  a:not(.btn) {
+    color: inherit;
+  }
+
+  // Icon color overrides
+  .field--name-field-icon {
+    svg, g, path {
+      fill: $primary;
+    }
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      color: inherit;
+    }
+  }
+}
+
+.geysir-field-paragraph-wrapper > .paragraph:not(.paragraph--type--hero) {
+  padding: $p_vertical_gutter 0;
+}
+
+.pg-bg--none + .pg-bg--none,
+.pg-bg--primary + .pg-bg--primary,
+.pg-bg--secondary + .pg-bg--secondary {
+  padding-top: 0;
+}
+
+.pg-valign--top {}
+
+.pg-valign--center {
+  >.container {
+    align-items: center;
+  }
+}
+
+.pg-valign--bottom {
+  > .container {
+    align-items: flex-end;
+  }
+}
+

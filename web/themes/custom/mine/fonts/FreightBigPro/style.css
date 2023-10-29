@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'FreightBigPro';
+    src: url('FreightBigPro-BoldItalic.eot');
+    src: url('FreightBigPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigPro-BoldItalic.woff2') format('woff2'),
+        url('FreightBigPro-BoldItalic.woff') format('woff'),
+        url('FreightBigPro-BoldItalic.ttf') format('truetype'),
+        url('FreightBigPro-BoldItalic.svg#FreightBigPro-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBigPro';
+    src: url('FreightBigPro-BlackItalic.eot');
+    src: url('FreightBigPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigPro-BlackItalic.woff2') format('woff2'),
+        url('FreightBigPro-BlackItalic.woff') format('woff'),
+        url('FreightBigPro-BlackItalic.ttf') format('truetype'),
+        url('FreightBigPro-BlackItalic.svg#FreightBigPro-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBigPro';
+    src: url('FreightBigPro-Black.eot');
+    src: url('FreightBigPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigPro-Black.woff2') format('woff2'),
+        url('FreightBigPro-Black.woff') format('woff'),
+        url('FreightBigPro-Black.ttf') format('truetype'),
+        url('FreightBigPro-Black.svg#FreightBigPro-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBigPro';
+    src: url('FreightBigPro-Bold.eot');
+    src: url('FreightBigPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigPro-Bold.woff2') format('woff2'),
+        url('FreightBigPro-Bold.woff') format('woff'),
+        url('FreightBigPro-Bold.ttf') format('truetype'),
+        url('FreightBigPro-Bold.svg#FreightBigPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBigPro';
+    src: url('FreightBigPro-MediumItalic.eot');
+    src: url('FreightBigPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigPro-MediumItalic.woff2') format('woff2'),
+        url('FreightBigPro-MediumItalic.woff') format('woff'),
+        url('FreightBigPro-MediumItalic.ttf') format('truetype'),
+        url('FreightBigPro-MediumItalic.svg#FreightBigPro-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBigPro';
+    src: url('FreightBigPro-Medium.eot');
+    src: url('FreightBigPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigPro-Medium.woff2') format('woff2'),
+        url('FreightBigPro-Medium.woff') format('woff'),
+        url('FreightBigPro-Medium.ttf') format('truetype'),
+        url('FreightBigPro-Medium.svg#FreightBigPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBigPro';
+    src: url('FreightBigPro-SemiboldItalic.eot');
+    src: url('FreightBigPro-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigPro-SemiboldItalic.woff2') format('woff2'),
+        url('FreightBigPro-SemiboldItalic.woff') format('woff'),
+        url('FreightBigPro-SemiboldItalic.ttf') format('truetype'),
+        url('FreightBigPro-SemiboldItalic.svg#FreightBigPro-SemiboldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightBigPro';
+    src: url('FreightBigPro-Semibold.eot');
+    src: url('FreightBigPro-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigPro-Semibold.woff2') format('woff2'),
+        url('FreightBigPro-Semibold.woff') format('woff'),
+        url('FreightBigPro-Semibold.ttf') format('truetype'),
+        url('FreightBigPro-Semibold.svg#FreightBigPro-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,21 @@
+uuid: c40e2da1-3ed1-4bf7-9a3e-f56b5a8a392f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_alignment
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - options
+id: paragraph.text_media.field_media_alignment
+field_name: field_media_alignment
+entity_type: paragraph
+bundle: text_media
+label: 'Media alignment'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

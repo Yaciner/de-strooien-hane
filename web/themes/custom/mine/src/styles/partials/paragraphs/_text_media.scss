@@ -1,0 +1,32 @@
+// ==========================================================================
+// Paragraph bundle: TEXT & MEDIA
+// ==========================================================================
+.paragraph--type--text-media {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .pg-text-media__media,
+  .pg-text-media__text {
+    width: 48%;
+
+    @include mq(m) {
+      width: 100%;
+    }
+  }
+  .pg-text-media__media {
+    @include mq(m) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &.pg--has-media-left {
+    .container {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+

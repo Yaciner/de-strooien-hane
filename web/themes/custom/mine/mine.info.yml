@@ -24,7 +24,6 @@ libraries-override:
         css/components/dialog.css: false
 
 regions:
-  top: 'Top'
   header: 'Header'
   system: 'System'
   content: 'Content'

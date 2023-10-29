@@ -1,3 +1,5 @@
+import Headroom from "headroom.js";
+
 (function ($, Drupal) {
   'use strict';
 
@@ -9,6 +11,11 @@
           height: 'auto',
         });
       });
+
+      // Headroom
+      let header = document.querySelector('.region-header');
+      let headroom  = new Headroom(header);
+      headroom.init();
     }
   };
 })(jQuery, Drupal);

@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Text & Media.
+ */
+#}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }}>
+    {% if show_html_id %}
+      <span class="html-id" data-id="{{ attributes.id }}">#</span>
+    {% endif %}
+
+    <div{{ container_attributes }}>
+    {% block content %}
+
+      <div class="pg-text-media__text">
+        {{ content.field_title }}
+        {{ content.field_text }}
+      </div>
+
+      <div class="pg-text-media__media">
+        {{ content.field_media}}
+      </div>
+
+    {% endblock %}
+    </div>
+  </section>
+{% endblock paragraph %}

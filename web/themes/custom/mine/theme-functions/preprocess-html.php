@@ -24,7 +24,10 @@ function mine_preprocess_html(&$variables) {
 
   // Node
   // Node: type
+  $node = \Drupal::routeMatch()->getParameter('node');
   $variables['attributes']['class'][] = isset($variables['node_type']) ? 'node-type-' . $variables['node_type'] : '';
+  $variables['attributes']['class'][] = $node->field_paragraphs->target_id ?? NULL ? 'has-paragraphs' : 'no-paragraphs';
+  $variables['attributes']['class'][] = ($node->field_hero->entity->type->target_id ?? '') !== 'hero' ? 'no-hero' : 'has-hero';
 
 
   // Taxonomy
