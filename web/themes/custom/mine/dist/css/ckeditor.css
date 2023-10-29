@@ -3,6 +3,44 @@ ul.paragraphs-add-dialog-list .button.button--small {
   padding-left: 3.75rem;
 }
 
+.ajax-progress.ajax-progress-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+}
+.ajax-progress.ajax-progress-fullscreen .ajax-throbber {
+  position: absolute;
+  top: 49%;
+  left: 49%;
+}
+@supports (display: flex) {
+  .ajax-progress.ajax-progress-fullscreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ajax-progress.ajax-progress-fullscreen .ajax-throbber {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+}
+
+.ajax-throbber.sk-chasing-dots .sk-child, .ajax-throbber.sk-circle .sk-child::before, .ajax-throbber.sk-cube-grid .sk-cube, .ajax-throbber.sk-double-bounce .sk-child, .ajax-throbber.sk-fading-circle .sk-circle::before, .ajax-throbber.sk-folding-cube .sk-cube::before, .ajax-throbber.sk-spinner-pulse, .ajax-throbber.sk-rotating-plane, .ajax-throbber.sk-three-bounce .sk-child, .ajax-throbber.sk-wandering-cubes .sk-cube, .ajax-throbber.sk-wave .sk-rect, .ajax-throbber.sk-flow .sk-flow-dot {
+  background-color: black;
+}
+
+.ui-dialog.entity-browser-modal .ui-dialog-content > .ajax-progress-throbber {
+  display: none;
+}
+
 .geysir-button {
   margin: 0 auto;
 }
@@ -570,16 +608,16 @@ ul.paragraphs-add-dialog-list .button.button--small {
   text-align: unset;
   translate: 0px 0;
   transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-.ck-content .btn::after {
-  margin-left: 0.1em;
+  padding-right: 2rem;
 }
 .ck-content .btn::after {
   content: "";
-  position: relative;
+  position: absolute;
   display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
+  width: 1.2em;
+  height: 100%;
+  right: 0;
+  top: 0;
   -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC4xMTIiIGhlaWdodD0iMTAuNDU4Ij48ZyBkYXRhLW5hbWU9IkxheWVyIDIiPjxwYXRoIGRhdGEtbmFtZT0iUGF0aCA1MCIgZD0iTTE0LjM0NC4yMDlhLjcxNy43MTcgMCAwMDAgMS4wMTFsMy4yNzEgMy4zMjhILjcxN2EuNzE3LjcxNyAwIDAwMCAxLjQzNGgxNi44NzZsLTMuMjQ5IDMuMjQ5YS43MTguNzE4IDAgMTAxLjAxMSAxLjAxOGw0LjU2OS00LjU2OWEuNjQ1LjY0NSAwIDAwMC0uOTExTDE1LjM1NS4yMDhhLjcxNy43MTcgMCAwMC0xLjAxMSAweiIvPjwvZz48L3N2Zz4=");
           mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC4xMTIiIGhlaWdodD0iMTAuNDU4Ij48ZyBkYXRhLW5hbWU9IkxheWVyIDIiPjxwYXRoIGRhdGEtbmFtZT0iUGF0aCA1MCIgZD0iTTE0LjM0NC4yMDlhLjcxNy43MTcgMCAwMDAgMS4wMTFsMy4yNzEgMy4zMjhILjcxN2EuNzE3LjcxNyAwIDAwMCAxLjQzNGgxNi44NzZsLTMuMjQ5IDMuMjQ5YS43MTguNzE4IDAgMTAxLjAxMSAxLjAxOGw0LjU2OS00LjU2OWEuNjQ1LjY0NSAwIDAwMC0uOTExTDE1LjM1NS4yMDhhLjcxNy43MTcgMCAwMC0xLjAxMSAweiIvPjwvZz48L3N2Zz4=");
   -webkit-mask-repeat: no-repeat;

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_entity_browser_images_or_video
     - field.field.paragraph.text_media.field_background_color
     - field.field.paragraph.text_media.field_media
     - field.field.paragraph.text_media.field_media_alignment
@@ -10,8 +11,8 @@ dependencies:
     - field.field.paragraph.text_media.field_vertical_alignment
     - paragraphs.paragraphs_type.text_media
   module:
+    - entity_browser
     - field_group
-    - media_library
     - text
 third_party_settings:
   field_group:
@@ -106,11 +107,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_media:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 1
     region: content
     settings:
-      media_types: {  }
+      entity_browser: media_entity_browser_images_or_video
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      field_widget_display_settings:
+        view_mode: media_entity_browser
+      selection_mode: selection_append
     third_party_settings: {  }
   field_media_alignment:
     type: options_select

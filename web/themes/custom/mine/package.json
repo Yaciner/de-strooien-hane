@@ -35,6 +35,7 @@
     "mix:production": "mix --production"
   },
   "dependencies": {
-    "headroom.js": "^0.12.0"
+    "headroom.js": "^0.12.0",
+    "lottie-web": "^5.12.2"
   }
 }

@@ -1,0 +1,83 @@
+uuid: 1359e738-a341-42c7-99ef-0027a4c6af00
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - media.type.remote_video
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+name: media_entity_browser_images_or_video
+label: 'Media entity browser: Images or video'
+display: modal
+display_configuration:
+  width: '1070'
+  height: '840'
+  link_text: 'Select image(s) or a video'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  e2d4cff9-9802-4fd5-884b-51345071020a:
+    id: dropzonejs_media_entity_inline_entity_form
+    uuid: e2d4cff9-9802-4fd5-884b-51345071020a
+    label: 'Add video'
+    weight: -7
+    settings:
+      submit_text: 'Select video'
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop your thumbnail to proceed'
+      max_filesize: 20M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: 1.0
+      resize_method: contain
+      thumbnail_method: contain
+      media_type: remote_video
+      form_mode: default
+  2b324206-2f84-47a5-aa15-e93f136c379f:
+    id: view
+    uuid: 2b324206-2f84-47a5-aa15-e93f136c379f
+    label: 'Select existing image(s)'
+    weight: -8
+    settings:
+      submit_text: 'Select image(s)'
+      auto_select: false
+      view: media_entity_browser
+      view_display: entity_browser_images
+  7e37b662-1f33-4217-8f2e-8e94bef038e3:
+    id: view
+    uuid: 7e37b662-1f33-4217-8f2e-8e94bef038e3
+    label: 'Select existing video'
+    weight: -6
+    settings:
+      submit_text: 'Select video'
+      auto_select: false
+      view: media_entity_browser
+      view_display: entity_browser_2
+  68d65c60-3c9d-4a14-af9f-17fc1aca50ca:
+    id: dropzonejs_media_entity_inline_entity_form
+    uuid: 68d65c60-3c9d-4a14-af9f-17fc1aca50ca
+    label: 'Select new image(s)'
+    weight: -10
+    settings:
+      submit_text: 'Select image(s)'
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop images here to upload them'
+      max_filesize: 2048M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: 1.0
+      resize_method: contain
+      thumbnail_method: contain
+      media_type: image
+      form_mode: default

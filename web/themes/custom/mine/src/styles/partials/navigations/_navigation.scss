@@ -7,14 +7,35 @@
 .main-menu {
   .menu__list {
     @include reset-list();
-    display: flex;
-    align-items: center;
-    gap: 3rem;
     
     .menu__item {
       a:not(.btn) {
         font-weight: 600;
         text-decoration: none;
+      }
+    }
+  }
+
+  & > .menu__list {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    & > .menu__item.menu__item--expanded {
+      position: relative;
+      @include iconize($chevron-down, 'after', $white);
+
+      & > .menu__list {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+      }
+
+      &:hover {
+        & > .menu__list {
+          display: inline-block;
+        }
       }
     }
   }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18cb1d4164ec048d7775307db3bd1bd9",
+    "content-hash": "834904f5d4277688e38922d449f6317b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1503,6 +1503,54 @@
             }
         },
         {
+            "name": "drupal/ajax_loader",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ajax_loader.git",
+                "reference": "2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ajax_loader-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "c5244d917b8c57fb20dca17351af2cbc1930fa53"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0",
+                    "datestamp": "1667919421",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mvogel",
+                    "homepage": "https://www.drupal.org/user/3319139"
+                },
+                {
+                    "name": "robin.ingelbrecht",
+                    "homepage": "https://www.drupal.org/user/2339074"
+                }
+            ],
+            "description": "Provides alternative ajax loaders/throbbers.",
+            "homepage": "https://www.drupal.org/project/ajax_loader",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ajax_loader"
+            }
+        },
+        {
             "name": "drupal/block_class",
             "version": "2.0.11",
             "source": {
@@ -2432,6 +2480,54 @@
             }
         },
         {
+            "name": "drupal/entity_type_clone",
+            "version": "4.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_type_clone.git",
+                "reference": "4.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_type_clone-4.0.3.zip",
+                "reference": "4.0.3",
+                "shasum": "684e81fcaa034bfb7a4ffdc3e81c040701fbd8b7"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.3",
+                    "datestamp": "1693947342",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ajay_reddy",
+                    "homepage": "https://www.drupal.org/user/3261994"
+                },
+                {
+                    "name": "vuil",
+                    "homepage": "https://www.drupal.org/user/3568458"
+                }
+            ],
+            "description": "This module provide option to clone entity types and role.",
+            "homepage": "https://www.drupal.org/project/entity_type_clone",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_type_clone"
+            }
+        },
+        {
             "name": "drupal/field_group",
             "version": "3.4.0",
             "source": {
@@ -2815,6 +2911,99 @@
             ]
         },
         {
+            "name": "drupal/inline_entity_form",
+            "version": "2.0.0-rc9",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/inline_entity_form.git",
+                "reference": "2.0.0-rc9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/inline_entity_form-2.0.0-rc9.zip",
+                "reference": "2.0.0-rc9",
+                "shasum": "aa3a2b086088b2819b9524b88876f0ca14f690e8"
+            },
+            "require": {
+                "drupal/core": "^9.1 || ^10",
+                "drupal/rat": "^1.0.0@rc",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "drupal/entity_reference_revisions": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-rc9",
+                    "datestamp": "1694533805",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "Centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "oknate",
+                    "homepage": "https://www.drupal.org/user/471638"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "ram4nd",
+                    "homepage": "https://www.drupal.org/user/601534"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
+            "homepage": "https://www.drupal.org/project/inline_entity_form",
+            "support": {
+                "source": "https://git.drupalcode.org/project/inline_entity_form"
+            }
+        },
+        {
             "name": "drupal/jquery_ui",
             "version": "1.6.0",
             "source": {
@@ -3186,6 +3375,39 @@
             }
         },
         {
+            "name": "drupal/rat",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rat.git",
+                "reference": "28202b02262a39ac8dbbfd43696b67c0c8c46b71"
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "drupal/core": "^9.4",
+                "drupal/core-dev": "^9.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\rat\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "gpl-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Merlin",
+                    "email": "merlin@geeks4change.net"
+                }
+            ],
+            "time": "2023-07-19T20:22:22+00:00"
+        },
+        {
             "name": "drupal/simple_sitemap",
             "version": "4.1.6",
             "source": {
@@ -3292,6 +3514,57 @@
             "homepage": "https://www.drupal.org/project/stable",
             "support": {
                 "source": "https://git.drupalcode.org/project/stable"
+            }
+        },
+        {
+            "name": "drupal/svg_image",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/svg_image.git",
+                "reference": "3.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/svg_image-3.0.2.zip",
+                "reference": "3.0.2",
+                "shasum": "77906ae731878b68a181f82b073617b798e5f110"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10",
+                "enshrined/svg-sanitize": ">=0.15 <1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.2",
+                    "datestamp": "1698471266",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Yaroslav Lushnikov",
+                    "homepage": "https://www.drupal.org/user/2870933",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/2887125/committers"
+                }
+            ],
+            "description": "Overrides the standard image formatter and widget to support SVG files.",
+            "homepage": "http://drupal.org/project/svg_image",
+            "support": {
+                "source": "http://cgit.drupalcode.org/svg_image",
+                "issues": "http://drupal.org/project/svg_image"
             }
         },
         {
@@ -3814,6 +4087,52 @@
             "time": "2022-02-21T22:40:16+00:00"
         },
         {
+            "name": "enshrined/svg-sanitize",
+            "version": "0.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darylldoyle/svg-sanitizer.git",
+                "reference": "239e257605e2141265b429e40987b2ee51bba4b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/239e257605e2141265b429e40987b2ee51bba4b4",
+                "reference": "239e257605e2141265b429e40987b2ee51bba4b4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "ezyang/htmlpurifier": "^4.16",
+                "php": "^5.6 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "enshrined\\svgSanitize\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daryll Doyle",
+                    "email": "daryll@enshrined.co.uk"
+                }
+            ],
+            "description": "An SVG sanitizer for PHP",
+            "support": {
+                "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
+                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.16.0"
+            },
+            "time": "2023-03-20T10:51:12+00:00"
+        },
+        {
             "name": "enyo/dropzone",
             "version": "5.7.2",
             "dist": {
@@ -3821,6 +4140,67 @@
                 "url": "https://github.com/enyo/dropzone/archive/v5.7.2.zip"
             },
             "type": "drupal-library"
+        },
+        {
+            "name": "ezyang/htmlpurifier",
+            "version": "v4.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezyang/htmlpurifier.git",
+                "reference": "523407fb06eb9e5f3d59889b3978d5bfe94299c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/523407fb06eb9e5f3d59889b3978d5bfe94299c8",
+                "reference": "523407fb06eb9e5f3d59889b3978d5bfe94299c8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0"
+            },
+            "require-dev": {
+                "cerdic/css-tidy": "^1.7 || ^2.0",
+                "simpletest/simpletest": "dev-master"
+            },
+            "suggest": {
+                "cerdic/css-tidy": "If you want to use the filter 'Filter.ExtractStyleBlocks'.",
+                "ext-bcmath": "Used for unit conversion and imagecrash protection",
+                "ext-iconv": "Converts text to and from non-UTF-8 encodings",
+                "ext-tidy": "Used for pretty-printing HTML"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "library/HTMLPurifier.composer.php"
+                ],
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
+                "exclude-from-classmap": [
+                    "/library/HTMLPurifier/Language/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Edward Z. Yang",
+                    "email": "admin@htmlpurifier.org",
+                    "homepage": "http://ezyang.com"
+                }
+            ],
+            "description": "Standards compliant HTML filter written in PHP",
+            "homepage": "http://htmlpurifier.org/",
+            "keywords": [
+                "html"
+            ],
+            "support": {
+                "issues": "https://github.com/ezyang/htmlpurifier/issues",
+                "source": "https://github.com/ezyang/htmlpurifier/tree/v4.16.0"
+            },
+            "time": "2022-09-18T07:06:19+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -8161,6 +8541,7 @@
         "drupal/geysir": 5,
         "drupal/gin": 5,
         "drupal/gin_toolbar": 5,
+        "drupal/inline_entity_form": 5,
         "drupal/rabbit_hole": 15,
         "drupal/webform": 5
     },

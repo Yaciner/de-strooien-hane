@@ -1,0 +1,50 @@
+uuid: 992b2643-9ea2-4c7e-9301-ab53e88d197a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.collection.field_hero
+    - field.field.node.collection.field_paragraphs
+    - field.field.node.collection.field_seo
+    - node.type.collection
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+id: node.collection.default
+targetEntityType: node
+bundle: collection
+mode: default
+content:
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_seo:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

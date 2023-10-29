@@ -1,0 +1,55 @@
+uuid: 63b2853d-54c8-4863-8b6b-1e600e4abed4
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+_core:
+  default_config_hash: FJitN5_w9L6IkS_AOWcf8sawbH1DrLitkIylnPa3JHM
+name: media_entity_browser_images
+label: 'Media entity browser: Images'
+display: modal
+display_configuration:
+  width: '1070'
+  height: '840'
+  link_text: 'Select images'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  7e375725-8df7-4c76-8408-7a29020a95fd:
+    id: view
+    uuid: 7e375725-8df7-4c76-8408-7a29020a95fd
+    label: 'Select existing image(s)'
+    weight: -8
+    settings:
+      submit_text: 'Select image(s)'
+      auto_select: false
+      view: media_entity_browser
+      view_display: entity_browser_images
+  dcb8f25b-1600-4968-a6f6-b6d5512c8015:
+    id: dropzonejs_media_entity_inline_entity_form
+    uuid: dcb8f25b-1600-4968-a6f6-b6d5512c8015
+    label: 'Select new image(s)'
+    weight: -10
+    settings:
+      submit_text: 'Select image(s)'
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop images here to upload them'
+      max_filesize: 2048M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: 1.0
+      resize_method: contain
+      thumbnail_method: contain
+      media_type: image
+      form_mode: default

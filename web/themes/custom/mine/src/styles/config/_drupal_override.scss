@@ -1,3 +1,68 @@
 ul.paragraphs-add-dialog-list .button.button--small {
   padding-left: rem(60);
 }
+
+// ==========================================================================
+// Custom AJAX loader
+// ==========================================================================
+// Overrides to create full screen faded overlay with centered throbber
+.ajax-progress.ajax-progress-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  opacity: 1;
+
+  background: rgba(white, .5);
+
+  border-radius: 0;
+
+  // Certain animations use transforms to skew, scale and rotate the throbber,
+  // so we can't use transform: translate to globally correct the offset from the center
+  // without losing those. Cheat a little for browsers without flexbox support.
+  .ajax-throbber {
+    position: absolute;
+    top: 49%;
+    left: 49%;
+  }
+
+  // Proper centering of the throbber for modern browsers.
+  @supports (display: flex) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ajax-throbber {
+      position: relative;
+      top: auto;
+      left: auto;
+    }
+  }
+}
+
+// Access to the animated elements that make up the throbber animation.
+// You could style these separately, ie. style "three bounce" you could target
+// the three circles individually to give them different shades / hues.
+.ajax-throbber {
+  &.sk-chasing-dots .sk-child,
+  &.sk-circle .sk-child::before,
+  &.sk-cube-grid .sk-cube,
+  &.sk-double-bounce .sk-child,
+  &.sk-fading-circle .sk-circle::before,
+  &.sk-folding-cube .sk-cube::before,
+  &.sk-spinner-pulse,
+  &.sk-rotating-plane,
+  &.sk-three-bounce .sk-child,
+  &.sk-wandering-cubes .sk-cube,
+  &.sk-wave .sk-rect,
+  &.sk-flow .sk-flow-dot {
+    background-color: black;
+  }
+}
+
+.ui-dialog.entity-browser-modal .ui-dialog-content > .ajax-progress-throbber {
+  display: none;
+}

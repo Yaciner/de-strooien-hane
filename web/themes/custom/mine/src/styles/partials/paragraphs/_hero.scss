@@ -1,7 +1,6 @@
 .paragraph--type--hero {
   position: relative;
   height: rem(600);
-  
 
   .hero__images {
     height: rem(600);
@@ -38,6 +37,14 @@
     h1 {
       color: $white;
     }
+  }
+
+  .lottie-cursor {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    translate: -50% 0;
+    width: 2rem;
   }
 
   &.paragraph--view-mode--large {

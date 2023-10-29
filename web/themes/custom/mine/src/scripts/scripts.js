@@ -1,4 +1,5 @@
 import Headroom from "headroom.js";
+import './lottie-animations';
 
 (function ($, Drupal) {
   'use strict';
