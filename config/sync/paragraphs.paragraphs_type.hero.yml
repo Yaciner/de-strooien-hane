@@ -1,10 +1,12 @@
 uuid: b4f3ccc8-dc39-4850-85e4-f50b5bd17216
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:701c6892-c5cb-427f-a587-c0862638bdf4'
 id: hero
 label: Hero
-icon_uuid: null
-icon_default: null
+icon_uuid: 701c6892-c5cb-427f-a587-c0862638bdf4
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDggODIiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0iI0RERCIgZD0iTTAgMGgxNDh2ODJIMHoiLz48cGF0aCBmaWxsPSIjNkQ2RDZEIiBkPSJNMCAwaDE0OHY4MkgweiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik01OS45NDkgNjAuOTExIDM0Ljk3IDM0LjE5NyAwIDgyaDE0OEw5NC45MiAxMXoiIG9wYWNpdHk9Ii4xIi8+PGcgZmlsbD0iI0ZGRiI+PHBhdGggZD0iTTIxLjUgMjZoNjF2OWgtNjF6TTIxLjUgMzloNDV2NGgtNDV6TTIxLjUgNDdoMzB2NGgtMzB6Ii8+PC9nPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xMDcgNjhoNHY0aC00eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xMTUgNjhoNHY0aC00ek0xMjMgNjhoNHY0aC00eiIgb3BhY2l0eT0iLjUiLz48L2c+PC9zdmc+'
 description: ''
 behavior_plugins: {  }

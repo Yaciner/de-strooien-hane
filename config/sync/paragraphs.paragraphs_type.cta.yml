@@ -1,10 +1,12 @@
 uuid: 5317b188-633f-4e7e-9ee2-bf4c708cbfef
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:6f21dce7-fad4-4d0b-8fa2-4c989609a50f'
 id: cta
 label: CTA
-icon_uuid: null
-icon_default: null
+icon_uuid: 6f21dce7-fad4-4d0b-8fa2-4c989609a50f
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDggODIiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0iI0RERCIgZD0iTTAgMGgxNDh2ODJIMHoiLz48cGF0aCBmaWxsPSIjOTk5IiBkPSJNMjUgMjguNWg5OHY0SDI1em05IDhoODB2NEgzNHoiLz48cGF0aCBmaWxsPSIjNjY2IiBkPSJNNjYgNDcuNWgxN3Y2SDY2eiIvPjwvZz48L3N2Zz4='
 description: ''
 behavior_plugins: {  }

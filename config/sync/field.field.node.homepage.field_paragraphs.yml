@@ -7,7 +7,6 @@ dependencies:
     - node.type.homepage
     - paragraphs.paragraphs_type.cta
     - paragraphs.paragraphs_type.form
-    - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_media
   module:
@@ -28,7 +27,6 @@ settings:
     target_bundles:
       cta: cta
       form: form
-      hero: hero
       text: text
       text_media: text_media
     negate: 0
@@ -41,7 +39,7 @@ settings:
         enabled: true
       hero:
         weight: 8
-        enabled: true
+        enabled: false
       text:
         weight: 9
         enabled: true

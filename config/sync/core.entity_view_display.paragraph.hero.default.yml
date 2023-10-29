@@ -3,47 +3,53 @@ langcode: nl
 status: true
 dependencies:
   config:
-    - field.field.paragraph.hero.field_background_color
     - field.field.paragraph.hero.field_html_title
     - field.field.paragraph.hero.field_media
+    - field.field.paragraph.hero.field_style
     - field.field.paragraph.hero.field_text
+    - image.style.pg_hero_default
     - paragraphs.paragraphs_type.hero
   module:
-    - options
+    - mine_formatters
     - text
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_background_color:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_html_title:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_media:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
     third_party_settings: {  }
     weight: 0
     region: content
-  field_text:
-    type: text_default
-    label: above
-    settings: {  }
+  field_media:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: pg_hero_default
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_style:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden: {  }

@@ -5,7 +5,8 @@
       var base_url = settings.path.baseUrl;
       var prefix = settings.path.pathPrefix;
 
-      $('video.not-loaded').once().each(function () {
+      
+      $(once('load-video', 'video.not-loaded')).each(function () {
         var video_placeholder = $(this);
         var video_id = video_placeholder.attr('data-vid');
         var video_url = base_url + prefix + 'mine-formatters/vimeo/hls?video=' + video_id;

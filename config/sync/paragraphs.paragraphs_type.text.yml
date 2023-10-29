@@ -1,10 +1,12 @@
 uuid: df8c9ef2-4eb6-4064-9010-7a7bad217872
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:e9cdbf3a-3218-4dcc-96d2-afce7104069a'
 id: text
 label: Text
-icon_uuid: null
-icon_default: null
+icon_uuid: e9cdbf3a-3218-4dcc-96d2-afce7104069a
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDggODIiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0iI0RERCIgZD0iTTAgMGgxNDh2ODJIMHoiLz48cGF0aCBmaWxsPSIjOTk5IiBkPSJNMjUgMjNoOTh2NEgyNXptMCA4aDk4djRIMjV6bTAgOGg5OHY0SDI1em0wIDhoOTh2NEgyNXptMCA4aDYydjRIMjV6Ii8+PC9nPjwvc3ZnPg=='
 description: ''
 behavior_plugins: {  }

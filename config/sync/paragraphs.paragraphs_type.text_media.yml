@@ -1,10 +1,12 @@
 uuid: cbbe9b89-ca77-4f68-9957-e69185275dd1
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:90a107a7-894e-4a07-b80b-faa7655bc50d'
 id: text_media
 label: 'Text & Media'
-icon_uuid: null
-icon_default: null
+icon_uuid: 90a107a7-894e-4a07-b80b-faa7655bc50d
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDggODIiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0iI0RERCIgZD0iTTAgMGgxNDh2ODJIMHoiLz48cGF0aCBmaWxsPSIjOTk5IiBkPSJNMjEuNSAyM2g0NXY0aC00NXptMCA4aDQ1djRoLTQ1em0wIDhoNDV2NGgtNDV6bTAgOGg0NXY0aC00NXptMCA4aDMwdjRoLTMweiIvPjxwYXRoIGZpbGw9IiM2RDZENkQiIGQ9Ik03NyAyM2g0OXYzNkg3N3oiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJtOTYuODQ4IDUxLjU3NC04LjI3LTkuNDA2TDc3IDU5aDQ5bC0xNy41NzQtMjV6IiBvcGFjaXR5PSIuNDAzIi8+PC9nPjwvc3ZnPg=='
 description: ''
 behavior_plugins: {  }

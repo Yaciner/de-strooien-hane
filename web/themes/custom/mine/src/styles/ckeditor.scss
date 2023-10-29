@@ -7,11 +7,9 @@
 // Charset
 @charset "UTF-8";
 
-// Config file that contains centralized variables
-@import "config";
-
 // Utility functions
 @import "utilities/**/*";
+@import "config";
 
 .ck-content {
   // Styling needed for ckeditor

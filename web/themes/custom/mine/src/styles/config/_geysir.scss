@@ -411,15 +411,15 @@ div[data-geysir-field-paragraph-field-wrapper="geysir-field-hero"] {
   }
 
   @include mq('l') {
-    @include flexgrid(4, '.geysir-add-type', 3%);
+    @include grid(4, '.geysir-add-type', 3%);
   }
 
   @include mq('m') {
-    @include flexgrid(3, '.geysir-add-type', 3%);
+    @include grid(3, '.geysir-add-type', 3%);
   }
 
   @include mq('s') {
-    @include flexgrid(2, '.geysir-add-type', 3%);
+    @include grid(2, '.geysir-add-type', 3%);
   }
 }
 

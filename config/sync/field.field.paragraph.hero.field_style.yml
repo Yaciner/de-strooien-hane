@@ -1,0 +1,23 @@
+uuid: 770e619c-fc7c-4235-a4d2-ebc0fbeb6023
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_style
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_style
+field_name: field_style
+entity_type: paragraph
+bundle: hero
+label: Style
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:entity_view_display'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference
