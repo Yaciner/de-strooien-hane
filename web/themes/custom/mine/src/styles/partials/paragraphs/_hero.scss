@@ -72,8 +72,10 @@
 
 body.loading {
   .hero__images {
-    scale: .8;
-    opacity: 0;
+    // scale: .8;
+    // opacity: 0;
+    scale: 1;
+    opacity: 1;
     transition: all 1s $cubic-bezier;
     transition-delay: .5s;
   }

@@ -72,6 +72,9 @@ settings:
         -
           label: 'Arrowed button'
           element: '<a class="btn btn--arrowed">'
+        -
+          label: 'Video button'
+          element: '<a class="btn--video lightbox">'
 image_upload:
   status: true
   scheme: public

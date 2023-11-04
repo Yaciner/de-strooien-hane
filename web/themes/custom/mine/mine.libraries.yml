@@ -21,6 +21,17 @@ global_scripts:
     - core/jquery
     - core/drupal
     - core/once
+    - dms_theme/fancybox
+
+fancybox:
+  version: 3.2.10
+  css:
+    theme:
+      dist/js/libs/fancybox/jquery.fancybox.min.css: { minified: true }
+  js:
+    dist/js/libs/fancybox/jquery.fancybox.min.js: { minified: true }
+  dependencies:
+    - core/jquery
 
 preloader:
   version: 1.x

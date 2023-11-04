@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.collection.field_hero
     - field.field.node.collection.field_paragraphs
     - field.field.node.collection.field_seo
+    - field.field.node.collection.field_weight
     - node.type.collection
   module:
     - entity_reference_revisions
@@ -44,7 +45,8 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
 hidden:
+  field_weight: true
   langcode: true

@@ -66,3 +66,11 @@ p {
 a {
   color: $primary;
 }
+
+.subtitle {
+  position: relative;
+  font-size: fluid(22px, 24px);
+  display: block;
+  font-family: $base-font-family;
+  font-weight: 400;
+}

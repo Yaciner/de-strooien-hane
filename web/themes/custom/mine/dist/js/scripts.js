@@ -36,7 +36,6 @@ __webpack_require__.r(__webpack_exports__);
 
   Drupal.behaviors.faq = {
     attach: function attach(context, settings) {
-      console.log('test - script');
       var accordions = Array.from(document.querySelectorAll('.field--name-field-faq-items'));
       new (accordion_js__WEBPACK_IMPORTED_MODULE_0___default())(accordions, {
         showMultiple: false,
@@ -93,6 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lottie_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lottie-animations */ "./src/scripts/lottie-animations.js");
 /* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./faq */ "./src/scripts/faq.js");
 
+// import './fancybox';
 
 
 (function ($, Drupal) {

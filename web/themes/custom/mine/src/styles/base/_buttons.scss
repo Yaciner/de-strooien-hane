@@ -36,9 +36,30 @@
 }
 
 .btn.btn--white {
-
+  background: $white;
+  color: $black;
+  @include iconize($video, 'before');
 }
 
-.btn.btn--arrowed {
+.btn--video {
+  background: $white;
+  color: $black;
 
+  position: relative;
+  display: inline-block;
+  padding: .7rem 1.6rem;
+  text-decoration: none;
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+  text-align: unset;
+
+  @include iconize($video, 'before');
+
+  &:after {
+    display: none;
+  }
+
+  &:before {
+    left: 1rem;
+  }
 }

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.collection.field_hero
     - field.field.node.collection.field_paragraphs
     - field.field.node.collection.field_seo
+    - field.field.node.collection.field_weight
     - node.type.collection
   module:
     - field_group
@@ -127,7 +128,7 @@ content:
     third_party_settings: {  }
   field_seo:
     type: metatag_firehose
-    weight: 26
+    weight: 8
     region: content
     settings:
       sidebar: true
@@ -190,4 +191,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_weight: true

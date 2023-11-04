@@ -7,8 +7,6 @@ import Accordion from 'accordion-js';
 
   Drupal.behaviors.faq = {
     attach: function (context, settings) {
-
-      console.log('test - script');
       const accordions = Array.from(document.querySelectorAll('.field--name-field-faq-items'));
       new Accordion(accordions, {
         showMultiple: false,

@@ -1,9 +1,16 @@
 @mixin iconize($icon, $position: 'after', $color: black) {
 
   @if $position == "before" {
-    padding-left: 2rem;
+    padding-left: 3rem;
+    &:before {
+      left: 0;
+    }
   } @else if $position == "after" {
-    padding-right: 2rem;
+    padding-right: 3rem;
+
+    &:after {
+      right: 0;
+    }
   }
 
   &::#{$position} {
@@ -14,8 +21,7 @@
     display: inline-block;
     width: 1.2em;
     height: 100%;
-    
-    right: 0;
+  
     top: 0;
 
     mask-image: url('data:image/svg+xml;base64,#{$icon}');

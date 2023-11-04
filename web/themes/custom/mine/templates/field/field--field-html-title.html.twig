@@ -1,0 +1,11 @@
+<div{{ attributes.addClass(classes) }}>
+{% for item in items %}
+  {% if multiple %}
+    <div{{ item.attributes.addClass('field__item') }}>
+    {{ item.content|render|striptags('<span>')|raw }}
+    </div>
+  {% else %}
+    {{ item.content|render|striptags('<span>')|raw }}
+  {% endif %}
+{% endfor %}
+</div>

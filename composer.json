@@ -43,6 +43,7 @@
         "drupal/svg_image": "^3.0",
         "drupal/twig_tweak": "^3.2",
         "drupal/webform": "6.2.0-rc2",
+        "drupal/weight": "^3.4",
         "drush/drush": "^11.5",
         "enyo/dropzone": "^5.7",
         "wikimedia/composer-merge-plugin": "^2.1"
