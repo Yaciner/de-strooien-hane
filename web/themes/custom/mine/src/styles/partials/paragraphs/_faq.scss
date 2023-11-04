@@ -1,0 +1,99 @@
+.paragraph--type--faq {
+
+  .field--name-field-faq-items {
+    border-radius: rem(10);
+    max-width: rem(600);
+    margin: 0 auto;
+  }
+
+  // styling accordion
+  .field__item {
+    position: relative;
+    box-sizing: border-box;
+
+    &:not(:last-child):after {
+      content: '';
+      position: absolute;
+      bottom: -.5rem;
+      left: 50%;
+      translate: -50% 0;
+      background-color: transparentize($primary, .9);
+      height: 1px;
+      width: 100%;
+    }
+
+    .ac-header {
+      margin: 0;
+      padding: 0;
+    }
+
+    .ac-trigger {
+      color: $primary;
+      text-align: left;
+      width: 100%;
+      padding: 1.6rem 0;
+      padding-bottom: 1rem;
+      display: block;
+      cursor: pointer;
+      background-color: transparent;
+      transition: color 0.25s ease;
+      position: relative;
+      text-decoration: none;
+      margin: 0;
+      border: 0;
+      font-size: rem(18);
+      font-weight: bold;
+      font-family: $system-font-family;
+      padding-right: 4rem;
+
+      @include iconize($chevron-down, 'after', $primary);
+
+      &:after {
+        font-size: rem(30);
+        position: absolute;
+        right: 0;
+      }
+
+    }
+
+    .ac-panel {
+      overflow: hidden;
+      transition-property: height, visibility;
+      transition-timing-function: ease;
+      padding-right: 4rem;
+      
+      .field--name-field-answer {
+        color: $primary;
+        padding-bottom: 1rem;
+        margin: 0;
+      }
+    }
+
+    &.js-enabled .ac-panel {
+      visibility: hidden;
+    }
+
+    &.is-active {
+      .ac-panel {
+        visibility: visible;
+      }
+
+      & > .ac-header .ac-trigger {
+        @include iconize($chevron-up, 'after', $primary);
+
+        &:after {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  & + .paragraph--type--faq {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: calc(#{$p_vertical_gutter} - 3rem);
+  }
+}

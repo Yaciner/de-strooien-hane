@@ -7,11 +7,10 @@ import lottie from "lottie-web";
   Drupal.behaviors.lottie_animations = {
     attach: function (context, settings) {
 
-      console.log(settings.theme_path);
-      let cursor = document.querySelector('.lottie-cursor');
+      let cursor = $(once('cursor' , '.lottie-cursor'));
 
       lottie.loadAnimation({
-        container: cursor,
+        container: $(cursor)[0],
         renderer: 'svg',
         loop: true,
         autoplay: true,

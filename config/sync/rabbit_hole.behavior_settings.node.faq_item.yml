@@ -1,0 +1,16 @@
+uuid: 8a38bc4d-f7b7-4bf9-80e3-d6e124095b8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faq_item
+id: node.faq_item
+targetEntityType: node
+bundle: faq_item
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: /<front>
+  redirect_code: 301
+  redirect_fallback_action: page_not_found

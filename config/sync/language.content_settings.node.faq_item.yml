@@ -1,0 +1,11 @@
+uuid: 216004cf-db2e-4565-91f9-1f9c77b39955
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faq_item
+id: node.faq_item
+target_entity_type_id: node
+target_bundle: faq_item
+default_langcode: current_interface
+language_alterable: true

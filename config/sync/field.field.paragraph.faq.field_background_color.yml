@@ -1,0 +1,21 @@
+uuid: 359593f8-92fa-46d4-b8b8-c17d19227aab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.faq
+  module:
+    - options
+id: paragraph.faq.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: faq
+label: 'Background color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_paragraphs
     - node.type.homepage
     - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_media
@@ -27,12 +28,16 @@ settings:
     target_bundles:
       cta: cta
       form: form
+      faq: faq
       text: text
       text_media: text_media
     negate: 0
     target_bundles_drag_drop:
       cta:
         weight: 6
+        enabled: true
+      faq:
+        weight: 8
         enabled: true
       form:
         weight: 7
