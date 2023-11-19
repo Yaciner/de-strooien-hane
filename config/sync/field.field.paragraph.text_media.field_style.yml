@@ -1,0 +1,23 @@
+uuid: 369de83e-d8bd-43b1-a394-fcb24d735303
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_style
+    - paragraphs.paragraphs_type.text_media
+id: paragraph.text_media.field_style
+field_name: field_style
+entity_type: paragraph
+bundle: text_media
+label: Style
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:entity_view_display'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

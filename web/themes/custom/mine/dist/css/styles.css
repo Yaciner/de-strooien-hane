@@ -584,6 +584,7 @@ h1 {
   font-size: clamp(2.25rem, 6.11vw + 0.42rem, 5rem);
   font-weight: 700;
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 h2, .nav__title,
@@ -858,7 +859,7 @@ a {
   padding-top: 0;
 }
 
-.pg-valign--center > .container, body:not(.path-node) .pg-valign--center > .region-content, .paragraph--type--hero .pg-valign--center > .hero__content {
+.pg-valign--middle > .container, body:not(.path-node) .pg-valign--middle > .region-content, .paragraph--type--hero .pg-valign--middle > .hero__content {
   align-items: center;
 }
 
@@ -1142,20 +1143,30 @@ body:not(.logged-in).has-hero .main-menu .menu__list .menu__item a:not(.btn) {
   left: 50%;
   translate: -50% 0;
   width: 100%;
+  color: #ffffff;
+}
+.paragraph--type--hero .hero__content .hero__content-wrapper {
+  max-width: 48.75rem;
 }
 .paragraph--type--hero .hero__content h1 {
   color: #ffffff;
 }
-.paragraph--type--hero .lottie-cursor {
+.paragraph--type--hero.paragraph--view-mode--default {
+  height: 37.5rem;
+}
+.paragraph--type--hero.paragraph--view-mode--default .lottie-cursor {
+  display: none;
+}
+.paragraph--type--hero.paragraph--view-mode--large {
+  height: 100vh;
+  height: 100svh;
+}
+.paragraph--type--hero.paragraph--view-mode--large .lottie-cursor {
   position: absolute;
   left: 50%;
   bottom: 2rem;
   translate: -50% 0;
   width: 2rem;
-}
-.paragraph--type--hero.paragraph--view-mode--large {
-  height: 100vh;
-  height: 100svh;
 }
 .paragraph--type--hero.paragraph--view-mode--large .hero__images {
   height: 100vh;
@@ -1209,6 +1220,41 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
 }
 .paragraph--type--text-media.pg--has-media-left .container, .paragraph--type--text-media.pg--has-media-left body:not(.path-node) .region-content, body:not(.path-node) .paragraph--type--text-media.pg--has-media-left .region-content, .paragraph--type--text-media.pg--has-media-left .paragraph--type--hero .hero__content, .paragraph--type--hero .paragraph--type--text-media.pg--has-media-left .hero__content {
   flex-direction: row-reverse;
+}
+.paragraph--type--text-media.paragraph--view-mode--large_media .pg-text-media__media {
+  width: 56%;
+}
+.paragraph--type--text-media.paragraph--view-mode--large_media .pg-text-media__text {
+  width: 40%;
+}
+.paragraph--type--text-media.paragraph--view-mode--full_width .container, .paragraph--type--text-media.paragraph--view-mode--full_width body:not(.path-node) .region-content, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width .region-content, .paragraph--type--text-media.paragraph--view-mode--full_width .paragraph--type--hero .hero__content, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width .hero__content {
+  padding: 0;
+  max-width: 100%;
+  justify-content: flex-end;
+}
+.paragraph--type--text-media.paragraph--view-mode--full_width .container .pg-text-media__media, .paragraph--type--text-media.paragraph--view-mode--full_width body:not(.path-node) .region-content .pg-text-media__media, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width .region-content .pg-text-media__media, .paragraph--type--text-media.paragraph--view-mode--full_width .paragraph--type--hero .hero__content .pg-text-media__media, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width .hero__content .pg-text-media__media {
+  width: 50%;
+}
+.paragraph--type--text-media.paragraph--view-mode--full_width .container .pg-text-media__text, .paragraph--type--text-media.paragraph--view-mode--full_width body:not(.path-node) .region-content .pg-text-media__text, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width .region-content .pg-text-media__text, .paragraph--type--text-media.paragraph--view-mode--full_width .paragraph--type--hero .hero__content .pg-text-media__text, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width .hero__content .pg-text-media__text {
+  max-width: 800px;
+  padding-right: 0;
+  padding-left: 2rem;
+}
+@media all and (max-width: 767px) {
+  .paragraph--type--text-media.paragraph--view-mode--full_width .container .pg-text-media__media, .paragraph--type--text-media.paragraph--view-mode--full_width body:not(.path-node) .region-content .pg-text-media__media, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width .region-content .pg-text-media__media, .paragraph--type--text-media.paragraph--view-mode--full_width .paragraph--type--hero .hero__content .pg-text-media__media, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width .hero__content .pg-text-media__media {
+    width: 100%;
+  }
+  .paragraph--type--text-media.paragraph--view-mode--full_width .container .pg-text-media__text, .paragraph--type--text-media.paragraph--view-mode--full_width body:not(.path-node) .region-content .pg-text-media__text, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width .region-content .pg-text-media__text, .paragraph--type--text-media.paragraph--view-mode--full_width .paragraph--type--hero .hero__content .pg-text-media__text, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width .hero__content .pg-text-media__text {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .container, .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right body:not(.path-node) .region-content, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .region-content, .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .paragraph--type--hero .hero__content, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .hero__content {
+  justify-content: flex-end;
+}
+.paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .container .pg-text-media__text, .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right body:not(.path-node) .region-content .pg-text-media__text, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .region-content .pg-text-media__text, .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .paragraph--type--hero .hero__content .pg-text-media__text, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .hero__content .pg-text-media__text {
+  padding-right: 2rem;
+  padding-left: 0;
 }
 
 #main {

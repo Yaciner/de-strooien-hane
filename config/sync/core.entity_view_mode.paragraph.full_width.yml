@@ -1,0 +1,10 @@
+uuid: 408c4e60-7c5a-4a99-a622-45542295c024
+langcode: nl
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.full_width
+label: 'Full width'
+targetEntityType: paragraph
+cache: true

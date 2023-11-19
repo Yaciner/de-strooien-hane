@@ -1,8 +1,9 @@
-uuid: 8d643610-3873-48ff-aae4-9402f2578b9e
+uuid: f14aa61f-9b33-436c-a4bf-85314d855bf7
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.full_width
     - field.field.paragraph.text_media.field_background_color
     - field.field.paragraph.text_media.field_media
     - field.field.paragraph.text_media.field_media_alignment
@@ -14,10 +15,10 @@ dependencies:
   module:
     - mine_formatters
     - text
-id: paragraph.text_media.default
+id: paragraph.text_media.full_width
 targetEntityType: paragraph
 bundle: text_media
-mode: default
+mode: full_width
 content:
   field_media:
     type: unveil_image

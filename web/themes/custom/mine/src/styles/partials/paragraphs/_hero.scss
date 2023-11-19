@@ -33,23 +33,36 @@
     left: 50%;
     translate: -50% 0;
     width: 100%;
+    color: $white;
+
+    .hero__content-wrapper {
+      max-width: rem(780);
+    }
 
     h1 {
       color: $white;
     }
   }
 
-  .lottie-cursor {
-    position: absolute;
-    left: 50%;
-    bottom: 2rem;
-    translate: -50% 0;
-    width: 2rem;
+  &.paragraph--view-mode--default {
+    height: rem(600);
+
+    .lottie-cursor {
+      display: none;
+    }
   }
 
   &.paragraph--view-mode--large {
     height: 100vh;
     height: 100svh;
+
+    .lottie-cursor {
+      position: absolute;
+      left: 50%;
+      bottom: 2rem;
+      translate: -50% 0;
+      width: 2rem;
+    }
 
     .hero__images {
       height: 100vh;
@@ -72,8 +85,6 @@
 
 body.loading {
   .hero__images {
-    // scale: .8;
-    // opacity: 0;
     scale: 1;
     opacity: 1;
     transition: all 1s $cubic-bezier;

@@ -32,4 +32,9 @@ function mine_preprocess_paragraph(&$variables) {
     $variables['attributes']['class'][] = 'has-background';
     $variables['attributes']['class'][] = 'pg-bg--' . Html::getClass($background);
   }
+
+  if (!empty($paragraph->field_vertical_alignment->value)) {
+    $variables['attributes']['class'][] = 'pg-valign--' . Html::getClass($paragraph->field_vertical_alignment->value);
+    unset($variables['content']['field_vertical_alignment']);
+  }
 }

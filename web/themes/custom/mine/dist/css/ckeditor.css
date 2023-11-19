@@ -534,6 +534,7 @@ ul.paragraphs-add-dialog-list .button.button--small {
   font-size: clamp(2.25rem, 6.11vw + 0.42rem, 5rem);
   font-weight: 700;
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 .ck-content h2, .ck-content .nav__title,
 .ck-content .menu__title,

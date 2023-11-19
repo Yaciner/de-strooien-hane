@@ -1,8 +1,9 @@
-uuid: 8d643610-3873-48ff-aae4-9402f2578b9e
+uuid: 49d24d10-10e4-4786-b037-bc5d177340c8
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.large_media
     - field.field.paragraph.text_media.field_background_color
     - field.field.paragraph.text_media.field_media
     - field.field.paragraph.text_media.field_media_alignment
@@ -14,10 +15,10 @@ dependencies:
   module:
     - mine_formatters
     - text
-id: paragraph.text_media.default
+id: paragraph.text_media.large_media
 targetEntityType: paragraph
 bundle: text_media
-mode: default
+mode: large_media
 content:
   field_media:
     type: unveil_image
