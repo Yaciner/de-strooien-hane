@@ -1,0 +1,35 @@
+uuid: 9c416a66-bd73-4fca-a389-86e6482593fc
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.form.field_background_color
+    - field.field.paragraph.form.field_form
+    - field.field.paragraph.form.field_intro
+    - paragraphs.paragraphs_type.form
+  module:
+    - text
+    - webform
+id: paragraph.form.default
+targetEntityType: paragraph
+bundle: form
+mode: default
+content:
+  field_form:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: false
+      lazy: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_background_color: true

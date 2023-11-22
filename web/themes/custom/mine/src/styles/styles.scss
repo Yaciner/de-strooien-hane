@@ -7,9 +7,30 @@
 // Charset
 @charset "UTF-8";
 
-// Utility functions
+@import '~bootstrap/scss/functions';
+
+// Config file that contains centralized variables
 @import "utilities/**/*";
 @import "config";
+
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/variables-dark';
+
+@import '~bootstrap/scss/maps';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/forms/form-control';
+@import '~bootstrap/scss/forms/form-select';
+@import '~bootstrap/scss/forms/form-check';
+@import '~bootstrap/scss/forms/validation';
+@import '~bootstrap/scss/alert';
+@import '~bootstrap/scss/pagination';
+
+
+// Utility functions
 
 // Base styling
 @import "base/breakpoint-dev";
