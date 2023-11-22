@@ -1,0 +1,25 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{% set body = content|without('field_paragraphs')|render %}
+<article{{ attributes.addClass(classes) }}>
+  {{ content.field_teaser_image }}
+
+  <main{{ content_attributes.addClass('node--teaser__content') }}>
+    <h3{{ title_attributes.addClass('node--teaser__title') }}>
+      <a href="{{ url }}" rel="bookmark">
+        {{ label }}
+      </a>
+    </h3>
+
+    {{ content|without('field_teaser_image') }}
+  </main>
+</article>

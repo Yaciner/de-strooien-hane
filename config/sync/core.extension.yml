@@ -48,6 +48,7 @@ module:
   metatag: 0
   mine_dev: 0
   mine_formatters: 0
+  mine_paragraphs: 0
   mysql: 0
   node: 0
   options: 0

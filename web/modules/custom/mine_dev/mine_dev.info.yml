@@ -1,6 +1,6 @@
 name: 'Mine dev'
 type: module
 description: 'Mine snippets'
-package: DMS
+package: MINE
 
 core_version_requirement: ^10

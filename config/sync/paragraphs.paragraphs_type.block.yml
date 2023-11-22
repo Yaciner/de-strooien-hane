@@ -1,0 +1,12 @@
+uuid: 0c6dae30-32ec-428c-80d4-b39407686f4f
+langcode: nl
+status: true
+dependencies:
+  content:
+    - 'file:file:70eab9a4-d66a-4805-92cd-5d865dacf104'
+id: block
+label: Block
+icon_uuid: 70eab9a4-d66a-4805-92cd-5d865dacf104
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDggODIiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0iI0RERCIgZD0iTTAgMGgxNDh2ODJIMHoiLz48cGF0aCBmaWxsPSIjNkQ2RDZEIiBkPSJNMjMgMjVoMTAydjMySDIzeiIvPjwvZz48L3N2Zz4='
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: f90da116-3d18-485e-ba0b-8283e66a41c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_html_id
+    - paragraphs.paragraphs_type.form
+id: paragraph.form.field_html_id
+field_name: field_html_id
+entity_type: paragraph
+bundle: form
+label: 'Paragraph ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

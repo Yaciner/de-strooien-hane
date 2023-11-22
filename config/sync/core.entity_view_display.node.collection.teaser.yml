@@ -1,0 +1,40 @@
+uuid: c395d3d0-ae32-4c2d-a15a-12623340f484
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.collection.field_hero
+    - field.field.node.collection.field_media
+    - field.field.node.collection.field_paragraphs
+    - field.field.node.collection.field_seo
+    - field.field.node.collection.field_weight
+    - node.type.collection
+  module:
+    - mine_formatters
+    - user
+id: node.collection.teaser
+targetEntityType: node
+bundle: collection
+mode: teaser
+content:
+  field_media:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_link_image_style: ''
+      image_only: false
+      image_style: ''
+      image_link: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_hero: true
+  field_paragraphs: true
+  field_seo: true
+  field_weight: true
+  langcode: true
+  links: true

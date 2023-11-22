@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.collection.field_hero
+    - field.field.node.collection.field_media
     - field.field.node.collection.field_paragraphs
     - field.field.node.collection.field_seo
     - field.field.node.collection.field_weight
     - node.type.collection
   module:
     - entity_reference_revisions
-    - metatag
     - user
 id: node.collection.default
 targetEntityType: node
@@ -35,18 +35,9 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_seo:
-    type: metatag_empty_formatter
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
 hidden:
+  field_media: true
+  field_seo: true
   field_weight: true
   langcode: true
+  links: true

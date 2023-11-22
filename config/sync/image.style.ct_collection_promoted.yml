@@ -1,0 +1,17 @@
+uuid: 4180a4ff-e709-4690-b694-970778d13ac7
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: ct_collection_promoted
+label: 'CT: Collection: Promoted'
+effects:
+  79f1c26d-85c6-4450-a277-5d4c232f2223:
+    uuid: 79f1c26d-85c6-4450-a277-5d4c232f2223
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1080
+      height: 800
+      crop_type: focal_point

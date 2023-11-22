@@ -5,6 +5,7 @@ dependencies:
   config:
     - entity_browser.browser.media_entity_browser_images_or_video
     - field.field.paragraph.text_media.field_background_color
+    - field.field.paragraph.text_media.field_html_id
     - field.field.paragraph.text_media.field_media
     - field.field.paragraph.text_media.field_media_alignment
     - field.field.paragraph.text_media.field_style
@@ -37,6 +38,7 @@ third_party_settings:
     group_options:
       children:
         - status
+        - field_html_id
       label: Options
       region: content
       parent_name: group_tabs
@@ -107,6 +109,14 @@ content:
     weight: 12
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_html_id:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_media:
     type: entity_browser_entity_reference

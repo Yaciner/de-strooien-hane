@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.form.field_background_color
     - field.field.paragraph.form.field_form
+    - field.field.paragraph.form.field_html_id
     - field.field.paragraph.form.field_intro
     - paragraphs.paragraphs_type.form
   module:
@@ -33,3 +34,4 @@ content:
     region: content
 hidden:
   field_background_color: true
+  field_html_id: true

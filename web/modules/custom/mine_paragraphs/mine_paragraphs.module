@@ -1,0 +1,85 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\paragraphs\ParagraphInterface;
+
+function mine_paragraphs_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+  $user = \Drupal::currentUser();
+  $container_attributes = [
+    'class' => [
+      'paragraph__inner',
+      'container'
+    ]
+  ];
+
+  // Section ID
+  if(!empty($paragraph->field_html_id->value)) {
+    $variables['attributes']['id'] = Html::getId($paragraph->field_html_id->value);
+
+    if ($user->hasPermission('display paragraph ids')) {
+      $variables['show_html_id'] = TRUE;
+      $variables['#attached']['library'][] = 'mine_paragraphs/general';
+    }
+  }
+
+  if (!empty($paragraph->field_container_width->value)) {
+    $container_attributes['class'][] = Html::getClass('container-' . $paragraph->field_container_width->value);
+  }
+
+  $variables['container_attributes'] = new Attribute($container_attributes);
+
+  // Unpublished
+  if (!$paragraph->isPublished()) {
+    $variables['attributes']['class'][] = 'paragraph--unpublished';
+    $variables['attributes']['data-unpublished'] = t('Unpublished');
+    $variables['#attached']['library'][] = 'mine_paragraphs/general';
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ *
+ * @param \Drupal\Core\Field\BaseFieldDefinition[] $fields
+ */
+function mine_paragraphs_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+  if ($entity_type->id() === 'paragraph') {
+    $fields['langcode']->setDefaultValueCallback('_mine_paragraphs_paragraph_default_langcode');
+  }
+}
+
+function _mine_paragraphs_paragraph_default_langcode() {
+  return \Drupal::languageManager()->getCurrentLanguage()->getId();
+}
+
+/**
+ * Add translation for all languages.
+ * Fixes bug #206 when paragraph is not added to the source language in the backoffice.
+ */
+function mine_paragraphs_paragraph_insert(ParagraphInterface $paragraph) {
+    // Retrieve all languages.
+    $languages = \Drupal::languageManager()->getLanguages();
+    foreach ($languages as $language) {
+        // Check if paragraph has translation.
+        if (!$paragraph->hasTranslation($language->getId())) {
+            // Add translation.
+            $paragraph->addTranslation($language->getId(), $paragraph->toArray());
+            $paragraphT = $paragraph->getTranslation($language->getId());
+            $paragraphT->save();
+        }
+    }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function mine_paragraphs_page_attachments(array &$attachments) {
+    $theme = \Drupal::theme()->getActiveTheme()->getName();
+    if ($theme == 'gin') {
+        $attachments['#attached']['library'][] = 'mine_paragraphs/gin';
+    }
+}
+

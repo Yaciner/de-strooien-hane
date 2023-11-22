@@ -1,0 +1,10 @@
+name: 'Mine paragraphs'
+version: VERSION
+type: module
+description: 'Mine paragraphs snippets'
+package: Mine
+
+dependencies:
+  - paragraphs:paragraphs
+
+core_version_requirement: ^10

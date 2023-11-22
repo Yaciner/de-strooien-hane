@@ -1,0 +1,23 @@
+uuid: 2631dfa5-c268-47b8-b24e-44840c64c8c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_to_embed
+    - paragraphs.paragraphs_type.block
+id: paragraph.block.field_block_to_embed
+field_name: field_block_to_embed
+entity_type: paragraph
+bundle: block
+label: 'Block to embed'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: blocks
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+field_type: entity_reference

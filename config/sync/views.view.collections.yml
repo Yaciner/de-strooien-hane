@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.promoted
+    - core.entity_view_mode.node.teaser
     - node.type.collection
     - system.menu.admin
   module:
@@ -190,7 +192,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -213,6 +218,22 @@ display:
       tags: {  }
   block_1:
     id: block_1
+    display_title: Master
+    display_plugin: block
+    position: 1
+    display_options:
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  overview:
+    id: overview
     display_title: Overview
     display_plugin: block
     position: 1
@@ -227,8 +248,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_2:
-    id: block_2
+  promoted:
+    id: promoted
     display_title: Promoted
     display_plugin: block
     position: 2
@@ -298,7 +319,17 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: promoted
       defaults:
+        style: false
+        row: false
         filters: false
         filter_groups: false
       display_description: ''
@@ -311,8 +342,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
-    id: page_1
+  sorting:
+    id: sorting
     display_title: Sorting
     display_plugin: page
     position: 3

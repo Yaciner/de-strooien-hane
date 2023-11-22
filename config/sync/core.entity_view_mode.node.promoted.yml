@@ -1,0 +1,10 @@
+uuid: e93c3e8f-8073-4509-a4fe-200e5847c697
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.promoted
+label: Promoted
+targetEntityType: node
+cache: true

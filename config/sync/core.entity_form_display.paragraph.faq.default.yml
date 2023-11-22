@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.faq.field_background_color
     - field.field.paragraph.faq.field_faq_items
+    - field.field.paragraph.faq.field_html_id
     - paragraphs.paragraphs_type.faq
   module:
     - field_group
@@ -44,6 +45,7 @@ third_party_settings:
     group_options:
       children:
         - status
+        - field_html_id
       label: Options
       region: content
       parent_name: group_tabs
@@ -89,6 +91,14 @@ content:
     settings:
       match_operator: CONTAINS
       match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_html_id:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }

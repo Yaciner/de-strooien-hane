@@ -1,0 +1,56 @@
+
+.paragraph .html-id {
+  display: block;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #FFF;
+  background-color: #000;
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.copied-text--message{
+  display: inline-block;
+  padding: 8px 12px;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 9999;
+  transform: translateX(-50%) translateY(-50%);
+  user-select: none;
+}
+
+.paragraph--unpublished {
+  position: relative;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff4f4 0px,
+    #fff4f4 20px,
+    #fff7f7 20px,
+    #fff7f7 40px
+  ) !important;
+}
+
+.paragraph--unpublished::before {
+  content: attr(data-unpublished);
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  display: block;
+  padding: .5rem 1rem;
+  color: #FFF;
+  background-color: rgba(255, 0, 0, 0.567);
+
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

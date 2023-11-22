@@ -1,0 +1,31 @@
+uuid: 895f5c76-f775-4371-b8e2-cb0a586d2191
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media.type.image
+    - media.type.remote_video
+    - node.type.collection
+id: node.collection.field_media
+field_name: field_media
+entity_type: node
+bundle: collection
+label: 'Teaser image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

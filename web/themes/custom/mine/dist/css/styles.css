@@ -1,6 +1,6 @@
 @charset "UTF-8";
 ul.paragraphs-add-dialog-list .button.button--small {
-  padding-left: 60px;
+  padding-left: 3.75rem;
 }
 
 .ajax-progress.ajax-progress-fullscreen {

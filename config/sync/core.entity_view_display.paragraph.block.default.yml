@@ -1,0 +1,36 @@
+uuid: da351850-634b-4048-bcca-c2194f7ebec9
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block.field_background_color
+    - field.field.paragraph.block.field_block_to_embed
+    - field.field.paragraph.block.field_html_id
+    - field.field.paragraph.block.field_intro
+    - paragraphs.paragraphs_type.block
+  module:
+    - text
+id: paragraph.block.default
+targetEntityType: paragraph
+bundle: block
+mode: default
+content:
+  field_block_to_embed:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_background_color: true
+  field_html_id: true

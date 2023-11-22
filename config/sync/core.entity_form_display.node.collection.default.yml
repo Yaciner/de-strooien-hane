@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_entity_browser_images_or_video
     - field.field.node.collection.field_hero
+    - field.field.node.collection.field_media
     - field.field.node.collection.field_paragraphs
     - field.field.node.collection.field_seo
     - field.field.node.collection.field_weight
     - node.type.collection
   module:
+    - entity_browser
     - field_group
     - metatag
     - paragraphs
@@ -21,7 +24,7 @@ third_party_settings:
       label: Hero
       region: content
       parent_name: group_basic_page
-      weight: 14
+      weight: 1
       format_type: tab
       format_settings:
         classes: ''
@@ -34,6 +37,7 @@ third_party_settings:
       children:
         - group_general
         - group_hero
+        - group_teaser
         - group_content
       label: Colletion
       region: content
@@ -68,7 +72,22 @@ third_party_settings:
       label: Content
       region: content
       parent_name: group_basic_page
-      weight: 15
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_teaser:
+      children:
+        - field_media
+      label: Teaser
+      region: content
+      parent_name: group_basic_page
+      weight: 2
       format_type: tab
       format_settings:
         classes: ''
@@ -84,7 +103,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -107,6 +126,21 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_media:
+    type: entity_browser_entity_reference
+    weight: 2
+    region: content
+    settings:
+      entity_browser: media_entity_browser_images_or_video
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      field_widget_display_settings:
+        view_mode: media_entity_browser
+      selection_mode: selection_append
+    third_party_settings: {  }
   field_paragraphs:
     type: paragraphs
     weight: 11
@@ -128,7 +162,7 @@ content:
     third_party_settings: {  }
   field_seo:
     type: metatag_firehose
-    weight: 8
+    weight: 9
     region: content
     settings:
       sidebar: true
@@ -143,32 +177,32 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true

@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{% set body = content|without('field_paragraphs')|render %}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="node__hero">
+    {{ content.field_hero }}
+  </div>
+  <div class="node__content">
+    {% if body %}
+      <div class="container">
+        {{ content|without('field_paragraphs', 'field_hero') }}
+      </div>
+    {% endif %}
+
+    {{ content.field_paragraphs }}
+  </div>
+</article>

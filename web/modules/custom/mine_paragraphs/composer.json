@@ -1,0 +1,8 @@
+{
+  "name": "mine/paragraphs",
+  "type": "drupal-module",
+  "description": "Contains snippets for paragraph module",
+  "keywords": ["Drupal"],
+  "license": "proprietary",
+  "minimum-stability": "stable"
+}

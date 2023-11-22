@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.collection
+    - paragraphs.paragraphs_type.block
     - paragraphs.paragraphs_type.cta
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.hero
@@ -28,14 +29,21 @@ settings:
     target_bundles:
       cta: cta
       form: form
+      block: block
       hero: hero
       text: text
       text_media: text_media
     negate: 0
     target_bundles_drag_drop:
+      block:
+        weight: 8
+        enabled: true
       cta:
         weight: 6
         enabled: true
+      faq:
+        weight: 10
+        enabled: false
       form:
         weight: 7
         enabled: true

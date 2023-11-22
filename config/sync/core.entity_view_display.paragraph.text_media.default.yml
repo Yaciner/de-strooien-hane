@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_media.field_background_color
+    - field.field.paragraph.text_media.field_html_id
     - field.field.paragraph.text_media.field_media
     - field.field.paragraph.text_media.field_media_alignment
     - field.field.paragraph.text_media.field_style
@@ -41,6 +42,7 @@ content:
     region: content
 hidden:
   field_background_color: true
+  field_html_id: true
   field_media_alignment: true
   field_style: true
   field_vertical_alignment: true

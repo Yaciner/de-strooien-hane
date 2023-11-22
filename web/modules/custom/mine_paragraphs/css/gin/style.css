@@ -1,0 +1,10 @@
+ul.paragraphs-add-dialog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 630px;
+}
+ul.paragraphs-add-dialog-list li input.field-add-more-submit {
+  background-size: 20px auto;
+}
+

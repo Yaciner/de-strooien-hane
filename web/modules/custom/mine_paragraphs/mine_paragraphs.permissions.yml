@@ -1,0 +1,4 @@
+display paragraph ids:
+  title: 'Display paragraph ids'
+  description: 'Displays the paragraph ID for each paragraph'
+  restrict access: TRUE
