@@ -10,8 +10,8 @@
   text-align: unset;
   translate: 0px 0;
   transition: all .4s $cubic-bezier;
-
   @include iconize($long-arrow-right, 'after', $white);
+  padding-right: 2rem;
   
 
   &:after {

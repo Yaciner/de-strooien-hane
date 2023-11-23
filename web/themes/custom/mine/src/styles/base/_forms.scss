@@ -1,0 +1,153 @@
+//------------------------------------------------------------------------------
+// FORMS.SCSS
+// Basic styling for forms.
+//------------------------------------------------------------------------------
+
+.webform-submission-form {
+  // max-width: rem(500);
+  // margin: 0 auto;
+  max-width: rem(768);
+
+  fieldset {
+    padding: 0;
+    margin: 0 0 rem(25) 0;
+    border: none;
+
+    legend {
+      padding: 0;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+
+  .description {
+    display: block;
+    font-size: 80%;
+  }
+}
+
+.captcha,
+.form-item {
+  margin: 0 0 rem(10);
+}
+
+label {
+  font-size: rem(13);
+  font-weight: bold;
+
+  &.form-required {
+    &::after {
+      content: ' *';
+      font-size: 80%;
+      line-height: 0;
+      vertical-align: super;
+    }
+  }
+
+  &.error {
+    width: 100%;
+    text-align: right;
+    color: $red;
+  }
+
+  .webform-element-help {
+    width: rem(20);
+    height: rem(20);
+    line-height: 1.125;
+
+    &:hover {
+      background: red;
+      border-color: red;
+    }
+  }
+}
+
+.description {
+  font-size: 80%;
+  color: rgba(black, 0.5);
+}
+
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="search"],
+input[type="number"],
+input[type="password"],
+input[type="file"],
+textarea {
+  @extend .form-control;
+
+  &.error {
+    @extend .is-invalid;
+  }
+
+  &::placeholder {
+    color: $gray-600;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  @extend .form-select;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.js-form-type-checkbox,
+.js-form-type-radio {
+  @extend .form-check;
+
+  input {
+    @extend .form-check-input;
+  }
+
+  label {
+    @extend .form-check-label;
+    font-size: $base-font-size;
+    font-weight: 400;
+  }
+}
+
+.submit-wrapper {
+  @extend .btn;
+  @extend .btn-primary;
+  
+  input[type="submit"] {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+    color: $white;
+  }
+}
+
+// Captcha
+.captcha {
+  display: block;
+
+  @include mq(s) {
+    transform: scale(.9);
+    transform-origin: 0 0;
+  }
+}
+
+// Recaptcha
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.recaptcha-v3-policy {
+  display: block;
+  width: 100%;
+  font-size: .85em;
+  font-style: italic;
+  opacity: .85;
+  margin-top: .5rem;
+}

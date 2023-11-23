@@ -1022,7 +1022,7 @@ progress {
   display: none !important;
 }
 
-.btn {
+.btn, .submit-wrapper {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -1058,41 +1058,41 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, .submit-wrapper {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, .submit-wrapper:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover {
+.btn-check + .btn:hover, .btn-check + .submit-wrapper:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible {
+.btn:focus-visible, .submit-wrapper:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn {
+.btn-check:focus-visible + .btn, .btn-check:focus-visible + .submit-wrapper {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+.btn-check:checked + .btn, .btn-check:checked + .submit-wrapper, :not(.btn-check) + .btn:active, :not(.btn-check) + .submit-wrapper:active, .btn:first-child:active, .submit-wrapper:first-child:active, .btn.active, .active.submit-wrapper, .btn.show, .show.submit-wrapper {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+.btn-check:checked + .btn:focus-visible, .btn-check:checked + .submit-wrapper:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .submit-wrapper:active:focus-visible, .btn:first-child:active:focus-visible, .submit-wrapper:first-child:active:focus-visible, .btn.active:focus-visible, .active.submit-wrapper:focus-visible, .btn.show:focus-visible, .show.submit-wrapper:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+.btn:disabled, .submit-wrapper:disabled, .btn.disabled, .disabled.submit-wrapper, fieldset:disabled .btn, fieldset:disabled .submit-wrapper {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -1100,7 +1100,7 @@ progress {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary {
+.btn-primary, .submit-wrapper {
   --bs-btn-color: #ffffff;
   --bs-btn-bg: #000000;
   --bs-btn-border-color: #000000;
@@ -1408,10 +1408,19 @@ progress {
   --bs-btn-border-radius: var(--bs-border-radius-sm);
 }
 
-.form-control {
+.form-control, input[type=tel],
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=date],
+input[type=search],
+input[type=number],
+input[type=password],
+input[type=file],
+textarea {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 8px 0.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -1421,52 +1430,119 @@ progress {
           appearance: none;
   background-color: var(--bs-body-bg);
   background-clip: padding-box;
-  border: var(--bs-border-width) solid var(--bs-border-color);
-  border-radius: var(--bs-border-radius);
+  border: var(--bs-border-width) solid #000000;
+  border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control {
+  .form-control, input[type=tel],
+  input[type=text],
+  input[type=email],
+  input[type=url],
+  input[type=date],
+  input[type=search],
+  input[type=number],
+  input[type=password],
+  input[type=file],
+  textarea {
     transition: none;
   }
 }
-.form-control[type=file] {
+.form-control[type=file],
+input[type=file],
+textarea[type=file] {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]) {
+.form-control[type=file]:not(:disabled):not([readonly]),
+input[type=file]:not(:disabled):not([readonly]),
+textarea[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control:focus {
+.form-control:focus, input[type=tel]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=date]:focus,
+input[type=search]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=file]:focus,
+textarea:focus {
   color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
   border-color: gray;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
 }
-.form-control::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value, input[type=tel]::-webkit-date-and-time-value,
+input[type=text]::-webkit-date-and-time-value,
+input[type=email]::-webkit-date-and-time-value,
+input[type=url]::-webkit-date-and-time-value,
+input[type=date]::-webkit-date-and-time-value,
+input[type=search]::-webkit-date-and-time-value,
+input[type=number]::-webkit-date-and-time-value,
+input[type=password]::-webkit-date-and-time-value,
+input[type=file]::-webkit-date-and-time-value,
+textarea::-webkit-date-and-time-value {
   min-width: 85px;
   height: 1.5em;
   margin: 0;
 }
-.form-control::-webkit-datetime-edit {
+.form-control::-webkit-datetime-edit, input[type=tel]::-webkit-datetime-edit,
+input[type=text]::-webkit-datetime-edit,
+input[type=email]::-webkit-datetime-edit,
+input[type=url]::-webkit-datetime-edit,
+input[type=date]::-webkit-datetime-edit,
+input[type=search]::-webkit-datetime-edit,
+input[type=number]::-webkit-datetime-edit,
+input[type=password]::-webkit-datetime-edit,
+input[type=file]::-webkit-datetime-edit,
+textarea::-webkit-datetime-edit {
   display: block;
   padding: 0;
 }
-.form-control::-moz-placeholder {
+.form-control::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=file]::-moz-placeholder, textarea::-moz-placeholder {
   color: var(--bs-secondary-color);
   opacity: 1;
 }
-.form-control::placeholder {
+.form-control::placeholder, input[type=tel]::placeholder,
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=url]::placeholder,
+input[type=date]::placeholder,
+input[type=search]::placeholder,
+input[type=number]::placeholder,
+input[type=password]::placeholder,
+input[type=file]::placeholder,
+textarea::placeholder {
   color: var(--bs-secondary-color);
   opacity: 1;
 }
-.form-control:disabled {
+.form-control:disabled, input[type=tel]:disabled,
+input[type=text]:disabled,
+input[type=email]:disabled,
+input[type=url]:disabled,
+input[type=date]:disabled,
+input[type=search]:disabled,
+input[type=number]:disabled,
+input[type=password]:disabled,
+input[type=file]:disabled,
+textarea:disabled {
   background-color: var(--bs-secondary-bg);
   opacity: 1;
 }
-.form-control::file-selector-button {
-  padding: 0.375rem 0.75rem;
-  margin: -0.375rem -0.75rem;
+.form-control::file-selector-button, input[type=tel]::file-selector-button,
+input[type=text]::file-selector-button,
+input[type=email]::file-selector-button,
+input[type=url]::file-selector-button,
+input[type=date]::file-selector-button,
+input[type=search]::file-selector-button,
+input[type=number]::file-selector-button,
+input[type=password]::file-selector-button,
+input[type=file]::file-selector-button,
+textarea::file-selector-button {
+  padding: 8px 0.75rem;
+  margin: -8px -0.75rem;
   -webkit-margin-end: 0.75rem;
           margin-inline-end: 0.75rem;
   color: var(--bs-body-color);
@@ -1480,18 +1556,36 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::file-selector-button {
+  .form-control::file-selector-button, input[type=tel]::file-selector-button,
+  input[type=text]::file-selector-button,
+  input[type=email]::file-selector-button,
+  input[type=url]::file-selector-button,
+  input[type=date]::file-selector-button,
+  input[type=search]::file-selector-button,
+  input[type=number]::file-selector-button,
+  input[type=password]::file-selector-button,
+  input[type=file]::file-selector-button,
+  textarea::file-selector-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, input[type=tel]:hover:not(:disabled):not([readonly])::file-selector-button,
+input[type=text]:hover:not(:disabled):not([readonly])::file-selector-button,
+input[type=email]:hover:not(:disabled):not([readonly])::file-selector-button,
+input[type=url]:hover:not(:disabled):not([readonly])::file-selector-button,
+input[type=date]:hover:not(:disabled):not([readonly])::file-selector-button,
+input[type=search]:hover:not(:disabled):not([readonly])::file-selector-button,
+input[type=number]:hover:not(:disabled):not([readonly])::file-selector-button,
+input[type=password]:hover:not(:disabled):not([readonly])::file-selector-button,
+input[type=file]:hover:not(:disabled):not([readonly])::file-selector-button,
+textarea:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: var(--bs-secondary-bg);
 }
 
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding: 0.375rem 0;
+  padding: 8px 0;
   margin-bottom: 0;
   line-height: 1.5;
   color: var(--bs-body-color);
@@ -1533,8 +1627,9 @@ progress {
           margin-inline-end: 1rem;
 }
 
-textarea.form-control {
-  min-height: calc(1.5em + 0.75rem + calc(var(--bs-border-width) * 2));
+textarea.form-control,
+textarea {
+  min-height: calc(1.5em + 16px + calc(var(--bs-border-width) * 2));
 }
 textarea.form-control-sm {
   min-height: calc(1.5em + 0.5rem + calc(var(--bs-border-width) * 2));
@@ -1545,19 +1640,19 @@ textarea.form-control-lg {
 
 .form-control-color {
   width: 3rem;
-  height: calc(1.5em + 0.75rem + calc(var(--bs-border-width) * 2));
-  padding: 0.375rem;
+  height: calc(1.5em + 16px + calc(var(--bs-border-width) * 2));
+  padding: 8px;
 }
 .form-control-color:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 .form-control-color::-moz-color-swatch {
   border: 0 !important;
-  border-radius: var(--bs-border-radius);
+  border-radius: 0.375rem;
 }
 .form-control-color::-webkit-color-swatch {
   border: 0 !important;
-  border-radius: var(--bs-border-radius);
+  border-radius: 0.375rem;
 }
 .form-control-color.form-control-sm {
   height: calc(1.5em + 0.5rem + calc(var(--bs-border-width) * 2));
@@ -1566,11 +1661,11 @@ textarea.form-control-lg {
   height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
 }
 
-.form-select {
+.form-select, select {
   --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   display: block;
   width: 100%;
-  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  padding: 8px 2.25rem 8px 0.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -1583,28 +1678,28 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  border: var(--bs-border-width) solid var(--bs-border-color);
-  border-radius: var(--bs-border-radius);
+  border: var(--bs-border-width) solid #000000;
+  border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-select {
+  .form-select, select {
     transition: none;
   }
 }
-.form-select:focus {
+.form-select:focus, select:focus {
   border-color: gray;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
 }
-.form-select[multiple], .form-select[size]:not([size="1"]) {
+.form-select[multiple], select[multiple], .form-select[size]:not([size="1"]), select[size]:not([size="1"]) {
   padding-right: 0.75rem;
   background-image: none;
 }
-.form-select:disabled {
+.form-select:disabled, select:disabled {
   background-color: var(--bs-secondary-bg);
 }
-.form-select:-moz-focusring {
+.form-select:-moz-focusring, select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 var(--bs-body-color);
 }
@@ -1625,17 +1720,20 @@ textarea.form-control-lg {
   border-radius: var(--bs-border-radius-lg);
 }
 
-[data-bs-theme=dark] .form-select {
+[data-bs-theme=dark] .form-select, [data-bs-theme=dark] select {
   --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 
-.form-check {
+.form-check, .js-form-type-checkbox,
+.js-form-type-radio {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
-.form-check .form-check-input {
+.form-check .form-check-input, .js-form-type-checkbox .form-check-input, .js-form-type-checkbox input,
+.js-form-type-radio .form-check-input,
+.js-form-type-radio input {
   float: left;
   margin-left: -1.5em;
 }
@@ -1645,13 +1743,16 @@ textarea.form-control-lg {
   padding-left: 0;
   text-align: right;
 }
-.form-check-reverse .form-check-input {
+.form-check-reverse .form-check-input, .form-check-reverse .js-form-type-checkbox input, .js-form-type-checkbox .form-check-reverse input,
+.form-check-reverse .js-form-type-radio input,
+.js-form-type-radio .form-check-reverse input {
   float: right;
   margin-right: -1.5em;
   margin-left: 0;
 }
 
-.form-check-input {
+.form-check-input, .js-form-type-checkbox input,
+.js-form-type-radio input {
   --bs-form-check-bg: var(--bs-body-bg);
   flex-shrink: 0;
   width: 1em;
@@ -1670,41 +1771,56 @@ textarea.form-control-lg {
   -webkit-print-color-adjust: exact;
           print-color-adjust: exact;
 }
-.form-check-input[type=checkbox] {
+.form-check-input[type=checkbox], .js-form-type-checkbox input[type=checkbox],
+.js-form-type-radio input[type=checkbox] {
   border-radius: 0.25em;
 }
-.form-check-input[type=radio] {
+.form-check-input[type=radio], .js-form-type-checkbox input[type=radio],
+.js-form-type-radio input[type=radio] {
   border-radius: 50%;
 }
-.form-check-input:active {
+.form-check-input:active, .js-form-type-checkbox input:active,
+.js-form-type-radio input:active {
   filter: brightness(90%);
 }
-.form-check-input:focus {
+.form-check-input:focus, .js-form-type-checkbox input:focus,
+.js-form-type-radio input:focus {
   border-color: gray;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
 }
-.form-check-input:checked {
+.form-check-input:checked, .js-form-type-checkbox input:checked,
+.js-form-type-radio input:checked {
   background-color: #000000;
   border-color: #000000;
 }
-.form-check-input:checked[type=checkbox] {
+.form-check-input:checked[type=checkbox], .js-form-type-checkbox input:checked[type=checkbox],
+.js-form-type-radio input:checked[type=checkbox] {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
-.form-check-input:checked[type=radio] {
+.form-check-input:checked[type=radio], .js-form-type-checkbox input:checked[type=radio],
+.js-form-type-radio input:checked[type=radio] {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23ffffff'/%3e%3c/svg%3e");
 }
-.form-check-input[type=checkbox]:indeterminate {
+.form-check-input[type=checkbox]:indeterminate, .js-form-type-checkbox input[type=checkbox]:indeterminate,
+.js-form-type-radio input[type=checkbox]:indeterminate {
   background-color: #000000;
   border-color: #000000;
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
-.form-check-input:disabled {
+.form-check-input:disabled, .js-form-type-checkbox input:disabled,
+.js-form-type-radio input:disabled {
   pointer-events: none;
   filter: none;
   opacity: 0.5;
 }
-.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+.form-check-input[disabled] ~ .form-check-label, .js-form-type-checkbox .form-check-input[disabled] ~ label,
+.js-form-type-radio .form-check-input[disabled] ~ label, .js-form-type-checkbox input[disabled] ~ .form-check-label, .js-form-type-checkbox input[disabled] ~ label,
+.js-form-type-radio input[disabled] ~ .form-check-label,
+.js-form-type-radio input[disabled] ~ label, .form-check-input:disabled ~ .form-check-label, .js-form-type-checkbox .form-check-input:disabled ~ label,
+.js-form-type-radio .form-check-input:disabled ~ label, .js-form-type-checkbox input:disabled ~ .form-check-label, .js-form-type-checkbox input:disabled ~ label,
+.js-form-type-radio input:disabled ~ .form-check-label,
+.js-form-type-radio input:disabled ~ label {
   cursor: default;
   opacity: 0.5;
 }
@@ -1712,7 +1828,9 @@ textarea.form-control-lg {
 .form-switch {
   padding-left: 2.5em;
 }
-.form-switch .form-check-input {
+.form-switch .form-check-input, .form-switch .js-form-type-checkbox input, .js-form-type-checkbox .form-switch input,
+.form-switch .js-form-type-radio input,
+.js-form-type-radio .form-switch input {
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
   width: 2em;
   margin-left: -2.5em;
@@ -1722,14 +1840,20 @@ textarea.form-control-lg {
   transition: background-position 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-switch .form-check-input {
+  .form-switch .form-check-input, .form-switch .js-form-type-checkbox input, .js-form-type-checkbox .form-switch input,
+  .form-switch .js-form-type-radio input,
+  .js-form-type-radio .form-switch input {
     transition: none;
   }
 }
-.form-switch .form-check-input:focus {
+.form-switch .form-check-input:focus, .form-switch .js-form-type-checkbox input:focus, .js-form-type-checkbox .form-switch input:focus,
+.form-switch .js-form-type-radio input:focus,
+.js-form-type-radio .form-switch input:focus {
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='gray'/%3e%3c/svg%3e");
 }
-.form-switch .form-check-input:checked {
+.form-switch .form-check-input:checked, .form-switch .js-form-type-checkbox input:checked, .js-form-type-checkbox .form-switch input:checked,
+.form-switch .js-form-type-radio input:checked,
+.js-form-type-radio .form-switch input:checked {
   background-position: right center;
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e");
 }
@@ -1737,7 +1861,9 @@ textarea.form-control-lg {
   padding-right: 2.5em;
   padding-left: 0;
 }
-.form-switch.form-check-reverse .form-check-input {
+.form-switch.form-check-reverse .form-check-input, .form-switch.form-check-reverse .js-form-type-checkbox input, .js-form-type-checkbox .form-switch.form-check-reverse input,
+.form-switch.form-check-reverse .js-form-type-radio input,
+.js-form-type-radio .form-switch.form-check-reverse input {
   margin-right: -2.5em;
   margin-left: 0;
 }
@@ -1752,13 +1878,15 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .submit-wrapper, .btn-check:disabled + .btn, .btn-check:disabled + .submit-wrapper {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
 }
 
-[data-bs-theme=dark] .form-switch .form-check-input:not(:checked):not(:focus) {
+[data-bs-theme=dark] .form-switch .form-check-input:not(:checked):not(:focus), [data-bs-theme=dark] .form-switch .js-form-type-checkbox input:not(:checked):not(:focus), .js-form-type-checkbox [data-bs-theme=dark] .form-switch input:not(:checked):not(:focus),
+[data-bs-theme=dark] .form-switch .js-form-type-radio input:not(:checked):not(:focus),
+.js-form-type-radio [data-bs-theme=dark] .form-switch input:not(:checked):not(:focus) {
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
 }
 
@@ -1791,62 +1919,140 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:valid, .form-control.is-valid {
+.was-validated .form-control:valid, .was-validated input[type=tel]:valid,
+.was-validated input[type=text]:valid,
+.was-validated input[type=email]:valid,
+.was-validated input[type=url]:valid,
+.was-validated input[type=date]:valid,
+.was-validated input[type=search]:valid,
+.was-validated input[type=number]:valid,
+.was-validated input[type=password]:valid,
+.was-validated input[type=file]:valid,
+.was-validated textarea:valid, .form-control.is-valid, input.is-valid[type=tel],
+input.is-valid[type=text],
+input.is-valid[type=email],
+input.is-valid[type=url],
+input.is-valid[type=date],
+input.is-valid[type=search],
+input.is-valid[type=number],
+input.is-valid[type=password],
+input.is-valid[type=file],
+textarea.is-valid {
   border-color: var(--bs-form-valid-border-color);
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.5em + 16px);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.375em + 4px) center;
+  background-size: calc(0.75em + 8px) calc(0.75em + 8px);
 }
-.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+.was-validated .form-control:valid:focus, .was-validated input[type=tel]:valid:focus,
+.was-validated input[type=text]:valid:focus,
+.was-validated input[type=email]:valid:focus,
+.was-validated input[type=url]:valid:focus,
+.was-validated input[type=date]:valid:focus,
+.was-validated input[type=search]:valid:focus,
+.was-validated input[type=number]:valid:focus,
+.was-validated input[type=password]:valid:focus,
+.was-validated input[type=file]:valid:focus,
+.was-validated textarea:valid:focus, .form-control.is-valid:focus, input.is-valid[type=tel]:focus,
+input.is-valid[type=text]:focus,
+input.is-valid[type=email]:focus,
+input.is-valid[type=url]:focus,
+input.is-valid[type=date]:focus,
+input.is-valid[type=search]:focus,
+input.is-valid[type=number]:focus,
+input.is-valid[type=password]:focus,
+input.is-valid[type=file]:focus,
+textarea.is-valid:focus {
   border-color: var(--bs-form-valid-border-color);
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
 }
 
-.was-validated textarea.form-control:valid, textarea.form-control.is-valid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+.was-validated textarea.form-control:valid,
+.was-validated textarea:valid, textarea.form-control.is-valid,
+textarea.is-valid {
+  padding-right: calc(1.5em + 16px);
+  background-position: top calc(0.375em + 4px) right calc(0.375em + 4px);
 }
 
-.was-validated .form-select:valid, .form-select.is-valid {
+.was-validated .form-select:valid, .was-validated select:valid, .form-select.is-valid, select.is-valid {
   border-color: var(--bs-form-valid-border-color);
 }
-.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"] {
+.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .was-validated select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], select.is-valid:not([multiple])[size="1"] {
   --bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   padding-right: 4.125rem;
   background-position: right 0.75rem center, center right 2.25rem;
-  background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-size: 16px 12px, calc(0.75em + 8px) calc(0.75em + 8px);
 }
-.was-validated .form-select:valid:focus, .form-select.is-valid:focus {
+.was-validated .form-select:valid:focus, .was-validated select:valid:focus, .form-select.is-valid:focus, select.is-valid:focus {
   border-color: var(--bs-form-valid-border-color);
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
 }
 
 .was-validated .form-control-color:valid, .form-control-color.is-valid {
-  width: calc(3rem + calc(1.5em + 0.75rem));
+  width: calc(3rem + calc(1.5em + 16px));
 }
 
-.was-validated .form-check-input:valid, .form-check-input.is-valid {
+.was-validated .form-check-input:valid, .was-validated .js-form-type-checkbox input:valid, .js-form-type-checkbox .was-validated input:valid,
+.was-validated .js-form-type-radio input:valid,
+.js-form-type-radio .was-validated input:valid, .form-check-input.is-valid, .js-form-type-checkbox input.is-valid,
+.js-form-type-radio input.is-valid {
   border-color: var(--bs-form-valid-border-color);
 }
-.was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked {
+.was-validated .form-check-input:valid:checked, .was-validated .js-form-type-checkbox input:valid:checked, .js-form-type-checkbox .was-validated input:valid:checked,
+.was-validated .js-form-type-radio input:valid:checked,
+.js-form-type-radio .was-validated input:valid:checked, .form-check-input.is-valid:checked, .js-form-type-checkbox input.is-valid:checked,
+.js-form-type-radio input.is-valid:checked {
   background-color: var(--bs-form-valid-color);
 }
-.was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus {
+.was-validated .form-check-input:valid:focus, .was-validated .js-form-type-checkbox input:valid:focus, .js-form-type-checkbox .was-validated input:valid:focus,
+.was-validated .js-form-type-radio input:valid:focus,
+.js-form-type-radio .was-validated input:valid:focus, .form-check-input.is-valid:focus, .js-form-type-checkbox input.is-valid:focus,
+.js-form-type-radio input.is-valid:focus {
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
 }
-.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+.was-validated .form-check-input:valid ~ .form-check-label, .was-validated .js-form-type-checkbox .form-check-input:valid ~ label, .js-form-type-checkbox .was-validated .form-check-input:valid ~ label,
+.was-validated .js-form-type-radio .form-check-input:valid ~ label,
+.js-form-type-radio .was-validated .form-check-input:valid ~ label, .was-validated .js-form-type-checkbox input:valid ~ .form-check-label, .was-validated .js-form-type-checkbox input:valid ~ label, .js-form-type-checkbox .was-validated input:valid ~ .form-check-label, .js-form-type-checkbox .was-validated input:valid ~ label,
+.was-validated .js-form-type-radio input:valid ~ .form-check-label,
+.was-validated .js-form-type-radio input:valid ~ label,
+.js-form-type-radio .was-validated input:valid ~ .form-check-label,
+.js-form-type-radio .was-validated input:valid ~ label, .form-check-input.is-valid ~ .form-check-label, .js-form-type-checkbox .form-check-input.is-valid ~ label,
+.js-form-type-radio .form-check-input.is-valid ~ label, .js-form-type-checkbox input.is-valid ~ .form-check-label, .js-form-type-checkbox input.is-valid ~ label,
+.js-form-type-radio input.is-valid ~ .form-check-label,
+.js-form-type-radio input.is-valid ~ label {
   color: var(--bs-form-valid-color);
 }
 
-.form-check-inline .form-check-input ~ .valid-feedback {
+.form-check-inline .form-check-input ~ .valid-feedback, .form-check-inline .js-form-type-checkbox input ~ .valid-feedback, .js-form-type-checkbox .form-check-inline input ~ .valid-feedback,
+.form-check-inline .js-form-type-radio input ~ .valid-feedback,
+.js-form-type-radio .form-check-inline input ~ .valid-feedback {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid,
+.was-validated .input-group > .form-control:not(:focus):valid, .was-validated .input-group > input[type=tel]:not(:focus):valid,
+.was-validated .input-group > input[type=text]:not(:focus):valid,
+.was-validated .input-group > input[type=email]:not(:focus):valid,
+.was-validated .input-group > input[type=url]:not(:focus):valid,
+.was-validated .input-group > input[type=date]:not(:focus):valid,
+.was-validated .input-group > input[type=search]:not(:focus):valid,
+.was-validated .input-group > input[type=number]:not(:focus):valid,
+.was-validated .input-group > input[type=password]:not(:focus):valid,
+.was-validated .input-group > input[type=file]:not(:focus):valid,
+.was-validated .input-group > textarea:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid, .input-group > input[type=tel]:not(:focus).is-valid,
+.input-group > input[type=text]:not(:focus).is-valid,
+.input-group > input[type=email]:not(:focus).is-valid,
+.input-group > input[type=url]:not(:focus).is-valid,
+.input-group > input[type=date]:not(:focus).is-valid,
+.input-group > input[type=search]:not(:focus).is-valid,
+.input-group > input[type=number]:not(:focus).is-valid,
+.input-group > input[type=password]:not(:focus).is-valid,
+.input-group > input[type=file]:not(:focus).is-valid,
+.input-group > textarea:not(:focus).is-valid,
 .was-validated .input-group > .form-select:not(:focus):valid,
+.was-validated .input-group > select:not(:focus):valid,
 .input-group > .form-select:not(:focus).is-valid,
+.input-group > select:not(:focus).is-valid,
 .was-validated .input-group > .form-floating:not(:focus-within):valid,
 .input-group > .form-floating:not(:focus-within).is-valid {
   z-index: 3;
@@ -1877,68 +2083,439 @@ textarea.form-control-lg {
 .was-validated :invalid ~ .invalid-feedback,
 .was-validated :invalid ~ .invalid-tooltip,
 .is-invalid ~ .invalid-feedback,
-.is-invalid ~ .invalid-tooltip {
+input[type=tel].error ~ .invalid-feedback,
+input[type=text].error ~ .invalid-feedback,
+input[type=email].error ~ .invalid-feedback,
+input[type=url].error ~ .invalid-feedback,
+input[type=date].error ~ .invalid-feedback,
+input[type=search].error ~ .invalid-feedback,
+input[type=number].error ~ .invalid-feedback,
+input[type=password].error ~ .invalid-feedback,
+input[type=file].error ~ .invalid-feedback,
+textarea.error ~ .invalid-feedback,
+.is-invalid ~ .invalid-tooltip,
+input[type=tel].error ~ .invalid-tooltip,
+input[type=text].error ~ .invalid-tooltip,
+input[type=email].error ~ .invalid-tooltip,
+input[type=url].error ~ .invalid-tooltip,
+input[type=date].error ~ .invalid-tooltip,
+input[type=search].error ~ .invalid-tooltip,
+input[type=number].error ~ .invalid-tooltip,
+input[type=password].error ~ .invalid-tooltip,
+input[type=file].error ~ .invalid-tooltip,
+textarea.error ~ .invalid-tooltip {
   display: block;
 }
 
-.was-validated .form-control:invalid, .form-control.is-invalid {
+.was-validated .form-control:invalid, .was-validated input[type=tel]:invalid,
+.was-validated input[type=text]:invalid,
+.was-validated input[type=email]:invalid,
+.was-validated input[type=url]:invalid,
+.was-validated input[type=date]:invalid,
+.was-validated input[type=search]:invalid,
+.was-validated input[type=number]:invalid,
+.was-validated input[type=password]:invalid,
+.was-validated input[type=file]:invalid,
+.was-validated textarea:invalid, .form-control.is-invalid,
+textarea.form-control.error, input.is-invalid[type=tel], input[type=tel].error,
+input.is-invalid[type=text],
+input[type=text].error,
+input.is-invalid[type=email],
+input[type=email].error,
+input.is-invalid[type=url],
+input[type=url].error,
+input.is-invalid[type=date],
+input[type=date].error,
+input.is-invalid[type=search],
+input[type=search].error,
+input.is-invalid[type=number],
+input[type=number].error,
+input.is-invalid[type=password],
+input[type=password].error,
+input.is-invalid[type=file],
+input[type=file].error,
+textarea.is-invalid,
+textarea.error {
   border-color: var(--bs-form-invalid-border-color);
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.5em + 16px);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ff0000'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ff0000' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.375em + 4px) center;
+  background-size: calc(0.75em + 8px) calc(0.75em + 8px);
 }
-.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+.was-validated .form-control:invalid:focus, .was-validated input[type=tel]:invalid:focus,
+.was-validated input[type=text]:invalid:focus,
+.was-validated input[type=email]:invalid:focus,
+.was-validated input[type=url]:invalid:focus,
+.was-validated input[type=date]:invalid:focus,
+.was-validated input[type=search]:invalid:focus,
+.was-validated input[type=number]:invalid:focus,
+.was-validated input[type=password]:invalid:focus,
+.was-validated input[type=file]:invalid:focus,
+.was-validated textarea:invalid:focus, .form-control.is-invalid:focus, input.is-invalid[type=tel]:focus, input[type=tel].error:focus,
+input.is-invalid[type=text]:focus,
+input[type=text].error:focus,
+input.is-invalid[type=email]:focus,
+input[type=email].error:focus,
+input.is-invalid[type=url]:focus,
+input[type=url].error:focus,
+input.is-invalid[type=date]:focus,
+input[type=date].error:focus,
+input.is-invalid[type=search]:focus,
+input[type=search].error:focus,
+input.is-invalid[type=number]:focus,
+input[type=number].error:focus,
+input.is-invalid[type=password]:focus,
+input[type=password].error:focus,
+input.is-invalid[type=file]:focus,
+input[type=file].error:focus,
+textarea.is-invalid:focus,
+textarea.error:focus {
   border-color: var(--bs-form-invalid-border-color);
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
 }
 
-.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+.was-validated textarea.form-control:invalid,
+.was-validated textarea:invalid, textarea.form-control.is-invalid,
+textarea.form-control.error,
+textarea.is-invalid,
+textarea.error {
+  padding-right: calc(1.5em + 16px);
+  background-position: top calc(0.375em + 4px) right calc(0.375em + 4px);
 }
 
-.was-validated .form-select:invalid, .form-select.is-invalid {
+.was-validated .form-select:invalid, .was-validated select:invalid, .form-select.is-invalid, select.is-invalid, input.form-select[type=tel].error,
+input.form-select[type=text].error,
+input.form-select[type=email].error,
+input.form-select[type=url].error,
+input.form-select[type=date].error,
+input.form-select[type=search].error,
+input.form-select[type=number].error,
+input.form-select[type=password].error,
+input.form-select[type=file].error,
+textarea.form-select.error {
   border-color: var(--bs-form-invalid-border-color);
 }
-.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"] {
+.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .was-validated select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), select.is-invalid:not([multiple]):not([size]), input.form-select[type=tel].error:not([multiple]):not([size]),
+input.form-select[type=text].error:not([multiple]):not([size]),
+input.form-select[type=email].error:not([multiple]):not([size]),
+input.form-select[type=url].error:not([multiple]):not([size]),
+input.form-select[type=date].error:not([multiple]):not([size]),
+input.form-select[type=search].error:not([multiple]):not([size]),
+input.form-select[type=number].error:not([multiple]):not([size]),
+input.form-select[type=password].error:not([multiple]):not([size]),
+input.form-select[type=file].error:not([multiple]):not([size]),
+textarea.form-select.error:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], select.is-invalid:not([multiple])[size="1"], input.form-select[type=tel].error:not([multiple])[size="1"],
+input.form-select[type=text].error:not([multiple])[size="1"],
+input.form-select[type=email].error:not([multiple])[size="1"],
+input.form-select[type=url].error:not([multiple])[size="1"],
+input.form-select[type=date].error:not([multiple])[size="1"],
+input.form-select[type=search].error:not([multiple])[size="1"],
+input.form-select[type=number].error:not([multiple])[size="1"],
+input.form-select[type=password].error:not([multiple])[size="1"],
+input.form-select[type=file].error:not([multiple])[size="1"],
+textarea.form-select.error:not([multiple])[size="1"] {
   --bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ff0000'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ff0000' stroke='none'/%3e%3c/svg%3e");
   padding-right: 4.125rem;
   background-position: right 0.75rem center, center right 2.25rem;
-  background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-size: 16px 12px, calc(0.75em + 8px) calc(0.75em + 8px);
 }
-.was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
+.was-validated .form-select:invalid:focus, .was-validated select:invalid:focus, .form-select.is-invalid:focus, select.is-invalid:focus, input.form-select[type=tel].error:focus,
+input.form-select[type=text].error:focus,
+input.form-select[type=email].error:focus,
+input.form-select[type=url].error:focus,
+input.form-select[type=date].error:focus,
+input.form-select[type=search].error:focus,
+input.form-select[type=number].error:focus,
+input.form-select[type=password].error:focus,
+input.form-select[type=file].error:focus,
+textarea.form-select.error:focus {
   border-color: var(--bs-form-invalid-border-color);
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
 }
 
-.was-validated .form-control-color:invalid, .form-control-color.is-invalid {
-  width: calc(3rem + calc(1.5em + 0.75rem));
+.was-validated .form-control-color:invalid, .form-control-color.is-invalid, input.form-control-color[type=tel].error,
+input.form-control-color[type=text].error,
+input.form-control-color[type=email].error,
+input.form-control-color[type=url].error,
+input.form-control-color[type=date].error,
+input.form-control-color[type=search].error,
+input.form-control-color[type=number].error,
+input.form-control-color[type=password].error,
+input.form-control-color[type=file].error,
+textarea.form-control-color.error {
+  width: calc(3rem + calc(1.5em + 16px));
 }
 
-.was-validated .form-check-input:invalid, .form-check-input.is-invalid {
+.was-validated .form-check-input:invalid, .was-validated .js-form-type-checkbox input:invalid, .js-form-type-checkbox .was-validated input:invalid,
+.was-validated .js-form-type-radio input:invalid,
+.js-form-type-radio .was-validated input:invalid, .form-check-input.is-invalid, .js-form-type-checkbox input.is-invalid,
+.js-form-type-radio input.is-invalid, input.form-check-input[type=tel].error, .js-form-type-checkbox input[type=tel].error,
+.js-form-type-radio input[type=tel].error,
+input.form-check-input[type=text].error,
+.js-form-type-checkbox input[type=text].error,
+.js-form-type-radio input[type=text].error,
+input.form-check-input[type=email].error,
+.js-form-type-checkbox input[type=email].error,
+.js-form-type-radio input[type=email].error,
+input.form-check-input[type=url].error,
+.js-form-type-checkbox input[type=url].error,
+.js-form-type-radio input[type=url].error,
+input.form-check-input[type=date].error,
+.js-form-type-checkbox input[type=date].error,
+.js-form-type-radio input[type=date].error,
+input.form-check-input[type=search].error,
+.js-form-type-checkbox input[type=search].error,
+.js-form-type-radio input[type=search].error,
+input.form-check-input[type=number].error,
+.js-form-type-checkbox input[type=number].error,
+.js-form-type-radio input[type=number].error,
+input.form-check-input[type=password].error,
+.js-form-type-checkbox input[type=password].error,
+.js-form-type-radio input[type=password].error,
+input.form-check-input[type=file].error,
+.js-form-type-checkbox input[type=file].error,
+.js-form-type-radio input[type=file].error,
+textarea.form-check-input.error {
   border-color: var(--bs-form-invalid-border-color);
 }
-.was-validated .form-check-input:invalid:checked, .form-check-input.is-invalid:checked {
+.was-validated .form-check-input:invalid:checked, .was-validated .js-form-type-checkbox input:invalid:checked, .js-form-type-checkbox .was-validated input:invalid:checked,
+.was-validated .js-form-type-radio input:invalid:checked,
+.js-form-type-radio .was-validated input:invalid:checked, .form-check-input.is-invalid:checked, .js-form-type-checkbox input.is-invalid:checked,
+.js-form-type-radio input.is-invalid:checked, input.form-check-input[type=tel].error:checked, .js-form-type-checkbox input[type=tel].error:checked,
+.js-form-type-radio input[type=tel].error:checked,
+input.form-check-input[type=text].error:checked,
+.js-form-type-checkbox input[type=text].error:checked,
+.js-form-type-radio input[type=text].error:checked,
+input.form-check-input[type=email].error:checked,
+.js-form-type-checkbox input[type=email].error:checked,
+.js-form-type-radio input[type=email].error:checked,
+input.form-check-input[type=url].error:checked,
+.js-form-type-checkbox input[type=url].error:checked,
+.js-form-type-radio input[type=url].error:checked,
+input.form-check-input[type=date].error:checked,
+.js-form-type-checkbox input[type=date].error:checked,
+.js-form-type-radio input[type=date].error:checked,
+input.form-check-input[type=search].error:checked,
+.js-form-type-checkbox input[type=search].error:checked,
+.js-form-type-radio input[type=search].error:checked,
+input.form-check-input[type=number].error:checked,
+.js-form-type-checkbox input[type=number].error:checked,
+.js-form-type-radio input[type=number].error:checked,
+input.form-check-input[type=password].error:checked,
+.js-form-type-checkbox input[type=password].error:checked,
+.js-form-type-radio input[type=password].error:checked,
+input.form-check-input[type=file].error:checked,
+.js-form-type-checkbox input[type=file].error:checked,
+.js-form-type-radio input[type=file].error:checked,
+textarea.form-check-input.error:checked {
   background-color: var(--bs-form-invalid-color);
 }
-.was-validated .form-check-input:invalid:focus, .form-check-input.is-invalid:focus {
+.was-validated .form-check-input:invalid:focus, .was-validated .js-form-type-checkbox input:invalid:focus, .js-form-type-checkbox .was-validated input:invalid:focus,
+.was-validated .js-form-type-radio input:invalid:focus,
+.js-form-type-radio .was-validated input:invalid:focus, .form-check-input.is-invalid:focus, .js-form-type-checkbox input.is-invalid:focus,
+.js-form-type-radio input.is-invalid:focus, input.form-check-input[type=tel].error:focus, .js-form-type-checkbox input[type=tel].error:focus,
+.js-form-type-radio input[type=tel].error:focus,
+input.form-check-input[type=text].error:focus,
+.js-form-type-checkbox input[type=text].error:focus,
+.js-form-type-radio input[type=text].error:focus,
+input.form-check-input[type=email].error:focus,
+.js-form-type-checkbox input[type=email].error:focus,
+.js-form-type-radio input[type=email].error:focus,
+input.form-check-input[type=url].error:focus,
+.js-form-type-checkbox input[type=url].error:focus,
+.js-form-type-radio input[type=url].error:focus,
+input.form-check-input[type=date].error:focus,
+.js-form-type-checkbox input[type=date].error:focus,
+.js-form-type-radio input[type=date].error:focus,
+input.form-check-input[type=search].error:focus,
+.js-form-type-checkbox input[type=search].error:focus,
+.js-form-type-radio input[type=search].error:focus,
+input.form-check-input[type=number].error:focus,
+.js-form-type-checkbox input[type=number].error:focus,
+.js-form-type-radio input[type=number].error:focus,
+input.form-check-input[type=password].error:focus,
+.js-form-type-checkbox input[type=password].error:focus,
+.js-form-type-radio input[type=password].error:focus,
+input.form-check-input[type=file].error:focus,
+.js-form-type-checkbox input[type=file].error:focus,
+.js-form-type-radio input[type=file].error:focus,
+textarea.form-check-input.error:focus {
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
 }
-.was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
+.was-validated .form-check-input:invalid ~ .form-check-label, .was-validated .js-form-type-checkbox .form-check-input:invalid ~ label, .js-form-type-checkbox .was-validated .form-check-input:invalid ~ label,
+.was-validated .js-form-type-radio .form-check-input:invalid ~ label,
+.js-form-type-radio .was-validated .form-check-input:invalid ~ label, .was-validated .js-form-type-checkbox input:invalid ~ .form-check-label, .was-validated .js-form-type-checkbox input:invalid ~ label,
+.was-validated .js-form-type-checkbox .js-form-type-radio input:invalid ~ label,
+.js-form-type-radio .was-validated .js-form-type-checkbox input:invalid ~ label, .js-form-type-checkbox .was-validated input:invalid ~ .form-check-label, .js-form-type-checkbox .was-validated input:invalid ~ label,
+.js-form-type-checkbox .was-validated .js-form-type-radio input:invalid ~ label,
+.js-form-type-radio .js-form-type-checkbox .was-validated input:invalid ~ label,
+.was-validated .js-form-type-radio input:invalid ~ .form-check-label,
+.was-validated .js-form-type-radio .js-form-type-checkbox input:invalid ~ label,
+.js-form-type-checkbox .was-validated .js-form-type-radio input:invalid ~ label,
+.was-validated .js-form-type-radio input:invalid ~ label,
+.js-form-type-radio .was-validated input:invalid ~ .form-check-label,
+.js-form-type-radio .was-validated .js-form-type-checkbox input:invalid ~ label,
+.js-form-type-checkbox .js-form-type-radio .was-validated input:invalid ~ label,
+.js-form-type-radio .was-validated input:invalid ~ label, .form-check-input.is-invalid ~ .form-check-label, .js-form-type-checkbox .form-check-input.is-invalid ~ label,
+.js-form-type-radio .form-check-input.is-invalid ~ label, .js-form-type-checkbox input.is-invalid ~ .form-check-label, .js-form-type-checkbox input.is-invalid ~ label,
+.js-form-type-checkbox .js-form-type-radio input.is-invalid ~ label,
+.js-form-type-radio .js-form-type-checkbox input.is-invalid ~ label,
+.js-form-type-radio input.is-invalid ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input.is-invalid ~ label,
+.js-form-type-checkbox .js-form-type-radio input.is-invalid ~ label,
+.js-form-type-radio input.is-invalid ~ label, input.form-check-input[type=tel].error ~ .form-check-label, .js-form-type-checkbox input.form-check-input[type=tel].error ~ label,
+.js-form-type-radio input.form-check-input[type=tel].error ~ label, .js-form-type-checkbox input[type=tel].error ~ .form-check-label, .js-form-type-checkbox input[type=tel].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=tel].error ~ label,
+.js-form-type-radio .js-form-type-checkbox input[type=tel].error ~ label,
+.js-form-type-radio input[type=tel].error ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input[type=tel].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=tel].error ~ label,
+.js-form-type-radio input[type=tel].error ~ label,
+input.form-check-input[type=text].error ~ .form-check-label,
+.js-form-type-checkbox input.form-check-input[type=text].error ~ label,
+.js-form-type-radio input.form-check-input[type=text].error ~ label,
+.js-form-type-checkbox input[type=text].error ~ .form-check-label,
+.js-form-type-checkbox input[type=text].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=text].error ~ label,
+.js-form-type-radio .js-form-type-checkbox input[type=text].error ~ label,
+.js-form-type-radio input[type=text].error ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input[type=text].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=text].error ~ label,
+.js-form-type-radio input[type=text].error ~ label,
+input.form-check-input[type=email].error ~ .form-check-label,
+.js-form-type-checkbox input.form-check-input[type=email].error ~ label,
+.js-form-type-radio input.form-check-input[type=email].error ~ label,
+.js-form-type-checkbox input[type=email].error ~ .form-check-label,
+.js-form-type-checkbox input[type=email].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=email].error ~ label,
+.js-form-type-radio .js-form-type-checkbox input[type=email].error ~ label,
+.js-form-type-radio input[type=email].error ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input[type=email].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=email].error ~ label,
+.js-form-type-radio input[type=email].error ~ label,
+input.form-check-input[type=url].error ~ .form-check-label,
+.js-form-type-checkbox input.form-check-input[type=url].error ~ label,
+.js-form-type-radio input.form-check-input[type=url].error ~ label,
+.js-form-type-checkbox input[type=url].error ~ .form-check-label,
+.js-form-type-checkbox input[type=url].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=url].error ~ label,
+.js-form-type-radio .js-form-type-checkbox input[type=url].error ~ label,
+.js-form-type-radio input[type=url].error ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input[type=url].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=url].error ~ label,
+.js-form-type-radio input[type=url].error ~ label,
+input.form-check-input[type=date].error ~ .form-check-label,
+.js-form-type-checkbox input.form-check-input[type=date].error ~ label,
+.js-form-type-radio input.form-check-input[type=date].error ~ label,
+.js-form-type-checkbox input[type=date].error ~ .form-check-label,
+.js-form-type-checkbox input[type=date].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=date].error ~ label,
+.js-form-type-radio .js-form-type-checkbox input[type=date].error ~ label,
+.js-form-type-radio input[type=date].error ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input[type=date].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=date].error ~ label,
+.js-form-type-radio input[type=date].error ~ label,
+input.form-check-input[type=search].error ~ .form-check-label,
+.js-form-type-checkbox input.form-check-input[type=search].error ~ label,
+.js-form-type-radio input.form-check-input[type=search].error ~ label,
+.js-form-type-checkbox input[type=search].error ~ .form-check-label,
+.js-form-type-checkbox input[type=search].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=search].error ~ label,
+.js-form-type-radio .js-form-type-checkbox input[type=search].error ~ label,
+.js-form-type-radio input[type=search].error ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input[type=search].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=search].error ~ label,
+.js-form-type-radio input[type=search].error ~ label,
+input.form-check-input[type=number].error ~ .form-check-label,
+.js-form-type-checkbox input.form-check-input[type=number].error ~ label,
+.js-form-type-radio input.form-check-input[type=number].error ~ label,
+.js-form-type-checkbox input[type=number].error ~ .form-check-label,
+.js-form-type-checkbox input[type=number].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=number].error ~ label,
+.js-form-type-radio .js-form-type-checkbox input[type=number].error ~ label,
+.js-form-type-radio input[type=number].error ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input[type=number].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=number].error ~ label,
+.js-form-type-radio input[type=number].error ~ label,
+input.form-check-input[type=password].error ~ .form-check-label,
+.js-form-type-checkbox input.form-check-input[type=password].error ~ label,
+.js-form-type-radio input.form-check-input[type=password].error ~ label,
+.js-form-type-checkbox input[type=password].error ~ .form-check-label,
+.js-form-type-checkbox input[type=password].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=password].error ~ label,
+.js-form-type-radio .js-form-type-checkbox input[type=password].error ~ label,
+.js-form-type-radio input[type=password].error ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input[type=password].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=password].error ~ label,
+.js-form-type-radio input[type=password].error ~ label,
+input.form-check-input[type=file].error ~ .form-check-label,
+.js-form-type-checkbox input.form-check-input[type=file].error ~ label,
+.js-form-type-radio input.form-check-input[type=file].error ~ label,
+.js-form-type-checkbox input[type=file].error ~ .form-check-label,
+.js-form-type-checkbox input[type=file].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=file].error ~ label,
+.js-form-type-radio .js-form-type-checkbox input[type=file].error ~ label,
+.js-form-type-radio input[type=file].error ~ .form-check-label,
+.js-form-type-radio .js-form-type-checkbox input[type=file].error ~ label,
+.js-form-type-checkbox .js-form-type-radio input[type=file].error ~ label,
+.js-form-type-radio input[type=file].error ~ label,
+textarea.form-check-input.error ~ .form-check-label,
+.js-form-type-checkbox textarea.form-check-input.error ~ label,
+.js-form-type-radio textarea.form-check-input.error ~ label {
   color: var(--bs-form-invalid-color);
 }
 
-.form-check-inline .form-check-input ~ .invalid-feedback {
+.form-check-inline .form-check-input ~ .invalid-feedback, .form-check-inline .js-form-type-checkbox input ~ .invalid-feedback, .js-form-type-checkbox .form-check-inline input ~ .invalid-feedback,
+.form-check-inline .js-form-type-radio input ~ .invalid-feedback,
+.js-form-type-radio .form-check-inline input ~ .invalid-feedback {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid,
+.was-validated .input-group > .form-control:not(:focus):invalid, .was-validated .input-group > input[type=tel]:not(:focus):invalid,
+.was-validated .input-group > input[type=text]:not(:focus):invalid,
+.was-validated .input-group > input[type=email]:not(:focus):invalid,
+.was-validated .input-group > input[type=url]:not(:focus):invalid,
+.was-validated .input-group > input[type=date]:not(:focus):invalid,
+.was-validated .input-group > input[type=search]:not(:focus):invalid,
+.was-validated .input-group > input[type=number]:not(:focus):invalid,
+.was-validated .input-group > input[type=password]:not(:focus):invalid,
+.was-validated .input-group > input[type=file]:not(:focus):invalid,
+.was-validated .input-group > textarea:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid, .input-group > input[type=tel]:not(:focus).is-invalid, .input-group > input[type=tel].error:not(:focus),
+.input-group > input[type=text]:not(:focus).is-invalid,
+.input-group > input[type=text].error:not(:focus),
+.input-group > input[type=email]:not(:focus).is-invalid,
+.input-group > input[type=email].error:not(:focus),
+.input-group > input[type=url]:not(:focus).is-invalid,
+.input-group > input[type=url].error:not(:focus),
+.input-group > input[type=date]:not(:focus).is-invalid,
+.input-group > input[type=date].error:not(:focus),
+.input-group > input[type=search]:not(:focus).is-invalid,
+.input-group > input[type=search].error:not(:focus),
+.input-group > input[type=number]:not(:focus).is-invalid,
+.input-group > input[type=number].error:not(:focus),
+.input-group > input[type=password]:not(:focus).is-invalid,
+.input-group > input[type=password].error:not(:focus),
+.input-group > input[type=file]:not(:focus).is-invalid,
+.input-group > input[type=file].error:not(:focus),
+.input-group > textarea:not(:focus).is-invalid,
+.input-group > textarea.error:not(:focus),
 .was-validated .input-group > .form-select:not(:focus):invalid,
+.was-validated .input-group > select:not(:focus):invalid,
 .input-group > .form-select:not(:focus).is-invalid,
+.input-group > select:not(:focus).is-invalid,
 .was-validated .input-group > .form-floating:not(:focus-within):invalid,
-.input-group > .form-floating:not(:focus-within).is-invalid {
+.input-group > .form-floating:not(:focus-within).is-invalid,
+.input-group > input.form-floating[type=tel].error:not(:focus-within),
+.input-group > input.form-floating[type=text].error:not(:focus-within),
+.input-group > input.form-floating[type=email].error:not(:focus-within),
+.input-group > input.form-floating[type=url].error:not(:focus-within),
+.input-group > input.form-floating[type=date].error:not(:focus-within),
+.input-group > input.form-floating[type=search].error:not(:focus-within),
+.input-group > input.form-floating[type=number].error:not(:focus-within),
+.input-group > input.form-floating[type=password].error:not(:focus-within),
+.input-group > input.form-floating[type=file].error:not(:focus-within),
+.input-group > textarea.form-floating.error:not(:focus-within) {
   z-index: 4;
 }
 
@@ -2230,7 +2807,7 @@ body {
   }
 }
 .container.container-s, body:not(.path-node) .container-s.region-content, .paragraph--type--hero .container-s.hero__content, .container.container-small, body:not(.path-node) .container-small.region-content, .paragraph--type--hero .container-small.hero__content {
-  max-width: 740px;
+  max-width: 780px;
 }
 .container.container-l, body:not(.path-node) .container-l.region-content, .paragraph--type--hero .container-l.hero__content, .container.container-large, body:not(.path-node) .container-large.region-content, .paragraph--type--hero .container-large.hero__content {
   max-width: 1800px;
@@ -2363,7 +2940,7 @@ a {
   font-weight: 400;
 }
 
-.btn {
+.btn, .submit-wrapper {
   position: relative;
   display: inline-block;
   padding: 0.7rem 1.6rem;
@@ -2376,11 +2953,12 @@ a {
   translate: 0px 0;
   transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   padding-right: 3rem;
+  padding-right: 2rem;
 }
-.btn:after {
+.btn:after, .submit-wrapper:after {
   right: 0;
 }
-.btn::after {
+.btn::after, .submit-wrapper::after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -2397,7 +2975,7 @@ a {
           mask-position: center;
   background-color: #ffffff;
 }
-.btn:after {
+.btn:after, .submit-wrapper:after {
   content: "";
   position: absolute;
   right: 1rem;
@@ -2406,24 +2984,24 @@ a {
   translate: 0% -50%;
   transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-.btn:hover {
+.btn:hover, .submit-wrapper:hover {
   padding-right: 3rem;
   translate: 0.625rem 0;
 }
-.btn:hover:after {
+.btn:hover:after, .submit-wrapper:hover:after {
   right: 1rem;
   opacity: 1;
 }
 
-.btn.btn--white {
+.btn.btn--white, .btn--white.submit-wrapper {
   background: #ffffff;
   color: #000000;
   padding-left: 3rem;
 }
-.btn.btn--white:before {
+.btn.btn--white:before, .btn--white.submit-wrapper:before {
   left: 0;
 }
-.btn.btn--white::before {
+.btn.btn--white::before, .btn--white.submit-wrapper::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -2495,7 +3073,7 @@ a {
   background-color: #000000;
   color: #ffffff;
 }
-.pg-bg--primary a:not(.btn) {
+.pg-bg--primary a:not(.btn):not(.submit-wrapper) {
   color: inherit;
 }
 .pg-bg--primary h1 {
@@ -2523,7 +3101,7 @@ a {
   background-color: #e5e5e5;
   color: #000000;
 }
-.pg-bg--secondary a:not(.btn) {
+.pg-bg--secondary a:not(.btn):not(.submit-wrapper) {
   color: inherit;
 }
 .pg-bg--secondary .field--name-field-icon svg, .pg-bg--secondary .field--name-field-icon g, .pg-bg--secondary .field--name-field-icon path {
@@ -2566,6 +3144,121 @@ a {
 
 .pg-valign--bottom > .container, body:not(.path-node) .pg-valign--bottom > .region-content, .paragraph--type--hero .pg-valign--bottom > .hero__content {
   align-items: flex-end;
+}
+
+.webform-submission-form {
+  max-width: 48rem;
+}
+.webform-submission-form fieldset {
+  padding: 0;
+  margin: 0 0 1.5625rem 0;
+  border: none;
+}
+.webform-submission-form fieldset legend {
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.webform-submission-form .description {
+  display: block;
+  font-size: 80%;
+}
+
+.captcha,
+.form-item {
+  margin: 0 0 0.625rem;
+}
+
+label {
+  font-size: 0.8125rem;
+  font-weight: bold;
+}
+label.form-required::after {
+  content: " *";
+  font-size: 80%;
+  line-height: 0;
+  vertical-align: super;
+}
+label.error {
+  width: 100%;
+  text-align: right;
+  color: #ff0000;
+}
+label .webform-element-help {
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.125;
+}
+label .webform-element-help:hover {
+  background: red;
+  border-color: red;
+}
+
+.description {
+  font-size: 80%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+input[type=tel]::-moz-placeholder, input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=file]::-moz-placeholder, textarea::-moz-placeholder {
+  color: #6c757d;
+}
+
+input[type=tel]::placeholder,
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=url]::placeholder,
+input[type=date]::placeholder,
+input[type=search]::placeholder,
+input[type=number]::placeholder,
+input[type=password]::placeholder,
+input[type=file]::placeholder,
+textarea::placeholder {
+  color: #6c757d;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.js-form-type-checkbox label,
+.js-form-type-radio label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.submit-wrapper input[type=submit] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  color: #ffffff;
+}
+
+.captcha {
+  display: block;
+}
+@media all and (max-width: 479px) {
+  .captcha {
+    transform: scale(0.9);
+    transform-origin: 0 0;
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.recaptcha-v3-policy {
+  display: block;
+  width: 100%;
+  font-size: 0.85em;
+  font-style: italic;
+  opacity: 0.85;
+  margin-top: 0.5rem;
 }
 
 .branding {
@@ -2647,7 +3340,7 @@ a {
   padding: 0;
   list-style: none;
 }
-.main-menu .menu__list .menu__item a:not(.btn) {
+.main-menu .menu__list .menu__item a:not(.btn):not(.submit-wrapper) {
   font-weight: 600;
   text-decoration: none;
 }
@@ -2690,7 +3383,7 @@ a {
   display: inline-block;
 }
 
-body:not(.logged-in).has-hero .main-menu .menu__list .menu__item a:not(.btn) {
+body:not(.logged-in).has-hero .main-menu .menu__list .menu__item a:not(.btn):not(.submit-wrapper) {
   color: #ffffff;
 }
 
@@ -2811,6 +3504,14 @@ body:not(.logged-in).has-hero .main-menu .menu__list .menu__item a:not(.btn) {
 }
 .paragraph--type--faq:last-child {
   padding-bottom: calc(120px - 3rem);
+}
+
+.paragraph--type--form .field--name-field-intro {
+  text-align: center;
+}
+.paragraph--type--form .webform-submission-form {
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .paragraph--type--hero {

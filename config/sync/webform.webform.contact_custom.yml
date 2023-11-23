@@ -28,15 +28,20 @@ elements: |-
         'option two': 'option two'
         'option three': 'option three'
       '#required': true
+    placholder:
+      '#type': hidden
+      '#title': Placholder
   flexbox:
     '#type': webform_flexbox
     first_name:
       '#type': textfield
       '#title': Voornaam
+      '#placeholder': 'Je voornaam'
       '#required': true
     name:
       '#type': textfield
       '#title': Naam
+      '#placeholder': 'Je naam'
       '#required': true
       '#default_value': '[current-user:display-name]'
   flexbox_01:
@@ -44,19 +49,23 @@ elements: |-
     email:
       '#type': email
       '#title': E-mail
+      '#placeholder': 'Je emailadres'
       '#required': true
       '#default_value': '[current-user:mail]'
     telephone_number:
       '#type': textfield
       '#title': Telefoon
+      '#placeholder': 'Je telefoonnummer'
   message:
     '#type': textarea
     '#title': 'Message or question'
+    '#placeholder': 'Stel hier je vraag...'
     '#required': true
     '#test': 'Please ignore this email.'
-  privacy_policy:
-    '#type': label
-    '#title': 'I state that I am aware and accept the <a target="_blank" href="/node/4">privacy policy</a>.'
+  ik_verklaar_op_de_hoogte_te_zijn_van_en_akkoord_te_gaan_met_het_:
+    '#type': checkbox
+    '#title': 'Ik verklaar op de hoogte te zijn van en akkoord te gaan met het <a target="_blank" href="/node/5">privacybeleid</a> van Juwelier Coens'
+    '#required': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
