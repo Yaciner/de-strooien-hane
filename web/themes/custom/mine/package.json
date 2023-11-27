@@ -5,9 +5,9 @@
   ],
   "devDependencies": {
     "accordion-js": "^3.3.4",
+    "bootstrap": "^5.3.1",
     "browser-sync": "^2.28.1",
     "browser-sync-webpack-plugin": "^2.3.0",
-    "bootstrap": "^5.3.1",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^7.6.0",
     "gulp": "^4.0.2",
@@ -18,7 +18,8 @@
     "photoswipe": "^5.4.2",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.64.2",
-    "sass-loader": "^13.3.2"
+    "sass-loader": "^13.3.2",
+    "swiper": "^11.0.5"
   },
   "scripts": {
     "start": "concurrently \"yarn mix:watch\" \"yarn svg\" \"yarn images\"",

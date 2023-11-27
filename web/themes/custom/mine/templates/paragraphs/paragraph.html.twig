@@ -11,8 +11,12 @@
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }}>
     <div class="container">
+      <div class="paragraph--intro">
+        {{ content.field_intro }}
+        {{ content.field_overview_link }}
+      </div>
       {% block content %}
-        {{ content }}
+        {{ content|without('field_intro', 'field_overview_link') }}
       {% endblock %}
     </div>
   </section>

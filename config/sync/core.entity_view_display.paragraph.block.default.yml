@@ -7,8 +7,10 @@ dependencies:
     - field.field.paragraph.block.field_block_to_embed
     - field.field.paragraph.block.field_html_id
     - field.field.paragraph.block.field_intro
+    - field.field.paragraph.block.field_overview_link
     - paragraphs.paragraphs_type.block
   module:
+    - link
     - text
 id: paragraph.block.default
 targetEntityType: paragraph
@@ -22,7 +24,7 @@ content:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_intro:
     type: text_default
@@ -30,6 +32,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_overview_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   field_background_color: true

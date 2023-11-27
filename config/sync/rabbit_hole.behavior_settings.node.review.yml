@@ -1,0 +1,16 @@
+uuid: 7ea17ae1-b205-41c9-8ca7-e373b12ae820
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.review
+id: node.review
+targetEntityType: node
+bundle: review
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: /<front>
+  redirect_code: 301
+  redirect_fallback_action: page_not_found

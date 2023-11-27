@@ -1,0 +1,21 @@
+uuid: 28f45823-cf8d-416d-bb13-5cfdd1dea206
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stars
+    - node.type.review
+  module:
+    - options
+id: node.review.field_stars
+field_name: field_stars
+entity_type: node
+bundle: review
+label: Stars
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,13 @@
+uuid: 90e1deb1-37ee-47d7-bf79-f5e8e2072247
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.webform
+id: node.webform
+targetEntityType: node
+bundle: webform
+action: display_page
+no_bypass: false
+bypass_message: false
+configuration: {  }

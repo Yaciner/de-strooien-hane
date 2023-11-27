@@ -2952,7 +2952,7 @@ a {
   text-align: unset;
   translate: 0px 0;
   transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  padding-right: 3rem;
+  padding-right: 2.8rem;
   padding-right: 2rem;
 }
 .btn:after, .submit-wrapper:after {
@@ -3063,6 +3063,39 @@ a {
 }
 .paragraph .paragraph {
   padding: 0;
+}
+.paragraph .paragraph--intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+.paragraph .paragraph--intro .field--name-field-overview-link {
+  position: relative;
+}
+.paragraph .paragraph--intro .field--name-field-overview-link a {
+  padding-right: 2.8rem;
+  text-decoration: none;
+}
+.paragraph .paragraph--intro .field--name-field-overview-link a:after {
+  right: 0;
+}
+.paragraph .paragraph--intro .field--name-field-overview-link a::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 1.2em;
+  height: 100%;
+  top: 0;
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC4xMTIiIGhlaWdodD0iMTAuNDU4Ij48ZyBkYXRhLW5hbWU9IkxheWVyIDIiPjxwYXRoIGRhdGEtbmFtZT0iUGF0aCA1MCIgZD0iTTE0LjM0NC4yMDlhLjcxNy43MTcgMCAwMDAgMS4wMTFsMy4yNzEgMy4zMjhILjcxN2EuNzE3LjcxNyAwIDAwMCAxLjQzNGgxNi44NzZsLTMuMjQ5IDMuMjQ5YS43MTguNzE4IDAgMTAxLjAxMSAxLjAxOGw0LjU2OS00LjU2OWEuNjQ1LjY0NSAwIDAwMC0uOTExTDE1LjM1NS4yMDhhLjcxNy43MTcgMCAwMC0xLjAxMSAweiIvPjwvZz48L3N2Zz4=");
+          mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC4xMTIiIGhlaWdodD0iMTAuNDU4Ij48ZyBkYXRhLW5hbWU9IkxheWVyIDIiPjxwYXRoIGRhdGEtbmFtZT0iUGF0aCA1MCIgZD0iTTE0LjM0NC4yMDlhLjcxNy43MTcgMCAwMDAgMS4wMTFsMy4yNzEgMy4zMjhILjcxN2EuNzE3LjcxNyAwIDAwMCAxLjQzNGgxNi44NzZsLTMuMjQ5IDMuMjQ5YS43MTguNzE4IDAgMTAxLjAxMSAxLjAxOGw0LjU2OS00LjU2OWEuNjQ1LjY0NSAwIDAwMC0uOTExTDE1LjM1NS4yMDhhLjcxNy43MTcgMCAwMC0xLjAxMSAweiIvPjwvZz48L3N2Zz4=");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: black;
 }
 
 .paragraph:not(.paragraph--type--hero) {
@@ -3266,7 +3299,7 @@ select::-ms-expand {
 }
 
 .share .facebook {
-  padding-right: 3rem;
+  padding-right: 2.8rem;
 }
 .share .facebook:after {
   right: 0;
@@ -3289,7 +3322,7 @@ select::-ms-expand {
   background-color: black;
 }
 .share .linkedin {
-  padding-right: 3rem;
+  padding-right: 2.8rem;
 }
 .share .linkedin:after {
   right: 0;
@@ -3312,7 +3345,7 @@ select::-ms-expand {
   background-color: black;
 }
 .share .twitter {
-  padding-right: 3rem;
+  padding-right: 2.8rem;
 }
 .share .twitter:after {
   right: 0;
@@ -3351,7 +3384,7 @@ select::-ms-expand {
 }
 .main-menu > .menu__list > .menu__item.menu__item--expanded {
   position: relative;
-  padding-right: 3rem;
+  padding-right: 2.8rem;
 }
 .main-menu > .menu__list > .menu__item.menu__item--expanded:after {
   right: 0;
@@ -3385,6 +3418,48 @@ select::-ms-expand {
 
 body:not(.logged-in).has-hero .main-menu .menu__list .menu__item a:not(.btn):not(.submit-wrapper) {
   color: #ffffff;
+}
+
+.node--type-collection.node--promoted {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.node--type-collection.node--promoted .field--name-field-media {
+  width: 100%;
+  height: 100%;
+}
+.node--type-collection.node--promoted .field--name-field-media img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.node--type-collection.node--promoted .field--name-field-media:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(125, 125, 125, 0) 51%, rgba(0, 0, 0, 0.5) 100%);
+}
+.node--type-collection.node--promoted .content {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  bottom: 1rem;
+  right: 1rem;
+}
+.node--type-collection.node--promoted .content h3 {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.node--type-review.node--view-mode-teaser {
+  padding: 2rem;
+  border: 1px solid #e5e5e5;
 }
 
 .paragraph--type--faq .field--name-field-faq-items {
@@ -3428,7 +3503,7 @@ body:not(.logged-in).has-hero .main-menu .menu__list .menu__item a:not(.btn):not
   font-weight: bold;
   font-family: "Manrope", -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
   padding-right: 4rem;
-  padding-right: 3rem;
+  padding-right: 2.8rem;
 }
 .paragraph--type--faq .field__item .ac-trigger:after {
   right: 0;
@@ -3473,7 +3548,7 @@ body:not(.logged-in).has-hero .main-menu .menu__list .menu__item a:not(.btn):not
   visibility: visible;
 }
 .paragraph--type--faq .field__item.is-active > .ac-header .ac-trigger {
-  padding-right: 3rem;
+  padding-right: 2.8rem;
 }
 .paragraph--type--faq .field__item.is-active > .ac-header .ac-trigger:after {
   right: 0;
@@ -3674,16 +3749,15 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
   align-items: center;
 }
 
-body.loading .region-header .container, body.loading .region-header .paragraph--type--hero .hero__content, .paragraph--type--hero body.loading .region-header .hero__content, body.loading .region-header body:not(.path-node) .region-content, body:not(.path-node) body.loading .region-header .region-content {
-  translate: 0% -100%;
-  opacity: 0;
-  transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition-delay: 1s;
+.view-collections.view-display-id-promoted .views-rows {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: repeat(2, 360px);
+  grid-column-gap: 0.4rem;
+  grid-row-gap: 0.4rem;
 }
-
-body.loaded .region-header .container, body.loaded .region-header .paragraph--type--hero .hero__content, .paragraph--type--hero body.loaded .region-header .hero__content, body.loaded .region-header body:not(.path-node) .region-content, body:not(.path-node) body.loaded .region-header .region-content {
-  translate: 0% 0%;
-  opacity: 1;
+.view-collections.view-display-id-promoted .views-rows .views-row:first-child {
+  grid-area: 1/1/3/2;
 }
 
 /*# sourceMappingURL=styles.css.map*/

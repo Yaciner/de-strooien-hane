@@ -1,0 +1,47 @@
+uuid: be94c22d-5c10-4bed-bb64-7d99c298ed47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.review.field_body
+    - field.field.node.review.field_name
+    - field.field.node.review.field_stars
+    - node.type.review
+  module:
+    - options
+    - text
+    - user
+id: node.review.default
+targetEntityType: node
+bundle: review
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_stars:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

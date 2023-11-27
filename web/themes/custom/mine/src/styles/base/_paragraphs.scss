@@ -4,6 +4,22 @@
   .paragraph {
     padding: 0;
   }
+
+  .paragraph--intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+
+    .field--name-field-overview-link {
+      position: relative;
+
+      a {
+        @include iconize($long-arrow-right, 'after');
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .paragraph:not(.paragraph--type--hero) {

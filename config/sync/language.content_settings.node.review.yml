@@ -1,0 +1,11 @@
+uuid: 373c43b5-94bf-4c9e-9c39-ab66c2950a9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.review
+id: node.review
+target_entity_type_id: node
+target_bundle: review
+default_langcode: nl
+language_alterable: false

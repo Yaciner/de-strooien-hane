@@ -21,6 +21,7 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view media'
+  - 'view paragraph content block'
   - 'view paragraph content cta'
   - 'view paragraph content faq'
   - 'view paragraph content form'

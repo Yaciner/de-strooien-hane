@@ -1,6 +1,7 @@
 import Headroom from "headroom.js";
 // import './fancybox';
 import './lottie-animations';
+import './reviews';
 import './faq';
 
 (function ($, Drupal) {

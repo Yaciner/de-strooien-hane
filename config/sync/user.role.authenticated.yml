@@ -27,6 +27,7 @@ permissions:
   - 'use text format basic_html'
   - 'use text format webform_default'
   - 'view media'
+  - 'view paragraph content block'
   - 'view paragraph content cta'
   - 'view paragraph content faq'
   - 'view paragraph content form'

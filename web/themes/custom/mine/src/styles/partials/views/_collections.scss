@@ -1,0 +1,13 @@
+.view-collections.view-display-id-promoted {
+  .views-rows {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(2, 360px);
+    grid-column-gap: .4rem;
+    grid-row-gap: .4rem;
+
+    .views-row:first-child {
+      grid-area: 1 / 1 / 3 / 2;
+    }
+  } 
+}

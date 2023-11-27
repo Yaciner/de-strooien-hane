@@ -1,0 +1,23 @@
+uuid: f6422aec-b6df-40cd-adc0-a9f6fa5a2089
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overview_link
+    - paragraphs.paragraphs_type.block
+  module:
+    - link
+id: paragraph.block.field_overview_link
+field_name: field_overview_link
+entity_type: paragraph
+bundle: block
+label: 'Overview link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 1
+field_type: link
