@@ -1,0 +1,29 @@
+uuid: b289feac-0ec6-4fef-a700-2795f96fc022
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - mine
+third_party_settings:
+  block_class:
+    classes: footer-main-menu
+id: mine_mainnavigation
+theme: mine
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: Navigatie
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

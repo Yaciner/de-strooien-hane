@@ -1,0 +1,28 @@
+uuid: 31710c82-362e-4da0-b98f-c965a4f98322
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.general_site_settings
+  module:
+    - block_class
+    - views
+  theme:
+    - mine
+third_party_settings:
+  block_class:
+    classes: footer-boilerplate
+id: mine_views_block__general_site_settings_block_1
+theme: mine
+region: footer
+weight: -9
+provider: null
+plugin: 'views_block:general_site_settings-block_1'
+settings:
+  id: 'views_block:general_site_settings-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

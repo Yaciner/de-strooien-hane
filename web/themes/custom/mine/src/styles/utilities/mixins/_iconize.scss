@@ -1,12 +1,12 @@
 @mixin iconize($icon, $position: 'after', $color: black) {
 
   @if $position == "before" {
-    padding-left: 3rem;
+    padding-left: 2.5rem;
     &:before {
       left: 0;
     }
   } @else if $position == "after" {
-    padding-right: 2.8rem;
+    padding-right: 2.5rem;
 
     &:after {
       right: 0;

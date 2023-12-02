@@ -1,0 +1,10 @@
+uuid: 6a46fcb8-c56b-4b5f-acd8-aa772f92bcda
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.socials
+label: Socials
+targetEntityType: node
+cache: true

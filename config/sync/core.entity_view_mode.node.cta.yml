@@ -1,0 +1,10 @@
+uuid: b29bd778-e14e-49c0-8e0b-3b49fd1cfaf9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.cta
+label: Contact
+targetEntityType: node
+cache: true

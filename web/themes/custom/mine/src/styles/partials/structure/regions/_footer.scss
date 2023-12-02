@@ -4,7 +4,66 @@
 //------------------------------------------------------------------------------
 
 .region-footer {
+  background-color: $primary;
+  color: $white;
+  padding: $p_vertical_gutter 0;
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:after, &:before {
+        background: $white;
+      }
+    }
+
+    .block-title {
+      position: relative;
+      font-size: rem(17);
+      color: $white;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      font-family: $system-font-family;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 3rem;
+        height: rem(1);
+        background-color: $white;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    
+    .footer-boilerplate {
+      max-width: rem(400);
+      padding-top: 6rem;
+      background-image: url(../svg/layout/logo--neg.svg);
+      background-repeat: no-repeat;
+      background-position: top left;
+    }
+
+    .footer-main-menu {
+      .menu__list {
+        @include reset-list();
+      }
+    }
+
+    .footer-socials {
+      padding-right: 3rem;
+      .views-row {
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+      }
+    }
+  }
 }
 
 

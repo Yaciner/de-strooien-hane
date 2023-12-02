@@ -1,0 +1,31 @@
+uuid: 1cfc5c03-4fc8-4da0-8e6c-2a4fbe9b7503
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.general_site_settings.field_footer_boilerplate
+    - field.field.node.general_site_settings.field_footer_contact
+    - field.field.node.general_site_settings.field_footer_opening_hours
+    - field.field.node.general_site_settings.field_socials_facebook
+    - field.field.node.general_site_settings.field_socials_instagram
+    - node.type.general_site_settings
+  module:
+    - user
+id: node.general_site_settings.teaser
+targetEntityType: node
+bundle: general_site_settings
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_footer_boilerplate: true
+  field_footer_contact: true
+  field_footer_opening_hours: true
+  field_socials_facebook: true
+  field_socials_instagram: true
+  langcode: true

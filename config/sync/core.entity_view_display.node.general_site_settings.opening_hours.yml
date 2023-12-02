@@ -1,0 +1,34 @@
+uuid: a182c94b-3b32-422d-8509-723bbb0e5004
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.opening_hours
+    - field.field.node.general_site_settings.field_footer_boilerplate
+    - field.field.node.general_site_settings.field_footer_contact
+    - field.field.node.general_site_settings.field_footer_opening_hours
+    - field.field.node.general_site_settings.field_socials_facebook
+    - field.field.node.general_site_settings.field_socials_instagram
+    - node.type.general_site_settings
+  module:
+    - text
+    - user
+id: node.general_site_settings.opening_hours
+targetEntityType: node
+bundle: general_site_settings
+mode: opening_hours
+content:
+  field_footer_opening_hours:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_footer_boilerplate: true
+  field_footer_contact: true
+  field_socials_facebook: true
+  field_socials_instagram: true
+  langcode: true
+  links: true

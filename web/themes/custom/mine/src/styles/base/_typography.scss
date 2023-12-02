@@ -75,3 +75,24 @@ a {
   font-family: $base-font-family;
   font-weight: 400;
 }
+
+.block-title {
+  position: relative;
+  display: inline-block;
+  @extend h2;
+}
+
+.phone, .mail {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.phone {
+  @include iconize($phone, 'before');
+}
+
+.mail {
+  @include iconize($mail, 'before');
+}

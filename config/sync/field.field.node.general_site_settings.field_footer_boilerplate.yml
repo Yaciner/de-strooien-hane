@@ -1,0 +1,22 @@
+uuid: 5ac1ee95-a493-4eee-b01b-3659c09f4e16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_boilerplate
+    - node.type.general_site_settings
+  module:
+    - text
+id: node.general_site_settings.field_footer_boilerplate
+field_name: field_footer_boilerplate
+entity_type: node
+bundle: general_site_settings
+label: 'Footer: Boilerplate'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,28 @@
+uuid: c653acfd-eba2-4ba3-9cf3-1ad863d84d19
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.general_site_settings
+  module:
+    - block_class
+    - views
+  theme:
+    - mine
+third_party_settings:
+  block_class:
+    classes: footer-opening-hours
+id: mine_views_block__general_site_settings_block_4
+theme: mine
+region: footer
+weight: -7
+provider: null
+plugin: 'views_block:general_site_settings-block_4'
+settings:
+  id: 'views_block:general_site_settings-block_4'
+  label: Openingsuren
+  label_display: visible
+  provider: views
+  views_label: Openingsuren
+  items_per_page: none
+visibility: {  }

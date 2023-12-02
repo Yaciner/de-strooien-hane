@@ -75,6 +75,12 @@ settings:
         -
           label: 'Video button'
           element: '<a class="btn--video lightbox">'
+        -
+          label: 'Phone icon'
+          element: '<a class="phone">'
+        -
+          label: 'Mail icon'
+          element: '<a class="mail">'
 image_upload:
   status: true
   scheme: public

@@ -1,0 +1,19 @@
+uuid: a4110d3d-c517-4424-a9a8-495859d42adb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_footer_boilerplate
+field_name: field_footer_boilerplate
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

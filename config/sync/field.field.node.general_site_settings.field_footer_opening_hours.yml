@@ -1,0 +1,22 @@
+uuid: 6a25bc04-2d39-4735-a1cc-49374d6099e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_opening_hours
+    - node.type.general_site_settings
+  module:
+    - text
+id: node.general_site_settings.field_footer_opening_hours
+field_name: field_footer_opening_hours
+entity_type: node
+bundle: general_site_settings
+label: 'Footer: Opening hours'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

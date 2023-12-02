@@ -1,0 +1,50 @@
+uuid: 9c84121b-b253-4cdf-9855-fb591dc54e13
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.socials
+    - field.field.node.general_site_settings.field_footer_boilerplate
+    - field.field.node.general_site_settings.field_footer_contact
+    - field.field.node.general_site_settings.field_footer_opening_hours
+    - field.field.node.general_site_settings.field_socials_facebook
+    - field.field.node.general_site_settings.field_socials_instagram
+    - node.type.general_site_settings
+  module:
+    - link
+    - user
+id: node.general_site_settings.socials
+targetEntityType: node
+bundle: general_site_settings
+mode: socials
+content:
+  field_socials_facebook:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_socials_instagram:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_footer_boilerplate: true
+  field_footer_contact: true
+  field_footer_opening_hours: true
+  langcode: true
+  links: true

@@ -1,0 +1,23 @@
+uuid: 6a23540a-01a0-4e33-8b4a-e56d93dc44b9
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_socials_instagram
+    - node.type.general_site_settings
+  module:
+    - link
+id: node.general_site_settings.field_socials_instagram
+field_name: field_socials_instagram
+entity_type: node
+bundle: general_site_settings
+label: 'Socials: Instagram'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

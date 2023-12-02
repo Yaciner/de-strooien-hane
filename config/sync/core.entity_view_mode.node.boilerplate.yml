@@ -1,0 +1,10 @@
+uuid: f82d4f13-18e0-436a-aedf-222ca46dea6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.boilerplate
+label: Boilerplate
+targetEntityType: node
+cache: true

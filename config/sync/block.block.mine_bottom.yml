@@ -1,0 +1,29 @@
+uuid: b27e3a0e-edf6-45fc-a673-12b466b1d81d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.bottom
+  module:
+    - block_class
+    - system
+  theme:
+    - mine
+third_party_settings:
+  block_class:
+    classes: bottom-menu
+id: mine_bottom
+theme: mine
+region: bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:bottom'
+settings:
+  id: 'system_menu_block:bottom'
+  label: Bottom
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

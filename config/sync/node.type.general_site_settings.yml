@@ -1,0 +1,17 @@
+uuid: 4f4addf8-8322-43fc-a70c-a8325303c94a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'General site settings'
+type: general_site_settings
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

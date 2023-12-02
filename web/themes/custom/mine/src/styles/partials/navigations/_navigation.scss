@@ -55,5 +55,17 @@ body:not(.logged-in).has-hero {
 
 // BOTTOM MENU
 .bottom-menu {
-
+  .menu__list {
+    @include reset-list;
+    display: flex;
+    gap: 1.5rem;
+    
+    .menu__item {
+      a, span {
+        font-size: rem(16);
+        text-decoration: none;
+        color: $gray-dark;
+      }
+    }
+  }
 }

@@ -101,10 +101,15 @@ __webpack_require__.r(__webpack_exports__);
   Drupal.behaviors.reviews = {
     attach: function attach(context, settings) {
       $('.field--name-field-block-to-embed .reviews .views-row').addClass('swiper-slide');
-      var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
+      swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
+      new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
         slidesPerView: 4,
         spaceBetween: 20,
-        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
       });
     }
   };

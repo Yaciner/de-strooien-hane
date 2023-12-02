@@ -1,0 +1,10 @@
+uuid: 08f6ac78-d23c-4e18-9548-b990e82b2d26
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.opening_hours
+label: 'Opening hours'
+targetEntityType: node
+cache: true

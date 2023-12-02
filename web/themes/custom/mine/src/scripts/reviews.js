@@ -10,10 +10,15 @@ import 'swiper/css/navigation';
   Drupal.behaviors.reviews = {
     attach: function (context, settings) {
       $('.field--name-field-block-to-embed .reviews .views-row').addClass('swiper-slide');
-      const swiper = new Swiper('.swiper', {
+      Swiper.use([Navigation]);
+      new Swiper('.swiper', {
         slidesPerView: 4,
         spaceBetween: 20,
-        modules: [Navigation]
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
       });
     }
   };

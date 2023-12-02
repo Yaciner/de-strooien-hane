@@ -1,0 +1,23 @@
+.field--name-field-socials-instagram, .field--name-field-socials-facebook {
+  width: 1.6rem;
+  height: 1.6rem;
+  overflow: hidden;
+  text-indent: -9999px;
+  position: relative;
+  a {
+  }
+}
+
+.field--name-field-socials-facebook {
+  a {
+    @include iconize($facebook, 'after', $white);
+    padding: 0;
+  }
+}
+
+.field--name-field-socials-instagram {
+  a {
+    @include iconize($instagram, 'after', $white);
+    padding: 0;
+  }
+}
