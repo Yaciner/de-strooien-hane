@@ -1,0 +1,25 @@
+uuid: 47f818cb-b192-41c2-b15b-bf5f8a77060d
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.large
+    - field.field.paragraph.timeline_entry.field_date
+    - field.field.paragraph.timeline_entry.field_text
+    - paragraphs.paragraphs_type.timeline_entry
+  module:
+    - text
+id: paragraph.timeline_entry.large
+targetEntityType: paragraph
+bundle: timeline_entry
+mode: large
+content:
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_date: true

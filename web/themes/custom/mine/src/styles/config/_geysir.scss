@@ -87,6 +87,10 @@
 // Geysir modal specific styling
 .geysir-dialog {
 
+  .submit-wrapper {
+    display: none;
+  }
+
   .ui-dialog-content {
     padding: rem(10);
   }

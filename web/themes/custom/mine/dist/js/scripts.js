@@ -106,6 +106,8 @@ __webpack_require__.r(__webpack_exports__);
         slidesPerView: 4,
         spaceBetween: 20,
         loop: true,
+        slidesOffsetAfter: 100,
+        slidesOffsetBefore: 100,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'

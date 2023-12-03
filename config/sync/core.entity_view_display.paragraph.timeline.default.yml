@@ -1,0 +1,28 @@
+uuid: b7e4fe3a-ff89-430f-8ff7-5055577e246f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline.field_background_color
+    - field.field.paragraph.timeline.field_entries
+    - field.field.paragraph.timeline.field_html_id
+    - paragraphs.paragraphs_type.timeline
+  module:
+    - entity_reference_revisions
+id: paragraph.timeline.default
+targetEntityType: paragraph
+bundle: timeline
+mode: default
+content:
+  field_entries:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_background_color: true
+  field_html_id: true

@@ -1,3 +1,11 @@
 .branding {
-  width: rem(196);
+  position: relative;
+  width: rem(180);
+
+  .positive {
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+  }
 }

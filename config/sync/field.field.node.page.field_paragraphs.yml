@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_media
+    - paragraphs.paragraphs_type.timeline
   module:
     - entity_reference_revisions
 id: node.page.field_paragraphs
@@ -35,6 +36,7 @@ settings:
       hero: hero
       text: text
       text_media: text_media
+      timeline: timeline
     negate: 0
     target_bundles_drag_drop:
       block:
@@ -58,4 +60,10 @@ settings:
       text_media:
         weight: 10
         enabled: true
+      timeline:
+        weight: 17
+        enabled: true
+      timeline_entry:
+        weight: 18
+        enabled: false
 field_type: entity_reference_revisions

@@ -105,14 +105,28 @@ body.logged-out {
 
   .headroom {
     will-change: transform;
-    transition: transform 200ms linear;
+    transition: all 200ms $cubic-bezier;
   }
   
   
   .headroom--pinned {
     transform: translateY(0%);
-    color: color('body');
     background-color: $white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+
+    .main-menu .menu__list .menu__item a:not(.btn):not(.submit-wrapper) {
+      color: $black;
+    }
+
+    .branding {
+      .positive {
+        opacity: 1;
+      }
+
+      .negative {
+        opacity: 0;
+      }
+    }
   }
   
   .headroom--unpinned {
@@ -121,9 +135,29 @@ body.logged-out {
 
   &.has-hero {
     .headroom--pinned {
-
       &.headroom--top {
         background-color: transparent;
+        box-shadow: none;
+
+        .main-menu > .menu__list > .menu__item.menu__item--expanded > .menu__list{
+          a:not(.btn) {
+            color: $primary;
+          }
+        }
+
+        .main-menu .menu__list .menu__item a:not(.btn):not(.submit-wrapper) {
+          color: $white;
+        }
+
+        .branding {
+          .positive {
+            opacity: 0;
+          }
+
+          .negative {
+            opacity: 1;
+          }
+        }
       }
     }
   }

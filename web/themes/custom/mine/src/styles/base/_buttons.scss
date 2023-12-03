@@ -8,6 +8,14 @@
   color: $white;
   border-radius: $border-radius;
   text-align: unset;
+
+  &:hover {
+    background: $primary;
+    color: $white;
+  }
+}
+
+.btn.btn--arrow {
   translate: 0px 0;
   transition: all .4s $cubic-bezier;
   @include iconize($long-arrow-right, 'after', $white);

@@ -1,0 +1,19 @@
+uuid: f7198fc7-17c2-4339-8492-98221c996478
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.timeline_entry
+id: paragraph.timeline_entry.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: timeline_entry
+label: Date
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

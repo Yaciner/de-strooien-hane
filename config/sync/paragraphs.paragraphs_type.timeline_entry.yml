@@ -1,0 +1,10 @@
+uuid: aa7e9373-d1eb-4cfa-9795-6360f8e5fc76
+langcode: nl
+status: true
+dependencies: {  }
+id: timeline_entry
+label: 'Timeline entry'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
