@@ -1,0 +1,28 @@
+uuid: 0d939262-134b-411c-a8c2-fed4f0b63840
+langcode: nl
+status: true
+dependencies:
+  config:
+    - views.view.general_site_settings
+  module:
+    - block_class
+    - views
+  theme:
+    - mine
+third_party_settings:
+  block_class:
+    classes: gss-google-maps
+id: mine_views_block__general_site_settings_maps
+theme: mine
+region: paragraph_blocks
+weight: 0
+provider: null
+plugin: 'views_block:general_site_settings-maps'
+settings:
+  id: 'views_block:general_site_settings-maps'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
