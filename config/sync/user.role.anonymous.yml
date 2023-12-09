@@ -27,4 +27,5 @@ permissions:
   - 'view paragraph content form'
   - 'view paragraph content hero'
   - 'view paragraph content text'
+  - 'view paragraph content text_column'
   - 'view paragraph content text_media'

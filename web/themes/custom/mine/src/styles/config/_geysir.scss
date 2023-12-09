@@ -87,9 +87,9 @@
 // Geysir modal specific styling
 .geysir-dialog {
 
-  .submit-wrapper {
-    display: none;
-  }
+  // .submit-wrapper {
+  //   display: none;
+  // }
 
   .ui-dialog-content {
     padding: rem(10);
@@ -133,10 +133,12 @@
     width: 100%;
     thead {
       h4 {
-        background-color: $gray-light;
         margin: 0;
-        padding: rem(10) 0;
-        text-transform: uppercase;
+        padding: rem(10);
+        font-size: rem(20);
+        background-color: $gray-light;
+        font-family: $base-font-family;
+        margin-bottom: 1rem;
       }
     }
     td.field-multiple-drag {

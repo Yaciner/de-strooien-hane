@@ -1,0 +1,22 @@
+uuid: 0c5486e5-486e-4be6-a3a8-8742966c1cd6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_column.field_text
+    - paragraphs.paragraphs_type.text_column
+  module:
+    - text
+id: paragraph.text_column.default
+targetEntityType: paragraph
+bundle: text_column
+mode: default
+content:
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

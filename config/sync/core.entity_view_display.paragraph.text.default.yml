@@ -1,0 +1,28 @@
+uuid: 09e2551d-c31e-42ba-b90f-e8f3613d4966
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text.field_background_color
+    - field.field.paragraph.text.field_html_id
+    - field.field.paragraph.text.field_text_columns
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: paragraph.text.default
+targetEntityType: paragraph
+bundle: text
+mode: default
+content:
+  field_text_columns:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_background_color: true
+  field_html_id: true

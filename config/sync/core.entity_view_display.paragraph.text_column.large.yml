@@ -1,0 +1,23 @@
+uuid: 133b9ef5-4316-42b5-90c8-dcdb552f02fa
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.large
+    - field.field.paragraph.text_column.field_text
+    - paragraphs.paragraphs_type.text_column
+  module:
+    - text
+id: paragraph.text_column.large
+targetEntityType: paragraph
+bundle: text_column
+mode: large
+content:
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

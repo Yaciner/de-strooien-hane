@@ -38,3 +38,15 @@ function mine_preprocess_paragraph(&$variables) {
     unset($variables['content']['field_vertical_alignment']);
   }
 }
+
+/**
+ * Preprocessing the Text paragraph bundle to determine classes for column
+ * layout.
+ *
+ * @param $variables
+ */
+function mine_preprocess_paragraph__text(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+  $variables['attributes']['class'][] = 'pg-textcol--' . count($paragraph->field_text_columns);
+}

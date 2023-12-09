@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Individual text column inside multi-column container.
+ */
+#}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

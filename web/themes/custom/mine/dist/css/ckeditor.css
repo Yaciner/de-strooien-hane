@@ -105,9 +105,6 @@ ul.paragraphs-add-dialog-list .button.button--small {
   display: none;
 }
 
-.geysir-dialog .submit-wrapper {
-  display: none;
-}
 .geysir-dialog .ui-dialog-content {
   padding: 0.625rem;
 }
@@ -138,10 +135,12 @@ ul.paragraphs-add-dialog-list .button.button--small {
   width: 100%;
 }
 .geysir-dialog .field-multiple-table thead h4 {
-  background-color: #e5e5e5;
   margin: 0;
-  padding: 0.625rem 0;
-  text-transform: uppercase;
+  padding: 0.625rem;
+  font-size: 1.25rem;
+  background-color: #e5e5e5;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+  margin-bottom: 1rem;
 }
 .geysir-dialog .field-multiple-table td.field-multiple-drag {
   width: 1.875rem;

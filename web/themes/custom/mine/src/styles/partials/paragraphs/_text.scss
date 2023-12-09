@@ -1,0 +1,28 @@
+.paragraph--type--text {
+
+}
+
+.field--name-field-text-columns {
+  .pg-textcol--1 & {
+    max-width: rem(760);
+  }
+
+  .pg-textcol--2 & {
+    @include grid(2, '.paragraph--type--text-column', 40px);
+
+    @include mq(m) {
+      @include grid(1, '.paragraph--type--text-column', 40px);
+    }
+  }
+
+  .pg-textcol--1,
+  .pg-textcol--3 & {
+    @include grid(3, '.paragraph--type--text-column', 40px);
+  }
+
+  .pg-textcol--3 & {
+    @include mq(l) {
+      @include grid(1, '.paragraph--type--text-column', 40px);
+    }
+  }
+}
