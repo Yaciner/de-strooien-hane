@@ -1,0 +1,15 @@
+uuid: 816a06c3-f8a6-42f6-9976-cbbc784eff01
+langcode: nl
+status: true
+dependencies: {  }
+name: pg_media
+label: 'PG: Media'
+effects:
+  94fcc670-2acc-4448-94b6-e835e0806103:
+    uuid: 94fcc670-2acc-4448-94b6-e835e0806103
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: null
+      upscale: true

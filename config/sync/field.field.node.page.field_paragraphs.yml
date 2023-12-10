@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.media
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_media
     - paragraphs.paragraphs_type.timeline
@@ -36,6 +37,7 @@ settings:
       hero: hero
       text: text
       text_media: text_media
+      media: media
       timeline: timeline
     negate: 0
     target_bundles_drag_drop:
@@ -54,9 +56,15 @@ settings:
       hero:
         weight: 8
         enabled: true
+      media:
+        weight: 17
+        enabled: true
       text:
         weight: 9
         enabled: true
+      text_column:
+        weight: 19
+        enabled: false
       text_media:
         weight: 10
         enabled: true

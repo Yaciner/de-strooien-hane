@@ -1,0 +1,15 @@
+uuid: d43b61e7-eb1a-4fdb-b250-513fd78a8885
+langcode: nl
+status: true
+dependencies: {  }
+name: pg_image_slider
+label: 'PG: Image slider'
+effects:
+  683ef395-33f8-4f41-b13e-721e2c7bb6be:
+    uuid: 683ef395-33f8-4f41-b13e-721e2c7bb6be
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 540
+      upscale: true

@@ -1,0 +1,23 @@
+uuid: b7d20771-2a6d-42c4-bfe8-4a071d1ac08e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid
+    - paragraphs.paragraphs_type.image_gallery
+  module:
+    - options
+id: paragraph.image_gallery.field_grid
+field_name: field_grid
+entity_type: paragraph
+bundle: image_gallery
+label: Grid
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '4'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

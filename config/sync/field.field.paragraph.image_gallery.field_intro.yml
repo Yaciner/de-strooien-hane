@@ -1,0 +1,22 @@
+uuid: a7b996b8-9bce-4935-8bf0-a546817912ab
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_intro
+    - paragraphs.paragraphs_type.image_gallery
+  module:
+    - text
+id: paragraph.image_gallery.field_intro
+field_name: field_intro
+entity_type: paragraph
+bundle: image_gallery
+label: Intro
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

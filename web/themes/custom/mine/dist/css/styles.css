@@ -3159,7 +3159,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .paragraph .paragraph--intro .field--name-field-overview-link {
   position: relative;
@@ -3926,6 +3926,14 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large {
 body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
   scale: 1;
   opacity: 1;
+}
+
+.paragraph--type--media .paragraph--intro {
+  text-align: center;
+  justify-content: center;
+}
+.paragraph--type--media .paragraph--intro .field--name-field-intro {
+  max-width: 48.75rem;
 }
 
 .paragraph--type--text-media .container, .paragraph--type--text-media body:not(.path-node) .region-content, body:not(.path-node) .paragraph--type--text-media .region-content, .paragraph--type--text-media .paragraph--type--hero .hero__content, .paragraph--type--hero .paragraph--type--text-media .hero__content {

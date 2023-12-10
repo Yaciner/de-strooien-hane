@@ -1,0 +1,21 @@
+uuid: b39addcb-2bf2-4a5e-abb9-a9f2f19d0f90
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.image_gallery
+  module:
+    - options
+id: paragraph.image_gallery.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: image_gallery
+label: 'Background color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: f58d08ac-b35f-4025-b9c9-77c2ef175fd7
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_html_id
+    - paragraphs.paragraphs_type.image_gallery
+id: paragraph.image_gallery.field_html_id
+field_name: field_html_id
+entity_type: paragraph
+bundle: image_gallery
+label: 'Paragraph ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,17 @@
+uuid: f65b8877-c98f-4d2b-b408-9f2dc989b508
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: pg_image_gallery
+label: 'PG: Image gallery'
+effects:
+  aeb1a16a-adb3-47f6-b8c5-b21c51158380:
+    uuid: aeb1a16a-adb3-47f6-b8c5-b21c51158380
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 520
+      crop_type: focal_point

@@ -1,0 +1,42 @@
+uuid: 11a3a2a4-6f55-4de5-b254-066625a1d5ed
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_slider.field_background_color
+    - field.field.paragraph.image_slider.field_html_id
+    - field.field.paragraph.image_slider.field_intro
+    - field.field.paragraph.image_slider.field_media
+    - image.style.pg_image_slider
+    - paragraphs.paragraphs_type.image_slider
+  module:
+    - mine_formatters
+    - text
+id: paragraph.image_slider.default
+targetEntityType: paragraph
+bundle: image_slider
+mode: default
+content:
+  field_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: pg_image_slider
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_background_color: true
+  field_html_id: true
