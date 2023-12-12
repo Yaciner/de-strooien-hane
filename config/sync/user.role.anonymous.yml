@@ -32,5 +32,7 @@ permissions:
   - 'view paragraph content text'
   - 'view paragraph content text_column'
   - 'view paragraph content text_media'
+  - 'view paragraph content text_media_item'
+  - 'view paragraph content text_media_slider'
   - 'view paragraph content timeline'
   - 'view paragraph content timeline_entry'

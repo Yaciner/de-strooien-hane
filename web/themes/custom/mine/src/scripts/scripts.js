@@ -4,6 +4,7 @@ import './lottie-animations';
 import './reviews';
 import './faq';
 import './image-slider';
+import './text-image-slider';
 
 (function ($, Drupal) {
   'use strict';

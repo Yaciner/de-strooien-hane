@@ -1343,6 +1343,7 @@ textarea.form-control-lg {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+  font-family: "FreightBigPro", -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
 }
 .ck-content h2, .ck-content .block-title, .ck-content .nav__title,
 .ck-content .menu__title,
@@ -1352,6 +1353,7 @@ textarea.form-control-lg {
   line-height: 1.16;
   font-size: clamp(1.88rem, 2.5vw + 1.13rem, 3rem);
   font-weight: 700;
+  font-family: "FreightBigPro", -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
 }
 .ck-content h3 {
   margin-top: 0;
@@ -1368,7 +1370,6 @@ textarea.form-control-lg {
 .ck-content .block__title,
 .ck-content h3,
 .ck-content h4 {
-  font-family: "FreightBigPro", -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
   font-weight: 900;
 }
 .ck-content h1:first-child,
