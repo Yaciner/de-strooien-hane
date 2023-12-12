@@ -1,0 +1,41 @@
+uuid: 8b0261f3-0a26-4254-9543-706020c6a853
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.large
+    - field.field.paragraph.text_media_item.field_media
+    - field.field.paragraph.text_media_item.field_text
+    - field.field.paragraph.text_media_item.field_title
+    - image.style.pg_hero_large
+    - paragraphs.paragraphs_type.text_media_item
+  module:
+    - mine_formatters
+    - text
+id: paragraph.text_media_item.large
+targetEntityType: paragraph
+bundle: text_media_item
+mode: large
+content:
+  field_media:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: pg_hero_large
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_title: true

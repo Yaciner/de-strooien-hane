@@ -11,10 +11,12 @@
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }}>
     <div class="container">
-      <div class="paragraph--intro">
-        {{ content.field_intro }}
-        {{ content.field_overview_link }}
-      </div>
+      {% if node.field_intro.value %}
+        <div class="paragraph--intro">
+          {{ content.field_intro }}
+          {{ content.field_overview_link }}
+        </div>
+      {% endif %}
       {% block content %}
         {{ content.field_media }}
         <div class="swiper-button-prev"></div>

@@ -1,25 +1,22 @@
-.swiper {
-  .swiper-button-prev, .swiper-button-next {
-    position: absolute;
-    width: 2.4rem;
-    height: 2.4rem; 
-    @include iconize($long-arrow-right, 'after', $white);
-    padding: 0;
-    background-color: $primary;
-    border-radius: $border-radius;
+.swiper + .swiper-button-prev, .swiper-button-prev + .swiper-button-next, .swiper .swiper-button-prev, .swiper .swiper-button-next  {
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem; 
+  @include iconize($long-arrow-right, 'after', $white);
+  padding: 0;
+  background-color: $primary;
+  border-radius: $border-radius;
 
-    &:after {
-      width: 1.2rem;
-      left: 50%;
-      top: 50%;
-      translate: -50% -50%;
-    }
-  }
-
-  .swiper-button-prev {
-    &:after {
-      scale: -1;
-    }
+  &:after {
+    width: 1.2rem;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
   }
 }
- 
+
+.swiper + .swiper-button-prev {
+  &:after {
+    scale: -1;
+  }
+}

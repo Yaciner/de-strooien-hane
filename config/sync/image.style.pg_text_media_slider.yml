@@ -1,0 +1,17 @@
+uuid: 5a94abb4-d2fc-4127-aacc-6cb85d8cc08c
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: pg_text_media_slider
+label: 'PG: Text & Media Slider'
+effects:
+  6779b939-5954-4eae-8041-3971e1730364:
+    uuid: 6779b939-5954-4eae-8041-3971e1730364
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 600
+      crop_type: focal_point

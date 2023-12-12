@@ -1,0 +1,73 @@
+uuid: 04f07533-7494-48ff-b0b6-fa7929d01df9
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_entries
+    - paragraphs.paragraphs_type.text_media_item
+    - paragraphs.paragraphs_type.text_media_slider
+  module:
+    - entity_reference_revisions
+id: paragraph.text_media_slider.field_entries
+field_name: field_entries
+entity_type: paragraph
+bundle: text_media_slider
+label: Entries
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text_media_item: text_media_item
+    negate: 0
+    target_bundles_drag_drop:
+      block:
+        weight: 10
+        enabled: false
+      cta:
+        weight: 11
+        enabled: false
+      faq:
+        weight: 12
+        enabled: false
+      form:
+        weight: 13
+        enabled: false
+      hero:
+        weight: 14
+        enabled: false
+      image_gallery:
+        weight: 21
+        enabled: false
+      image_slider:
+        weight: 22
+        enabled: false
+      media:
+        weight: 23
+        enabled: false
+      text:
+        weight: 15
+        enabled: false
+      text_column:
+        weight: 25
+        enabled: false
+      text_media:
+        weight: 16
+        enabled: false
+      text_media_item:
+        weight: 27
+        enabled: true
+      text_media_slider:
+        weight: 28
+        enabled: false
+      timeline:
+        weight: 17
+        enabled: false
+      timeline_entry:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

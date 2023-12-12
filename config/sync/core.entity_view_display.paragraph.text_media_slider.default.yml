@@ -1,0 +1,37 @@
+uuid: 2d04dd07-e9a0-4fb6-8738-287245b7c0f0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_media_slider.field_background_color
+    - field.field.paragraph.text_media_slider.field_entries
+    - field.field.paragraph.text_media_slider.field_html_id
+    - field.field.paragraph.text_media_slider.field_intro
+    - paragraphs.paragraphs_type.text_media_slider
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.text_media_slider.default
+targetEntityType: paragraph
+bundle: text_media_slider
+mode: default
+content:
+  field_entries:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_background_color: true
+  field_html_id: true

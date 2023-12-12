@@ -1,0 +1,10 @@
+uuid: b6028a5b-7592-4642-bd7a-993f75b5cc8a
+langcode: nl
+status: true
+dependencies: {  }
+id: text_media_slider
+label: 'Text & Media Slider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

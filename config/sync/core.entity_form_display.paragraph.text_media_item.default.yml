@@ -1,0 +1,72 @@
+uuid: 888c8fad-64e3-4d1c-9b7d-d19abd1b198e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_entity_browser_images_or_video
+    - field.field.paragraph.text_media_item.field_media
+    - field.field.paragraph.text_media_item.field_text
+    - field.field.paragraph.text_media_item.field_title
+    - paragraphs.paragraphs_type.text_media_item
+  module:
+    - entity_browser
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_text_media_item:
+      children:
+        - field_title
+        - field_text
+        - field_media
+      label: 'Text & Media item'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: false
+id: paragraph.text_media_item.default
+targetEntityType: paragraph
+bundle: text_media_item
+mode: default
+content:
+  field_media:
+    type: entity_browser_entity_reference
+    weight: 5
+    region: content
+    settings:
+      entity_browser: media_entity_browser_images_or_video
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      field_widget_display_settings:
+        view_mode: media_entity_browser
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_text:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

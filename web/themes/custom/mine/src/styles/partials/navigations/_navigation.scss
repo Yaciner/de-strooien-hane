@@ -106,3 +106,37 @@ body:not(.logged-in).has-hero {
     }
   }
 }
+
+// FIXED MENU
+.fixed-menu {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 10;
+
+  .menu__list {
+    @include reset-list;
+    display: flex;
+    gap: 1.2rem;
+    
+    .menu__item {
+      a, span {
+        position: relative;
+        text-indent: -9999px;
+        background-color: $white;
+        width: rem(56);
+        height: rem(56);
+        border-radius: 50%;
+        box-shadow: $box-shadow;
+        padding: 0;
+
+        &:before {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          mask-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
