@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.cta
     - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.image_slider
     - paragraphs.paragraphs_type.media
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_media
@@ -37,6 +38,7 @@ settings:
       text_media: text_media
       media: media
       timeline: timeline
+      image_slider: image_slider
     negate: 0
     target_bundles_drag_drop:
       block:
@@ -54,6 +56,12 @@ settings:
       hero:
         weight: 8
         enabled: false
+      image_gallery:
+        weight: 19
+        enabled: false
+      image_slider:
+        weight: 20
+        enabled: true
       media:
         weight: 17
         enabled: true

@@ -3,6 +3,7 @@ import Headroom from "headroom.js";
 import './lottie-animations';
 import './reviews';
 import './faq';
+import './image-slider';
 
 (function ($, Drupal) {
   'use strict';

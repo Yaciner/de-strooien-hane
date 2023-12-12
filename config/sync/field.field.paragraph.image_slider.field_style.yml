@@ -1,0 +1,23 @@
+uuid: a469488c-e4ab-4150-b0fc-a89f24b60b1e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_style
+    - paragraphs.paragraphs_type.image_slider
+id: paragraph.image_slider.field_style
+field_name: field_style
+entity_type: paragraph
+bundle: image_slider
+label: Style
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:entity_view_display'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

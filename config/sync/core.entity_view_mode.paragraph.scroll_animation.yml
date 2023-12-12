@@ -1,0 +1,10 @@
+uuid: 21f0f534-204c-4a9a-9189-b3f4de8ae755
+langcode: nl
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.scroll_animation
+label: 'Scroll animation'
+targetEntityType: paragraph
+cache: true

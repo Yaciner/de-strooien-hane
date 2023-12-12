@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.image_slider.field_html_id
     - field.field.paragraph.image_slider.field_intro
     - field.field.paragraph.image_slider.field_media
+    - field.field.paragraph.image_slider.field_style
     - paragraphs.paragraphs_type.image_slider
   module:
     - entity_browser
@@ -17,6 +18,7 @@ third_party_settings:
   field_group:
     group_layout:
       children:
+        - field_style
         - field_background_color
       label: Layout
       region: content
@@ -85,7 +87,7 @@ mode: default
 content:
   field_background_color:
     type: options_select
-    weight: 4
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -119,6 +121,12 @@ content:
       field_widget_display_settings:
         view_mode: media_entity_browser
       selection_mode: selection_append
+    third_party_settings: {  }
+  field_style:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

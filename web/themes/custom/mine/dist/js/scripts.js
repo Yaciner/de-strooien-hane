@@ -49,6 +49,51 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/scripts/image-slider.js":
+/*!*************************************!*\
+  !*** ./src/scripts/image-slider.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
+
+
+
+
+(function ($, Drupal) {
+  'use strict';
+
+  Drupal.behaviors.image_slider = {
+    attach: function attach(context, settings) {
+      var sliders = $('.paragraph--type--image-slider.paragraph--view-mode--default .field--name-field-media');
+      $(once('swiper', sliders)).each(function (index, item) {
+        $(item).addClass('swiper');
+        $(item).find('.field__item').addClass('swiper-slide');
+        $(item).children().wrapAll('<div class="swiper-wrapper"></div>');
+        swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
+        var dom = $(item).get(0);
+        new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](dom, {
+          spaceBetween: 16,
+          slidesPerView: 3,
+          loop: true,
+          centeredSlides: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }
+        });
+      });
+    }
+  };
+})(jQuery, Drupal);
+
+/***/ }),
+
 /***/ "./src/scripts/lottie-animations.js":
 /*!******************************************!*\
   !*** ./src/scripts/lottie-animations.js ***!
@@ -132,8 +177,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lottie_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lottie-animations */ "./src/scripts/lottie-animations.js");
 /* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reviews */ "./src/scripts/reviews.js");
 /* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./faq */ "./src/scripts/faq.js");
+/* harmony import */ var _image_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./image-slider */ "./src/scripts/image-slider.js");
 
 // import './fancybox';
+
 
 
 

@@ -1,6 +1,6 @@
 uuid: 6695acf9-c10a-4227-81ef-d3b6b29d7737
 langcode: nl
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.paragraph.large
@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.image_slider.field_html_id
     - field.field.paragraph.image_slider.field_intro
     - field.field.paragraph.image_slider.field_media
+    - field.field.paragraph.image_slider.field_style
     - image.style.pg_hero_large
     - paragraphs.paragraphs_type.image_slider
   module:
@@ -34,3 +35,4 @@ hidden:
   field_background_color: true
   field_html_id: true
   field_intro: true
+  field_style: true

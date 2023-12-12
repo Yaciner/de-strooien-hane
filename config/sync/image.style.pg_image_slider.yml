@@ -1,15 +1,17 @@
 uuid: d43b61e7-eb1a-4fdb-b250-513fd78a8885
 langcode: nl
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - focal_point
 name: pg_image_slider
-label: 'PG: Image slider'
+label: 'PG: Image slider: Default'
 effects:
-  683ef395-33f8-4f41-b13e-721e2c7bb6be:
-    uuid: 683ef395-33f8-4f41-b13e-721e2c7bb6be
-    id: image_scale
-    weight: 1
+  e995fda4-5b6c-422f-a9b9-a2e1848d55ee:
+    uuid: e995fda4-5b6c-422f-a9b9-a2e1848d55ee
+    id: focal_point_scale_and_crop
+    weight: 2
     data:
-      width: null
+      width: 740
       height: 540
-      upscale: true
+      crop_type: focal_point

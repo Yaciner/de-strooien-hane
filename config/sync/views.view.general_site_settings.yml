@@ -745,8 +745,8 @@ display:
         options:
           data_provider_id: geolocation_field_provider
           geolocation_field: field_geolocation
-          title_field: ''
-          label_field: ''
+          title_field: none
+          label_field: none
           marker_row_number: 0
           marker_icon_path: ''
           even_empty: 1
@@ -1048,8 +1048,8 @@ display:
             zoom: 10
             minZoom: 0
             maxZoom: 18
-            height: 100%
-            width: 100%
+            height: 500px
+            width: 500px
             gestureHandling: auto
       row:
         type: fields

@@ -19,6 +19,7 @@ function mine_preprocess_paragraph(&$variables) {
   $variables['attributes']['class'][] = 'paragraph--view-mode--' . $variables['elements']['#view_mode'];
   !empty($paragraph->field_media_alignment->value) ? $variables['attributes']['class'][] = 'pg--has-media-' . $paragraph->field_media_alignment->value : null;
   !empty($paragraph->field_vertical_alignment->value) ? $variables['attributes']['class'][] = 'pg-valign--' . $paragraph->field_vertical_alignment->value : null;
+  !empty($paragraph->field_grid->value) ? $variables['attributes']['class'][] = 'pg-grid--' . $paragraph->field_grid->value : null;
 
   $container_attributes = [
     'class' => [

@@ -1,8 +1,9 @@
-uuid: 11a3a2a4-6f55-4de5-b254-066625a1d5ed
+uuid: 807c8ca6-c9b8-4810-b62d-8d0c7dcac3f3
 langcode: nl
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.scroll_animation
     - field.field.paragraph.image_slider.field_background_color
     - field.field.paragraph.image_slider.field_html_id
     - field.field.paragraph.image_slider.field_intro
@@ -13,10 +14,10 @@ dependencies:
   module:
     - mine_formatters
     - text
-id: paragraph.image_slider.default
+id: paragraph.image_slider.scroll_animation
 targetEntityType: paragraph
 bundle: image_slider
-mode: default
+mode: scroll_animation
 content:
   field_intro:
     type: text_default
@@ -33,7 +34,7 @@ content:
       image_link: ''
       image_link_image_style: ''
       image_loading:
-        attribute: eager
+        attribute: lazy
       image_only: 0
     third_party_settings: {  }
     weight: 1

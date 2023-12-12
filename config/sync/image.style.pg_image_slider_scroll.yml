@@ -1,0 +1,15 @@
+uuid: c6959e31-4188-4821-a38d-9ae0df34d280
+langcode: nl
+status: true
+dependencies: {  }
+name: pg_image_slider_scroll
+label: 'PG: Image slider: Scroll'
+effects:
+  e22cdbb7-e2d6-43d2-972a-0ed9f8967b63:
+    uuid: e22cdbb7-e2d6-43d2-972a-0ed9f8967b63
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 640
+      upscale: true
