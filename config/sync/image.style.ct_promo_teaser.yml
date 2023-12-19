@@ -1,0 +1,17 @@
+uuid: b9a9ee0e-b03d-49c3-802c-47577d967e76
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: ct_promo_teaser
+label: 'CT: Promo: Teaser'
+effects:
+  cd83456f-cd20-434b-b867-35bd98104e22:
+    uuid: cd83456f-cd20-434b-b867-35bd98104e22
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      crop_type: focal_point

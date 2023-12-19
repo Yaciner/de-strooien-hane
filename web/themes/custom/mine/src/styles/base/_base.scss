@@ -3,6 +3,7 @@
 //
 //------------------------------------------------------------------------------
 
+$header-size: 110px;
 
 html,
 body {
@@ -43,13 +44,19 @@ body {
   outline: 0;
 }
 
-.wrapper {
+.layout-container {
   max-width: $container-max;
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
 
   background: white;
+}
+
+body.no-hero {
+  .layout-container {
+    padding-top: $header-size;
+  }
 }
 
 .off-canvas {}

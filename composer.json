@@ -19,6 +19,7 @@
         "drupal/address": "^1.12",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ajax_loader": "^2.1",
+        "drupal/better_exposed_filters": "^6.0",
         "drupal/block_class": "^2.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",

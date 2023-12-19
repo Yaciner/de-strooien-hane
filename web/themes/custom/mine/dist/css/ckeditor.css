@@ -1247,12 +1247,15 @@ textarea.form-control-lg {
 .ck-content *:focus {
   outline: 0;
 }
-.ck-content .wrapper {
+.ck-content .layout-container {
   max-width: 1920px;
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
   background: white;
+}
+.ck-content body.no-hero .layout-container {
+  padding-top: 110px;
 }
 .ck-content .container {
   max-width: 1600px;
@@ -1382,16 +1385,6 @@ textarea.form-control-lg {
 .ck-content h4:first-child {
   margin-top: 0;
 }
-.ck-content h1:last-child,
-.ck-content h2:last-child,
-.ck-content .block-title:last-child,
-.ck-content .nav__title:last-child,
-.ck-content .menu__title:last-child,
-.ck-content .block__title:last-child,
-.ck-content h3:last-child,
-.ck-content h4:last-child {
-  margin-bottom: 0;
-}
 .ck-content img {
   max-width: 100%;
   height: auto;
@@ -1471,6 +1464,10 @@ textarea.form-control-lg {
   -webkit-mask-position: center;
           mask-position: center;
   background-color: black;
+}
+.ck-content .search-fail {
+  font-size: 1.875rem;
+  font-weight: bold;
 }
 .ck-content .btn {
   position: relative;

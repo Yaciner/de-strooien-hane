@@ -1,0 +1,16 @@
+uuid: 93054241-2533-417f-a0f7-c3dfc34c152f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.promo_collections
+id: taxonomy_term.promo_collections
+targetEntityType: taxonomy_term
+bundle: promo_collections
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: /<front>
+  redirect_code: 301
+  redirect_fallback_action: page_not_found

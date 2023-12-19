@@ -38,9 +38,6 @@ h4 {
   &:first-child {
     margin-top: 0;
   }
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .nav__title,
@@ -97,4 +94,9 @@ a {
 
 .mail {
   @include iconize($mail, 'before');
+}
+
+.search-fail {
+  font-size: rem(30);
+  font-weight: bold;
 }

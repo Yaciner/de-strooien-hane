@@ -1,0 +1,19 @@
+uuid: bd7535de-b2bc-44fb-a019-2de45037c14a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_discount
+    - node.type.promo_item
+id: node.promo_item.field_discount
+field_name: field_discount
+entity_type: node
+bundle: promo_item
+label: Discount
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

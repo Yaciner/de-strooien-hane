@@ -1,0 +1,52 @@
+uuid: 9cdbffc3-58a5-4016-9b14-6f789fd8e379
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.promo_item.field_collection
+    - field.field.node.promo_item.field_description
+    - field.field.node.promo_item.field_discount
+    - field.field.node.promo_item.field_media
+    - image.style.ct_promo_teaser
+    - node.type.promo_item
+  module:
+    - mine_formatters
+    - user
+id: node.promo_item.default
+targetEntityType: node
+bundle: promo_item
+mode: default
+content:
+  field_description:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_discount:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: ct_promo_teaser
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_collection: true
+  langcode: true
+  links: true

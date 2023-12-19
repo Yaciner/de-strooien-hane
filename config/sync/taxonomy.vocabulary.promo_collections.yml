@@ -1,0 +1,8 @@
+uuid: f0329df6-4669-473c-99d8-a1364193d7da
+langcode: nl
+status: true
+dependencies: {  }
+name: 'Promo collections'
+vid: promo_collections
+description: ''
+weight: 0

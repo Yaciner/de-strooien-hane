@@ -1,0 +1,43 @@
+.node--type-promo-item {
+  &.node--view-mode-default {
+    position: relative;
+
+    .field--name-field-discount {
+      position: absolute;
+      top: $small-gutter;
+      left: $small-gutter;
+      background-color: $primary;
+      color: $white;
+      padding: .4rem .6rem;
+      z-index: 2;
+    }
+
+    .field--name-field-media {
+      &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .3);
+      }
+    }
+
+    .node--teaser__content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+      z-index: 2;
+
+      h3 {
+        font-size: fluid(20px, 24px);
+        color: $white;
+      }
+
+      .field {
+        color: $white;
+      }
+    }
+  }
+}

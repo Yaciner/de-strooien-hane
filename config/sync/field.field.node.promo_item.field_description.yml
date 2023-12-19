@@ -1,0 +1,19 @@
+uuid: e061cd84-3b7d-405f-9ea3-f279c507fa67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.promo_item
+id: node.promo_item.field_description
+field_name: field_description
+entity_type: node
+bundle: promo_item
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

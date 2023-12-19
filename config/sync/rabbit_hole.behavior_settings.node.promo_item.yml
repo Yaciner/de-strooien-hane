@@ -1,0 +1,16 @@
+uuid: 610dfd88-51da-4c89-9554-03266803f19f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.promo_item
+id: node.promo_item
+targetEntityType: node
+bundle: promo_item
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: /front
+  redirect_code: 301
+  redirect_fallback_action: page_not_found

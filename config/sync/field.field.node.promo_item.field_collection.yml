@@ -1,0 +1,29 @@
+uuid: 51ba3873-d9b5-4fee-b9c4-1495a6425e75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_collection
+    - node.type.promo_item
+    - taxonomy.vocabulary.promo_collections
+id: node.promo_item.field_collection
+field_name: field_collection
+entity_type: node
+bundle: promo_item
+label: Collection
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      promo_collections: promo_collections
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

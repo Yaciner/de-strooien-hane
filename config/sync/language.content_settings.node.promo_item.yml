@@ -1,0 +1,11 @@
+uuid: f4f43558-31cd-4f65-8b16-bfa452149353
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.promo_item
+id: node.promo_item
+target_entity_type_id: node
+target_bundle: promo_item
+default_langcode: nl
+language_alterable: false

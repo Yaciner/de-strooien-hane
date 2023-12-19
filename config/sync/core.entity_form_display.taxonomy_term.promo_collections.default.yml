@@ -1,0 +1,25 @@
+uuid: 38b1125c-9def-42e8-86d5-c96dcb65c112
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.promo_collections
+id: taxonomy_term.promo_collections.default
+targetEntityType: taxonomy_term
+bundle: promo_collections
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  simple_sitemap: true
+  status: true

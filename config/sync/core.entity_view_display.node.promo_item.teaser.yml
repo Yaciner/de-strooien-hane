@@ -1,0 +1,42 @@
+uuid: 4009a3d8-9514-41ed-a45c-81f5d36b6ea6
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.promo_item.field_collection
+    - field.field.node.promo_item.field_description
+    - field.field.node.promo_item.field_discount
+    - field.field.node.promo_item.field_media
+    - node.type.promo_item
+  module:
+    - mine_formatters
+    - user
+id: node.promo_item.teaser
+targetEntityType: node
+bundle: promo_item
+mode: teaser
+content:
+  field_media:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_link_image_style: ''
+      image_only: false
+      image_style: ''
+      image_link: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_collection: true
+  field_description: true
+  field_discount: true
+  langcode: true
