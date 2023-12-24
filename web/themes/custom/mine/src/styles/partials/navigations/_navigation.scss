@@ -20,7 +20,7 @@
   & > .menu__list {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 
     & > .menu__item.menu__item--expanded {
       position: relative;
@@ -63,6 +63,10 @@
         }
       }
     }
+  }
+
+  @include mq(xl) {
+    display: none;
   }
 }
 

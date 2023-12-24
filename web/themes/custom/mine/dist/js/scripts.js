@@ -216,6 +216,10 @@ __webpack_require__.r(__webpack_exports__);
       var header = document.querySelector('.region-header');
       var headroom = new (headroom_js__WEBPACK_IMPORTED_MODULE_0___default())(header);
       headroom.init();
+      $(once('click', '.js-mm-toggle')).on('click', function (e) {
+        $('body').toggleClass('mm-open');
+        e.preventDefault();
+      });
     }
   };
 })(jQuery, Drupal);

@@ -1,0 +1,29 @@
+uuid: c9fd4a3d-1a52-4901-8c80-8605591338e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - mine
+third_party_settings:
+  block_class:
+    classes: mm-main-menu
+id: mine_mainnavigation_2
+theme: mine
+region: off_canvas
+weight: -11
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

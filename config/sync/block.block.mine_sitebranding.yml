@@ -1,0 +1,27 @@
+uuid: 7c5f0c32-444b-44e8-9877-30c0175e97c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - mine
+third_party_settings:
+  block_class:
+    classes: mm-branding
+id: mine_sitebranding
+theme: mine
+region: off_canvas
+weight: -12
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

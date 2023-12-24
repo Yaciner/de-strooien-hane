@@ -22,6 +22,11 @@ import './text-image-slider';
       let header = document.querySelector('.region-header');
       let headroom  = new Headroom(header);
       headroom.init();
+
+      $(once('click', '.js-mm-toggle')).on('click', function (e) {
+        $('body').toggleClass('mm-open');
+        e.preventDefault();
+      });
     }
   };
 })(jQuery, Drupal);

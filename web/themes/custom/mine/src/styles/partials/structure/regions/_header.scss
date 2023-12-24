@@ -12,6 +12,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .mm-toggle {
+      display: none;
+      @include iconize($menu, 'after', $white);
+      width: 2.5rem;
+      padding: 0;
+      height: 2.5rem;
+
+      &:after {
+        position: relative;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      @include mq(xl) {
+        display: block;
+      }
+    }
   }
 }
 
