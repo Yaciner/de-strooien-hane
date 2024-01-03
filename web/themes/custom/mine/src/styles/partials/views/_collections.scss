@@ -11,3 +11,17 @@
     }
   } 
 }
+
+.view-collections.view-display-id-overview {
+  .views-rows {
+    @include grid(3, '.views-row', $small-gutter);
+
+    @include mq(l) {
+      @include grid(2, '.views-row', $small-gutter);
+    }
+
+    @include mq(m) {
+      @include grid(1, '.views-row', $small-gutter);
+    }
+  }
+}

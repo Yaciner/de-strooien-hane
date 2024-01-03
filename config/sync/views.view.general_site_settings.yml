@@ -1048,8 +1048,8 @@ display:
             zoom: 10
             minZoom: 0
             maxZoom: 18
-            height: 500px
-            width: 500px
+            height: 600px
+            width: 100%
             gestureHandling: auto
       row:
         type: fields

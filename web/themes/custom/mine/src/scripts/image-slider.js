@@ -21,27 +21,33 @@ import { TextPlugin } from "gsap/TextPlugin";
       let scrollSliders = $('.paragraph--type--image-slider.paragraph--view-mode--scroll_animation .field--name-field-media');
 
       $(once('swiper', defaultSliders)).each(function (index, item) {
+        let uniqueNavClass = 'swiper-navigation-i-s-' + index;
         $(item).addClass('swiper');
         $(item).find('.field__item').addClass('swiper-slide');
         $(item).children().wrapAll('<div class="swiper-wrapper"></div>');
 
+        $(item).parent().find('.swiper-button-next').addClass(uniqueNavClass + '-next');
+        $(item).parent().find('.swiper-button-prev').addClass(uniqueNavClass + '-prev');
+        
+        if($(item).find('.swiper-wrapper').children().length <= 3) {
+          let clones = $(item).find('.swiper-wrapper').children().clone();
+          $(item).find('.swiper-wrapper').append(clones);
+        }
+        
+
         Swiper.use([Navigation]);
         let dom = $(item).get(0);
         new Swiper(dom, {
-          spaceBetween: 16,
-          slidesPerView: 3,
+          slidesPerView: 2.2,
+          spaceBetween: 30,
           loop: true,
           centeredSlides: true,
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.' + uniqueNavClass + '-next',
+            prevEl: '.' + uniqueNavClass + '-prev',
           }
         });
       });
-
-      // write logic for scorll trigger
-
-
     }
   };
 

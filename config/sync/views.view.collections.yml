@@ -237,6 +237,17 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+      defaults:
+        style: false
+        row: false
       display_description: ''
       display_extenders: {  }
     cache_metadata:

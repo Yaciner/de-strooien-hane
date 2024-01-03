@@ -84,24 +84,29 @@ __webpack_require__.r(__webpack_exports__);
       var defaultSliders = $('.paragraph--type--image-slider.paragraph--view-mode--default .field--name-field-media');
       var scrollSliders = $('.paragraph--type--image-slider.paragraph--view-mode--scroll_animation .field--name-field-media');
       $(once('swiper', defaultSliders)).each(function (index, item) {
+        var uniqueNavClass = 'swiper-navigation-i-s-' + index;
         $(item).addClass('swiper');
         $(item).find('.field__item').addClass('swiper-slide');
         $(item).children().wrapAll('<div class="swiper-wrapper"></div>');
+        $(item).parent().find('.swiper-button-next').addClass(uniqueNavClass + '-next');
+        $(item).parent().find('.swiper-button-prev').addClass(uniqueNavClass + '-prev');
+        if ($(item).find('.swiper-wrapper').children().length <= 3) {
+          var clones = $(item).find('.swiper-wrapper').children().clone();
+          $(item).find('.swiper-wrapper').append(clones);
+        }
         swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
         var dom = $(item).get(0);
         new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](dom, {
-          spaceBetween: 16,
-          slidesPerView: 3,
+          slidesPerView: 2.2,
+          spaceBetween: 30,
           loop: true,
           centeredSlides: true,
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.' + uniqueNavClass + '-next',
+            prevEl: '.' + uniqueNavClass + '-prev'
           }
         });
       });
-
-      // write logic for scorll trigger
     }
   };
 })(jQuery, Drupal);
@@ -277,9 +282,17 @@ __webpack_require__.r(__webpack_exports__);
     attach: function attach(context, settings) {
       var defaultSliders = $('.paragraph--type--text-media-slider.paragraph--view-mode--default .field--name-field-entries');
       $(once('swiper', defaultSliders)).each(function (index, item) {
+        var uniqueNavClass = 'navigation-t-m-s-' + index; // Unique class for each slider
+
         $(item).addClass('swiper');
         $(item).find('.paragraph--type--text-media-item').addClass('swiper-slide');
         $(item).children().wrapAll('<div class="swiper-wrapper"></div>');
+        $(item).parent().find('.swiper-button-next').addClass(uniqueNavClass + '-next');
+        $(item).parent().find('.swiper-button-prev').addClass(uniqueNavClass + '-prev');
+        if ($(item).find('.swiper-wrapper').children().length <= 3) {
+          var clones = $(item).find('.swiper-wrapper').children().clone();
+          $(item).find('.swiper-wrapper').append(clones);
+        }
         swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
         var dom = $(item).get(0);
         new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](dom, {
@@ -287,8 +300,8 @@ __webpack_require__.r(__webpack_exports__);
           loop: true,
           centeredSlides: true,
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.' + uniqueNavClass + '-next',
+            prevEl: '.' + uniqueNavClass + '-prev'
           }
         });
       });

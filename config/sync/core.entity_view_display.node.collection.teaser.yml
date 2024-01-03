@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.collection.field_paragraphs
     - field.field.node.collection.field_seo
     - field.field.node.collection.field_weight
+    - image.style.ct_collection_teaser
     - node.type.collection
   module:
     - mine_formatters
@@ -22,12 +23,12 @@ content:
     type: unveil_image
     label: hidden
     settings:
-      image_link_image_style: ''
-      image_only: false
-      image_style: ''
+      image_style: ct_collection_teaser
       image_link: ''
+      image_link_image_style: ''
       image_loading:
         attribute: lazy
+      image_only: 0
     third_party_settings: {  }
     weight: 0
     region: content

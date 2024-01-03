@@ -2,6 +2,8 @@
 
 use Drupal\Core\Template\Attribute;
 use Drupal\Component\Utility\Html;
+use \Drupal\block\Entity\Block;
+
 
 /**
  * @param $variables
@@ -50,4 +52,14 @@ function mine_preprocess_paragraph__text(&$variables) {
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $variables['elements']['#paragraph'];
   $variables['attributes']['class'][] = 'pg-textcol--' . count($paragraph->field_text_columns);
+}
+
+
+function mine_preprocess_paragraph__block(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+  $block = $variables['content']['field_block_to_embed']['#items'][0]->entity ?? null;
+  if ($block instanceof \Drupal\block\Entity\Block) {
+    $variables['attributes']['class'][] = $block->id();
+  }
 }

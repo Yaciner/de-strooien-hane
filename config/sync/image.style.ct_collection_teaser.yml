@@ -1,0 +1,17 @@
+uuid: 995c4a44-1847-45d3-9d38-340f9946f6c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: ct_collection_teaser
+label: 'CT: Collection: Teaser'
+effects:
+  48c85f61-303f-4915-95f5-03ca992d99cb:
+    uuid: 48c85f61-303f-4915-95f5-03ca992d99cb
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      crop_type: focal_point

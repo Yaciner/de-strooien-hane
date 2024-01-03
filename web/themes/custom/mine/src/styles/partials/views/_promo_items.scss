@@ -28,13 +28,31 @@
 
       li {
         a {
+          position: relative;
           padding: .4rem 1rem;
           border: 1px solid $primary;
           text-decoration: none;
+          display: block;
 
           &.bef-link--selected {
             background-color: $primary;
             color: $white;
+
+            @include iconize($checkbox, 'before');
+
+            &:before {
+              background-color: $white;
+              left: .5rem;
+              mask-size: 1rem;
+            }
+          }
+
+          @include iconize($checkbox-empty, 'before');
+
+          &:before {
+            position: absolute;
+            left: .5rem;
+            mask-size: 1rem;
           }
         }
       }
