@@ -4907,9 +4907,49 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
   z-index: 2;
   height: 100%;
   background: #000000;
+  min-width: 26.25rem;
+  width: auto;
 }
-.gss-google-maps .view-general-site-settings.view-display-id-maps .views-rows {
+.gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem 2rem;
+}
+.gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows .views-field:first-child {
+  padding-top: 5rem;
+  background-image: url(../svg/layout/logo--neg.svg);
+  background-size: auto 3rem;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows .views-field:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows .views-label {
+  display: block;
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+.gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows .views-label:after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.0625rem;
+  background-color: #ffffff;
+  left: 0;
+  bottom: 0;
+}
+.gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows p, .gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows span, .gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows p:before, .gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows span:before, .gss-google-maps .view-general-site-settings.view-display-id-maps .view-general-site-settings.view-display-id-attachment_1 .views-rows a:before {
+  background-color: #ffffff;
 }
 
 .view-promo.view-display-id-overview .views-rows {
