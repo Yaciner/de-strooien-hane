@@ -1,0 +1,10 @@
+uuid: 6176050e-f8d6-40cd-a3b0-ccd6790fbd28
+langcode: nl
+status: true
+dependencies: {  }
+id: quickmenu
+label: Quickmenu
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

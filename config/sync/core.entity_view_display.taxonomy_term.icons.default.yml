@@ -1,0 +1,32 @@
+uuid: 79b6a694-d9df-4382-96d0-7b377562bc8d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.icons.field_icon
+    - taxonomy.vocabulary.icons
+  module:
+    - svg_image
+id: taxonomy_term.icons.default
+targetEntityType: taxonomy_term
+bundle: icons
+mode: default
+content:
+  field_icon:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+hidden:
+  description: true
+  langcode: true

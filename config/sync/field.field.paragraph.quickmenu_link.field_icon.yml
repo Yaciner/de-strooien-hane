@@ -1,0 +1,29 @@
+uuid: 5cb282c6-62a5-47e1-9e13-70535867bcf9
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.quickmenu_link
+    - taxonomy.vocabulary.icons
+id: paragraph.quickmenu_link.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: quickmenu_link
+label: Icon
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      icons: icons
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

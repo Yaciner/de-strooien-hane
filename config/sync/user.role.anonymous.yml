@@ -29,6 +29,8 @@ permissions:
   - 'view paragraph content image_gallery'
   - 'view paragraph content image_slider'
   - 'view paragraph content media'
+  - 'view paragraph content quickmenu'
+  - 'view paragraph content quickmenu_link'
   - 'view paragraph content text'
   - 'view paragraph content text_column'
   - 'view paragraph content text_media'

@@ -1,0 +1,79 @@
+uuid: a7e86845-9a5c-484d-843e-3fb4f74e6e69
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quickmenu_links
+    - paragraphs.paragraphs_type.quickmenu
+    - paragraphs.paragraphs_type.quickmenu_link
+  module:
+    - entity_reference_revisions
+id: paragraph.quickmenu.field_quickmenu_links
+field_name: field_quickmenu_links
+entity_type: paragraph
+bundle: quickmenu
+label: 'Quickmenu links'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      quickmenu_link: quickmenu_link
+    negate: 0
+    target_bundles_drag_drop:
+      block:
+        weight: 18
+        enabled: false
+      cta:
+        weight: 19
+        enabled: false
+      faq:
+        weight: 20
+        enabled: false
+      form:
+        weight: 21
+        enabled: false
+      hero:
+        weight: 22
+        enabled: false
+      image_gallery:
+        weight: 23
+        enabled: false
+      image_slider:
+        weight: 24
+        enabled: false
+      media:
+        weight: 25
+        enabled: false
+      quickmenu:
+        weight: 26
+        enabled: false
+      quickmenu_link:
+        weight: 27
+        enabled: true
+      text:
+        weight: 28
+        enabled: false
+      text_column:
+        weight: 29
+        enabled: false
+      text_media:
+        weight: 30
+        enabled: false
+      text_media_item:
+        weight: 31
+        enabled: false
+      text_media_slider:
+        weight: 32
+        enabled: false
+      timeline:
+        weight: 33
+        enabled: false
+      timeline_entry:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

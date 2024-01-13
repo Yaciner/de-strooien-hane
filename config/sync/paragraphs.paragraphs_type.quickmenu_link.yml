@@ -1,0 +1,10 @@
+uuid: fa7b096d-eee7-4d2a-a6af-220a69adda3b
+langcode: nl
+status: true
+dependencies: {  }
+id: quickmenu_link
+label: 'Quickmenu link'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

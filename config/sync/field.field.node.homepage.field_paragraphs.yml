@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.image_slider
     - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.quickmenu
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_media
     - paragraphs.paragraphs_type.text_media_slider
@@ -40,6 +41,7 @@ settings:
       media: media
       timeline: timeline
       image_slider: image_slider
+      quickmenu: quickmenu
       text_media_slider: text_media_slider
     negate: 0
     target_bundles_drag_drop:
@@ -67,6 +69,12 @@ settings:
       media:
         weight: 17
         enabled: true
+      quickmenu:
+        weight: 26
+        enabled: true
+      quickmenu_link:
+        weight: 27
+        enabled: false
       text:
         weight: 9
         enabled: true

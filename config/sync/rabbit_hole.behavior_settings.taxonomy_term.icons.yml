@@ -1,0 +1,16 @@
+uuid: d87ac7d3-a8b1-43ac-8171-770ec320b938
+langcode: nl
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.icons
+id: taxonomy_term.icons
+targetEntityType: taxonomy_term
+bundle: icons
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: /<front>
+  redirect_code: 301
+  redirect_fallback_action: page_not_found

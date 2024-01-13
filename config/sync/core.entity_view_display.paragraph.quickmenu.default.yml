@@ -1,0 +1,24 @@
+uuid: 7e784b8e-10bd-4807-b373-9d6602e7e68c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quickmenu.field_quickmenu_links
+    - paragraphs.paragraphs_type.quickmenu
+  module:
+    - entity_reference_revisions
+id: paragraph.quickmenu.default
+targetEntityType: paragraph
+bundle: quickmenu
+mode: default
+content:
+  field_quickmenu_links:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
