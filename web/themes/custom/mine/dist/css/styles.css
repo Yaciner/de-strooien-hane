@@ -3745,16 +3745,17 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   width: 100%;
 }
 
-.node--type-collection.node--promoted {
+.node--type-collection.node--view-mode-next-collection {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.node--type-collection.node--promoted .field--name-field-media {
+.node--type-collection.node--view-mode-next-collection .field--name-field-next-collection {
   width: 100%;
   height: 100%;
+  aspect-ratio: 1920/680;
 }
-.node--type-collection.node--promoted .field--name-field-media img {
+.node--type-collection.node--view-mode-next-collection .field--name-field-next-collection img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -3762,7 +3763,7 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   width: 100%;
   height: 100%;
 }
-.node--type-collection.node--promoted .field--name-field-media:before {
+.node--type-collection.node--view-mode-next-collection .field--name-field-next-collection:before {
   content: "";
   position: absolute;
   inset: 0;
@@ -3770,14 +3771,91 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   height: 100%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(125, 125, 125, 0) 51%, rgba(0, 0, 0, 0.5) 100%);
 }
-.node--type-collection.node--promoted .content {
+.node--type-collection.node--view-mode-next-collection .content {
+  position: absolute;
+  left: 50%;
+  padding-left: 1.25rem;
+  max-width: 1600px;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  translate: -50%;
+}
+.node--type-collection.node--view-mode-next-collection .content h3, .node--type-collection.node--view-mode-next-collection .content .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .field--name-field-title, .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .node--type-collection.node--view-mode-next-collection .content .field--name-field-title {
+  font-size: 6.25rem;
+  color: #ffffff;
+  font-family: "FreightBigPro", -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+  padding-right: 2.5rem;
+}
+.node--type-collection.node--view-mode-next-collection .content h3:after, .node--type-collection.node--view-mode-next-collection .content .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .field--name-field-title:after, .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .node--type-collection.node--view-mode-next-collection .content .field--name-field-title:after {
+  right: 0;
+}
+.node--type-collection.node--view-mode-next-collection .content h3::after, .node--type-collection.node--view-mode-next-collection .content .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .field--name-field-title::after, .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .node--type-collection.node--view-mode-next-collection .content .field--name-field-title::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 1.2em;
+  height: 100%;
+  top: 0;
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC4xMTIiIGhlaWdodD0iMTAuNDU4Ij48ZyBkYXRhLW5hbWU9IkxheWVyIDIiPjxwYXRoIGRhdGEtbmFtZT0iUGF0aCA1MCIgZD0iTTE0LjM0NC4yMDlhLjcxNy43MTcgMCAwMDAgMS4wMTFsMy4yNzEgMy4zMjhILjcxN2EuNzE3LjcxNyAwIDAwMCAxLjQzNGgxNi44NzZsLTMuMjQ5IDMuMjQ5YS43MTguNzE4IDAgMTAxLjAxMSAxLjAxOGw0LjU2OS00LjU2OWEuNjQ1LjY0NSAwIDAwMC0uOTExTDE1LjM1NS4yMDhhLjcxNy43MTcgMCAwMC0xLjAxMSAweiIvPjwvZz48L3N2Zz4=");
+          mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC4xMTIiIGhlaWdodD0iMTAuNDU4Ij48ZyBkYXRhLW5hbWU9IkxheWVyIDIiPjxwYXRoIGRhdGEtbmFtZT0iUGF0aCA1MCIgZD0iTTE0LjM0NC4yMDlhLjcxNy43MTcgMCAwMDAgMS4wMTFsMy4yNzEgMy4zMjhILjcxN2EuNzE3LjcxNyAwIDAwMCAxLjQzNGgxNi44NzZsLTMuMjQ5IDMuMjQ5YS43MTguNzE4IDAgMTAxLjAxMSAxLjAxOGw0LjU2OS00LjU2OWEuNjQ1LjY0NSAwIDAwMC0uOTExTDE1LjM1NS4yMDhhLjcxNy43MTcgMCAwMC0xLjAxMSAweiIvPjwvZz48L3N2Zz4=");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: #ffffff;
+}
+@media all and (max-width: 959px) {
+  .node--type-collection.node--view-mode-next-collection .content {
+    left: 2.5rem;
+  }
+}
+@media all and (max-width: 479px) {
+  .node--type-collection.node--view-mode-next-collection .content {
+    left: 1.25rem;
+  }
+}
+
+.node--type-collection.node--view-mode-promoted {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.node--type-collection.node--view-mode-promoted .field--name-field-media {
+  width: 100%;
+  height: 100%;
+}
+.node--type-collection.node--view-mode-promoted .field--name-field-media img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.node--type-collection.node--view-mode-promoted .field--name-field-media:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(125, 125, 125, 0) 51%, rgba(0, 0, 0, 0.5) 100%);
+}
+.node--type-collection.node--view-mode-promoted .content {
   position: absolute;
   bottom: 0;
   z-index: 1;
   bottom: 1rem;
   right: 1rem;
 }
-.node--type-collection.node--promoted .content h3, .node--type-collection.node--promoted .content .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .field--name-field-title, .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .node--type-collection.node--promoted .content .field--name-field-title {
+.node--type-collection.node--view-mode-promoted .content h3, .node--type-collection.node--view-mode-promoted .content .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .field--name-field-title, .paragraph--type--text-media-slider .paragraph--type--text-media-item.swiper-slide-active article .node--type-collection.node--view-mode-promoted .content .field--name-field-title {
   color: #ffffff;
   font-weight: 400;
 }

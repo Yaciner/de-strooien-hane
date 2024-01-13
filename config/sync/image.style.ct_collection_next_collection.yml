@@ -1,0 +1,17 @@
+uuid: 15110ae1-ed8b-4a1e-846c-c57b4051c526
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: ct_collection_next_collection
+label: 'CT: Collection: Next collection'
+effects:
+  17e2430a-26eb-4fed-981e-890297ddbba8:
+    uuid: 17e2430a-26eb-4fed-981e-890297ddbba8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 680
+      crop_type: focal_point

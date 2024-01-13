@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.collection.field_hero
     - field.field.node.collection.field_media
+    - field.field.node.collection.field_next_collection
     - field.field.node.collection.field_paragraphs
     - field.field.node.collection.field_seo
     - field.field.node.collection.field_weight
@@ -37,6 +38,7 @@ content:
     region: content
 hidden:
   field_media: true
+  field_next_collection: true
   field_seo: true
   field_weight: true
   langcode: true

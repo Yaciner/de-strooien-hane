@@ -1,0 +1,31 @@
+uuid: 74a450fe-f31f-49a2-a45b-00836cbaddca
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_next_collection
+    - media.type.image
+    - media.type.remote_video
+    - node.type.collection
+id: node.collection.field_next_collection
+field_name: field_next_collection
+entity_type: node
+bundle: collection
+label: 'Next collection'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

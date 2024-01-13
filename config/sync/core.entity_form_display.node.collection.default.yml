@@ -6,6 +6,7 @@ dependencies:
     - entity_browser.browser.media_entity_browser_images_or_video
     - field.field.node.collection.field_hero
     - field.field.node.collection.field_media
+    - field.field.node.collection.field_next_collection
     - field.field.node.collection.field_paragraphs
     - field.field.node.collection.field_seo
     - field.field.node.collection.field_weight
@@ -84,6 +85,7 @@ third_party_settings:
     group_teaser:
       children:
         - field_media
+        - field_next_collection
       label: Teaser
       region: content
       parent_name: group_basic_page
@@ -103,7 +105,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -141,6 +143,21 @@ content:
         view_mode: media_entity_browser
       selection_mode: selection_append
     third_party_settings: {  }
+  field_next_collection:
+    type: entity_browser_entity_reference
+    weight: 3
+    region: content
+    settings:
+      entity_browser: media_entity_browser_images_or_video
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      field_widget_display_settings:
+        view_mode: default
+      selection_mode: selection_append
+    third_party_settings: {  }
   field_paragraphs:
     type: paragraphs
     weight: 11
@@ -162,7 +179,7 @@ content:
     third_party_settings: {  }
   field_seo:
     type: metatag_firehose
-    weight: 8
+    weight: 9
     region: content
     settings:
       sidebar: true
@@ -177,32 +194,32 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true

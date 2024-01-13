@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.next_collection
     - core.entity_view_mode.node.promoted
     - core.entity_view_mode.node.teaser
     - node.type.collection
@@ -222,6 +223,38 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+      tags: {  }
+  next_collection:
+    id: next_collection
+    display_title: 'Next collection'
+    display_plugin: block
+    position: 5
+    display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 1
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: next_collection
+      defaults:
+        pager: false
+        style: false
+        row: false
       display_description: ''
       display_extenders: {  }
     cache_metadata:

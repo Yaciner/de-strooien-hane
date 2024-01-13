@@ -1,0 +1,43 @@
+uuid: 5a3c60ce-28f6-401b-8489-593f9b8794ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.next_collection
+    - field.field.node.collection.field_hero
+    - field.field.node.collection.field_media
+    - field.field.node.collection.field_next_collection
+    - field.field.node.collection.field_paragraphs
+    - field.field.node.collection.field_seo
+    - field.field.node.collection.field_weight
+    - image.style.ct_collection_next_collection
+    - node.type.collection
+  module:
+    - mine_formatters
+    - user
+id: node.collection.next_collection
+targetEntityType: node
+bundle: collection
+mode: next_collection
+content:
+  field_next_collection:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: ct_collection_next_collection
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_hero: true
+  field_media: true
+  field_paragraphs: true
+  field_seo: true
+  field_weight: true
+  langcode: true
+  links: true

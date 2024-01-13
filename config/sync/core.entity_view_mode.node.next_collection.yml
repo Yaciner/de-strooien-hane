@@ -1,0 +1,10 @@
+uuid: 6af09044-45aa-47a9-afb0-0acd4a61386d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.next_collection
+label: 'Next collection'
+targetEntityType: node
+cache: true
