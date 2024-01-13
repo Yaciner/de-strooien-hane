@@ -64,11 +64,20 @@ settings:
           label: Subtitle
           element: '<span class="subtitle">'
         -
+          label: 'Subtitle with line'
+          element: '<span class="lined-subtitle">'
+        -
           label: 'Black button'
           element: '<a class="btn">'
         -
+          label: 'Black bordered button'
+          element: '<a class="btn bordered">'
+        -
           label: 'White button'
           element: '<a class="btn btn--white">'
+        -
+          label: 'White bordered button'
+          element: '<a class="btn btn--white bordered">'
         -
           label: 'Arrowed button'
           element: '<a class="btn btn--arrowed">'

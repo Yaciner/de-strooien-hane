@@ -1421,6 +1421,23 @@ textarea.form-control-lg {
   font-family: "Manrope", -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
+.ck-content .lined-subtitle {
+  position: relative;
+  padding-left: 4rem;
+  font-size: 16px;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+  display: block;
+}
+.ck-content .lined-subtitle:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  translate: 0 -50%;
+  background-color: #ffffff;
+  height: 0.0625rem;
+  width: 3rem;
+}
 .ck-content .block-title {
   position: relative;
   display: inline-block;
@@ -1496,6 +1513,15 @@ textarea.form-control-lg {
   background: #000000;
   color: #ffffff;
 }
+.ck-content .btn.bordered {
+  background: transparent;
+  color: #000000;
+  border-color: #000000;
+}
+.ck-content .btn.bordered:hover, .ck-content .btn.bordered:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
 .ck-content .btn.btn--arrow {
   translate: 0px 0;
   transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -1542,27 +1568,15 @@ textarea.form-control-lg {
 .ck-content .btn.btn--white {
   background: #ffffff;
   color: #000000;
-  padding-left: 2.5rem;
 }
-.ck-content .btn.btn--white:before {
-  left: 0;
+.ck-content .btn.btn--white.bordered {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
 }
-.ck-content .btn.btn--white::before {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  width: 1.2em;
-  height: 100%;
-  top: 0;
-  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMy4yNzgiIGhlaWdodD0iMTUuNTE5Ij48cGF0aCBkPSJNMCAyLjU4NkEyLjU4OSAyLjU4OSAwIDAxMi41ODYgMGgxMC4zNDZhMi41ODkgMi41ODkgMCAwMTIuNTg2IDIuNTg2djEwLjM0NmEyLjU4OSAyLjU4OSAwIDAxLTIuNTg2IDIuNTg2SDIuNTg2QTIuNTg5IDIuNTg5IDAgMDEwIDEyLjkzMnptMjIuNi0xLjE0YTEuMjk0IDEuMjk0IDAgMDEuNjgzIDEuMTR2MTAuMzQ2YTEuMjk0IDEuMjk0IDAgMDEtMi4wMTMgMS4wNzVsLTMuODgtMi41ODYtLjU3NC0uMzg0VjQuNDgybC41NzQtLjM4NCAzLjg4LTIuNTg2YTEuMyAxLjMgMCAwMTEuMzMtLjA2NXoiLz48L3N2Zz4=");
-          mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMy4yNzgiIGhlaWdodD0iMTUuNTE5Ij48cGF0aCBkPSJNMCAyLjU4NkEyLjU4OSAyLjU4OSAwIDAxMi41ODYgMGgxMC4zNDZhMi41ODkgMi41ODkgMCAwMTIuNTg2IDIuNTg2djEwLjM0NmEyLjU4OSAyLjU4OSAwIDAxLTIuNTg2IDIuNTg2SDIuNTg2QTIuNTg5IDIuNTg5IDAgMDEwIDEyLjkzMnptMjIuNi0xLjE0YTEuMjk0IDEuMjk0IDAgMDEuNjgzIDEuMTR2MTAuMzQ2YTEuMjk0IDEuMjk0IDAgMDEtMi4wMTMgMS4wNzVsLTMuODgtMi41ODYtLjU3NC0uMzg0VjQuNDgybC41NzQtLjM4NCAzLjg4LTIuNTg2YTEuMyAxLjMgMCAwMTEuMzMtLjA2NXoiLz48L3N2Zz4=");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  -webkit-mask-position: center;
-          mask-position: center;
-  background-color: black;
+.ck-content .btn.btn--white.bordered:hover, .ck-content .btn.btn--white.bordered:focus {
+  background-color: #ffffff;
+  color: #000000;
 }
 .ck-content .btn--video {
   background: #ffffff;

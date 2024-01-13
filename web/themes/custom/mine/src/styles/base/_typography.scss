@@ -75,6 +75,25 @@ a {
   font-weight: 400;
 }
 
+.lined-subtitle {
+  position: relative;
+  padding-left: 4rem;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  display: block;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
+    background-color: $white;
+    height: rem(1);
+    width: 3rem;
+  }
+}
+
 .block-title {
   position: relative;
   display: inline-block;

@@ -3,6 +3,41 @@
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Entity\EntityViewDisplay;
 
+
+function mine_dev_views_pre_view(\Drupal\views\ViewExecutable $view, $display_id, array &$args) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  
+  if (!empty($node) && $node->getType() == 'collection') {
+    if ($view->id() == 'collections' && $display_id == 'next_collection') {
+      $current_id = $node->id();
+
+      $query = \Drupal::entityQuery('node')
+                ->condition('type', 'collection')
+                ->condition('status', 1)
+                ->sort('field_weight', 'ASC')
+                ->accessCheck(TRUE);
+      $all_ids = $query->execute();
+
+      if (in_array($current_id, $all_ids)) {
+        $current_index = array_search($current_id, $all_ids);
+        $next_index = ($current_index + 1) % count($all_ids);
+        $next_id = array_values($all_ids)[$next_index];
+
+        // Additional Debugging for Specific Collection
+        if ($current_id == $next_id) {
+          \Drupal::logger('my_module')->error('Collection loops to itself. ID: ' . $current_id);
+        }
+
+        $args[0] = $next_id;
+      } else {
+        \Drupal::logger('my_module')->warning('Current ID not found in collections: ' . $current_id);
+      }
+    }
+  }
+}
+
+
+
 /**
  * Implements hook_entity_view_mode_alter().
  */
