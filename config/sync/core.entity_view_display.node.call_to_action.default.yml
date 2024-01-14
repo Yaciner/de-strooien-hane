@@ -1,0 +1,29 @@
+uuid: 6f42741e-8832-42a4-804f-856b4df2e6d8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.call_to_action.field_body
+    - node.type.call_to_action
+  module:
+    - text
+    - user
+id: node.call_to_action.default
+targetEntityType: node
+bundle: call_to_action
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

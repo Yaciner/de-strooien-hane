@@ -1,0 +1,26 @@
+uuid: 05ff3006-0f1c-4003-99ac-c2291f17d959
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.call_to_action.field_body
+    - node.type.call_to_action
+  module:
+    - text
+    - user
+id: node.call_to_action.teaser
+targetEntityType: node
+bundle: call_to_action
+mode: teaser
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true

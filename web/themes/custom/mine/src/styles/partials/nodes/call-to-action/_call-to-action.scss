@@ -1,0 +1,10 @@
+// ==========================================================================
+// Paragraph bundle: CALL TO ACTION
+// ==========================================================================
+.node--type-call-to-action {
+  &.node--view-mode-teaser {
+    max-width: rem(760);
+    margin: 0 auto;
+    text-align: center;
+  }
+}

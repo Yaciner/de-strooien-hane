@@ -1,0 +1,17 @@
+uuid: 6cb76f7c-269f-48ce-a1d3-20b4a1dd7b0a
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Call to action'
+type: call_to_action
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

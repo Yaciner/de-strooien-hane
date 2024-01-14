@@ -1,0 +1,29 @@
+uuid: 5218d0ee-a153-4ca5-ae9c-6f6019809767
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_call_to_action
+    - node.type.call_to_action
+    - paragraphs.paragraphs_type.cta
+id: paragraph.cta.field_call_to_action
+field_name: field_call_to_action
+entity_type: paragraph
+bundle: cta
+label: 'Call to action'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      call_to_action: call_to_action
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

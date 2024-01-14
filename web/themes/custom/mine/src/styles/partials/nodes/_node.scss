@@ -8,3 +8,9 @@
   margin: 0 auto;
   width: 100%;
 }
+
+.has-hero.has-quickmenu {
+  .paragraph--type--hero .hero__content {
+    bottom: 10rem;
+  }
+}

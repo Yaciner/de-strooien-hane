@@ -51,7 +51,7 @@
       .pg-text-media__text {
         max-width: calc($container-m / 2);
         padding-right: 0;
-        padding-left: 2rem;
+        padding-left: 4rem;
       }
 
       @include mq(m) {
@@ -71,7 +71,7 @@
         justify-content: flex-end;
 
         .pg-text-media__text {
-          padding-right: 2rem;
+          padding-right: 4rem;
           padding-left: 0;
         }
       }

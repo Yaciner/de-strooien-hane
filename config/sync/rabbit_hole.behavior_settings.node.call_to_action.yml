@@ -1,0 +1,16 @@
+uuid: b4f0735c-275a-4a77-8a88-ff67c19901a6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action
+id: node.call_to_action
+targetEntityType: node
+bundle: call_to_action
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: /<front>
+  redirect_code: 301
+  redirect_fallback_action: page_not_found

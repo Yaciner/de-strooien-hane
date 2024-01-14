@@ -1,0 +1,26 @@
+uuid: 61db9038-bc96-4548-8e34-93c2f012f8a8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta.field_background_color
+    - field.field.paragraph.cta.field_call_to_action
+    - field.field.paragraph.cta.field_html_id
+    - paragraphs.paragraphs_type.cta
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_call_to_action:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_background_color: true
+  field_html_id: true

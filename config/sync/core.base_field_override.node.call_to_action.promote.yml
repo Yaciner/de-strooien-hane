@@ -1,0 +1,22 @@
+uuid: 6cacfd3e-ebbf-4bea-84c3-b84b3a17f7f2
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action
+id: node.call_to_action.promote
+field_name: promote
+entity_type: node
+bundle: call_to_action
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

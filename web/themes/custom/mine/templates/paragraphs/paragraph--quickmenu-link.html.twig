@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ * Outputs a paragraph as a section within its parent article.
+ *
+ * @see template_preprocess_paragraph()
+ * @ingroup themeable
+ */
+#}
+{% block paragraph %}
+  {% block content %}
+    <a{{ attributes.addClass(classes) }} href="{{ content.field_link[0]['#url']|render }}">
+      {{ content|without('field_link') }}
+    </a>
+  {% endblock %}
+{% endblock paragraph %}

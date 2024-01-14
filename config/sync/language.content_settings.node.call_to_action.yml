@@ -1,0 +1,16 @@
+uuid: 48d9bd43-7a6d-4740-962b-50ec97aa6bae
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.call_to_action
+target_entity_type_id: node
+target_bundle: call_to_action
+default_langcode: current_interface
+language_alterable: true
