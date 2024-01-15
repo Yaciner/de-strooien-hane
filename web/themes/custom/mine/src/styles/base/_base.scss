@@ -132,6 +132,12 @@ body.logged-out {
       color: $black;
     }
 
+    .main-menu .menu__list .menu__item.menu__item--expanded {
+      &::after {
+        background-color: $primary;
+      }
+    }
+
     .branding {
       .positive {
         opacity: 1;
@@ -164,6 +170,14 @@ body.logged-out {
             color: $primary;
           }
         }
+
+        .main-menu .menu__list .menu__item.menu__item--expanded {
+          &::after {
+            background-color: $white;
+          }
+        }
+
+        
 
         .main-menu .menu__list .menu__item a:not(.btn):not(.submit-wrapper) {
           color: $white;

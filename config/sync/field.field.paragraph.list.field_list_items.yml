@@ -1,0 +1,85 @@
+uuid: 482340a9-13c9-4219-be51-5e12aaaf0b2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_items
+    - paragraphs.paragraphs_type.list
+    - paragraphs.paragraphs_type.list_item
+  module:
+    - entity_reference_revisions
+id: paragraph.list.field_list_items
+field_name: field_list_items
+entity_type: paragraph
+bundle: list
+label: 'List items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      list_item: list_item
+    negate: 0
+    target_bundles_drag_drop:
+      block:
+        weight: 20
+        enabled: false
+      cta:
+        weight: 21
+        enabled: false
+      faq:
+        weight: 22
+        enabled: false
+      form:
+        weight: 23
+        enabled: false
+      hero:
+        weight: 24
+        enabled: false
+      image_gallery:
+        weight: 25
+        enabled: false
+      image_slider:
+        weight: 26
+        enabled: false
+      list:
+        weight: 27
+        enabled: false
+      list_item:
+        weight: 28
+        enabled: true
+      media:
+        weight: 29
+        enabled: false
+      quickmenu:
+        weight: 30
+        enabled: false
+      quickmenu_link:
+        weight: 31
+        enabled: false
+      text:
+        weight: 32
+        enabled: false
+      text_column:
+        weight: 33
+        enabled: false
+      text_media:
+        weight: 34
+        enabled: false
+      text_media_item:
+        weight: 35
+        enabled: false
+      text_media_slider:
+        weight: 36
+        enabled: false
+      timeline:
+        weight: 37
+        enabled: false
+      timeline_entry:
+        weight: 38
+        enabled: false
+field_type: entity_reference_revisions

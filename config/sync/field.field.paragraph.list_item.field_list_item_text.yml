@@ -1,0 +1,22 @@
+uuid: 52464d62-63c7-4a94-af3f-bb521f3d719a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_item_text
+    - paragraphs.paragraphs_type.list_item
+  module:
+    - text
+id: paragraph.list_item.field_list_item_text
+field_name: field_list_item_text
+entity_type: paragraph
+bundle: list_item
+label: 'List item text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

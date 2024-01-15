@@ -21,7 +21,7 @@ global_scripts:
     - core/jquery
     - core/drupal
     - core/once
-    - dms_theme/slick
+    - mine/slick
 
 slick:
   version: 1.8.0
@@ -32,7 +32,7 @@ slick:
     dist/js/libs/slick/slick.min.js: { minified: true }
   dependencies:
     - core/jquery
-    - dms_theme/fancybox
+    - mine/fancybox
 
 fancybox:
   version: 3.2.10

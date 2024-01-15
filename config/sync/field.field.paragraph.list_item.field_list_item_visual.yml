@@ -1,0 +1,29 @@
+uuid: bc800e35-c1cc-491b-ac05-9b8df9c3428e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_item_visual
+    - media.type.image
+    - paragraphs.paragraphs_type.list_item
+id: paragraph.list_item.field_list_item_visual
+field_name: field_list_item_visual
+entity_type: paragraph
+bundle: list_item
+label: 'List item visual'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: 2c748c29-dae3-4bde-bf1e-1309359fcee2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: pg_list_item
+label: 'PG: List item'
+effects:
+  0ac469bb-b871-4d0e-934a-210ceb2191bd:
+    uuid: 0ac469bb-b871-4d0e-934a-210ceb2191bd
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 500
+      crop_type: focal_point

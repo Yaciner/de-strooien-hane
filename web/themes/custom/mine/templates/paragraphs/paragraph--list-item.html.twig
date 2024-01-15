@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * List item child inside list paragraph bundle.
+ */
+#}
+
+
+{% block paragraph %}
+  {% if url %}
+    <a{{ attributes }} href="{{ url }}">
+  {% else %}
+    <div{{ attributes }}>
+  {% endif %}
+
+  {% block content %}
+    <div class="paragraph--type-list-item__content">
+      {{ content.field_list_item_visual }}
+      {{ content.field_list_item_title }}
+      {{ content.field_list_item_text }}
+    </div>
+  {% endblock %}
+  {% if url %}
+    </a>
+  {% else %}
+    </div>
+  {% endif %}
+{% endblock paragraph %}

@@ -2867,6 +2867,9 @@ body.logged-out .headroom--pinned .mm-toggle:after {
 body.logged-out .headroom--pinned .main-menu .menu__list .menu__item a:not(.btn):not(button[type=submit]):not(.submit-wrapper) {
   color: #000000;
 }
+body.logged-out .headroom--pinned .main-menu .menu__list .menu__item.menu__item--expanded::after {
+  background-color: #000000;
+}
 body.logged-out .headroom--pinned .branding .positive {
   opacity: 1;
 }
@@ -2885,6 +2888,9 @@ body.logged-out.has-hero .headroom--pinned.headroom--top .mm-toggle:after {
 }
 body.logged-out.has-hero .headroom--pinned.headroom--top .main-menu > .menu__list > .menu__item.menu__item--expanded > .menu__list a:not(.btn):not(button[type=submit]) {
   color: #000000;
+}
+body.logged-out.has-hero .headroom--pinned.headroom--top .main-menu .menu__list .menu__item.menu__item--expanded::after {
+  background-color: #ffffff;
 }
 body.logged-out.has-hero .headroom--pinned.headroom--top .main-menu .menu__list .menu__item a:not(.btn):not(button[type=submit]):not(.submit-wrapper) {
   color: #ffffff;
@@ -4518,6 +4524,282 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.paragraph .paragraph--type--list-item {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #e5e5e5;
+  text-decoration: none;
+}
+.paragraph .paragraph--type--list-item > * {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.paragraph .paragraph--type--list-item .paragraph--type-list-item__content:last-child {
+  margin-bottom: 0;
+}
+.paragraph .paragraph--type--list-item .field--name-field-list-item-text {
+  transition: color 0.3s ease;
+  padding: 1.5rem;
+}
+.paragraph .paragraph--type--list-item .field--name-field-list-item-text:last-child {
+  margin-bottom: 0;
+}
+
+.paragraph--type--list .pg-section__title,
+.paragraph--type--list .field--name-field-intro {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.paragraph--type--list .field--name-field-intro {
+  margin-bottom: 1.875rem;
+}
+.paragraph--type--list.pg-grid--2 .field--name-field-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-0.5rem / 2) -0.5rem;
+}
+.paragraph--type--list.pg-grid--2 .field--name-field-list-items .paragraph--type--list-item {
+  flex: 0 0 calc(100% / 2 - 0.5rem);
+  flex-basis: calc(100% / 2 - 0.5rem);
+  width: calc(100% / 2 - 0.5rem);
+  min-height: 1px;
+  margin: 0 calc(0.5rem / 2) 0.5rem;
+}
+@media all and (max-width: 479px) {
+  .paragraph--type--list.pg-grid--2 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--2 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 1 - 0.5rem);
+    flex-basis: calc(100% / 1 - 0.5rem);
+    width: calc(100% / 1 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+.paragraph--type--list.pg-grid--3 .field--name-field-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-0.5rem / 2) -0.5rem;
+}
+.paragraph--type--list.pg-grid--3 .field--name-field-list-items .paragraph--type--list-item {
+  flex: 0 0 calc(100% / 3 - 0.5rem);
+  flex-basis: calc(100% / 3 - 0.5rem);
+  width: calc(100% / 3 - 0.5rem);
+  min-height: 1px;
+  margin: 0 calc(0.5rem / 2) 0.5rem;
+}
+@media all and (max-width: 767px) {
+  .paragraph--type--list.pg-grid--3 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--3 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 2 - 0.5rem);
+    flex-basis: calc(100% / 2 - 0.5rem);
+    width: calc(100% / 2 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+@media all and (max-width: 479px) {
+  .paragraph--type--list.pg-grid--3 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--3 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 1 - 0.5rem);
+    flex-basis: calc(100% / 1 - 0.5rem);
+    width: calc(100% / 1 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+.paragraph--type--list.pg-grid--4 .field--name-field-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-0.5rem / 2) -0.5rem;
+}
+.paragraph--type--list.pg-grid--4 .field--name-field-list-items .paragraph--type--list-item {
+  flex: 0 0 calc(100% / 4 - 0.5rem);
+  flex-basis: calc(100% / 4 - 0.5rem);
+  width: calc(100% / 4 - 0.5rem);
+  min-height: 1px;
+  margin: 0 calc(0.5rem / 2) 0.5rem;
+}
+@media all and (max-width: 959px) {
+  .paragraph--type--list.pg-grid--4 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--4 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 3 - 0.5rem);
+    flex-basis: calc(100% / 3 - 0.5rem);
+    width: calc(100% / 3 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .paragraph--type--list.pg-grid--4 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--4 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 2 - 0.5rem);
+    flex-basis: calc(100% / 2 - 0.5rem);
+    width: calc(100% / 2 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+@media all and (max-width: 479px) {
+  .paragraph--type--list.pg-grid--4 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--4 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 1 - 0.5rem);
+    flex-basis: calc(100% / 1 - 0.5rem);
+    width: calc(100% / 1 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+.paragraph--type--list.pg-grid--5 .field--name-field-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-0.5rem / 2) -0.5rem;
+}
+.paragraph--type--list.pg-grid--5 .field--name-field-list-items .paragraph--type--list-item {
+  flex: 0 0 calc(100% / 5 - 0.5rem);
+  flex-basis: calc(100% / 5 - 0.5rem);
+  width: calc(100% / 5 - 0.5rem);
+  min-height: 1px;
+  margin: 0 calc(0.5rem / 2) 0.5rem;
+}
+@media all and (max-width: 959px) {
+  .paragraph--type--list.pg-grid--5 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--5 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 3 - 0.5rem);
+    flex-basis: calc(100% / 3 - 0.5rem);
+    width: calc(100% / 3 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .paragraph--type--list.pg-grid--5 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--5 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 2 - 0.5rem);
+    flex-basis: calc(100% / 2 - 0.5rem);
+    width: calc(100% / 2 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+@media all and (max-width: 479px) {
+  .paragraph--type--list.pg-grid--5 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--5 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 1 - 0.5rem);
+    flex-basis: calc(100% / 1 - 0.5rem);
+    width: calc(100% / 1 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+.paragraph--type--list.pg-grid--6 .field--name-field-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-0.5rem / 2) -0.5rem;
+}
+.paragraph--type--list.pg-grid--6 .field--name-field-list-items .paragraph--type--list-item {
+  flex: 0 0 calc(100% / 6 - 0.5rem);
+  flex-basis: calc(100% / 6 - 0.5rem);
+  width: calc(100% / 6 - 0.5rem);
+  min-height: 1px;
+  margin: 0 calc(0.5rem / 2) 0.5rem;
+}
+@media all and (max-width: 1199px) {
+  .paragraph--type--list.pg-grid--6 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--6 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 4 - 0.5rem);
+    flex-basis: calc(100% / 4 - 0.5rem);
+    width: calc(100% / 4 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+@media all and (max-width: 959px) {
+  .paragraph--type--list.pg-grid--6 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--6 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 3 - 0.5rem);
+    flex-basis: calc(100% / 3 - 0.5rem);
+    width: calc(100% / 3 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .paragraph--type--list.pg-grid--6 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--6 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 2 - 0.5rem);
+    flex-basis: calc(100% / 2 - 0.5rem);
+    width: calc(100% / 2 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
+}
+@media all and (max-width: 479px) {
+  .paragraph--type--list.pg-grid--6 .field--name-field-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-0.5rem / 2) -0.5rem;
+  }
+  .paragraph--type--list.pg-grid--6 .field--name-field-list-items .paragraph--type--list-item {
+    flex: 0 0 calc(100% / 1 - 0.5rem);
+    flex-basis: calc(100% / 1 - 0.5rem);
+    width: calc(100% / 1 - 0.5rem);
+    min-height: 1px;
+    margin: 0 calc(0.5rem / 2) 0.5rem;
+  }
 }
 
 .paragraph--type--media .paragraph--intro {

@@ -3,6 +3,7 @@
 use Drupal\Core\Template\Attribute;
 use Drupal\Component\Utility\Html;
 use \Drupal\block\Entity\Block;
+use Drupal\Core\Url;
 
 
 /**
@@ -61,5 +62,18 @@ function mine_preprocess_paragraph__block(&$variables) {
   $block = $variables['content']['field_block_to_embed']['#items'][0]->entity ?? null;
   if ($block instanceof \Drupal\block\Entity\Block) {
     $variables['attributes']['class'][] = $block->id();
+  }
+}
+
+function mine_preprocess_paragraph__list_item(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+  if ($url = $variables['content']['field_list_item_link'][0]['#url'] ?? NULL) {
+    $link = $paragraph->get('field_list_item_link')->first()->getValue();
+    $variables['url'] = Url::fromUri($link['uri']);
+
+    if ($url->isExternal()) {
+      $variables['content']['field_list_item_link'][0]['#attributes']['target'] = '_blank';
+    }
   }
 }

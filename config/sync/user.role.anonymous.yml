@@ -28,6 +28,8 @@ permissions:
   - 'view paragraph content hero'
   - 'view paragraph content image_gallery'
   - 'view paragraph content image_slider'
+  - 'view paragraph content list'
+  - 'view paragraph content list_item'
   - 'view paragraph content media'
   - 'view paragraph content quickmenu'
   - 'view paragraph content quickmenu_link'

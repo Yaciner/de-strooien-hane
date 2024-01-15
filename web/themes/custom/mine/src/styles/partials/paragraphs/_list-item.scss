@@ -1,0 +1,35 @@
+// ==========================================================================
+// Paragraph bundle: LIST ITEM
+// ==========================================================================
+
+.paragraph .paragraph--type--list-item {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $pg-listitem-bg;
+  color: $pg-listitem;
+  border: 1px solid $pg-listitem-border;
+  text-decoration: none;
+
+  // Content
+  & > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .paragraph--type-list-item__content {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  // Text
+  .field--name-field-list-item-text {
+    transition: color .3s ease;
+    padding: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

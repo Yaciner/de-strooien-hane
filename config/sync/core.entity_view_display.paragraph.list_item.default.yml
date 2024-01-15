@@ -1,0 +1,52 @@
+uuid: afbabbe2-ce31-4e57-8b04-5026ba9eaa0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_item.field_list_item_link
+    - field.field.paragraph.list_item.field_list_item_text
+    - field.field.paragraph.list_item.field_list_item_visual
+    - image.style.pg_list_item
+    - paragraphs.paragraphs_type.list_item
+  module:
+    - link
+    - mine_formatters
+    - text
+id: paragraph.list_item.default
+targetEntityType: paragraph
+bundle: list_item
+mode: default
+content:
+  field_list_item_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_list_item_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_list_item_visual:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: pg_list_item
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

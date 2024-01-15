@@ -1,0 +1,102 @@
+// ==========================================================================
+// Paragraph bundle: LIST
+// ==========================================================================
+.paragraph--type--list {
+  // Make sure title nor intro become ridiculously long.
+  .pg-section__title,
+  .field--name-field-intro {
+    max-width: $container-s;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+  }
+
+  // If an intro was added, provide some spacing between it and the image slider.
+  .field--name-field-intro {
+    margin-bottom: rem(30);
+  }
+
+
+  &.pg-grid--2 {
+    .field--name-field-list-items {
+      @include grid(2, '.paragraph--type--list-item', .5rem);
+
+      @include mq(s) {
+        @include grid(1, '.paragraph--type--list-item', .5rem);
+      }
+    }
+  }
+
+  &.pg-grid--3 {
+    .field--name-field-list-items {
+      @include grid(3, '.paragraph--type--list-item', .5rem);
+
+      @include mq(m) {
+        @include grid(2, '.paragraph--type--list-item', .5rem);
+      }
+
+      @include mq(s) {
+        @include grid(1, '.paragraph--type--list-item', .5rem);
+      }
+    }
+  }
+
+  &.pg-grid--4 {
+    .field--name-field-list-items {
+      @include grid(4, '.paragraph--type--list-item', .5rem);
+
+      @include mq(l) {
+        @include grid(3, '.paragraph--type--list-item', .5rem);
+      }
+
+      @include mq(m) {
+        @include grid(2, '.paragraph--type--list-item', .5rem);
+      }
+
+      @include mq(s) {
+        @include grid(1, '.paragraph--type--list-item', .5rem);
+      }
+    }
+  }
+
+  &.pg-grid--5 {
+    .field--name-field-list-items {
+      @include grid(5, '.paragraph--type--list-item', .5rem);
+
+      @include mq(l) {
+        @include grid(3, '.paragraph--type--list-item', .5rem);
+      }
+
+      @include mq(m) {
+        @include grid(2, '.paragraph--type--list-item', .5rem);
+      }
+
+      @include mq(s) {
+        @include grid(1, '.paragraph--type--list-item', .5rem);
+      }
+    }
+  }
+
+  &.pg-grid--6 {
+    .field--name-field-list-items {
+      @include grid(6, '.paragraph--type--list-item', .5rem);
+
+      @include mq(xl) {
+        @include grid(4, '.paragraph--type--list-item', .5rem);
+      }
+
+      @include mq(l) {
+        @include grid(3, '.paragraph--type--list-item', .5rem);
+      }
+
+      @include mq(m) {
+        @include grid(2, '.paragraph--type--list-item', .5rem);
+      }
+
+      @include mq(s) {
+        @include grid(1, '.paragraph--type--list-item', .5rem);
+      }
+    }
+  }
+}
