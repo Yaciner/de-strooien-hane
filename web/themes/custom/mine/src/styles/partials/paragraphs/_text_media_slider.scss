@@ -1,4 +1,9 @@
 .paragraph--type--text-media-slider { 
+
+  .slick-list {
+    overflow: visible;
+  }
+
   .paragraph--intro {
     text-align: center;
     justify-content: center;

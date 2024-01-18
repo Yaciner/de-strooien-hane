@@ -1,0 +1,21 @@
+uuid: 02642d00-1102-43b5-8d8e-9c86f2e89850
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.people
+  module:
+    - options
+id: paragraph.people.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: people
+label: 'Background color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

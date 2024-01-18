@@ -1,0 +1,21 @@
+uuid: aba9ad32-c31a-4edb-bece-11eac5858dd8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_title
+    - node.type.page
+id: node.page.field_center_title
+field_name: field_center_title
+entity_type: node
+bundle: page
+label: 'Center title'
+description: 'Only works when the hero is not active'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

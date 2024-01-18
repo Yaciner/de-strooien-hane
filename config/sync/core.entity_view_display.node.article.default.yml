@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_image
+    - field.field.node.article.field_paragraphs
     - field.field.node.article.field_tags
     - image.style.wide
     - node.type.article
   module:
-    - image
+    - entity_reference_revisions
+    - svg_image
     - text
     - user
 _core:
@@ -36,6 +38,15 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: -1
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_tags:
     type: entity_reference_label

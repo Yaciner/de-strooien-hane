@@ -230,7 +230,9 @@ __webpack_require__.r(__webpack_exports__);
   Drupal.behaviors.scripts = {
     attach: function attach(context, settings) {
       // AOS
-      aos__WEBPACK_IMPORTED_MODULE_6___default().init();
+      aos__WEBPACK_IMPORTED_MODULE_6___default().init({
+        once: true
+      });
 
       // Geysir
       $(once('click', 'body')).on('click', '.geysir-dialog .horizontal-tab-button a', function () {

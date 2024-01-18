@@ -1,0 +1,17 @@
+uuid: b73d1377-06a8-4488-889c-44fbabe1b749
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: pg_timeline
+label: 'PG: Timeline'
+effects:
+  290bda78-a6bc-4eb4-bcaa-4abf06751d05:
+    uuid: 290bda78-a6bc-4eb4-bcaa-4abf06751d05
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 500
+      crop_type: focal_point

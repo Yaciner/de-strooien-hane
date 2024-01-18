@@ -1,0 +1,17 @@
+uuid: d8cba501-763a-4b37-a5b5-0ae1e2cda895
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: pg_person
+label: 'PG: Person'
+effects:
+  4dc55927-968b-4c60-b681-14ec0f309269:
+    uuid: 4dc55927-968b-4c60-b681-14ec0f309269
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 900
+      crop_type: focal_point

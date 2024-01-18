@@ -7,10 +7,21 @@
   max-width: $container-m;
   margin: 0 auto;
   width: 100%;
+  padding: 0 rem(40);
+
+  @include mq(s){
+    padding: 0 rem(20);
+  }
 }
 
 .has-hero.has-quickmenu {
   .paragraph--type--hero .hero__content {
     bottom: 10rem;
+  }
+}
+
+.centered-title {
+  #block-mine-page-title {
+    text-align: center;
   }
 }

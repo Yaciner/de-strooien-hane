@@ -3,6 +3,16 @@
 // ==========================================================================
 .paragraph--type--image-slider {
   &.paragraph--view-mode--default {
+    .paragraph--intro {
+      max-width: $container-s;
+      margin: 0 auto;
+  
+      .field--name-field-intro {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
     .container {
       position: relative;
     }

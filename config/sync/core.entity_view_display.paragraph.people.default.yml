@@ -1,0 +1,37 @@
+uuid: ddac13b8-3370-4c40-ae57-0d56c5b2b92a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.people.field_background_color
+    - field.field.paragraph.people.field_html_id
+    - field.field.paragraph.people.field_intro
+    - field.field.paragraph.people.field_people
+    - paragraphs.paragraphs_type.people
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.people.default
+targetEntityType: paragraph
+bundle: people
+mode: default
+content:
+  field_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_people:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_background_color: true
+  field_html_id: true

@@ -1,0 +1,91 @@
+uuid: b4367800-7cc5-480e-a57b-2cb62c28f505
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_people
+    - paragraphs.paragraphs_type.people
+    - paragraphs.paragraphs_type.person
+  module:
+    - entity_reference_revisions
+id: paragraph.people.field_people
+field_name: field_people
+entity_type: paragraph
+bundle: people
+label: People
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      person: person
+    negate: 0
+    target_bundles_drag_drop:
+      block:
+        weight: 22
+        enabled: false
+      cta:
+        weight: 23
+        enabled: false
+      faq:
+        weight: 24
+        enabled: false
+      form:
+        weight: 25
+        enabled: false
+      hero:
+        weight: 26
+        enabled: false
+      image_gallery:
+        weight: 27
+        enabled: false
+      image_slider:
+        weight: 28
+        enabled: false
+      list:
+        weight: 29
+        enabled: false
+      list_item:
+        weight: 30
+        enabled: false
+      media:
+        weight: 31
+        enabled: false
+      people:
+        weight: 32
+        enabled: false
+      person:
+        weight: 33
+        enabled: true
+      quickmenu:
+        weight: 34
+        enabled: false
+      quickmenu_link:
+        weight: 35
+        enabled: false
+      text:
+        weight: 36
+        enabled: false
+      text_column:
+        weight: 37
+        enabled: false
+      text_media:
+        weight: 38
+        enabled: false
+      text_media_item:
+        weight: 39
+        enabled: false
+      text_media_slider:
+        weight: 40
+        enabled: false
+      timeline:
+        weight: 41
+        enabled: false
+      timeline_entry:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

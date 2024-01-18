@@ -1,0 +1,10 @@
+uuid: 804aba4e-b4ba-481f-be5a-1024cc63a9fe
+langcode: nl
+status: true
+dependencies: {  }
+id: person
+label: Person
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

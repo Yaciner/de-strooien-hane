@@ -1,0 +1,31 @@
+uuid: 6902f5ff-2f8b-486a-bc3e-5acfd081f5e1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_picture
+    - media.type.image
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.field_picture
+field_name: field_picture
+entity_type: paragraph
+bundle: person
+label: Picture
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

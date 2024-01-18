@@ -1,0 +1,137 @@
+// ==========================================================================
+// Timeline
+// ==========================================================================
+
+.paragraph--type--timeline {
+  .paragraph--intro {
+    max-width: $container-s;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    .field--name-field-intro {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .paragraph--type--timeline-entry {
+    position: relative;
+    padding-bottom: rem(60);
+
+    &:nth-child(even) {
+      .field--name-field-text {
+        order: 2;
+      }
+      .field--name-field-media {
+        order: 1;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 100%;
+      border-left: 1px solid $primary;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 1;
+
+      @include mq(m) {
+        left: rem(40);
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        height: 50%;
+        top: 50%;
+        @include mq(m) {
+          height: 100%;
+          top: 0;
+        }
+      }
+    }
+    &:last-child {
+      padding-bottom: 0;
+      &::before {
+        height: 50%;
+        top: auto;
+        bottom: 50%;
+        @include mq(m) {
+          display: none;
+        }
+      }
+    }
+  }
+  .timeline-entry-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    @include mq(m) {
+      display: block;
+      padding-left: calc(80px + 40px);
+    }
+
+    @include mq(s) {
+      padding-left: 0;
+    }
+
+    .field--name-field-date {
+      order: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: $primary;
+      width: rem(80);
+      height: rem(80);
+      font-weight: 700;
+      color: $white;
+      border: 1px solid $primary;
+      border-radius: 50%;
+      text-align: center;
+
+      @include mq(m) {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      @include mq(s) {
+        display: block;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        border: 0;
+        text-align: left;
+        position: relative;
+      }
+    }
+    .field--name-field-text {
+      order: 1;
+      width: calc(50% - 100px);
+
+      @include mq(m) {
+        width: 100%;
+      }
+    }
+    .field--name-field-media {
+      order: 3;
+      width: calc(50% - 100px);
+
+      @include mq(m) {
+        width: 100%;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+}

@@ -1,20 +1,18 @@
-uuid: 99ae4f53-445f-494f-a5b5-4107c470a079
-langcode: en
+uuid: b1dda650-9e20-4e4d-93e6-25538655989a
+langcode: nl
 status: true
 dependencies:
   config:
     - field.storage.node.field_paragraphs
-    - node.type.page
+    - node.type.article
     - paragraphs.paragraphs_type.block
     - paragraphs.paragraphs_type.cta
-    - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.image_gallery
     - paragraphs.paragraphs_type.image_slider
     - paragraphs.paragraphs_type.list
     - paragraphs.paragraphs_type.media
-    - paragraphs.paragraphs_type.people
     - paragraphs.paragraphs_type.quickmenu
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_media
@@ -22,10 +20,10 @@ dependencies:
     - paragraphs.paragraphs_type.timeline
   module:
     - entity_reference_revisions
-id: node.page.field_paragraphs
+id: node.article.field_paragraphs
 field_name: field_paragraphs
 entity_type: node
-bundle: page
+bundle: article
 label: Paragraphs
 description: ''
 required: false
@@ -39,7 +37,6 @@ settings:
       cta: cta
       form: form
       block: block
-      faq: faq
       hero: hero
       text: text
       text_media: text_media
@@ -50,7 +47,6 @@ settings:
       quickmenu: quickmenu
       list: list
       text_media_slider: text_media_slider
-      people: people
     negate: 0
     target_bundles_drag_drop:
       block:
@@ -60,8 +56,8 @@ settings:
         weight: 6
         enabled: true
       faq:
-        weight: 8
-        enabled: true
+        weight: 10
+        enabled: false
       form:
         weight: 7
         enabled: true
@@ -85,7 +81,7 @@ settings:
         enabled: true
       people:
         weight: 32
-        enabled: true
+        enabled: false
       person:
         weight: 33
         enabled: false

@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.field_center_title
     - field.field.node.page.field_hero
     - field.field.node.page.field_paragraphs
     - field.field.node.page.field_seo
     - node.type.page
   module:
     - entity_reference_revisions
-    - metatag
     - user
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
@@ -36,13 +36,8 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_seo:
-    type: metatag_empty_formatter
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
 hidden:
+  field_center_title: true
+  field_seo: true
   langcode: true
   links: true

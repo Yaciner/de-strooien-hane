@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Timeline entry.
+ */
+#}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="timeline-entry-wrapper">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+    </div>
+  </div>
+{% endblock paragraph %}

@@ -39,6 +39,8 @@ permissions:
   - 'view paragraph content list'
   - 'view paragraph content list_item'
   - 'view paragraph content media'
+  - 'view paragraph content people'
+  - 'view paragraph content person'
   - 'view paragraph content quickmenu'
   - 'view paragraph content quickmenu_link'
   - 'view paragraph content text'

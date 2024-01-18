@@ -13,7 +13,9 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
   Drupal.behaviors.scripts = {
     attach: function (context, settings) {
       // AOS
-      AOS.init();
+      AOS.init({
+        once: true
+      });
 
       // Geysir
       $(once('click', 'body')).on('click', '.geysir-dialog .horizontal-tab-button a',function() {

@@ -1,0 +1,22 @@
+uuid: 5e0c6f21-fb88-41b9-b562-034b7eb2396a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_intro
+    - paragraphs.paragraphs_type.people
+  module:
+    - text
+id: paragraph.people.field_intro
+field_name: field_intro
+entity_type: paragraph
+bundle: people
+label: Intro
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

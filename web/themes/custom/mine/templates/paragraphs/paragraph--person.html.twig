@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ * Outputs a paragraph as a section within its parent article.
+ *
+ * @see template_preprocess_paragraph()
+ * @ingroup themeable
+ */
+#}
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }}>
+    {% if paragraph.field_intro.value %}
+      <div class="paragraph--intro" data-aos="fade-up">
+        {{ content.field_intro }}
+        {{ content.field_overview_link }}
+      </div>
+    {% endif %}
+    {% block content %}
+    <div class="content" data-aos="fade-up">
+      {{ content.field_picture }}
+      <div class="text">
+        {{ content.field_name }}
+        {{ content.field_info }}
+      </div>
+    </div>
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

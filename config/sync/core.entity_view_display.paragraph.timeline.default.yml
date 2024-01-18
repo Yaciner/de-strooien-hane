@@ -6,9 +6,11 @@ dependencies:
     - field.field.paragraph.timeline.field_background_color
     - field.field.paragraph.timeline.field_entries
     - field.field.paragraph.timeline.field_html_id
+    - field.field.paragraph.timeline.field_intro
     - paragraphs.paragraphs_type.timeline
   module:
     - entity_reference_revisions
+    - text
 id: paragraph.timeline.default
 targetEntityType: paragraph
 bundle: timeline
@@ -20,6 +22,13 @@ content:
     settings:
       view_mode: default
       link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content

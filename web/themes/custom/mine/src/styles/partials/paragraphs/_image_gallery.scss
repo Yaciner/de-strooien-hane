@@ -7,11 +7,12 @@
   }
   
   .paragraph--intro {
-    text-align: center;
-    justify-content: center;
+    max-width: $container-s;
+    margin: 0 auto;
 
-    .field--name-field-intro  {
-      max-width: rem(780);
+    .field--name-field-intro {
+      text-align: center;
+      width: 100%;
     }
   }
 

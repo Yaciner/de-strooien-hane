@@ -1,25 +1,41 @@
-uuid: 34fb3043-28bb-432a-af1f-05e69475af9e
+uuid: 0f9de5c5-2a21-4505-bedc-1e301ac3f21e
 langcode: nl
 status: true
 dependencies:
   config:
-    - field.field.paragraph.timeline.field_background_color
-    - field.field.paragraph.timeline.field_entries
-    - field.field.paragraph.timeline.field_html_id
-    - field.field.paragraph.timeline.field_intro
-    - paragraphs.paragraphs_type.timeline
+    - field.field.paragraph.people.field_background_color
+    - field.field.paragraph.people.field_html_id
+    - field.field.paragraph.people.field_intro
+    - field.field.paragraph.people.field_people
+    - paragraphs.paragraphs_type.people
   module:
     - field_group
     - paragraphs
     - text
 third_party_settings:
   field_group:
-    group_tabs:
+    group_options:
+      children:
+        - status
+        - field_html_id
+      label: Options
+      region: hidden
+      parent_name: group_people
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+    group_people:
       children:
         - group_main_data
         - group_layout
         - group_options
-      label: Tabs
+      label: People
       region: content
       parent_name: ''
       weight: 0
@@ -33,11 +49,11 @@ third_party_settings:
     group_main_data:
       children:
         - field_intro
-        - field_entries
+        - field_people
       label: 'Main data'
-      region: content
-      parent_name: group_tabs
-      weight: 5
+      region: hidden
+      parent_name: group_people
+      weight: 2
       format_type: tab
       format_settings:
         classes: ''
@@ -45,30 +61,14 @@ third_party_settings:
         id: ''
         formatter: closed
         description: ''
-        required_fields: true
-    group_options:
-      children:
-        - status
-        - field_html_id
-      label: Options
-      region: content
-      parent_name: group_tabs
-      weight: 7
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        formatter: closed
-        description: ''
-        required_fields: true
+        required_fields: false
     group_layout:
       children:
         - field_background_color
       label: Layout
-      region: content
-      parent_name: group_tabs
-      weight: 6
+      region: hidden
+      parent_name: group_people
+      weight: 3
       format_type: tab
       format_settings:
         classes: ''
@@ -76,21 +76,37 @@ third_party_settings:
         id: ''
         formatter: closed
         description: ''
-        required_fields: true
-id: paragraph.timeline.default
+        required_fields: false
+id: paragraph.people.default
 targetEntityType: paragraph
-bundle: timeline
+bundle: people
 mode: default
 content:
   field_background_color:
     type: options_select
-    weight: 2
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_entries:
+  field_html_id:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_intro:
+    type: text_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_people:
     type: paragraphs
-    weight: 3
+    weight: 9
     region: content
     settings:
       title: Paragraph
@@ -106,25 +122,9 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-  field_html_id:
-    type: string_textfield
-    weight: 1
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_intro:
-    type: text_textarea
-    weight: 2
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 0
+    weight: 8
     region: content
     settings:
       display_label: true

@@ -1,0 +1,19 @@
+uuid: 5066412b-e12f-46d3-af31-13108605f8b3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_info
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.field_info
+field_name: field_info
+entity_type: paragraph
+bundle: person
+label: Info
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

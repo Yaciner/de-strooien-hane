@@ -4,6 +4,7 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_center_title
     - field.field.node.page.field_hero
     - field.field.node.page.field_paragraphs
     - field.field.node.page.field_seo
@@ -21,6 +22,7 @@ content:
     weight: 101
     region: content
 hidden:
+  field_center_title: true
   field_hero: true
   field_paragraphs: true
   field_seo: true

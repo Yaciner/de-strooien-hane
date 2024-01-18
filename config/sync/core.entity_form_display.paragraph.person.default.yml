@@ -1,27 +1,26 @@
-uuid: 58701e57-c258-43de-9b32-37fb0243ce62
+uuid: a4663f0d-da0a-4731-99c6-bcdfd1140823
 langcode: nl
 status: true
 dependencies:
   config:
     - entity_browser.browser.media_entity_browser_images_or_video
-    - field.field.paragraph.timeline_entry.field_date
-    - field.field.paragraph.timeline_entry.field_media
-    - field.field.paragraph.timeline_entry.field_text
-    - paragraphs.paragraphs_type.timeline_entry
+    - field.field.paragraph.person.field_info
+    - field.field.paragraph.person.field_name
+    - field.field.paragraph.person.field_picture
+    - paragraphs.paragraphs_type.person
   module:
     - entity_browser
     - field_group
-    - text
 third_party_settings:
   field_group:
-    group_timeline_entry:
+    group_main_data:
       children:
-        - field_date
-        - field_text
-        - field_media
-      label: 'Timeline entry'
-      region: content
-      parent_name: group_entry
+        - field_name
+        - field_info
+        - field_picture
+      label: 'Main data'
+      region: hidden
+      parent_name: group_person
       weight: 1
       format_type: tab
       format_settings:
@@ -30,11 +29,11 @@ third_party_settings:
         id: ''
         formatter: closed
         description: ''
-        required_fields: true
-    group_entry:
+        required_fields: false
+    group_person:
       children:
-        - group_timeline_entry
-      label: Entry
+        - group_main_data
+      label: Person
       region: content
       parent_name: ''
       weight: 0
@@ -45,12 +44,12 @@ third_party_settings:
         id: ''
         direction: horizontal
         width_breakpoint: 640
-id: paragraph.timeline_entry.default
+id: paragraph.person.default
 targetEntityType: paragraph
-bundle: timeline_entry
+bundle: person
 mode: default
 content:
-  field_date:
+  field_info:
     type: string_textfield
     weight: 3
     region: content
@@ -58,9 +57,17 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_media:
+  field_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_picture:
     type: entity_browser_entity_reference
-    weight: 5
+    weight: 4
     region: content
     settings:
       entity_browser: media_entity_browser_images_or_video
@@ -72,14 +79,6 @@ content:
       field_widget_display_settings:
         view_mode: media_entity_browser
       selection_mode: selection_append
-    third_party_settings: {  }
-  field_text:
-    type: text_textarea
-    weight: 4
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
 hidden:
   created: true

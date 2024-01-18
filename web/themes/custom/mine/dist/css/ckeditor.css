@@ -1266,12 +1266,7 @@ textarea.form-control-lg {
 .ck-content .container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-}
-@media all and (max-width: 959px) {
-  .ck-content .container {
-    padding: 0 2.5rem;
-  }
+  padding: 0 2.5rem;
 }
 @media all and (max-width: 479px) {
   .ck-content .container {
@@ -1380,7 +1375,7 @@ textarea.form-control-lg {
   margin-top: 0;
   color: #000000;
   line-height: 1.2;
-  font-size: clamp(1.5rem, 0.83vw + 1.25rem, 1.88rem);
+  font-size: clamp(1.5rem, 0.28vw + 1.42rem, 1.63rem);
   font-weight: 400;
 }
 .ck-content h1,

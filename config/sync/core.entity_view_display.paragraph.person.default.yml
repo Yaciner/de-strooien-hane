@@ -1,0 +1,47 @@
+uuid: a198207b-143a-4e3d-a2aa-b633179b307d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person.field_info
+    - field.field.paragraph.person.field_name
+    - field.field.paragraph.person.field_picture
+    - image.style.pg_person
+    - paragraphs.paragraphs_type.person
+  module:
+    - mine_formatters
+id: paragraph.person.default
+targetEntityType: paragraph
+bundle: person
+mode: default
+content:
+  field_info:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_picture:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: pg_person
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
