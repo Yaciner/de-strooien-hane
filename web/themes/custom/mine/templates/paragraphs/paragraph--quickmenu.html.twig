@@ -18,9 +18,9 @@
         </div>
       {% endif %}
       {% block content %}
-        {{ content.field_media }}
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+      <div class="content">
+        {{ content|without('field_intro', 'field_overview_link') }}
+      </div>
       {% endblock %}
     </div>
   </section>

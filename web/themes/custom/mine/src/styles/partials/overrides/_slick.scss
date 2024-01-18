@@ -1,4 +1,4 @@
-.swiper + .swiper-button-prev, .swiper-button-prev + .swiper-button-next, .swiper .swiper-button-prev, .swiper .swiper-button-next  {
+.slick-arrow {
   position: absolute;
   width: 2.4rem;
   height: 2.4rem; 
@@ -6,6 +6,10 @@
   padding: 0;
   background-color: $primary;
   border-radius: $border-radius;
+  top: 50%;
+  translate: 0% -50%;
+  z-index: 2;
+  cursor: pointer;
 
   &:after {
     width: 1.2rem;
@@ -15,7 +19,13 @@
   }
 }
 
-.swiper + .swiper-button-prev {
+.slick-next {
+  right: 2rem;
+}
+
+.slick-prev {
+  left: 2rem;
+
   &:after {
     scale: -1;
   }

@@ -14,12 +14,12 @@
     <div{{ container_attributes }}>
     {% block content %}
 
-      <div class="pg-text-media__text">
+      <div class="pg-text-media__text" data-aos="fade-up" data-aos-delay="50">
         {{ content.field_title }}
         {{ content.field_text }}
       </div>
 
-      <div class="pg-text-media__media">
+      <div class="pg-text-media__media" data-aos="fade-up">
         {{ content.field_media}}
       </div>
 

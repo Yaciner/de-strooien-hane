@@ -41,34 +41,34 @@
       }
     }
 
-    &.swiper-slide {
+    &.slick-slide {
       scale: .8;
       transition: scale 1s $cubic-bezier;
-    }
 
-    &.swiper-slide-prev {
-      .field--name-field-title {
-        right: 0;
-        padding-right: 6vw;
-
-        &:before {
+      &.prevSlide {
+        .field--name-field-title {
           right: 0;
+          padding-right: 6vw;
+  
+          &:before {
+            right: 0;
+          }
         }
       }
-    }
 
-    &.swiper-slide-next {
-      .field--name-field-title {
-        left: 0;
-        padding-left: 6vw;
-
-        &:before {
+      &.nextSlide {
+        .field--name-field-title {
           left: 0;
+          padding-left: 6vw;
+  
+          &:before {
+            left: 0;
+          }
         }
       }
     }
 
-    &.swiper-slide-active {
+    &.slick-active {
       scale: 1;
 
       article {

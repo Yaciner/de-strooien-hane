@@ -20,32 +20,33 @@ import { TextPlugin } from "gsap/TextPlugin";
       let defaultSliders = $('.paragraph--type--image-slider.paragraph--view-mode--default .field--name-field-media');
       let scrollSliders = $('.paragraph--type--image-slider.paragraph--view-mode--scroll_animation .field--name-field-media');
 
-      $(once('swiper', defaultSliders)).each(function (index, item) {
-        let uniqueNavClass = 'swiper-navigation-i-s-' + index;
-        $(item).addClass('swiper');
-        $(item).find('.field__item').addClass('swiper-slide');
-        $(item).children().wrapAll('<div class="swiper-wrapper"></div>');
 
-        $(item).parent().find('.swiper-button-next').addClass(uniqueNavClass + '-next');
-        $(item).parent().find('.swiper-button-prev').addClass(uniqueNavClass + '-prev');
-        
-        if($(item).find('.swiper-wrapper').children().length <= 3) {
-          let clones = $(item).find('.swiper-wrapper').children().clone();
-          $(item).find('.swiper-wrapper').append(clones);
+      $(once('slick', '.paragraph--type--image-slider.paragraph--view-mode--default')).each(function () {
+        const slider = $(this).find('.field--name-field-media');
+
+        slider.slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+          dots: false,
+          prevArrow: '<div class="slick-prev"></div>',
+          nextArrow: '<div class="slick-next"></div>',
+          lazyLoad: 'progressive'
+        });
+
+        function updateSlideClasses(slick, currentSlide) {
+          slick.$slides.removeClass('prevSlide nextSlide');
+          $(slick.$slides[currentSlide]).prev().addClass('prevSlide');
+          $(slick.$slides[currentSlide]).next().addClass('nextSlide');
         }
-        
 
-        Swiper.use([Navigation]);
-        let dom = $(item).get(0);
-        new Swiper(dom, {
-          slidesPerView: 2.2,
-          spaceBetween: 30,
-          loop: true,
-          centeredSlides: true,
-          navigation: {
-            nextEl: '.' + uniqueNavClass + '-next',
-            prevEl: '.' + uniqueNavClass + '-prev',
-          }
+        updateSlideClasses(slider.slick('getSlick'), 0);
+
+        slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+          updateSlideClasses(slick, nextSlide);
         });
       });
     }

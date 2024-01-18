@@ -7,11 +7,20 @@
       position: relative;
     }
 
-    .swiper-slide.swiper-slide-active {
+    .slick-slide {
+      margin: 0 2rem;
+    }
+
+    .slick-list {
+      overflow: visible;
+      margin: 0 2rem;
+    }
+
+    .slick-slide.slick-active {
       scale: 1.2;
     }
 
-    .swiper-slide {
+    .slick-slide {
       scale: .8;
       transition: scale 1s $cubic-bezier;
 

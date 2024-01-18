@@ -327,7 +327,7 @@ ul.paragraphs-add-dialog-list .button.button--small {
 }
 .geysir-dialog select {
   padding-right: 2.5rem;
-  background-image: url("../dist/svg/icons/dropdown.svg");
+  background-image: url("../svg/icons/dropdown.svg");
   background-size: 0.625rem 0.625rem;
   background-repeat: no-repeat;
   background-position: right 0.9375rem center;

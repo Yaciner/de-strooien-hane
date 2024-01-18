@@ -9,18 +9,21 @@ import 'swiper/css/navigation';
 
   Drupal.behaviors.reviews = {
     attach: function (context, settings) {
-      $('.field--name-field-block-to-embed .reviews .views-row').addClass('swiper-slide');
-      Swiper.use([Navigation]);
-      new Swiper('.swiper', {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        loop: true,
-        slidesOffsetAfter: 100,
-        slidesOffsetBefore: 100,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }
+
+      $(once('slick', '.mine_views_block__reviews_overview')).each(function () {
+        const slider = $(this).find('.views-rows');
+
+        slider.slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 4,
+          dots: false,
+          centerMode: false,
+          prevArrow: '<div class="slick-prev"></div>',
+          nextArrow: '<div class="slick-next"></div>',
+          lazyLoad: 'progressive'
+        });
       });
     }
   };

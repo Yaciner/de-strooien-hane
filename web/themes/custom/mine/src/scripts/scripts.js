@@ -1,16 +1,20 @@
 import Headroom from "headroom.js";
-// import './fancybox';
 import './lottie-animations';
 import './reviews';
 import './faq';
 import './image-slider';
 import './text-image-slider';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 (function ($, Drupal) {
   'use strict';
 
   Drupal.behaviors.scripts = {
     attach: function (context, settings) {
+      // AOS
+      AOS.init();
+
       // Geysir
       $(once('click', 'body')).on('click', '.geysir-dialog .horizontal-tab-button a',function() {
         $('#geysir-modal').dialog({

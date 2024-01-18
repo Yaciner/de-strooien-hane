@@ -52,6 +52,10 @@
     .footer-main-menu {
       .menu__list {
         @include reset-list();
+
+        a.btn {
+          padding: 0;
+        }
       }
     }
 

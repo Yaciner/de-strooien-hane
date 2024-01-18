@@ -1,4 +1,16 @@
 .node--type-review.node--view-mode-teaser {
   padding: 2rem;
   border: 1px solid $gray-light;
+
+  .field--name-field-body {
+    font-weight: bold;
+    font-size: rem(18);
+  }
+
+  .field--name-field-name {
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: rem(15);
+    opacity: .7;
+  }
 }

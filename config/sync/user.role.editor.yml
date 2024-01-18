@@ -1,0 +1,190 @@
+uuid: c9a1190b-3284-41cc-a671-c1a954db55b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.call_to_action
+    - node.type.collection
+    - node.type.faq_item
+    - node.type.general_site_settings
+    - node.type.homepage
+    - node.type.page
+    - node.type.promo_item
+    - node.type.review
+    - node.type.system_page
+    - taxonomy.vocabulary.icons
+    - taxonomy.vocabulary.promo_collections
+    - taxonomy.vocabulary.tags
+  module:
+    - dropzonejs
+    - entity_browser
+    - eu_cookie_compliance
+    - geysir
+    - media
+    - node
+    - paragraphs
+    - paragraphs_type_permissions
+    - system
+    - taxonomy
+    - toolbar
+    - webform
+    - webform_node
+id: editor
+label: Editor
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access media_entity_browser entity browser pages'
+  - 'access media_entity_browser_files entity browser pages'
+  - 'access media_entity_browser_images entity browser pages'
+  - 'access media_entity_browser_images_or_video entity browser pages'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access webform overview'
+  - 'create article content'
+  - 'create call_to_action content'
+  - 'create collection content'
+  - 'create faq_item content'
+  - 'create page content'
+  - 'create paragraph content block'
+  - 'create paragraph content cta'
+  - 'create paragraph content faq'
+  - 'create paragraph content form'
+  - 'create paragraph content hero'
+  - 'create paragraph content image_gallery'
+  - 'create paragraph content image_slider'
+  - 'create paragraph content list'
+  - 'create paragraph content list_item'
+  - 'create paragraph content media'
+  - 'create paragraph content quickmenu'
+  - 'create paragraph content quickmenu_link'
+  - 'create paragraph content text'
+  - 'create paragraph content text_column'
+  - 'create paragraph content text_media'
+  - 'create paragraph content text_media_item'
+  - 'create paragraph content text_media_slider'
+  - 'create paragraph content timeline'
+  - 'create paragraph content timeline_entry'
+  - 'create promo_item content'
+  - 'create review content'
+  - 'create system_page content'
+  - 'create terms in icons'
+  - 'create terms in promo_collections'
+  - 'create terms in tags'
+  - 'delete any article content'
+  - 'delete any call_to_action content'
+  - 'delete any collection content'
+  - 'delete any faq_item content'
+  - 'delete any page content'
+  - 'delete any promo_item content'
+  - 'delete any review content'
+  - 'delete own article content'
+  - 'delete own call_to_action content'
+  - 'delete own collection content'
+  - 'delete own faq_item content'
+  - 'delete own general_site_settings content'
+  - 'delete own homepage content'
+  - 'delete own page content'
+  - 'delete own promo_item content'
+  - 'delete own review content'
+  - 'delete own system_page content'
+  - 'delete paragraph content block'
+  - 'delete paragraph content cta'
+  - 'delete paragraph content faq'
+  - 'delete paragraph content form'
+  - 'delete paragraph content hero'
+  - 'delete paragraph content image_gallery'
+  - 'delete paragraph content image_slider'
+  - 'delete paragraph content list'
+  - 'delete paragraph content list_item'
+  - 'delete paragraph content media'
+  - 'delete paragraph content quickmenu'
+  - 'delete paragraph content quickmenu_link'
+  - 'delete paragraph content text'
+  - 'delete paragraph content text_column'
+  - 'delete paragraph content text_media'
+  - 'delete paragraph content text_media_item'
+  - 'delete paragraph content text_media_slider'
+  - 'delete paragraph content timeline'
+  - 'delete paragraph content timeline_entry'
+  - 'delete terms in icons'
+  - 'delete terms in promo_collections'
+  - 'delete terms in tags'
+  - 'display eu cookie compliance popup'
+  - 'dropzone upload files'
+  - 'edit any article content'
+  - 'edit any call_to_action content'
+  - 'edit any collection content'
+  - 'edit any faq_item content'
+  - 'edit any general_site_settings content'
+  - 'edit any homepage content'
+  - 'edit any page content'
+  - 'edit any promo_item content'
+  - 'edit any review content'
+  - 'edit any system_page content'
+  - 'edit own article content'
+  - 'edit own call_to_action content'
+  - 'edit own collection content'
+  - 'edit own faq_item content'
+  - 'edit own general_site_settings content'
+  - 'edit own homepage content'
+  - 'edit own page content'
+  - 'edit own promo_item content'
+  - 'edit own review content'
+  - 'edit own system_page content'
+  - 'edit terms in icons'
+  - 'edit terms in promo_collections'
+  - 'edit terms in tags'
+  - 'geysir manage paragraphs from front-end'
+  - 'revert article revisions'
+  - 'revert call_to_action revisions'
+  - 'revert collection revisions'
+  - 'revert faq_item revisions'
+  - 'revert general_site_settings revisions'
+  - 'revert homepage revisions'
+  - 'revert page revisions'
+  - 'revert promo_item revisions'
+  - 'revert review revisions'
+  - 'revert system_page revisions'
+  - 'update any media'
+  - 'update media'
+  - 'update paragraph content block'
+  - 'update paragraph content cta'
+  - 'update paragraph content faq'
+  - 'update paragraph content form'
+  - 'update paragraph content hero'
+  - 'update paragraph content image_gallery'
+  - 'update paragraph content image_slider'
+  - 'update paragraph content list'
+  - 'update paragraph content list_item'
+  - 'update paragraph content media'
+  - 'update paragraph content quickmenu'
+  - 'update paragraph content quickmenu_link'
+  - 'update paragraph content text'
+  - 'update paragraph content text_column'
+  - 'update paragraph content text_media'
+  - 'update paragraph content text_media_item'
+  - 'update paragraph content text_media_slider'
+  - 'update paragraph content timeline'
+  - 'update paragraph content timeline_entry'
+  - 'view all media revisions'
+  - 'view any webform submission'
+  - 'view article revisions'
+  - 'view call_to_action revisions'
+  - 'view collection revisions'
+  - 'view faq_item revisions'
+  - 'view general_site_settings revisions'
+  - 'view homepage revisions'
+  - 'view own unpublished content'
+  - 'view own webform submission'
+  - 'view page revisions'
+  - 'view promo_item revisions'
+  - 'view review revisions'
+  - 'view system_page revisions'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view webform submissions any node'
+  - 'view webform submissions own node'
