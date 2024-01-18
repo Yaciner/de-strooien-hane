@@ -3,7 +3,7 @@ _core:
 maxlength_block_class_field: 255
 field_type: multiple_textfields
 default_case: standard
-block_classes_stored: '{"main-menu":"main-menu","branding":"branding","footer-boilerplate":"footer-boilerplate","footer-contact":"footer-contact","footer-socials":"footer-socials","footer-opening-hours":"footer-opening-hours","footer-main-menu":"footer-main-menu","bottom-menu":"bottom-menu","gss-google-maps":"gss-google-maps","fixed-menu":"fixed-menu","mm-main-menu":"mm-main-menu","mm-branding":"mm-branding"}'
+block_classes_stored: '{"main-menu":"main-menu","branding":"branding","footer-boilerplate":"footer-boilerplate","footer-contact":"footer-contact","footer-socials":"footer-socials","footer-opening-hours":"footer-opening-hours","footer-main-menu":"footer-main-menu","bottom-menu":"bottom-menu","gss-google-maps":"gss-google-maps","fixed-menu":"fixed-menu","mm-main-menu":"mm-main-menu","mm-branding":"mm-branding","notification-bar":"notification-bar"}'
 enable_attributes: true
 enable_auto_complete: true
 qty_classes_per_block: 10

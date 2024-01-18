@@ -17,7 +17,7 @@ _core:
 id: mine_main_menu
 theme: mine
 region: header
-weight: -4
+weight: -11
 provider: null
 plugin: 'system_menu_block:main'
 settings:

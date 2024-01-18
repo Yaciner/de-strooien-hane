@@ -9,7 +9,7 @@ _core:
 id: mine_primary_admin_actions
 theme: mine
 region: header
-weight: -3
+weight: -10
 provider: null
 plugin: local_actions_block
 settings:

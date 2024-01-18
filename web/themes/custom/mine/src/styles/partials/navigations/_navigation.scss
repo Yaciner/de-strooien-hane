@@ -85,7 +85,7 @@ body:not(.logged-in).has-hero {
     background-color: $white;
 
     a {
-      color: $black;
+      color: $black !important;
     }
   }
 }

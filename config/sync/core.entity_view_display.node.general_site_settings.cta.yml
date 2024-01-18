@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.general_site_settings.field_footer_contact
     - field.field.node.general_site_settings.field_footer_opening_hours
     - field.field.node.general_site_settings.field_geolocation
+    - field.field.node.general_site_settings.field_notification
     - field.field.node.general_site_settings.field_socials_facebook
     - field.field.node.general_site_settings.field_socials_instagram
     - node.type.general_site_settings
@@ -32,6 +33,7 @@ hidden:
   field_footer_boilerplate: true
   field_footer_opening_hours: true
   field_geolocation: true
+  field_notification: true
   field_socials_facebook: true
   field_socials_instagram: true
   langcode: true

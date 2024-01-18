@@ -15,7 +15,7 @@ _core:
 id: mine_site_branding
 theme: mine
 region: header
-weight: -5
+weight: -12
 provider: null
 plugin: system_branding_block
 settings:

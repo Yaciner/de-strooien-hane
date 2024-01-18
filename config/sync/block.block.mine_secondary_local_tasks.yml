@@ -9,7 +9,7 @@ _core:
 id: mine_secondary_local_tasks
 theme: mine
 region: header
-weight: 1
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

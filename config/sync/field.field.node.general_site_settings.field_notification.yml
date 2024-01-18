@@ -1,0 +1,19 @@
+uuid: 378cfc34-cd2d-4430-a520-ab260c207031
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notification
+    - node.type.general_site_settings
+id: node.general_site_settings.field_notification
+field_name: field_notification
+entity_type: node
+bundle: general_site_settings
+label: Notification
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
