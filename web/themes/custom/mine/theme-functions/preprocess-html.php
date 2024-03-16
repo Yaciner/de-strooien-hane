@@ -50,6 +50,9 @@ function mine_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'mm-' . $mobilePosition;
   }
 
+  // Notification bar
+  // views_block:general_site_settings-notification_bar
+
   // https://css-tricks.com/the-current-state-of-telephone-links/
   // <meta name="format-detection" content="telephone=no">
   $formatDetection = [

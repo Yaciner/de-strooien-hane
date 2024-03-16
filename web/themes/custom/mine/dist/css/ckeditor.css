@@ -1299,7 +1299,6 @@ textarea.form-control-lg {
   left: 50%;
   width: 100%;
   z-index: 1000;
-  background-color: color("white");
   max-width: 1920px;
   translate: -50% 0%;
 }

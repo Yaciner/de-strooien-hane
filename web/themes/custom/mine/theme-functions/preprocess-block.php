@@ -1,6 +1,8 @@
 <?php
 
-function mine_preprocess_block(&$variables) {}
+function mine_preprocess_block(&$variables) {
+
+}
 
 function mine_preprocess_block__page_title_block(&$variables) {
   $node = \Drupal::routeMatch()->getParameter('node');

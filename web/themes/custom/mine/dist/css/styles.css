@@ -2843,7 +2843,6 @@ body.logged-out .region-header {
   left: 50%;
   width: 100%;
   z-index: 1000;
-  background-color: color("white");
   max-width: 1920px;
   translate: -50% 0%;
 }
@@ -3777,7 +3776,10 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   text-align: center;
 }
 
-.notification-bar {
+.region-header.has-notification {
+  padding-top: 3.5rem;
+}
+.region-header.has-notification .notification-bar {
   position: absolute;
   top: 0;
   left: 0;
