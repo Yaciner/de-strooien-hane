@@ -1,6 +1,6 @@
 uuid: 91fa3ca3-5236-4098-8ba7-b8fa97d13b45
 langcode: nl
-status: true
+status: false
 dependencies:
   config:
     - views.view.general_site_settings

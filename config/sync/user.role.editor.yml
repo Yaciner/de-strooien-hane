@@ -12,6 +12,7 @@ dependencies:
     - node.type.page
     - node.type.promo_item
     - node.type.review
+    - node.type.social_post
     - node.type.system_page
     - taxonomy.vocabulary.icons
     - taxonomy.vocabulary.promo_collections
@@ -72,6 +73,7 @@ permissions:
   - 'create paragraph content timeline_entry'
   - 'create promo_item content'
   - 'create review content'
+  - 'create social_post content'
   - 'create system_page content'
   - 'create terms in icons'
   - 'create terms in promo_collections'
@@ -83,6 +85,7 @@ permissions:
   - 'delete any page content'
   - 'delete any promo_item content'
   - 'delete any review content'
+  - 'delete any social_post content'
   - 'delete own article content'
   - 'delete own call_to_action content'
   - 'delete own collection content'
@@ -92,6 +95,7 @@ permissions:
   - 'delete own page content'
   - 'delete own promo_item content'
   - 'delete own review content'
+  - 'delete own social_post content'
   - 'delete own system_page content'
   - 'delete paragraph content block'
   - 'delete paragraph content cta'
@@ -128,6 +132,7 @@ permissions:
   - 'edit any page content'
   - 'edit any promo_item content'
   - 'edit any review content'
+  - 'edit any social_post content'
   - 'edit any system_page content'
   - 'edit own article content'
   - 'edit own call_to_action content'
@@ -138,6 +143,7 @@ permissions:
   - 'edit own page content'
   - 'edit own promo_item content'
   - 'edit own review content'
+  - 'edit own social_post content'
   - 'edit own system_page content'
   - 'edit terms in icons'
   - 'edit terms in promo_collections'
@@ -152,6 +158,7 @@ permissions:
   - 'revert page revisions'
   - 'revert promo_item revisions'
   - 'revert review revisions'
+  - 'revert social_post revisions'
   - 'revert system_page revisions'
   - 'update any media'
   - 'update media'
@@ -189,6 +196,7 @@ permissions:
   - 'view page revisions'
   - 'view promo_item revisions'
   - 'view review revisions'
+  - 'view social_post revisions'
   - 'view system_page revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'

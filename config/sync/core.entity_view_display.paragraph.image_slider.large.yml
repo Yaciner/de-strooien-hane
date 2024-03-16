@@ -4,6 +4,7 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.paragraph.large
+    - field.field.paragraph.image_slider.field_autoplay
     - field.field.paragraph.image_slider.field_background_color
     - field.field.paragraph.image_slider.field_html_id
     - field.field.paragraph.image_slider.field_intro
@@ -32,6 +33,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_autoplay: true
   field_background_color: true
   field_html_id: true
   field_intro: true

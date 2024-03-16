@@ -1,0 +1,21 @@
+uuid: cf7db496-00bc-4fb5-ad89-d670051b5113
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_autoplay
+    - paragraphs.paragraphs_type.image_slider
+id: paragraph.image_slider.field_autoplay
+field_name: field_autoplay
+entity_type: paragraph
+bundle: image_slider
+label: Autoplay
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

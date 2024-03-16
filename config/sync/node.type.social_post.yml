@@ -1,0 +1,17 @@
+uuid: 5c967974-ce7d-47eb-ba7e-82f1dccd0d81
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Social post'
+type: social_post
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

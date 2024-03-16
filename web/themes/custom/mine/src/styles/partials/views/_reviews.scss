@@ -1,11 +1,16 @@
 .mine_views_block__reviews_overview {
-  
+  .slick-track {
+    display: flex !important;
+    align-items: center;
+  }
+
   .view-reviews {
     padding: 0 2rem;
   }
 
   .slick-slide {
     margin: 0 1rem;
+    height: inherit !important;
   }
 
   .slick-list {

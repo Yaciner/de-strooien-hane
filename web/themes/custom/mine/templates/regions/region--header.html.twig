@@ -12,8 +12,15 @@
  * @see template_preprocess_region()
  */
 #}
+{% set notification_bar = drupal_entity('node', 31, 'notification_bar') %}
+{% if notification_bar['#node'].field_notification.value is not empty %}
+  {% set attributes = attributes.addClass('has-notification') %}
+{% endif %}
+
 {% if content %}
   <div{{ attributes }}>
+    {{ notification_bar }}
+
     <div class="container">
       {{ content }}
       <a href="#" rel="nofollow" class="mm-toggle mm-toggle--wrapper js-mm-toggle"></a>

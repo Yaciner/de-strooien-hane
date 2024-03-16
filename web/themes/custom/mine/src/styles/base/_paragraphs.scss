@@ -73,7 +73,7 @@
   padding-top: 0;
 }
 
-.no-hero .pg-bg--none:first-child {
+.no-hero .geysir-field-paragraph-wrapper > .pg-bg--none:first-child, .no-hero .field--name-field-paragraphs > .pg-bg--none:first-child {
   padding-top: 3rem;
 }
 

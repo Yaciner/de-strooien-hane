@@ -18,6 +18,7 @@ import 'swiper/css/navigation';
           infinite: true,
           speed: 300,
           slidesToShow: 4,
+          adaptiveWidth: true,
           dots: false,
           centerMode: false,
           prevArrow: '<div class="slick-prev"></div>',

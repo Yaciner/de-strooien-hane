@@ -1,0 +1,18 @@
+uuid: 16928ce8-3467-4d43-836a-45d1c594087e
+langcode: nl
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_autoplay
+field_name: field_autoplay
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

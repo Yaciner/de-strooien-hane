@@ -33,8 +33,9 @@ $notification-bar-height: 2.5rem;
   &.has-notification {
     padding-top: calc($notification-bar-height + 1rem);
     
-    .notification-bar {
+    .field--name-field-notification {
       position: absolute;
+      z-index: 10;
       top: 0;
       left: 0;
       background-color: $primary;

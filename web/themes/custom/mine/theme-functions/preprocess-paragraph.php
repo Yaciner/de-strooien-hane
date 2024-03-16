@@ -82,3 +82,10 @@ function mine_preprocess_paragraph__list_item(&$variables) {
     }
   }
 }
+
+function mine_preprocess_paragraph__image_slider(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+  $autoplay = $paragraph->field_autoplay->value == '1' ? TRUE : FALSE;
+  $variables['#attached']['drupalSettings']['image_slider']['autplay'] = $autoplay;
+}

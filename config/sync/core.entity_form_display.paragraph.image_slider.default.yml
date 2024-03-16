@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_entity_browser_images_or_video
+    - field.field.paragraph.image_slider.field_autoplay
     - field.field.paragraph.image_slider.field_background_color
     - field.field.paragraph.image_slider.field_html_id
     - field.field.paragraph.image_slider.field_intro
@@ -52,6 +53,7 @@ third_party_settings:
       children:
         - field_intro
         - field_media
+        - field_autoplay
       label: 'Main data'
       region: content
       parent_name: group_image_slider
@@ -85,9 +87,16 @@ targetEntityType: paragraph
 bundle: image_slider
 mode: default
 content:
+  field_autoplay:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_background_color:
     type: options_select
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }

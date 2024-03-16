@@ -1,0 +1,10 @@
+uuid: 0d27587b-35d4-4bd0-a553-d94139cb2d58
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.notification_bar
+label: 'Notification bar'
+targetEntityType: node
+cache: true

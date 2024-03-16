@@ -29,6 +29,8 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
       let headroom  = new Headroom(header);
       headroom.init();
 
+      // $('.has-notification').append('.notification-bar');
+
       $(once('click', '.js-mm-toggle')).on('click', function (e) {
         $('body').toggleClass('mm-open');
         e.preventDefault();

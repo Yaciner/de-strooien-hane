@@ -1,0 +1,11 @@
+uuid: 3fdbac77-0680-485a-b2cf-6589b13f8e09
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.social_post
+id: node.social_post
+target_entity_type_id: node
+target_bundle: social_post
+default_langcode: current_interface
+language_alterable: false

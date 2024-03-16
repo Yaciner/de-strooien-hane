@@ -1,0 +1,28 @@
+uuid: 0795e2d4-6455-47d1-8d8b-fc7a76dfef61
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.social_post.field_embed_code
+    - node.type.social_post
+  module:
+    - user
+id: node.social_post.default
+targetEntityType: node
+bundle: social_post
+mode: default
+content:
+  field_embed_code:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

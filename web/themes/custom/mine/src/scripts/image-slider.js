@@ -19,7 +19,8 @@ import { TextPlugin } from "gsap/TextPlugin";
       gsap.registerPlugin(ScrollTrigger,Observer,ScrollToPlugin,TextPlugin);
       let defaultSliders = $('.paragraph--type--image-slider.paragraph--view-mode--default .field--name-field-media');
       let scrollSliders = $('.paragraph--type--image-slider.paragraph--view-mode--scroll_animation .field--name-field-media');
-
+      let autoplay = settings.image_slider;
+      console.log(autoplay);
 
       $(once('slick', '.paragraph--type--image-slider.paragraph--view-mode--default')).each(function () {
         const slider = $(this).find('.field--name-field-media');
@@ -27,6 +28,8 @@ import { TextPlugin } from "gsap/TextPlugin";
         slider.slick({
           dots: true,
           infinite: true,
+          autoplay: autoplay,
+          autoplaySpeed: 3000,
           speed: 300,
           slidesToShow: 1,
           centerMode: true,

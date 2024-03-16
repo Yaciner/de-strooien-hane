@@ -3355,7 +3355,7 @@ body .region-off-canvas {
   padding-top: 0;
 }
 
-.no-hero .pg-bg--none:first-child {
+.no-hero .geysir-field-paragraph-wrapper > .pg-bg--none:first-child, .no-hero .field--name-field-paragraphs > .pg-bg--none:first-child {
   padding-top: 3rem;
 }
 
@@ -3779,8 +3779,9 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
 .region-header.has-notification {
   padding-top: 3.5rem;
 }
-.region-header.has-notification .notification-bar {
+.region-header.has-notification .field--name-field-notification {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   background-color: #000000;
@@ -4002,6 +4003,9 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
 .node--type-review.node--view-mode-teaser {
   padding: 2rem;
   border: 1px solid #e5e5e5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .node--type-review.node--view-mode-teaser .field--name-field-body {
   font-weight: bold;
@@ -5789,11 +5793,16 @@ body.loaded .region-header .container, body.loaded .region-header .paragraph--ty
   padding: 3rem 0;
 }
 
+.mine_views_block__reviews_overview .slick-track {
+  display: flex !important;
+  align-items: center;
+}
 .mine_views_block__reviews_overview .view-reviews {
   padding: 0 2rem;
 }
 .mine_views_block__reviews_overview .slick-slide {
   margin: 0 1rem;
+  height: inherit !important;
 }
 .mine_views_block__reviews_overview .slick-list {
   margin: 0 1rem;
@@ -5803,6 +5812,19 @@ body.loaded .region-header .container, body.loaded .region-header .paragraph--ty
 }
 .mine_views_block__reviews_overview .slick-next {
   right: -2rem;
+}
+
+.view-social-posts.view-display-id-block_1 .views-rows {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-0.4rem / 2) -0.4rem;
+}
+.view-social-posts.view-display-id-block_1 .views-rows .views-row {
+  flex: 0 0 calc(100% / 4 - 0.4rem);
+  flex-basis: calc(100% / 4 - 0.4rem);
+  width: calc(100% / 4 - 0.4rem);
+  min-height: 1px;
+  margin: 0 calc(0.4rem / 2) 0.4rem;
 }
 
 /*# sourceMappingURL=styles.css.map*/

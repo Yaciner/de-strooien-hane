@@ -1,0 +1,25 @@
+uuid: 788c46a3-cda8-43be-aa48-d250020c863c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.social_post.field_embed_code
+    - node.type.social_post
+  module:
+    - user
+id: node.social_post.teaser
+targetEntityType: node
+bundle: social_post
+mode: teaser
+content:
+  field_embed_code:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true

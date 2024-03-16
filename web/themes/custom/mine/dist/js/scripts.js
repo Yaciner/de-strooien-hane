@@ -98,12 +98,16 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_5__.ScrollTrigger, gsap_Observer__WEBPACK_IMPORTED_MODULE_6__.Observer, gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_7__.ScrollToPlugin, gsap_TextPlugin__WEBPACK_IMPORTED_MODULE_8__.TextPlugin);
       var defaultSliders = $('.paragraph--type--image-slider.paragraph--view-mode--default .field--name-field-media');
       var scrollSliders = $('.paragraph--type--image-slider.paragraph--view-mode--scroll_animation .field--name-field-media');
+      var autoplay = settings.image_slider;
+      console.log(autoplay);
       $(once('slick', '.paragraph--type--image-slider.paragraph--view-mode--default')).each(function () {
         var _slider$slick;
         var slider = $(this).find('.field--name-field-media');
         slider.slick((_slider$slick = {
           dots: true,
           infinite: true,
+          autoplay: autoplay,
+          autoplaySpeed: 3000,
           speed: 300,
           slidesToShow: 1,
           centerMode: true,
@@ -187,7 +191,8 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
           dots: true,
           infinite: true,
           speed: 300,
-          slidesToShow: 4
+          slidesToShow: 4,
+          adaptiveWidth: true
         }, _defineProperty(_slider$slick, "dots", false), _defineProperty(_slider$slick, "centerMode", false), _defineProperty(_slider$slick, "prevArrow", '<div class="slick-prev"></div>'), _defineProperty(_slider$slick, "nextArrow", '<div class="slick-next"></div>'), _defineProperty(_slider$slick, "lazyLoad", 'progressive'), _slider$slick));
       });
     }
@@ -245,6 +250,9 @@ __webpack_require__.r(__webpack_exports__);
       var header = document.querySelector('.region-header');
       var headroom = new (headroom_js__WEBPACK_IMPORTED_MODULE_0___default())(header);
       headroom.init();
+
+      // $('.has-notification').append('.notification-bar');
+
       $(once('click', '.js-mm-toggle')).on('click', function (e) {
         $('body').toggleClass('mm-open');
         e.preventDefault();

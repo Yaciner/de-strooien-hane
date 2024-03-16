@@ -1,15 +1,15 @@
-uuid: 67df3a11-d321-4642-9d8a-b7fa6befbe8b
+uuid: 0555aa65-ba05-4fe4-9ec6-ab83095caf90
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - node.type.review
+    - node.type.social_post
   module:
     - node
     - user
-id: reviews
-label: Reviews
+id: social_posts
+label: 'Social posts'
 module: views
 description: ''
 tag: ''
@@ -22,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: All
+      title: 'Social posts'
       fields:
         title:
           id: title
@@ -72,10 +72,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: some
+        type: none
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 0
       exposed_form:
         type: basic
         options:
@@ -94,23 +94,7 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          order: ASC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-          granularity: second
+      sorts: {  }
       arguments: {  }
       filters:
         status:
@@ -132,7 +116,7 @@ display:
           entity_field: type
           plugin_id: bundle
           value:
-            review: review
+            social_post: social_post
       style:
         type: default
       row:
@@ -159,8 +143,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  overview:
-    id: overview
+  block_1:
+    id: block_1
     display_title: Overview
     display_plugin: block
     position: 1

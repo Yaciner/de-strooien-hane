@@ -1,0 +1,7 @@
+live:
+  host: 188.208.36.164
+  user: ggeerolf6be
+  root: /data/sites/web/ggeerolf6be/subsites/juweliercoens.be/httpdocs/web
+  uri: https://stage.juweliercoens.be
+  ssh:
+    options: -A -p 9999
