@@ -1,0 +1,105 @@
+uuid: 4f16c940-6a79-4207-83fb-bc5c4d5fe4f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.brands.field_brands
+    - field.field.paragraph.brands.field_html_id
+    - field.field.paragraph.brands.field_intro
+    - paragraphs.paragraphs_type.brands
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_brands:
+      children:
+        - group_main_data
+        - group_items
+        - group_options
+      label: Brands
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_options:
+      children:
+        - field_html_id
+      label: Options
+      region: content
+      parent_name: group_brands
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+    group_main_data:
+      children:
+        - field_intro
+      label: 'Main data'
+      region: content
+      parent_name: group_brands
+      weight: 7
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+    group_items:
+      children:
+        - field_brands
+      label: Items
+      region: content
+      parent_name: group_brands
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+id: paragraph.brands.default
+targetEntityType: paragraph
+bundle: brands
+mode: default
+content:
+  field_brands:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_html_id:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_intro:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

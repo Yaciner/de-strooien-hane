@@ -1,0 +1,39 @@
+uuid: ff310413-d2f8-4cab-97cb-c5e18450336b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.promoted
+    - field.field.node.brand_item.field_brand_info
+    - field.field.node.brand_item.field_media
+    - image.style.ct_collection_promoted
+    - node.type.brand_item
+  module:
+    - mine_formatters
+    - user
+id: node.brand_item.promoted
+targetEntityType: node
+bundle: brand_item
+mode: promoted
+content:
+  field_media:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: ct_collection_promoted
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_brand_info: true
+  langcode: true

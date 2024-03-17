@@ -1,0 +1,23 @@
+.paragraph--type--brands {
+  @extend .centered;
+
+  .slick-slide {
+    margin: 0 2rem;
+  }
+
+  .slick-list {
+    margin: 0 -2rem;
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+
+  .field__item {
+    img {
+      max-height: rem(50);
+      width: auto;
+    }
+  }
+}

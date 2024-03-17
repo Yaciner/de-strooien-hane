@@ -1,0 +1,19 @@
+uuid: 4bbc2753-906f-4695-8ead-ed1662f7f178
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_html_id
+    - paragraphs.paragraphs_type.brands
+id: paragraph.brands.field_html_id
+field_name: field_html_id
+entity_type: paragraph
+bundle: brands
+label: 'Paragraph ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

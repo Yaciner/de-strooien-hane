@@ -90,3 +90,14 @@
     align-items: flex-end;
   }
 }
+
+.paragraph {
+  &.centered {
+    .paragraph--intro {
+      max-width: rem(790);
+      margin: 0 auto;
+      margin-bottom: rem(30);
+      text-align: center;
+    }
+  }
+}

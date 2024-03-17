@@ -1,0 +1,17 @@
+uuid: 3cb76d4a-9d4b-4ad4-9e23-b97514bc99ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Brand item'
+type: brand_item
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

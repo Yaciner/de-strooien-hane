@@ -2,17 +2,17 @@
 
   'use strict';
 
-  Drupal.behaviors.reviews = {
+  Drupal.behaviors.brands = {
     attach: function (context, settings) {
 
-      $(once('slick', '.mine_views_block__reviews_overview')).each(function () {
-        const slider = $(this).find('.views-rows');
-
+      $(once('slick', '.paragraph--type--brands')).each(function () {
+        console.log('tester');
+        const slider = $(this).find('.field--name-field-brands');
         slider.slick({
           dots: true,
           infinite: true,
           speed: 300,
-          slidesToShow: 4,
+          slidesToShow: 5,
           adaptiveWidth: true,
           dots: false,
           centerMode: false,

@@ -1,0 +1,15 @@
+uuid: a96c6b05-daed-4d7e-83f0-62250a4f6bc1
+langcode: en
+status: true
+dependencies: {  }
+name: pg_brand_item_media
+label: 'PG: Brand item: Media'
+effects:
+  618e1f33-2afc-47d9-b3f8-e3c11b874c68:
+    uuid: 618e1f33-2afc-47d9-b3f8-e3c11b874c68
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 100
+      upscale: true

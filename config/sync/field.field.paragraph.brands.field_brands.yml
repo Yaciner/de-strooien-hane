@@ -1,0 +1,29 @@
+uuid: 63118b94-301a-4391-b258-56b9acefed2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_brands
+    - node.type.brand_item
+    - paragraphs.paragraphs_type.brands
+id: paragraph.brands.field_brands
+field_name: field_brands
+entity_type: paragraph
+bundle: brands
+label: 'Brand items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      brand_item: brand_item
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

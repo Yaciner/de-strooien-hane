@@ -30,6 +30,8 @@ permissions:
   - 'use text format webform_default'
   - 'view media'
   - 'view paragraph content block'
+  - 'view paragraph content brand_item'
+  - 'view paragraph content brands'
   - 'view paragraph content cta'
   - 'view paragraph content faq'
   - 'view paragraph content form'

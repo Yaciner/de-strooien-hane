@@ -1,0 +1,19 @@
+uuid: 9aa3dffb-0bfc-46e9-a0c0-bc8ffc424edd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_brand_info
+field_name: field_brand_info
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

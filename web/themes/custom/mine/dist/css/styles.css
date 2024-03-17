@@ -3367,6 +3367,13 @@ body .region-off-canvas {
   align-items: flex-end;
 }
 
+.paragraph.centered .paragraph--intro, .paragraph.paragraph--type--brands .paragraph--intro, .paragraph.paragraph--type--block.mine_views_block__collections_promoted .paragraph--intro {
+  max-width: 49.375rem;
+  margin: 0 auto;
+  margin-bottom: 1.875rem;
+  text-align: center;
+}
+
 .webform-submission-form {
   max-width: 48rem;
 }
@@ -4078,18 +4085,19 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   padding: 0;
 }
 
-.paragraph--type--block.mine_views_block__collections_promoted .paragraph--intro {
-  max-width: 100%;
-  margin: 0;
-  margin-bottom: 3rem;
-  text-align: left;
+.paragraph--type--brands .slick-slide {
+  margin: 0 2rem;
 }
-
-.paragraph--type--block .paragraph--intro {
-  max-width: 48.75rem;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-  text-align: center;
+.paragraph--type--brands .slick-list {
+  margin: 0 -2rem;
+}
+.paragraph--type--brands .slick-track {
+  display: flex;
+  align-items: center;
+}
+.paragraph--type--brands .field__item img {
+  max-height: 3.125rem;
+  width: auto;
 }
 
 .paragraph--type--faq .field--name-field-faq-items {

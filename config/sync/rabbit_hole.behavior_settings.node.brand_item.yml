@@ -1,0 +1,16 @@
+uuid: 4f38aeae-64d5-4f14-ab66-2c8022962a33
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.brand_item
+id: node.brand_item
+targetEntityType: node
+bundle: brand_item
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: /<front>
+  redirect_code: 301
+  redirect_fallback_action: access_denied

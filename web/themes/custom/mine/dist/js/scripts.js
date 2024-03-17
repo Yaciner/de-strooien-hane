@@ -31,6 +31,39 @@
 
 /***/ }),
 
+/***/ "./src/scripts/brands.js":
+/*!*******************************!*\
+  !*** ./src/scripts/brands.js ***!
+  \*******************************/
+/***/ (function() {
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+(function ($, Drupal) {
+  'use strict';
+
+  Drupal.behaviors.brands = {
+    attach: function attach(context, settings) {
+      $(once('slick', '.paragraph--type--brands')).each(function () {
+        var _slider$slick;
+        console.log('tester');
+        var slider = $(this).find('.field--name-field-brands');
+        slider.slick((_slider$slick = {
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 5,
+          adaptiveWidth: true
+        }, _defineProperty(_slider$slick, "dots", false), _defineProperty(_slider$slick, "centerMode", false), _defineProperty(_slider$slick, "prevArrow", '<div class="slick-prev"></div>'), _defineProperty(_slider$slick, "nextArrow", '<div class="slick-next"></div>'), _defineProperty(_slider$slick, "lazyLoad", 'progressive'), _slider$slick));
+      });
+    }
+  };
+})(jQuery, Drupal);
+
+/***/ }),
+
 /***/ "./src/scripts/fancybox.js":
 /*!*********************************!*\
   !*** ./src/scripts/fancybox.js ***!
@@ -42,7 +75,6 @@
 
   Drupal.behaviors.fancybox = {
     attach: function attach(context, settings) {
-      console.log('test');
       $().fancybox({
         selector: '.lightbox:not(.slick-cloned)'
       });
@@ -184,22 +216,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************!*\
   !*** ./src/scripts/reviews.js ***!
   \********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
-/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
-/* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-
-
-
 (function ($, Drupal) {
   'use strict';
 
@@ -234,15 +256,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var headroom_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(headroom_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _lottie_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lottie-animations */ "./src/scripts/lottie-animations.js");
 /* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reviews */ "./src/scripts/reviews.js");
+/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reviews__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./faq */ "./src/scripts/faq.js");
 /* harmony import */ var _image_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./image-slider */ "./src/scripts/image-slider.js");
 /* harmony import */ var _text_image_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./text-image-slider */ "./src/scripts/text-image-slider.js");
 /* harmony import */ var _text_image_slider__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_text_image_slider__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _fancybox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./fancybox */ "./src/scripts/fancybox.js");
 /* harmony import */ var _fancybox__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fancybox__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var _brands__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./brands */ "./src/scripts/brands.js");
+/* harmony import */ var _brands__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_brands__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+
 
 
 
@@ -259,7 +285,7 @@ __webpack_require__.r(__webpack_exports__);
   Drupal.behaviors.scripts = {
     attach: function attach(context, settings) {
       // AOS
-      aos__WEBPACK_IMPORTED_MODULE_7___default().init({
+      aos__WEBPACK_IMPORTED_MODULE_8___default().init({
         once: true
       });
 

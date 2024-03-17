@@ -1,0 +1,35 @@
+uuid: b8b438d4-8baa-4faa-a972-4f8909bedfce
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.brand_item.field_brand_info
+    - field.field.node.brand_item.field_media
+    - image.style.pg_brand_item_media
+    - node.type.brand_item
+  module:
+    - mine_formatters
+    - user
+id: node.brand_item.teaser
+targetEntityType: node
+bundle: brand_item
+mode: teaser
+content:
+  field_media:
+    type: unveil_image
+    label: hidden
+    settings:
+      image_style: pg_brand_item_media
+      image_link: ''
+      image_link_image_style: ''
+      image_loading:
+        attribute: lazy
+      image_only: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_brand_info: true
+  langcode: true
+  links: true

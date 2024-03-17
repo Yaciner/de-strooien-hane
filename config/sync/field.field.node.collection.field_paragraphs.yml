@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_paragraphs
     - node.type.collection
     - paragraphs.paragraphs_type.block
+    - paragraphs.paragraphs_type.brands
     - paragraphs.paragraphs_type.cta
     - paragraphs.paragraphs_type.form
     - paragraphs.paragraphs_type.hero
@@ -45,6 +46,7 @@ settings:
       timeline: timeline
       image_gallery: image_gallery
       image_slider: image_slider
+      brands: brands
       quickmenu: quickmenu
       list: list
       text_media_slider: text_media_slider
@@ -53,6 +55,12 @@ settings:
     target_bundles_drag_drop:
       block:
         weight: 8
+        enabled: true
+      brand_item:
+        weight: 26
+        enabled: false
+      brands:
+        weight: 25
         enabled: true
       cta:
         weight: 6

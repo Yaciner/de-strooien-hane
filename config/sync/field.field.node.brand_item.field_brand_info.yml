@@ -1,0 +1,22 @@
+uuid: f1cce6d8-b97e-4f48-812a-37fde889bf07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brand_info
+    - node.type.brand_item
+  module:
+    - text
+id: node.brand_item.field_brand_info
+field_name: field_brand_info
+entity_type: node
+bundle: brand_item
+label: 'Brand info'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
