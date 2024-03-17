@@ -3367,7 +3367,7 @@ body .region-off-canvas {
   align-items: flex-end;
 }
 
-.paragraph.centered .paragraph--intro, .paragraph.paragraph--type--brands .paragraph--intro, .paragraph.paragraph--type--block.mine_views_block__collections_promoted .paragraph--intro {
+.paragraph.centered .paragraph--intro, .paragraph.paragraph--type--brands .paragraph--intro {
   max-width: 49.375rem;
   margin: 0 auto;
   margin-bottom: 1.875rem;
