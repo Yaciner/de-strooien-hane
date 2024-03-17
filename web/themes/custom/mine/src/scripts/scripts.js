@@ -4,6 +4,7 @@ import './reviews';
 import './faq';
 import './image-slider';
 import './text-image-slider';
+import './fancybox';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 

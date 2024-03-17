@@ -31,6 +31,27 @@
 
 /***/ }),
 
+/***/ "./src/scripts/fancybox.js":
+/*!*********************************!*\
+  !*** ./src/scripts/fancybox.js ***!
+  \*********************************/
+/***/ (function() {
+
+(function ($, Drupal) {
+  'use strict';
+
+  Drupal.behaviors.fancybox = {
+    attach: function attach(context, settings) {
+      console.log('test');
+      $().fancybox({
+        selector: '.lightbox:not(.slick-cloned)'
+      });
+    }
+  };
+})(jQuery, Drupal);
+
+/***/ }),
+
 /***/ "./src/scripts/faq.js":
 /*!****************************!*\
   !*** ./src/scripts/faq.js ***!
@@ -217,9 +238,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _image_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./image-slider */ "./src/scripts/image-slider.js");
 /* harmony import */ var _text_image_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./text-image-slider */ "./src/scripts/text-image-slider.js");
 /* harmony import */ var _text_image_slider__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_text_image_slider__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var _fancybox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./fancybox */ "./src/scripts/fancybox.js");
+/* harmony import */ var _fancybox__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fancybox__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+
 
 
 
@@ -235,7 +259,7 @@ __webpack_require__.r(__webpack_exports__);
   Drupal.behaviors.scripts = {
     attach: function attach(context, settings) {
       // AOS
-      aos__WEBPACK_IMPORTED_MODULE_6___default().init({
+      aos__WEBPACK_IMPORTED_MODULE_7___default().init({
         once: true
       });
 

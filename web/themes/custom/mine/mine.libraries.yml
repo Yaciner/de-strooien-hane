@@ -21,6 +21,7 @@ global_scripts:
     - core/jquery
     - core/drupal
     - core/once
+    - mine/fancybox
     - mine/slick
 
 slick:

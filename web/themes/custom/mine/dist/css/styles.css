@@ -4078,6 +4078,20 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   padding: 0;
 }
 
+.paragraph--type--block.mine_views_block__collections_promoted .paragraph--intro {
+  max-width: 100%;
+  margin: 0;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.paragraph--type--block .paragraph--intro {
+  max-width: 48.75rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
 .paragraph--type--faq .field--name-field-faq-items {
   border-radius: 0.625rem;
   max-width: 37.5rem;

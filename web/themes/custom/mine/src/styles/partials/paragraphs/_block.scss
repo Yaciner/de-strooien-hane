@@ -6,3 +6,21 @@
     padding: 0;
   }
 }
+
+.paragraph--type--block.mine_views_block__collections_promoted {
+  .paragraph--intro {
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 3rem;
+    text-align: left;
+  }
+}
+
+.paragraph--type--block {
+  .paragraph--intro {
+    max-width: rem(780);
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+}
