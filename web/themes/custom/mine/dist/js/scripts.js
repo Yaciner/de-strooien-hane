@@ -37,26 +37,28 @@
   \*******************************/
 /***/ (function() {
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 (function ($, Drupal) {
   'use strict';
 
   Drupal.behaviors.brands = {
     attach: function attach(context, settings) {
       $(once('slick', '.paragraph--type--brands')).each(function () {
-        var _slider$slick;
         console.log('tester');
         var slider = $(this).find('.field--name-field-brands');
-        slider.slick((_slider$slick = {
-          dots: true,
+        slider.slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
           infinite: true,
           speed: 300,
+          arrows: false,
           slidesToShow: 5,
-          adaptiveWidth: true
-        }, _defineProperty(_slider$slick, "dots", false), _defineProperty(_slider$slick, "centerMode", false), _defineProperty(_slider$slick, "prevArrow", '<div class="slick-prev"></div>'), _defineProperty(_slider$slick, "nextArrow", '<div class="slick-next"></div>'), _defineProperty(_slider$slick, "lazyLoad", 'progressive'), _slider$slick));
+          adaptiveWidth: true,
+          dots: false,
+          centerMode: false,
+          // prevArrow: '<div class="slick-prev"></div>',
+          // nextArrow: '<div class="slick-next"></div>',
+          lazyLoad: 'progressive'
+        });
       });
     }
   };
@@ -234,9 +236,23 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
           dots: true,
           infinite: true,
           speed: 300,
-          slidesToShow: 4,
-          adaptiveWidth: true
-        }, _defineProperty(_slider$slick, "dots", false), _defineProperty(_slider$slick, "centerMode", false), _defineProperty(_slider$slick, "prevArrow", '<div class="slick-prev"></div>'), _defineProperty(_slider$slick, "nextArrow", '<div class="slick-next"></div>'), _defineProperty(_slider$slick, "lazyLoad", 'progressive'), _slider$slick));
+          slidesToShow: 4
+        }, _defineProperty(_slider$slick, "dots", false), _defineProperty(_slider$slick, "centerMode", false), _defineProperty(_slider$slick, "adaptiveHeight", true), _defineProperty(_slider$slick, "prevArrow", '<div class="slick-prev"></div>'), _defineProperty(_slider$slick, "nextArrow", '<div class="slick-next"></div>'), _defineProperty(_slider$slick, "lazyLoad", 'progressive'), _defineProperty(_slider$slick, "responsive", [{
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 940,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
+        }]), _slider$slick));
       });
     }
   };

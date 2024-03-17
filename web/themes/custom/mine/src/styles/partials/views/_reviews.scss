@@ -2,19 +2,35 @@
   .slick-track {
     display: flex !important;
     align-items: center;
+
+    @include mq(m) {
+      display: block !important;
+    }
   }
 
   .view-reviews {
     padding: 0 2rem;
+
+    @include mq(m) {
+      padding: 0;
+    }
   }
 
   .slick-slide {
     margin: 0 1rem;
     height: inherit !important;
+
+    @include mq(m) {
+      margin: 0;
+    }
   }
 
   .slick-list {
     margin: 0 1rem;
+
+    @include mq(m) {
+      margin: 0;
+    }
   }
 
   .slick-prev {
@@ -23,5 +39,20 @@
 
   .slick-next {
     right: -2rem;
+  }
+
+  @include mq(m) {
+    .slick-prev {
+      bottom: -5rem;
+      top: auto;
+      left: calc(50% - 3rem);
+    }
+
+    .slick-next {
+      bottom: -5rem;
+      top: auto;
+      left: calc(50% + 1rem);
+      right: auto;
+    }
   }
 }

@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "~1.0",
         "drupal/address": "^1.12",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ajax_loader": "^2.1",
@@ -143,6 +144,12 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "enable-patching": "true",
+        "patches": {
+            "drupal/core": {
+                "RuntimeException: Adding non-existent permissions to a role is not allowed": "https://www.drupal.org/files/issues/2023-09-14/3358586-11.patch"
+            }
         }
     }
 }

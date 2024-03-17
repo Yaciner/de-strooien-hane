@@ -9,15 +9,17 @@
         console.log('tester');
         const slider = $(this).find('.field--name-field-brands');
         slider.slick({
-          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
           infinite: true,
           speed: 300,
+          arrows: false,
           slidesToShow: 5,
           adaptiveWidth: true,
           dots: false,
           centerMode: false,
-          prevArrow: '<div class="slick-prev"></div>',
-          nextArrow: '<div class="slick-next"></div>',
+          // prevArrow: '<div class="slick-prev"></div>',
+          // nextArrow: '<div class="slick-next"></div>',
           lazyLoad: 'progressive'
         });
       });

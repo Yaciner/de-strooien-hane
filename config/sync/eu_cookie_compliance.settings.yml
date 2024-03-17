@@ -2,7 +2,7 @@ _core:
   default_config_hash: zmkyvoZ03LGqfVeB0mtslC-pkWMOrGIU9lJl9_jqUkc
 langcode: en
 uuid: 7379444f-6c27-4fa1-8c1f-ffec0fa4af61
-popup_enabled: false
+popup_enabled: true
 popup_clicking_confirmation: false
 popup_scrolling_confirmation: false
 eu_countries: {  }
@@ -28,7 +28,7 @@ popup_agreed:
   format: full_html
 popup_find_more_button_message: 'More info'
 popup_hide_button_message: Hide
-popup_link: /<front>
+popup_link: /nl/node/5
 popup_link_new_window: true
 popup_height: null
 popup_width: 100%
@@ -57,7 +57,7 @@ better_support_for_screen_readers: false
 method: categories
 disabled_javascripts: ''
 automatic_cookies_removal: true
-allowed_cookies: ''
+allowed_cookies: "functional:BIGipServer#\r\nfunctional:lang\r\nfunctional:_Ifa\r\nfunctional:_Ifa_expiry\r\nfunctional:Iissc\r\nfunctional:__cfduid\r\nfunctional:cref"
 consent_storage_method: do_not_store
 withdraw_message:
   value: '<h3>We gebruiken cookies op deze site om uw gebruikerservaring te verbeteren.</h3><p><span style="-webkit-text-stroke-width:0px;color:rgb(55, 65, 81);display:inline !important;float:none;font-family:Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:pre-wrap;widows:2;word-spacing:0px;">U heeft uw toestemming gegeven voor het plaatsen van cookies.</span></p>'
@@ -79,7 +79,7 @@ cookie_value_agreed: '2'
 accessibility_focus: false
 close_button_action: close_banner
 reject_button_label: ''
-reject_button_enabled: false
+reject_button_enabled: true
 close_button_enabled: false
 dependencies:
   config:

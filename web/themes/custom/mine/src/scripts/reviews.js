@@ -13,12 +13,32 @@
           infinite: true,
           speed: 300,
           slidesToShow: 4,
-          adaptiveWidth: true,
           dots: false,
           centerMode: false,
+          adaptiveHeight: true,
           prevArrow: '<div class="slick-prev"></div>',
           nextArrow: '<div class="slick-next"></div>',
-          lazyLoad: 'progressive'
+          lazyLoad: 'progressive',
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 940,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+          ]
         });
       });
     }

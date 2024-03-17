@@ -12,12 +12,12 @@
   .pg-text-media__text {
     width: 48%;
 
-    @include mq(m) {
+    @include mq(l) {
       width: 100%;
     }
   }
   .pg-text-media__media {
-    @include mq(m) {
+    @include mq(l) {
       margin-top: 1.5rem;
     }
   }
@@ -31,10 +31,18 @@
   &.paragraph--view-mode--large_media {
     .pg-text-media__media {
       width: 56%;
+
+      @include mq(l) {
+        width: 100%;
+      }
     }
 
     .pg-text-media__text {
       width: 40%;
+
+      @include mq(l) {
+        width: 100%;
+      }
     }
   }
 
@@ -54,7 +62,7 @@
         padding-left: 4rem;
       }
 
-      @include mq(m) {
+      @include mq(l) {
         .pg-text-media__media {
           width: 100%;
         }

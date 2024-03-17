@@ -24,7 +24,6 @@ permissions:
   - 'use text format restricted_html'
   - 'view media'
   - 'view paragraph content block'
-  - 'view paragraph content brand_item'
   - 'view paragraph content brands'
   - 'view paragraph content cta'
   - 'view paragraph content faq'

@@ -7,6 +7,10 @@
     align-items: flex-end;
     margin-bottom: 3rem;
 
+    .field--name-field-intro {
+      max-width: rem(780);
+    }
+
     .field--name-field-overview-link {
       position: relative;
 
