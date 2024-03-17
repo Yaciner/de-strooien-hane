@@ -3801,7 +3801,7 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
 }
 
 .node--type-call-to-action.node--view-mode-teaser {
-  max-width: 47.5rem;
+  max-width: 48.75rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -4627,6 +4627,7 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
 .paragraph .paragraph--type--list-item .field--name-field-list-item-text {
   transition: color 0.3s ease;
   padding: 1.5rem;
+  text-align: center;
 }
 .paragraph .paragraph--type--list-item .field--name-field-list-item-text:last-child {
   margin-bottom: 0;
