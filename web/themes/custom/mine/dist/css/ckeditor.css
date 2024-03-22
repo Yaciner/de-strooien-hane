@@ -1374,7 +1374,7 @@ textarea.form-control-lg {
   margin-top: 0;
   color: #000000;
   line-height: 1.2;
-  font-size: clamp(1.5rem, 0.28vw + 1.42rem, 1.63rem);
+  font-size: clamp(1.38rem, 0.28vw + 1.29rem, 1.5rem);
   font-weight: 400;
 }
 .ck-content h1,
@@ -1497,6 +1497,23 @@ textarea.form-control-lg {
 .ck-content .search-fail {
   font-size: 1.875rem;
   font-weight: bold;
+}
+.ck-content .field blockquote {
+  font-size: clamp(2.25rem, 0.28vw + 2.17rem, 2.38rem);
+  font-weight: 900;
+}
+.ck-content .field blockquote.animate .word {
+  position: relative;
+}
+.ck-content .field blockquote.animate .line-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
 }
 .ck-content .btn {
   position: relative;

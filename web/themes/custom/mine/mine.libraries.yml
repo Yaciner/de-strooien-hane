@@ -23,6 +23,7 @@ global_scripts:
     - core/once
     - mine/fancybox
     - mine/slick
+    - mine/greensock
 
 slick:
   version: 1.8.0
@@ -52,5 +53,14 @@ preloader:
       dist/css/preload.css: {}
   js:
     dist/js/preload.js: {}
+  dependencies:
+    - core/jquery
+
+greensock:
+  version: 2.0.1
+  js:
+    dist/js/libs/greensock/minified/gsap.min.js: { minified: true }
+    dist/js/libs/greensock/minified/ScrollTrigger.min.js: { minified: true }
+    dist/js/libs/greensock/minified/CSSRulePlugin.min.js: { minified: true }
   dependencies:
     - core/jquery

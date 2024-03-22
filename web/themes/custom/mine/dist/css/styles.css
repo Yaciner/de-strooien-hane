@@ -2921,7 +2921,7 @@ h3, .paragraph--type--text-media-slider .paragraph--type--text-media-item.slick-
   margin-top: 0;
   color: #000000;
   line-height: 1.2;
-  font-size: clamp(1.5rem, 0.28vw + 1.42rem, 1.63rem);
+  font-size: clamp(1.38rem, 0.28vw + 1.29rem, 1.5rem);
   font-weight: 400;
 }
 
@@ -3057,6 +3057,24 @@ a {
 .search-fail {
   font-size: 1.875rem;
   font-weight: bold;
+}
+
+.field blockquote {
+  font-size: clamp(2.25rem, 0.28vw + 2.17rem, 2.38rem);
+  font-weight: 900;
+}
+.field blockquote.animate .word {
+  position: relative;
+}
+.field blockquote.animate .line-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
 }
 
 .btn, button[type=submit] {
@@ -4041,6 +4059,36 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   font-weight: 500;
   font-size: 0.9375rem;
   opacity: 0.7;
+}
+
+.maintenance-page {
+  background-color: #000000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.maintenance-page .dialog-off-canvas-main-canvas {
+  background-color: #ffffff;
+  max-width: 56.25rem;
+  padding: 3rem;
+  margin: 1rem;
+}
+.maintenance-page .dialog-off-canvas-main-canvas header {
+  display: flex;
+  justify-content: center;
+}
+.maintenance-page .dialog-off-canvas-main-canvas header a {
+  display: block;
+  position: relative;
+}
+.maintenance-page .dialog-off-canvas-main-canvas h1 {
+  display: none;
+}
+.maintenance-page main {
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .slick-arrow {

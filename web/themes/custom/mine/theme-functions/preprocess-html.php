@@ -38,11 +38,11 @@ function mine_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'taxonomy-term-' . $pathArgs[3];
   }
 
-  // Breakpoint labels
-  $breakpoints = theme_get_setting('breakpoints');
-  if ($breakpoints == 1) {
-    $variables['attributes']['class'][] = 'breakpoint-labels';
-  }
+  // // Breakpoint labels
+  // $breakpoints = theme_get_setting('breakpoints');
+  // if ($breakpoints == 1) {
+  //   $variables['attributes']['class'][] = 'breakpoint-labels';
+  // }
 
   // Mobile menu
   $mobilePosition = theme_get_setting('mm_position');

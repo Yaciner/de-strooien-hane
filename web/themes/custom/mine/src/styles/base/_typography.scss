@@ -24,7 +24,7 @@ h3 {
   margin-top: 0;
   color: $body;
   line-height: 1.2;
-  font-size: fluid(24px, 26px);
+  font-size: fluid(22px, 24px);
   font-weight: 400;
   
 }
@@ -118,4 +118,29 @@ a {
 .search-fail {
   font-size: rem(30);
   font-weight: bold;
+}
+
+.field {
+  blockquote {
+    font-size: fluid(36px, 38px);
+    font-weight: 900;
+    // font-family: $heading;
+
+    &.animate {
+      .word {
+        position: relative;
+      }
+  
+      .line-mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        opacity: 0.8;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+      }
+    }
+  }
 }

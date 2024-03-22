@@ -1,0 +1,34 @@
+.maintenance-page {
+  background-color: $black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dialog-off-canvas-main-canvas {
+    background-color: $white;
+    max-width: rem(900);
+    padding: 3rem;
+    margin: 1rem;
+
+    header {
+      display: flex;
+      justify-content: center;
+
+      a {
+        display: block;
+        position: relative;
+      }
+    }
+
+    h1 {
+      display: none;
+    }
+  }
+
+  main {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}

@@ -1,4 +1,4 @@
 _core:
   default_config_hash: 1SNdA25INsV5YjlgAJtfC-6AM8VcWe_00xneMLb2yFg
 langcode: en
-message: '@site is currently under maintenance. We should be back shortly. Thank you for your patience.'
+message: "<h3>De website van Juwelier Coens is momenteel in ontwikkeling.</h3>\r\n\r\nWe zijn hard aan het werk om je spoedig te kunnen verwelkomen op onze vernieuwde site.\r\nVoor vragen zijn we beschikbaar via <a href=\"mailto:coens.vicky@telenet.be\">e-mail</a> of volg ons voor updates op onze <a href=\"https://www.instagram.com/juwelier.coens/\" target=\"_blank\">Instragram</a>"
