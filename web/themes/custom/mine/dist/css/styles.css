@@ -4168,8 +4168,8 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
 }
 .maintenance-page .dialog-off-canvas-main-canvas {
   background-color: #ffffff;
-  max-width: 56.25rem;
-  padding: 3rem;
+  max-width: 50rem;
+  padding: 2.5rem;
   margin: 1rem;
 }
 .maintenance-page .dialog-off-canvas-main-canvas header {
