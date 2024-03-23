@@ -8,6 +8,7 @@
       $(once('slick', '.mine_views_block__reviews_overview')).each(function () {
         const slider = $(this).find('.views-rows');
 
+        console.log('test');
         slider.slick({
           dots: true,
           infinite: true,

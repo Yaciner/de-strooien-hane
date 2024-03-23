@@ -1,0 +1,10 @@
+uuid: ef05690f-585c-4d0d-8725-e6a400f78432
+langcode: nl
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.masonry
+label: Masonry
+targetEntityType: paragraph
+cache: true

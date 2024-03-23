@@ -124,7 +124,9 @@ a {
   blockquote {
     font-size: fluid(36px, 38px);
     font-weight: 900;
-    // font-family: $heading;
+    position: relative;
+    text-align: center;
+    padding-top: 5rem;
 
     &.animate {
       .word {
@@ -140,6 +142,48 @@ a {
         height: 100%;
         width: 100%;
         z-index: 2;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0rem;
+      left: 50%;
+      translate: -50% 0;
+      mask-image: url(../svg/icons/quote.svg);
+      background-color: $primary;
+      width: 5rem;
+      aspect-ratio: 1/1;
+      mask-repeat: no-repeat;
+      mask-size: 100% auto;
+      opacity: .3;
+    }
+  }
+}
+
+.pg-bg--primary {
+  .field {
+    blockquote {
+      &.animate {
+        .line-mask {
+          background-color: $primary;
+        }
+      }
+      &:before {
+        background-color: $white;
+      }   
+    }
+  }
+}
+
+.pg-bg--secondary {
+  .field {
+    blockquote {
+      &.animate {
+        .line-mask {
+          background-color: $secondary;
+        }
       }
     }
   }

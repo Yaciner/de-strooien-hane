@@ -1,4 +1,6 @@
 .mine_views_block__reviews_overview {
+  @extend .centered;
+  
   .slick-track {
     display: flex !important;
     align-items: center;

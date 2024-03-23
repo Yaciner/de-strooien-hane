@@ -43,7 +43,6 @@
   Drupal.behaviors.brands = {
     attach: function attach(context, settings) {
       $(once('slick', '.paragraph--type--brands')).each(function () {
-        console.log('tester');
         var slider = $(this).find('.field--name-field-brands');
         slider.slick({
           autoplay: true,
@@ -154,7 +153,6 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       var defaultSliders = $('.paragraph--type--image-slider.paragraph--view-mode--default .field--name-field-media');
       var scrollSliders = $('.paragraph--type--image-slider.paragraph--view-mode--scroll_animation .field--name-field-media');
       var autoplay = settings.image_slider;
-      console.log(autoplay);
       $(once('slick', '.paragraph--type--image-slider.paragraph--view-mode--default')).each(function () {
         var _slider$slick;
         var slider = $(this).find('.field--name-field-media');
@@ -214,6 +212,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/scripts/masonry.js":
+/*!********************************!*\
+  !*** ./src/scripts/masonry.js ***!
+  \********************************/
+/***/ (function() {
+
+(function ($, Drupal) {
+  'use strict';
+
+  Drupal.behaviors.reviews = {
+    attach: function attach(context, settings) {
+      // console.log('test');
+      // $('.paragraph--view-mode--masonry .field--name-field-media ').masonry({
+      //   itemSelector: '.field__item',
+      //   columnWidth: '.grid-sizer',
+      //   percentPosition: true
+      // })
+    }
+  };
+})(jQuery, Drupal);
+
+/***/ }),
+
 /***/ "./src/scripts/reviews.js":
 /*!********************************!*\
   !*** ./src/scripts/reviews.js ***!
@@ -232,6 +253,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       $(once('slick', '.mine_views_block__reviews_overview')).each(function () {
         var _slider$slick;
         var slider = $(this).find('.views-rows');
+        console.log('test');
         slider.slick((_slider$slick = {
           dots: true,
           infinite: true,
@@ -281,10 +303,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fancybox__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fancybox__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _brands__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./brands */ "./src/scripts/brands.js");
 /* harmony import */ var _brands__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_brands__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var split_type__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! split-type */ "./node_modules/split-type/dist/index.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var _masonry__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./masonry */ "./src/scripts/masonry.js");
+/* harmony import */ var _masonry__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_masonry__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var split_type__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! split-type */ "./node_modules/split-type/dist/index.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_11__);
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
@@ -296,9 +320,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
-
-
  // You can also use <link> for styles
+
+
 
 (function ($, Drupal) {
   "use strict";
@@ -307,7 +331,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   Drupal.behaviors.scripts = {
     attach: function attach(context, settings) {
       // AOS
-      aos__WEBPACK_IMPORTED_MODULE_9___default().init({
+      aos__WEBPACK_IMPORTED_MODULE_11___default().init({
         once: true
       });
 
@@ -332,7 +356,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var animationTargets = [".field blockquote"];
       function runSplit() {
         animationTargets.forEach(function (target) {
-          typeSplit = new split_type__WEBPACK_IMPORTED_MODULE_8__["default"](target, {
+          typeSplit = new split_type__WEBPACK_IMPORTED_MODULE_10__["default"](target, {
             types: "lines, words"
           });
           $(target).find(".word").append("<div class='line-mask'></div>");

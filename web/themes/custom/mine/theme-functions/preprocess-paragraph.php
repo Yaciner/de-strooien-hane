@@ -22,7 +22,7 @@ function mine_preprocess_paragraph(&$variables) {
   $variables['attributes']['class'][] = 'paragraph--view-mode--' . $variables['elements']['#view_mode'];
   !empty($paragraph->field_media_alignment->value) ? $variables['attributes']['class'][] = 'pg--has-media-' . $paragraph->field_media_alignment->value : null;
   !empty($paragraph->field_vertical_alignment->value) ? $variables['attributes']['class'][] = 'pg-valign--' . $paragraph->field_vertical_alignment->value : null;
-  !empty($paragraph->field_grid->value) ? $variables['attributes']['class'][] = 'pg-grid--' . $paragraph->field_grid->value : null;
+  (!empty($paragraph->field_grid->value) && $variables['view_mode'] != 'masonry') ? $variables['attributes']['class'][] = 'pg-grid--' . $paragraph->field_grid->value : null;
 
   $container_attributes = [
     'class' => [
@@ -58,6 +58,8 @@ function mine_preprocess_paragraph__text(&$variables) {
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $variables['elements']['#paragraph'];
   $variables['attributes']['class'][] = 'pg-textcol--' . count($paragraph->field_text_columns);
+
+  $variables['attributes']['class'][] =  $paragraph->field_center_column_s_->value == '1' ? 'centered' : 'not-centered';
 }
 
 

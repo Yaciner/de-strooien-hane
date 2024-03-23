@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text.field_background_color
+    - field.field.paragraph.text.field_center_column_s_
     - field.field.paragraph.text.field_html_id
     - field.field.paragraph.text.field_text_columns
     - paragraphs.paragraphs_type.text
@@ -61,6 +62,7 @@ third_party_settings:
         required_fields: true
     group_layout:
       children:
+        - field_center_column_s_
         - field_background_color
       label: Layout
       region: content
@@ -81,9 +83,16 @@ mode: default
 content:
   field_background_color:
     type: options_select
-    weight: 3
+    weight: 11
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_center_column_s_:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_html_id:
     type: string_textfield

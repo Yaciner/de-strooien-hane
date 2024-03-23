@@ -30,6 +30,7 @@
         "drupal/devel_debug_log": "^2.0",
         "drupal/disable_language": "1.0-beta12",
         "drupal/dropzonejs": "^2.8",
+        "drupal/editor_advanced_link": "^2.2",
         "drupal/entity": "^1.4",
         "drupal/entity_browser": "^2.9",
         "drupal/entity_type_clone": "^4.0",

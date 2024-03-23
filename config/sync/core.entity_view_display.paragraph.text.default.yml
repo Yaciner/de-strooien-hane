@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text.field_background_color
+    - field.field.paragraph.text.field_center_column_s_
     - field.field.paragraph.text.field_html_id
     - field.field.paragraph.text.field_text_columns
     - paragraphs.paragraphs_type.text
@@ -25,4 +26,5 @@ content:
     region: content
 hidden:
   field_background_color: true
+  field_center_column_s_: true
   field_html_id: true

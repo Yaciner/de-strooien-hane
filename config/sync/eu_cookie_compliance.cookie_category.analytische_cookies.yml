@@ -1,0 +1,9 @@
+uuid: 9332e223-8546-4a00-b3b9-b2274d219924
+langcode: nl
+status: true
+dependencies: {  }
+id: analytische_cookies
+label: 'Analytische cookies'
+description: ''
+checkbox_default_state: unchecked
+weight: -8

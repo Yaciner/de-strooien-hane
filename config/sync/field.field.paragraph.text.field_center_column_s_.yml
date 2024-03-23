@@ -1,0 +1,21 @@
+uuid: d71895d9-96c1-4056-ac7d-6aba63f734f3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_center_column_s_
+    - paragraphs.paragraphs_type.text
+id: paragraph.text.field_center_column_s_
+field_name: field_center_column_s_
+entity_type: paragraph
+bundle: text
+label: 'Center column(s)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -20,7 +20,6 @@ import { TextPlugin } from "gsap/TextPlugin";
       let defaultSliders = $('.paragraph--type--image-slider.paragraph--view-mode--default .field--name-field-media');
       let scrollSliders = $('.paragraph--type--image-slider.paragraph--view-mode--scroll_animation .field--name-field-media');
       let autoplay = settings.image_slider;
-      console.log(autoplay);
 
       $(once('slick', '.paragraph--type--image-slider.paragraph--view-mode--default')).each(function () {
         const slider = $(this).find('.field--name-field-media');

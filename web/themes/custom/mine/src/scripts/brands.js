@@ -6,7 +6,6 @@
     attach: function (context, settings) {
 
       $(once('slick', '.paragraph--type--brands')).each(function () {
-        console.log('tester');
         const slider = $(this).find('.field--name-field-brands');
         slider.slick({
           autoplay: true,

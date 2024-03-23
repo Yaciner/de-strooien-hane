@@ -1030,7 +1030,7 @@ progress {
   display: none !important;
 }
 
-.btn, button[type=submit] {
+.btn, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button, button[type=submit] {
   --bs-btn-padding-x: 1.6rem;
   --bs-btn-padding-y: 0.7rem;
   --bs-btn-font-family: ;
@@ -1066,41 +1066,41 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, button[type=submit] {
+  .btn, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button, button[type=submit] {
     transition: none;
   }
 }
-.btn:hover, button[type=submit]:hover {
+.btn:hover, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button:hover, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button:hover, button[type=submit]:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover, .btn-check + button[type=submit]:hover {
+.btn-check + .btn:hover, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons .btn-check + button:hover, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn-check + .agree-button:hover, .btn-check + button[type=submit]:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible, button[type=submit]:focus-visible {
+.btn:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button:focus-visible, button[type=submit]:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn, .btn-check:focus-visible + button[type=submit] {
+.btn-check:focus-visible + .btn, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons .btn-check:focus-visible + button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn-check:focus-visible + .agree-button, .btn-check:focus-visible + button[type=submit] {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, .btn-check:checked + button[type=submit], :not(.btn-check) + .btn:active, :not(.btn-check) + button[type=submit]:active, .btn:first-child:active, button[type=submit]:first-child:active, .btn.active, button.active[type=submit], .btn.show, button.show[type=submit] {
+.btn-check:checked + .btn, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons .btn-check:checked + button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn-check:checked + .agree-button, .btn-check:checked + button[type=submit], :not(.btn-check) + .btn:active, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons :not(.btn-check) + button:active, #sliding-popup .popup-content .eu-cookie-compliance-buttons :not(.btn-check) + .agree-button:active, :not(.btn-check) + button[type=submit]:active, .btn:first-child:active, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button:first-child:active, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button:first-child:active, button[type=submit]:first-child:active, .btn.active, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.active, #sliding-popup .popup-content .eu-cookie-compliance-buttons .active.agree-button, button.active[type=submit], .btn.show, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.show, #sliding-popup .popup-content .eu-cookie-compliance-buttons .show.agree-button, button.show[type=submit] {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, .btn-check:checked + button[type=submit]:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + button[type=submit]:active:focus-visible, .btn:first-child:active:focus-visible, button[type=submit]:first-child:active:focus-visible, .btn.active:focus-visible, button.active[type=submit]:focus-visible, .btn.show:focus-visible, button.show[type=submit]:focus-visible {
+.btn-check:checked + .btn:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons .btn-check:checked + button:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn-check:checked + .agree-button:focus-visible, .btn-check:checked + button[type=submit]:focus-visible, :not(.btn-check) + .btn:active:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons :not(.btn-check) + button:active:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-buttons :not(.btn-check) + .agree-button:active:focus-visible, :not(.btn-check) + button[type=submit]:active:focus-visible, .btn:first-child:active:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button:first-child:active:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button:first-child:active:focus-visible, button[type=submit]:first-child:active:focus-visible, .btn.active:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.active:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-buttons .active.agree-button:focus-visible, button.active[type=submit]:focus-visible, .btn.show:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.show:focus-visible, #sliding-popup .popup-content .eu-cookie-compliance-buttons .show.agree-button:focus-visible, button.show[type=submit]:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, button[type=submit]:disabled, .btn.disabled, button.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled button[type=submit] {
+.btn:disabled, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button:disabled, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button:disabled, button[type=submit]:disabled, .btn.disabled, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.disabled, #sliding-popup .popup-content .eu-cookie-compliance-buttons .disabled.agree-button, button.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons fieldset:disabled button, fieldset:disabled #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button, #sliding-popup .popup-content .eu-cookie-compliance-buttons fieldset:disabled .agree-button, fieldset:disabled button[type=submit] {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -1886,7 +1886,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check[disabled] + button[type=submit], .btn-check:disabled + .btn, .btn-check:disabled + button[type=submit] {
+.btn-check[disabled] + .btn, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons .btn-check[disabled] + button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn-check[disabled] + .agree-button, .btn-check[disabled] + button[type=submit], .btn-check:disabled + .btn, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons .btn-check:disabled + button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn-check:disabled + .agree-button, .btn-check:disabled + button[type=submit] {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -3062,6 +3062,9 @@ a {
 .field blockquote {
   font-size: clamp(2.25rem, 0.28vw + 2.17rem, 2.38rem);
   font-weight: 900;
+  position: relative;
+  text-align: center;
+  padding-top: 5rem;
 }
 .field blockquote.animate .word {
   position: relative;
@@ -3076,39 +3079,67 @@ a {
   width: 100%;
   z-index: 2;
 }
+.field blockquote:before {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  left: 50%;
+  translate: -50% 0;
+  -webkit-mask-image: url(../svg/icons/quote.svg);
+          mask-image: url(../svg/icons/quote.svg);
+  background-color: #000000;
+  width: 5rem;
+  aspect-ratio: 1/1;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% auto;
+          mask-size: 100% auto;
+  opacity: 0.3;
+}
 
-.btn, button[type=submit] {
+.pg-bg--primary .field blockquote.animate .line-mask {
+  background-color: #000000;
+}
+.pg-bg--primary .field blockquote:before {
+  background-color: #ffffff;
+}
+
+.pg-bg--secondary .field blockquote.animate .line-mask {
+  background-color: #e5e5e5;
+}
+
+.btn, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button, button[type=submit] {
   position: relative;
   display: inline-block;
   text-decoration: none;
   background-color: #000000;
   text-align: unset;
 }
-.btn:hover, button[type=submit]:hover {
+.btn:hover, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button:hover, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button:hover, button[type=submit]:hover {
   background: #000000;
   color: #ffffff;
 }
 
-.btn.bordered, button.bordered[type=submit] {
+.btn.bordered, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.bordered, #sliding-popup .popup-content .eu-cookie-compliance-buttons .bordered.agree-button, button.bordered[type=submit] {
   background: transparent;
   color: #000000;
   border-color: #000000;
 }
-.btn.bordered:hover, button.bordered[type=submit]:hover, .btn.bordered:focus, button.bordered[type=submit]:focus {
+.btn.bordered:hover, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.bordered:hover, #sliding-popup .popup-content .eu-cookie-compliance-buttons .bordered.agree-button:hover, button.bordered[type=submit]:hover, .btn.bordered:focus, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.bordered:focus, #sliding-popup .popup-content .eu-cookie-compliance-buttons .bordered.agree-button:focus, button.bordered[type=submit]:focus {
   background-color: #000000;
   color: #ffffff;
 }
 
-.btn.btn--arrow, button[type=submit] {
+.btn.btn--arrow, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--arrow, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn--arrow.agree-button, button[type=submit] {
   translate: 0px 0;
   transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   padding-right: 2.5rem;
   padding-right: 1.6rem;
 }
-.btn.btn--arrow:after, button[type=submit]:after {
+.btn.btn--arrow:after, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--arrow:after, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn--arrow.agree-button:after, button[type=submit]:after {
   right: 0;
 }
-.btn.btn--arrow::after, button[type=submit]::after {
+.btn.btn--arrow::after, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--arrow::after, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn--arrow.agree-button::after, button[type=submit]::after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -3125,7 +3156,7 @@ a {
           mask-position: center;
   background-color: #ffffff;
 }
-.btn.btn--arrow:after, button[type=submit]:after {
+.btn.btn--arrow:after, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--arrow:after, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn--arrow.agree-button:after, button[type=submit]:after {
   content: "";
   position: absolute;
   right: 1rem;
@@ -3134,26 +3165,26 @@ a {
   translate: 0% -50%;
   transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-.btn.btn--arrow:hover, button[type=submit]:hover {
+.btn.btn--arrow:hover, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--arrow:hover, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn--arrow.agree-button:hover, button[type=submit]:hover {
   padding-right: 3rem;
   translate: 0.625rem 0;
 }
-.btn.btn--arrow:hover:after, button[type=submit]:hover:after {
+.btn.btn--arrow:hover:after, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--arrow:hover:after, #sliding-popup .popup-content .eu-cookie-compliance-buttons .btn--arrow.agree-button:hover:after, button[type=submit]:hover:after {
   right: 1rem;
   opacity: 1;
 }
 
-.btn.btn--white, button.btn--white[type=submit] {
+.btn.btn--white, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--white, #sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button, button.btn--white[type=submit] {
   background: #ffffff;
   color: #000000;
 }
 
-.btn.btn--white.bordered, button.btn--white.bordered[type=submit] {
+.btn.btn--white.bordered, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--white.bordered, #sliding-popup .popup-content .eu-cookie-compliance-buttons .bordered.agree-button, button.btn--white.bordered[type=submit] {
   background: transparent;
   border-color: #ffffff;
   color: #ffffff;
 }
-.btn.btn--white.bordered:hover, button.btn--white.bordered[type=submit]:hover, .btn.btn--white.bordered:focus, button.btn--white.bordered[type=submit]:focus {
+.btn.btn--white.bordered:hover, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--white.bordered:hover, #sliding-popup .popup-content .eu-cookie-compliance-buttons .bordered.agree-button:hover, button.btn--white.bordered[type=submit]:hover, .btn.btn--white.bordered:focus, #sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button.btn--white.bordered:focus, #sliding-popup .popup-content .eu-cookie-compliance-buttons .bordered.agree-button:focus, button.btn--white.bordered[type=submit]:focus {
   background-color: #ffffff;
   color: #000000;
 }
@@ -3388,7 +3419,7 @@ body .region-off-canvas {
   align-items: flex-end;
 }
 
-.paragraph.centered .paragraph--intro, .paragraph.paragraph--type--brands .paragraph--intro {
+.paragraph.centered .paragraph--intro, .paragraph.mine_views_block__reviews_overview .paragraph--intro, .paragraph.paragraph--type--brands .paragraph--intro {
   max-width: 49.375rem;
   margin: 0 auto;
   margin-bottom: 1.875rem;
@@ -3511,6 +3542,72 @@ select::-ms-expand {
   left: 0;
   position: absolute;
   opacity: 0;
+}
+
+#sliding-popup {
+  background-color: #000000 !important;
+  padding: 1.5rem !important;
+  max-width: 31.25rem;
+  bottom: 1rem !important;
+  left: 1rem;
+}
+#sliding-popup .eu-cookie-compliance-buttons {
+  margin-bottom: 0 !important;
+}
+#sliding-popup .eu-cookie-compliance-content {
+  max-width: 100% !important;
+}
+#sliding-popup h3, #sliding-popup .paragraph--type--text-media-slider .paragraph--type--text-media-item.slick-active article .field--name-field-title, .paragraph--type--text-media-slider .paragraph--type--text-media-item.slick-active article #sliding-popup .field--name-field-title {
+  font-size: 1.25rem !important;
+}
+#sliding-popup .eu-cookie-withdraw-button {
+  display: none;
+}
+#sliding-popup .popup-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#sliding-popup .popup-content #popup-text {
+  width: 100%;
+}
+#sliding-popup .popup-content .eu-cookie-compliance-buttons {
+  width: 100%;
+  max-width: 100%;
+}
+#sliding-popup .popup-content .eu-cookie-compliance-buttons .agree-button {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.9375rem;
+}
+#sliding-popup .popup-content .eu-cookie-compliance-categories {
+  width: 100%;
+  order: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  color: #ffffff;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  text-shadow: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border-top: none;
+}
+#sliding-popup .popup-content .eu-cookie-compliance-categories .eu-cookie-compliance-categories-buttons button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 
 .share .facebook {
@@ -5204,6 +5301,11 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
   padding-left: 0;
 }
 
+.paragraph--type--text.centered .content, .paragraph--type--text.mine_views_block__reviews_overview .content, .paragraph--type--text.paragraph--type--brands .content {
+  display: flex;
+  justify-content: center;
+}
+
 .pg-textcol--1 .field--name-field-text-columns {
   max-width: 47.5rem;
 }
@@ -5449,7 +5551,7 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
   padding: 0;
   list-style: none;
 }
-.region-footer .container .footer-main-menu .menu__list a.btn, .region-footer .paragraph--type--hero .hero__content .footer-main-menu .menu__list a.btn, .paragraph--type--hero .region-footer .hero__content .footer-main-menu .menu__list a.btn, .region-footer body:not(.path-node) .region-content .footer-main-menu .menu__list a.btn, body:not(.path-node) .region-footer .region-content .footer-main-menu .menu__list a.btn {
+.region-footer .container .footer-main-menu .menu__list a.btn, .region-footer .paragraph--type--hero .hero__content .footer-main-menu .menu__list a.btn, .paragraph--type--hero .region-footer .hero__content .footer-main-menu .menu__list a.btn, .region-footer body:not(.path-node) .region-content .footer-main-menu .menu__list a.btn, body:not(.path-node) .region-footer .region-content .footer-main-menu .menu__list a.btn, .region-footer .container .footer-main-menu .menu__list #sliding-popup .popup-content .eu-cookie-compliance-buttons a.agree-button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .region-footer .container .footer-main-menu .menu__list a.agree-button, .region-footer .paragraph--type--hero .hero__content .footer-main-menu .menu__list #sliding-popup .popup-content .eu-cookie-compliance-buttons a.agree-button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .region-footer .paragraph--type--hero .hero__content .footer-main-menu .menu__list a.agree-button, .paragraph--type--hero .region-footer .hero__content .footer-main-menu .menu__list #sliding-popup .popup-content .eu-cookie-compliance-buttons a.agree-button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .paragraph--type--hero .region-footer .hero__content .footer-main-menu .menu__list a.agree-button, .region-footer body:not(.path-node) .region-content .footer-main-menu .menu__list #sliding-popup .popup-content .eu-cookie-compliance-buttons a.agree-button, #sliding-popup .popup-content .eu-cookie-compliance-buttons .region-footer body:not(.path-node) .region-content .footer-main-menu .menu__list a.agree-button, body:not(.path-node) .region-footer .region-content .footer-main-menu .menu__list #sliding-popup .popup-content .eu-cookie-compliance-buttons a.agree-button, #sliding-popup .popup-content .eu-cookie-compliance-buttons body:not(.path-node) .region-footer .region-content .footer-main-menu .menu__list a.agree-button {
   padding: 0;
 }
 .region-footer .container .footer-socials, .region-footer .paragraph--type--hero .hero__content .footer-socials, .paragraph--type--hero .region-footer .hero__content .footer-socials, .region-footer body:not(.path-node) .region-content .footer-socials, body:not(.path-node) .region-footer .region-content .footer-socials {

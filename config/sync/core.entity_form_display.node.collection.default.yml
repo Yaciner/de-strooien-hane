@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.collection.field_hero
     - field.field.node.collection.field_media
     - field.field.node.collection.field_next_collection
+    - field.field.node.collection.field_next_collection_page
     - field.field.node.collection.field_paragraphs
     - field.field.node.collection.field_seo
     - field.field.node.collection.field_weight
@@ -40,6 +41,7 @@ third_party_settings:
         - group_hero
         - group_teaser
         - group_content
+        - group_collection
       label: Colletion
       region: content
       parent_name: ''
@@ -98,6 +100,21 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+    group_collection:
+      children:
+        - field_next_collection_page
+      label: 'Next collection'
+      region: content
+      parent_name: group_basic_page
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
 id: node.collection.default
 targetEntityType: node
 bundle: collection
@@ -157,6 +174,12 @@ content:
       field_widget_display_settings:
         view_mode: default
       selection_mode: selection_append
+    third_party_settings: {  }
+  field_next_collection_page:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_paragraphs:
     type: paragraphs

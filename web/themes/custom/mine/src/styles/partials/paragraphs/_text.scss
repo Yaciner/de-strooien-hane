@@ -1,5 +1,12 @@
 .paragraph--type--text {
 
+  &.centered {
+    .content {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
 }
 
 .field--name-field-text-columns {

@@ -1,6 +1,6 @@
 uuid: 235d3fd3-6f77-48b1-8d66-7e1ce6caa76b
 langcode: nl
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.paragraph.large
@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.image_gallery.field_html_id
     - field.field.paragraph.image_gallery.field_intro
     - field.field.paragraph.image_gallery.field_media
+    - field.field.paragraph.image_gallery.field_style
     - image.style.pg_hero_large
     - paragraphs.paragraphs_type.image_gallery
   module:
@@ -36,3 +37,4 @@ hidden:
   field_grid: true
   field_html_id: true
   field_intro: true
+  field_style: true

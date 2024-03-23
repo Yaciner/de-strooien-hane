@@ -1,23 +1,24 @@
-uuid: 4fbfb0b4-6eae-421a-a1c1-a4134650db84
+uuid: abe51a1c-c38c-490b-aa7f-30696578872f
 langcode: nl
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.masonry
     - field.field.paragraph.image_gallery.field_background_color
     - field.field.paragraph.image_gallery.field_grid
     - field.field.paragraph.image_gallery.field_html_id
     - field.field.paragraph.image_gallery.field_intro
     - field.field.paragraph.image_gallery.field_media
     - field.field.paragraph.image_gallery.field_style
-    - image.style.pg_image_gallery
+    - image.style.pg_image_gallery_masonry
     - paragraphs.paragraphs_type.image_gallery
   module:
     - mine_formatters
     - text
-id: paragraph.image_gallery.default
+id: paragraph.image_gallery.masonry
 targetEntityType: paragraph
 bundle: image_gallery
-mode: default
+mode: masonry
 content:
   field_intro:
     type: text_default
@@ -30,12 +31,12 @@ content:
     type: unveil_image
     label: hidden
     settings:
-      image_style: pg_image_gallery
       image_link: ''
-      image_link_image_style: ''
+      image_style: pg_image_gallery_masonry
       image_loading:
         attribute: lazy
-      image_only: 0
+      image_link_image_style: ''
+      image_only: false
     third_party_settings: {  }
     weight: 1
     region: content

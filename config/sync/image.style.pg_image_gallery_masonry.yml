@@ -1,0 +1,15 @@
+uuid: be1b83ac-4260-487c-9d03-cbcc5bd04015
+langcode: nl
+status: true
+dependencies: {  }
+name: pg_image_gallery_masonry
+label: 'PG: Image gallery: Masonry'
+effects:
+  6970c093-f361-4bdf-9e8d-a9421b2b4a09:
+    uuid: 6970c093-f361-4bdf-9e8d-a9421b2b4a09
+    id: image_scale
+    weight: 1
+    data:
+      width: 740
+      height: null
+      upscale: true

@@ -1,0 +1,9 @@
+uuid: 9b670237-7713-4b22-9136-32da7404678f
+langcode: nl
+status: true
+dependencies: {  }
+id: functionele_cookies_
+label: "Functionele cookies\t"
+description: ''
+checkbox_default_state: required
+weight: -9
