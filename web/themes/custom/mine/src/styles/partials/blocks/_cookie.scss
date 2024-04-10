@@ -1,9 +1,10 @@
 #sliding-popup {
   background-color: $primary !important;
   padding: 1.5rem !important;
-  max-width: rem(500);
   bottom: 1rem !important;
   left: 1rem;
+  accent-color: $white;
+  max-width: rem(500);
 
   .eu-cookie-compliance-buttons {
     margin-bottom: 0 !important;
@@ -30,15 +31,28 @@
       width: 100%;
     }
 
+    .find-more-button {
+      font-size: rem(13);
+    }
+
     .eu-cookie-compliance-buttons {
       width: 100%;
       max-width: 100%;
+      float: none !important;
+      margin-top: 0 !important;
 
       .agree-button {
         @extend .btn;
         @extend .btn--white;
         padding: .2rem .4rem;
         font-size: rem(15);
+
+        &:hover {
+          background-color: $white !important;
+          color: $body !important;
+          // border: 0 !important;
+          box-shadow: 0 !important;
+        }
       }
     }
 
@@ -50,8 +64,10 @@
       gap: 1rem;
 
       .eu-cookie-compliance-categories-buttons {
+
         button {
           @extend .btn;
+          @extend .btn-light;
           padding: 0;
           margin: 0;
           border: 0;
@@ -60,13 +76,14 @@
           appearance: none;
           background: none;
           text-shadow: none;
-          font-size: rem(14);
+          font-size: rem(13);
+          text-decoration: underline;
           font-weight: 600;
-          border: none;
           margin: 0;
           padding: 0;
           border-radius: 0;
           border-top: none;
+          box-shadow: none;
 
           &::-moz-focus-inner {
             border: 0;
@@ -75,5 +92,9 @@
         }
       }
     }
+  }
+
+  @include mq(s) {
+    max-width: rem(320);
   }
 }

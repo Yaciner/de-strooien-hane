@@ -17,8 +17,6 @@
           adaptiveWidth: true,
           dots: false,
           centerMode: false,
-          // prevArrow: '<div class="slick-prev"></div>',
-          // nextArrow: '<div class="slick-next"></div>',
           lazyLoad: 'progressive'
         });
       });

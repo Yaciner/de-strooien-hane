@@ -6,7 +6,7 @@ import "./image-slider";
 import "./text-image-slider";
 import "./fancybox";
 import "./brands";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css";
 import "./masonry";
 import SplitType from "split-type";
 import AOS from "aos";

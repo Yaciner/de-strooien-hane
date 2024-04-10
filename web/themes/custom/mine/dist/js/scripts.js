@@ -54,8 +54,6 @@
           adaptiveWidth: true,
           dots: false,
           centerMode: false,
-          // prevArrow: '<div class="slick-prev"></div>',
-          // nextArrow: '<div class="slick-next"></div>',
           lazyLoad: 'progressive'
         });
       });
@@ -223,12 +221,13 @@ __webpack_require__.r(__webpack_exports__);
 
   Drupal.behaviors.reviews = {
     attach: function attach(context, settings) {
-      // console.log('test');
-      // $('.paragraph--view-mode--masonry .field--name-field-media ').masonry({
-      //   itemSelector: '.field__item',
+      // $('.paragraph--view-mode--masonry .field--name-field-media', context).addClass('grid');
+      // $('.paragraph--view-mode--masonry .field--name-field-media .field__item', context).addClass('grid-item');
+      // var masonry = new Masonry('.paragraph--view-mode--masonry .field--name-field-media', {
+      //   itemSelector: '.grid-item',
       //   columnWidth: '.grid-sizer',
       //   percentPosition: true
-      // })
+      // });
     }
   };
 })(jQuery, Drupal);
@@ -320,7 +319,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
- // You can also use <link> for styles
+
 
 
 
