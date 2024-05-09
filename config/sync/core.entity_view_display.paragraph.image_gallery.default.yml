@@ -27,16 +27,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_lightbox:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_media:
     type: unveil_image
     label: hidden
@@ -54,4 +44,5 @@ hidden:
   field_background_color: true
   field_grid: true
   field_html_id: true
+  field_lightbox: true
   field_style: true
