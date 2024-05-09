@@ -13,7 +13,7 @@ function mine_preprocess_node__brand_item__teaser(&$variables) {
     $variables['attributes']['class'][] = 'use-ajax';
     $variables['attributes']['data-dialog-type'] = 'modal';
     $variables['attributes']['data-dialog-options'] = json_encode([
-      "width" => "calc(100% - 20px)",
+      "width" => "900",
       "dialogClass" => "modal--node"
     ]);
   }

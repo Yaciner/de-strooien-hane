@@ -39,3 +39,32 @@
     }
   }
 }
+
+.ui-dialog.modal--node {
+  display: block;
+  background-color: $white !important;
+  
+  .ui-dialog-titlebar {
+    // display: none;
+
+    .ui-dialog-title {
+      display: none;
+    }
+  }
+
+  & + .ui-widget-overlay {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  .ui-dialog-titlebar-close {
+    translate: -1.5rem 2rem;
+    z-index: 1000;
+  }
+
+  .ui-dialog-titlebar-close .ui-icon-closethick {
+    @include iconize($close);
+    mask-image: none;
+    padding-right: 0;
+    background-color: transparent;
+  }
+}

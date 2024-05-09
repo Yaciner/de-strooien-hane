@@ -1,0 +1,14 @@
+.node--type-brand-item.node--view-mode-full {
+  padding: 2.5rem 0;
+  text-align: center;
+
+  .field--name-field-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  
+    img {
+      max-width: rem(180);
+    }
+  }
+}
