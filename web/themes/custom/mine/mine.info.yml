@@ -22,7 +22,17 @@ libraries-override:
     css:
       theme:
         css/components/dialog.css: false
+  
+  claro/claro.jquery.ui:
+    css:
+      component:
+        css/components/jquery.ui/theme.css: false
 
+  stable/normalize:
+    css:
+      base:
+        css/core/assets/vendor/normalize-css/normalize.css: false
+        css/core/normalize-fixes.css: false
 regions:
   header: 'Header'
   system: 'System'

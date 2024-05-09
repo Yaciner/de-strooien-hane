@@ -7,7 +7,7 @@ dependencies:
 id: node.brand_item
 targetEntityType: node
 bundle: brand_item
-action: page_redirect
+action: display_page
 no_bypass: false
 bypass_message: false
 configuration:

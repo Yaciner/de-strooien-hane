@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.image_gallery.field_grid
     - field.field.paragraph.image_gallery.field_html_id
     - field.field.paragraph.image_gallery.field_intro
+    - field.field.paragraph.image_gallery.field_lightbox
     - field.field.paragraph.image_gallery.field_media
     - field.field.paragraph.image_gallery.field_style
     - image.style.pg_hero_large
@@ -37,4 +38,5 @@ hidden:
   field_grid: true
   field_html_id: true
   field_intro: true
+  field_lightbox: true
   field_style: true

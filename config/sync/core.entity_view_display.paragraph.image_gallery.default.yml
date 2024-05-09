@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.image_gallery.field_grid
     - field.field.paragraph.image_gallery.field_html_id
     - field.field.paragraph.image_gallery.field_intro
+    - field.field.paragraph.image_gallery.field_lightbox
     - field.field.paragraph.image_gallery.field_media
     - field.field.paragraph.image_gallery.field_style
     - image.style.pg_image_gallery
@@ -25,6 +26,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_lightbox:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_media:
     type: unveil_image
