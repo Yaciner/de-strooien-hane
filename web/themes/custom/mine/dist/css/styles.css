@@ -4828,14 +4828,9 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
 .paragraph--type--image-gallery.paragraph--view-mode--masonry .field--name-field-media {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(15, 200px); /* Enough rows to handle 3 sets of items */
+  grid-template-rows: repeat(5, 200px);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item {
-  /* First set (items 1-6) */
-  /* Second set (items 7-12) */
-  /* Third set (items 13-18) */
 }
 .paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item img {
   width: 100%;
@@ -4862,42 +4857,6 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
 }
 .paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+6) {
   grid-area: 3/3/6/4;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+7) {
-  grid-area: 6/1/8/2;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+8) {
-  grid-area: 6/2/9/3;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+9) {
-  grid-area: 6/3/8/4;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+10) {
-  grid-area: 8/1/11/2;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+11) {
-  grid-area: 9/2/11/3;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+12) {
-  grid-area: 8/3/11/4;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+13) {
-  grid-area: 11/1/13/2;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+14) {
-  grid-area: 11/2/14/3;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+15) {
-  grid-area: 11/3/13/4;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+16) {
-  grid-area: 13/1/16/2;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+17) {
-  grid-area: 14/2/16/3;
-}
-.paragraph--type--image-gallery.paragraph--view-mode--masonry .field__item:nth-child(6n+18) {
-  grid-area: 13/3/16/4;
 }
 
 .paragraph--type--image-slider.paragraph--view-mode--default .paragraph--intro {
