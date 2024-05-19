@@ -1,0 +1,7 @@
+aos:
+  css:
+    theme:
+      //unpkg.com/aos@2.3.1/dist/aos.css: { external: true, minified: true }
+  js:
+    //unpkg.com/aos@2.3.1/dist/aos.js: { external: true, minified: true }
+    js/aos.js: { }

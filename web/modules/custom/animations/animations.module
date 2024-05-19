@@ -1,0 +1,31 @@
+<?php
+
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function animations_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+
+  $config = \Drupal::config('animations.settings');
+
+  if (!$config->get('enabled')) {
+    return;
+  }
+
+  $bundle = $paragraph->bundle();
+
+  if (!$config->get('paragraphs.' . $bundle . '.enabled')) {
+    return;
+  }
+
+  $aos = $config->get('aos.aos');
+
+  foreach (Element::children($variables['content']) as $child) {
+    $variables['content'][$child]['#attributes']['data-aos'] = $aos;
+  }
+
+  $variables['#attached']['library'][] = 'animations/aos';
+}

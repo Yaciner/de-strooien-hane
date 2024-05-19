@@ -1,0 +1,6 @@
+animations.settings:
+  title: Animations
+  description: Animation settings
+  parent: core.system
+  route_name: animations.settings
+

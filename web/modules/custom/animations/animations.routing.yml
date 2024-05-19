@@ -1,0 +1,7 @@
+animations.settings:
+  path: /admin/animations
+  defaults:
+    _form: Drupal\animations\Form\SettingsForm
+    _title: Animations
+  requirements:
+    _permission: administer animations
