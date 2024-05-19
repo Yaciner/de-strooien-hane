@@ -22,6 +22,7 @@ module:
   datetime: 0
   dblog: 0
   disable_language: 0
+  dms_animations: 0
   dropzonejs: 0
   dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
