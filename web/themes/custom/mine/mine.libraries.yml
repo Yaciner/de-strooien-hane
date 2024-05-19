@@ -25,6 +25,7 @@ global_scripts:
     - mine/slick
     - mine/greensock
     - mine/masonry
+    - mine/waypoints
 
 slick:
   version: 1.8.0
@@ -70,5 +71,12 @@ greensock:
     dist/js/libs/greensock/minified/gsap.min.js: { minified: true }
     dist/js/libs/greensock/minified/ScrollTrigger.min.js: { minified: true }
     dist/js/libs/greensock/minified/CSSRulePlugin.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+waypoints:
+  version: 4.0.1
+  js:
+    dist/js/libs/waypoints/jquery.waypoints.min.js: {}
   dependencies:
     - core/jquery

@@ -17,7 +17,21 @@
           adaptiveWidth: true,
           dots: false,
           centerMode: false,
-          lazyLoad: 'progressive'
+          lazyLoad: 'progressive',
+          responsive: [
+            {
+              breakpoint: 940,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 567,
+              settings: {
+                slidesToShow: 2,
+              }
+            }
+          ]
         });
       });
     }

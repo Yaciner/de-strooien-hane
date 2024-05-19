@@ -91,3 +91,20 @@ function mine_preprocess_paragraph__image_slider(&$variables) {
   $autoplay = $paragraph->field_autoplay->value == '1' ? TRUE : FALSE;
   $variables['#attached']['drupalSettings']['image_slider']['autplay'] = $autoplay;
 }
+
+function mine_preprocess_paragraph__image_gallery__masonry(&$variables) {
+  $paragraph = $variables['elements']['#paragraph'];
+  $rendered_items = [];
+  $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
+
+  foreach ($paragraph->field_media as $media) {
+    $rendered_items[] = $media->view([
+      'label' => 'hidden',
+      'type' => 'unveil_image',
+      'settings' => [
+        'image_style' => 'pg_image_gallery_masonry'
+      ],
+    ]);
+  }
+  $variables['content']['grouped_media_items'] = array_chunk($rendered_items, 6);
+}

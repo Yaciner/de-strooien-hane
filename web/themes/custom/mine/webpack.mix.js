@@ -21,7 +21,7 @@ mix
   })
   .sourceMaps(true, 'source-map')
   .browserSync({
-    proxy: 'localhost:57467',
+    proxy: 'juweliercoens.lndo.site',
     files: ['dist/js/*.js', 'dist/css/*.css'],
     open: false,
   })

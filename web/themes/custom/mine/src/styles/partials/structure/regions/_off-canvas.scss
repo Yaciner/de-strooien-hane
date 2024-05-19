@@ -67,6 +67,7 @@
       justify-content: center;
       gap: .4rem;
       align-items: flex-start;
+      padding-left: 2;
 
       a {
         font-size: fluid(36px, 60px);
@@ -77,6 +78,10 @@
         background: none;
         font-family: $heading;
       }
+      
+      @include mq(m) {
+        padding-left: 0;
+      }
     }
   }
 
@@ -84,8 +89,16 @@
     position: relative;
     padding: 1.6rem 0;
 
+    .positive {
+      display: none;
+    }
+
     img {
-      width: rem(180);
+      width: rem(220);
+
+      @include mq(l) {
+        width: rem(160);
+      }
     }
 
     &:after {
@@ -101,9 +114,6 @@
       transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) ;
     }
 
-    @include mq(s) {
-      max-width: rem(120);
-    }
   }
 }
 

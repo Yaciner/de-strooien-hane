@@ -1,0 +1,51 @@
+_core:
+  default_config_hash: X2-qaWSMFC3APRPxPtr1xfgAyySA8_gbo_YhxiKmdBU
+enabled: 1
+aos:
+  aos: fade-up
+  duration: ''
+paragraphs:
+  block:
+    enabled: 1
+  brands:
+    enabled: 1
+  cta:
+    enabled: 1
+  faq:
+    enabled: 1
+  form:
+    enabled: 1
+  hero:
+    enabled: 0
+  image_gallery:
+    enabled: 1
+  image_slider:
+    enabled: 1
+  list:
+    enabled: 1
+  list_item:
+    enabled: 0
+  media:
+    enabled: 1
+  people:
+    enabled: 1
+  person:
+    enabled: 0
+  quickmenu:
+    enabled: 1
+  quickmenu_link:
+    enabled: 0
+  text:
+    enabled: 1
+  text_column:
+    enabled: 0
+  text_media:
+    enabled: 1
+  text_media_item:
+    enabled: 1
+  text_media_slider:
+    enabled: 1
+  timeline:
+    enabled: 0
+  timeline_entry:
+    enabled: 1

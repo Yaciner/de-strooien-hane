@@ -8303,6 +8303,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.3:
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
+simple-parallax-js@^5.6.2:
+  version "5.6.2"
+  resolved "https://registry.yarnpkg.com/simple-parallax-js/-/simple-parallax-js-5.6.2.tgz#6515432c9e265d8e5e0f8a6691a8b0d6333b3acb"
+  integrity sha512-qJPZgg37BstDyvNqONU1YffiJ9P5n4B9IPl5h3kzZ2oEinTRwy1syxfEwTMLXYFHAFCRWXUcWD8yBnVcp8nxdA==
+
 simplelightbox@^2.14.3:
   version "2.14.3"
   resolved "https://registry.yarnpkg.com/simplelightbox/-/simplelightbox-2.14.3.tgz#de00b70509fc5087cf2eacb7b275a55b7a5eaf49"

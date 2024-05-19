@@ -6,6 +6,7 @@ module:
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   ajax_loader: 0
+  animations: 0
   antibot: 0
   automated_cron: 0
   better_exposed_filters: 0
@@ -83,6 +84,7 @@ module:
   search: 0
   shortcut: 0
   simple_sitemap: 0
+  stage_file_proxy: 0
   svg_image: 0
   system: 0
   taxonomy: 0

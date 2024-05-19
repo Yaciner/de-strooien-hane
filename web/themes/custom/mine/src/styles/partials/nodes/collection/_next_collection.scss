@@ -47,7 +47,7 @@
     }
     
     h3 {
-      font-size: rem(90);
+      font-size: fluid(32px, 90px);
       color: $white;
       font-family: $heading;
       position: relative;
@@ -61,14 +61,15 @@
         top: 9px;
         width: 3.8rem;
       }
-    }
 
-    @include mq(l) {
-      left: rem(40);
-    }
+      @include mq(m) {
+        padding-right: 4rem;
 
-    @include mq(s) {
-      left: rem(20);
+        &:after {
+          top: 4px;
+          width: 2.3rem;
+        }
+      }
     }
   }
 }

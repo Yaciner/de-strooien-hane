@@ -4,7 +4,7 @@
   .paragraph--intro {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 3rem;
 
     .field--name-field-intro {
@@ -19,6 +19,11 @@
         text-decoration: none;
       }
     }
+    
+    @include mq(m) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -27,6 +32,10 @@
 
   .paragraph {
     padding: 0;
+  }
+
+  @include mq(m) {
+    padding: $p_vertical_gutter_mobile 0;
   }
 }
 
@@ -69,6 +78,10 @@
 
 .geysir-field-paragraph-wrapper > .paragraph:not(.paragraph--type--hero) {
   padding: $p_vertical_gutter 0;
+
+  @include mq(m) {
+    padding: $p_vertical_gutter_mobile 0;
+  }
 }
 
 .pg-bg--none + .pg-bg--none,
@@ -104,4 +117,9 @@
       text-align: center;
     }
   }
+}
+
+.paragraph:not(.paragraph--type--hero) .field--type-entity-reference img, .paragraph:not(.paragraph--type--hero) .field--type-entity-reference video {
+  will-change: transform;
+  transition: transform 0.1s ease-in;
 }

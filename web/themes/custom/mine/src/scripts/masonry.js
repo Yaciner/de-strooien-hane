@@ -2,7 +2,7 @@
 
   'use strict';
 
-  Drupal.behaviors.reviews = {
+  Drupal.behaviors.masonry = {
     attach: function (context, settings) {
       // $('.paragraph--view-mode--masonry .field--name-field-media', context).addClass('grid');
       // $('.paragraph--view-mode--masonry .field--name-field-media .field__item', context).addClass('grid-item');

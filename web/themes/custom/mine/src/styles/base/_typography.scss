@@ -69,6 +69,7 @@ a {
 
 .subtitle {
   position: relative;
+  display: block !important;
   font-size: fluid(22px, 24px);
   display: block;
   font-family: $base-font-family;
@@ -187,4 +188,9 @@ a {
       }
     }
   }
+}
+
+.word-wrapper {
+  display: inline-block;
+  overflow-y: hidden;
 }

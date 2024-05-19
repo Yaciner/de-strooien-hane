@@ -8,4 +8,8 @@
     position: absolute;
     opacity: 0;
   }
+
+  @include mq(l) {
+    width: rem(160);
+  }
 }

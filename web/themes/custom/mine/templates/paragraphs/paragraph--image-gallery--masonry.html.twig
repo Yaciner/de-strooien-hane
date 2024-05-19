@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ * Outputs a paragraph as a section within its parent article.
+ *
+ * @see template_preprocess_paragraph()
+ * @ingroup themeable
+ */
+#}
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }}>
+    <div class="container">
+      {% if content.field_intro %}
+        <div class="paragraph--intro" data-aos="fade-up">
+          {{ content.field_intro }}
+          {{ content.field_overview_link }}
+        </div>
+      {% endif %}
+      <div class="content">
+        {% if content.grouped_media_items %}
+          {% for group in content.grouped_media_items %}
+            <div class="media-group">
+              {% for item in group %}
+                <div class="media-item">
+                  {{ item }}
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

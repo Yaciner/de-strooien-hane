@@ -23,6 +23,10 @@
       height: 100%;
       background-color: rgba(0, 0, 0, .4);
     }
+
+    @include mq(m) {
+      height: rem(400);
+    }
   }
 
   .hero__content {
@@ -34,6 +38,18 @@
     translate: -50% 0;
     width: 100%;
     color: $white;
+
+    a.btn--video {
+      opacity: 0;
+      translate: 0 20px;
+      transition: all .2s $cubic-bezier;
+      transition-delay: 3s;
+
+      &.active {
+        opacity: 1;
+        translate: 0 0px;
+      }
+    }
 
     .hero__content-wrapper {
       max-width: rem(780);
@@ -49,6 +65,10 @@
 
     .lottie-cursor {
       display: none;
+    }
+
+    @include mq(m) {
+      height: rem(400);
     }
   }
 
