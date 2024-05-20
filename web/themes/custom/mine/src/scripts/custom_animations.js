@@ -9,13 +9,17 @@ import SplitType from "split-type";
       let typeSplitHero;
 
       // Simple parallax next collection
-      // $(".paragraph--type--hero .field--name-field-media").
+      var nextCollection = document.querySelector(".node--view-mode-next-collection .field--name-field-next-collection");
+      new simpleParallax(nextCollection, {
+        delay: 0.6,
+        scale: 1.1,
+        orientation: 'right',
+        transition: "cubic-bezier(0,0,0,1)",
+      });
 
 
       // Simple parallax hero
-      var hero = document.querySelector(
-        ".paragraph--type--hero .field--name-field-media"
-      );
+      var hero = document.querySelector(".paragraph--type--hero .field--name-field-media");
       new simpleParallax(hero, {
         delay: 0.6,
         transition: "cubic-bezier(0,0,0,1)",

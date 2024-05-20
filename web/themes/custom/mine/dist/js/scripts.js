@@ -98,7 +98,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var typeSplitHero;
 
       // Simple parallax next collection
-      // $(".paragraph--type--hero .field--name-field-media").
+      var nextCollection = document.querySelector(".node--view-mode-next-collection .field--name-field-next-collection");
+      new (simple_parallax_js__WEBPACK_IMPORTED_MODULE_0___default())(nextCollection, {
+        delay: 0.6,
+        scale: 1.1,
+        orientation: 'right',
+        transition: "cubic-bezier(0,0,0,1)"
+      });
 
       // Simple parallax hero
       var hero = document.querySelector(".paragraph--type--hero .field--name-field-media");
