@@ -1,7 +1,7 @@
 _core:
   default_config_hash: wNpilbhustdj8tLBsYJ6GPdxS5lUKU5rRei_XxSyd3A
-google_map_api_key: AIzaSyDEGdi7QjpEk-xstJuLXCWw9iuUbyAfK-Q
-google_map_api_server_key: AIzaSyAUMDtQjxkkKp-nRv3k_JlJD6ouC2Qguf8
+google_map_api_key: AIzaSyCUj4e7ZQrXBvuB9iri0evHeNHlCnzxAxo
+google_map_api_server_key: AIzaSyCUj4e7ZQrXBvuB9iri0evHeNHlCnzxAxo
 use_current_language: false
 china_mode: false
 google_maps_base_url: ''
