@@ -4325,6 +4325,21 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   padding: 0;
 }
 
+.mine_views_block__social_posts_block_1 .field--name-field-block-to-embed {
+  position: relative;
+}
+.mine_views_block__social_posts_block_1 .field--name-field-block-to-embed:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 16rem;
+  height: 3rem;
+  left: 50%;
+  translate: -50% 0;
+  background-color: #ffffff;
+  z-index: 100000;
+}
+
 .paragraph--type--brands .field--name-field-brands {
   padding: 0 2rem;
 }
@@ -5474,12 +5489,21 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
   padding-left: 4rem;
 }
 @media all and (max-width: 959px) {
+  .paragraph--type--text-media.paragraph--view-mode--full_width .container, .paragraph--type--text-media.paragraph--view-mode--full_width body:not(.path-node) .region-content, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width .region-content, .paragraph--type--text-media.paragraph--view-mode--full_width .paragraph--type--hero .hero__content, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width .hero__content {
+    padding: 0 2.5rem;
+  }
   .paragraph--type--text-media.paragraph--view-mode--full_width .container .pg-text-media__media, .paragraph--type--text-media.paragraph--view-mode--full_width body:not(.path-node) .region-content .pg-text-media__media, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width .region-content .pg-text-media__media, .paragraph--type--text-media.paragraph--view-mode--full_width .paragraph--type--hero .hero__content .pg-text-media__media, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width .hero__content .pg-text-media__media {
     width: 100%;
   }
   .paragraph--type--text-media.paragraph--view-mode--full_width .container .pg-text-media__text, .paragraph--type--text-media.paragraph--view-mode--full_width body:not(.path-node) .region-content .pg-text-media__text, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width .region-content .pg-text-media__text, .paragraph--type--text-media.paragraph--view-mode--full_width .paragraph--type--hero .hero__content .pg-text-media__text, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width .hero__content .pg-text-media__text {
     max-width: 100%;
     width: 100%;
+    padding-left: 0;
+  }
+}
+@media all and (max-width: 479px) {
+  .paragraph--type--text-media.paragraph--view-mode--full_width .container, .paragraph--type--text-media.paragraph--view-mode--full_width body:not(.path-node) .region-content, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width .region-content, .paragraph--type--text-media.paragraph--view-mode--full_width .paragraph--type--hero .hero__content, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width .hero__content {
+    padding: 0 1.25rem;
   }
 }
 .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .container, .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right body:not(.path-node) .region-content, body:not(.path-node) .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .region-content, .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .paragraph--type--hero .hero__content, .paragraph--type--hero .paragraph--type--text-media.paragraph--view-mode--full_width.pg--has-media-right .hero__content {

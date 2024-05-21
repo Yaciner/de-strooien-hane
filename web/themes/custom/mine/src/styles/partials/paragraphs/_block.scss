@@ -7,3 +7,21 @@
     padding: 0;
   }
 }
+
+.mine_views_block__social_posts_block_1 {
+  .field--name-field-block-to-embed {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 16rem;
+      height: 3rem;
+      left: 50%;
+      translate: -50% 0;
+      background-color: $white;
+      z-index: 100000;
+    }
+  }
+}

@@ -25,7 +25,7 @@ import SplitType from "split-type";
         transition: "cubic-bezier(0,0,0,1)",
       });
 
-      const heroTargets = [".paragraph--type--hero h1", ".paragraph--type--hero .field--name-field-text *:not(a)", ".paragraph--type--hero .field--name-field-text h6"];
+      const heroTargets = [".node-type-homepage .paragraph--type--hero h1", ".node-type-homepage .paragraph--type--hero .field--name-field-text *:not(a)"];
 
       function splitHero() {
         heroTargets.forEach((target) => {
@@ -49,7 +49,7 @@ import SplitType from "split-type";
       tl.from(".line .word", 1, {
         y: 300,
         ease: "ease-in",
-        delay: 1,
+        delay: .5,
         stagger: {
           amount: 0.6,
         },

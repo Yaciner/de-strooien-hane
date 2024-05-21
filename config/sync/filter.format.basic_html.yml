@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - editor
+    - linkit
 _core:
   default_config_hash: RjoJPQLCAE8u1Ys_yCKubpkYlRz_Oy12a5qCVeNIHJ8
 name: 'Basic HTML'
@@ -49,3 +50,10 @@ filters:
     status: true
     weight: 12
     settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true

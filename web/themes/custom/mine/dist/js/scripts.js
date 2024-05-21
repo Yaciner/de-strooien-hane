@@ -112,7 +112,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         delay: 0.6,
         transition: "cubic-bezier(0,0,0,1)"
       });
-      var heroTargets = [".paragraph--type--hero h1", ".paragraph--type--hero .field--name-field-text *:not(a)", ".paragraph--type--hero .field--name-field-text h6"];
+      var heroTargets = [".node-type-homepage .paragraph--type--hero h1", ".node-type-homepage .paragraph--type--hero .field--name-field-text *:not(a)"];
       function splitHero() {
         heroTargets.forEach(function (target) {
           typeSplitHero = new split_type__WEBPACK_IMPORTED_MODULE_1__["default"](target, {
@@ -133,7 +133,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       tl.from(".line .word", 1, {
         y: 300,
         ease: "ease-in",
-        delay: 1,
+        delay: .5,
         stagger: {
           amount: 0.6
         }

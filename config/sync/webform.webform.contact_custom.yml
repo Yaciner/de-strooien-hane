@@ -18,19 +18,6 @@ title: Contact
 description: 'Basic email contact webform.'
 categories: {  }
 elements: |-
-  flexbox_02:
-    '#type': webform_flexbox
-    subject:
-      '#type': select
-      '#title': Onderwerp
-      '#options':
-        'option one': 'option one'
-        'option two': 'option two'
-        'option three': 'option three'
-      '#required': true
-    placholder:
-      '#type': hidden
-      '#title': Placholder
   flexbox:
     '#type': webform_flexbox
     first_name:

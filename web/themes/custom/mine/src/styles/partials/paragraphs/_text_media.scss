@@ -63,6 +63,8 @@
       }
 
       @include mq(l) {
+        padding: 0 rem(40);
+
         .pg-text-media__media {
           width: 100%;
         }
@@ -70,7 +72,12 @@
         .pg-text-media__text {
           max-width: 100%;
           width: 100%;
+          padding-left: 0;
         }
+      }
+
+      @include mq(s){
+        padding: 0 rem(20);
       }
     }
 
