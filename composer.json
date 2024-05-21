@@ -44,6 +44,7 @@
         "drupal/gin": "^3.0@rc",
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@rc",
+        "drupal/google_tag": "^2.0",
         "drupal/honeypot": "^2.1",
         "drupal/inline_entity_form": "^2.0@RC",
         "drupal/linkit": "^6.1",

@@ -1,0 +1,33 @@
+uuid: 9695e21c-8e20-4c5d-8f1a-693a471ffc5a
+langcode: en
+status: true
+dependencies: {  }
+id: GTM-KNXMQ6R8.664cad222e6ae3.71696171
+label: GTM-KNXMQ6R8
+weight: 0
+tag_container_ids:
+  - GTM-KNXMQ6R8
+advanced_settings:
+  consent_mode: true
+  gtm:
+    GTM-KNXMQ6R8:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  generate_lead:
+    value: ''
+    currency: ''
+  search: {  }
+  webform_purchase: {  }
+  custom: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS
