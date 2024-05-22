@@ -154,6 +154,10 @@
         "patches": {
             "drupal/core": {
                 "RuntimeException: Adding non-existent permissions to a role is not allowed": "https://www.drupal.org/files/issues/2023-09-14/3358586-11.patch"
+            },
+            "drupal/mimemail": {
+                "Seeing errors when sending a mail with files attached as file contents": "https://www.drupal.org/files/issues/2023-03-24/mimemail_attachment_errors-2904611-55.patch",
+                "Return path #3089331": "patches/mimemail-return-path.patch"
             }
         }
     }
