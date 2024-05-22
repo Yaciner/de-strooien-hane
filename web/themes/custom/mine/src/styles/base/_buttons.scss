@@ -88,3 +88,20 @@
     left: .6rem;
   }
 }
+
+.btn + .btn {
+  display: inline-block;
+  margin-left: .4rem;
+
+  @include mq(m) {
+    display: inline-block;
+    // margin-top: .5rem;
+    margin-left: 0;
+  }
+}
+
+.field--type-text-long {
+  .btn {
+    margin-bottom: .4rem;
+  }
+}

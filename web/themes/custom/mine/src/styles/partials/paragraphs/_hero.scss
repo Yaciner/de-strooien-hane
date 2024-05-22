@@ -58,6 +58,10 @@
     h1 {
       color: $white;
     }
+
+    @include mq(m) {
+      bottom: 2rem;
+    }
   }
 
   &.paragraph--view-mode--default {

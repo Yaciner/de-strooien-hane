@@ -1663,5 +1663,18 @@ textarea.form-control-lg {
 .ck-content .btn--video:before {
   left: 0.6rem;
 }
+.ck-content .btn + .btn {
+  display: inline-block;
+  margin-left: 0.4rem;
+}
+@media all and (max-width: 767px) {
+  .ck-content .btn + .btn {
+    display: inline-block;
+    margin-left: 0;
+  }
+}
+.ck-content .field--type-text-long .btn {
+  margin-bottom: 0.4rem;
+}
 
 /*# sourceMappingURL=ckeditor.css.map*/
