@@ -56,7 +56,7 @@ elements: |-
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': Submit
+    '#submit__label': Verzenden
 css: ''
 javascript: ''
 settings:
@@ -162,7 +162,7 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: url
-  confirmation_url: node/6
+  confirmation_url: node/65
   confirmation_title: ''
   confirmation_message: ''
   confirmation_attributes: {  }
@@ -265,10 +265,15 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'Thank you for your message'
-      body: "<p>Dear,</p>\r\n\r\n<p>Thank you for your message!</p>\r\n\r\n<p>We will contact you as soon as possible.</p>\r\n\r\n<p>Kind regards,<br />\r\n[site:name]</p>"
+      subject: 'Bedankt voor uw bericht!'
+      body: '<p>Beste,<br><br>Hartelijk dank voor het invullen van het contactformulier. Wij hebben jouw vraag goed ontvangen en behandelen deze zo spoedig mogelijk.<br><br>Nog een fijne dag verder.<br><br>Vriendelijke groet,<br>Juwelier Coens</p>'
       excluded_elements:
-        privacy_policy: privacy_policy
+        first_name: first_name
+        name: name
+        email: email
+        telephone_number: telephone_number
+        message: message
+        ik_verklaar_op_de_hoogte_te_zijn_van_en_akkoord_te_gaan_met_het_: ik_verklaar_op_de_hoogte_te_zijn_van_en_akkoord_te_gaan_met_het_
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
@@ -296,17 +301,16 @@ handlers:
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
-      from_mail: '[site:mail]'
+      from_mail: _default
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
+      from_name: _default
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: _default
+      subject: 'Juwelier Coens - Contact inzending'
       body: _default
-      excluded_elements:
-        privacy_policy: privacy_policy
+      excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false

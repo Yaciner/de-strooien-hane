@@ -8,3 +8,8 @@ services:
     overrides:
       environment:
         DRUSH_OPTIONS_URI: 'https://juweliercoens.lndo.site'
+  mailhog:
+    type: mailhog:v1.0.0
+    portforward: true
+    hogfrom:
+      - appserver

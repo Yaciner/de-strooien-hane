@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: rpfRQVoEn2ZWd_lw-iULKPiuina5CqcmzXWlz1OjTwM
+name: 'Juwelier Coens'
+mail: noreply@juweliercoens.be
+simple_address: false
+sitestyle: false
+textonly: false
+linkonly: false
+user_plaintext_field: ''
+format: full_html
+preserve_class: false
+advanced:
+  incoming: false
+  key: FlL28IVAutDx73sZRE770iCZw_0EYpYtqoUZfiBfGkQ

@@ -63,6 +63,7 @@ module:
   language: 0
   link: 0
   linkit: 0
+  mailsystem: 0
   masquerade: 0
   media: 0
   media_library: 0
@@ -70,6 +71,7 @@ module:
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  mimemail: 0
   mine_dev: 0
   mine_formatters: 0
   mine_paragraphs: 0
@@ -83,10 +85,10 @@ module:
   phpass: 0
   quick_node_clone: 0
   rabbit_hole: 0
+  reroute_email: 0
   search: 0
   shortcut: 0
   simple_sitemap: 0
-  stage_file_proxy: 0
   svg_image: 0
   system: 0
   taxonomy: 0
