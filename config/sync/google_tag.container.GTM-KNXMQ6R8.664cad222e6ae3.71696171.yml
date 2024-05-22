@@ -8,7 +8,7 @@ weight: 0
 tag_container_ids:
   - GTM-KNXMQ6R8
 advanced_settings:
-  consent_mode: true
+  consent_mode: false
   gtm:
     GTM-KNXMQ6R8:
       data_layer: dataLayer
