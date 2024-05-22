@@ -16,6 +16,7 @@
           dots: false,
           centerMode: false,
           adaptiveHeight: true,
+          autoplay: true,
           prevArrow: '<div class="slick-prev"></div>',
           nextArrow: '<div class="slick-next"></div>',
           lazyLoad: 'progressive',

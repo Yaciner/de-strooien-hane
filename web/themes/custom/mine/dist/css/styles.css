@@ -3975,6 +3975,16 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
 .has-hero.has-quickmenu .paragraph--type--hero .hero__content {
   bottom: 10rem;
 }
+@media all and (max-width: 959px) {
+  .has-hero.has-quickmenu .paragraph--type--hero .hero__content {
+    bottom: 5rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .has-hero.has-quickmenu .paragraph--type--hero .hero__content {
+    bottom: 2rem;
+  }
+}
 
 .centered-title #block-mine-page-title {
   text-align: center;
@@ -4109,6 +4119,7 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
 
 .node--type-collection.node--view-mode-promoted {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -5357,10 +5368,62 @@ body.loaded .paragraph--type--hero.paragraph--view-mode--large .hero__images {
 }
 .paragraph.paragraph--type--quickmenu .field--name-field-quickmenu-links .paragraph--type--quickmenu-link .field--name-field-icon {
   aspect-ratio: 1/1;
-  width: 5rem;
+  width: 3.5rem;
 }
 .paragraph.paragraph--type--quickmenu .field--name-field-quickmenu-links .paragraph--type--quickmenu-link .field--name-field-icon svg {
   width: 100%;
+}
+@media all and (max-width: 1199px) {
+  .paragraph.paragraph--type--quickmenu .field--name-field-quickmenu-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-1rem / 2) -1rem;
+    gap: 0rem;
+  }
+  .paragraph.paragraph--type--quickmenu .field--name-field-quickmenu-links .paragraph--type--quickmenu-link {
+    flex: 0 0 calc(100% / 3 - 1rem);
+    flex-basis: calc(100% / 3 - 1rem);
+    width: calc(100% / 3 - 1rem);
+    min-height: 1px;
+    margin: 0 calc(1rem / 2) 1rem;
+  }
+}
+@media all and (max-width: 959px) {
+  .paragraph.paragraph--type--quickmenu {
+    margin-top: 120px;
+  }
+  .paragraph.paragraph--type--quickmenu .field--name-field-quickmenu-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-1rem / 2) -1rem;
+  }
+  .paragraph.paragraph--type--quickmenu .field--name-field-quickmenu-links .paragraph--type--quickmenu-link {
+    flex: 0 0 calc(100% / 2 - 1rem);
+    flex-basis: calc(100% / 2 - 1rem);
+    width: calc(100% / 2 - 1rem);
+    min-height: 1px;
+    margin: 0 calc(1rem / 2) 1rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .paragraph.paragraph--type--quickmenu {
+    display: block;
+    margin-top: 4rem;
+  }
+  .paragraph.paragraph--type--quickmenu .field--name-field-quickmenu-links {
+    display: block;
+    margin: 0;
+    padding: 0 4rem;
+  }
+  .paragraph.paragraph--type--quickmenu .field--name-field-quickmenu-links .paragraph--type--quickmenu-link {
+    margin: 0;
+  }
+  .paragraph.paragraph--type--quickmenu .slick-next {
+    right: 0;
+  }
+  .paragraph.paragraph--type--quickmenu .slick-prev {
+    left: 0;
+  }
 }
 
 .paragraph--type--text-media-slider .slick-list {

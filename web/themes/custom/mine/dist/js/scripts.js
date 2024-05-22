@@ -420,7 +420,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
           infinite: true,
           speed: 300,
           slidesToShow: 4
-        }, _defineProperty(_slider$slick, "dots", false), _defineProperty(_slider$slick, "centerMode", false), _defineProperty(_slider$slick, "adaptiveHeight", true), _defineProperty(_slider$slick, "prevArrow", '<div class="slick-prev"></div>'), _defineProperty(_slider$slick, "nextArrow", '<div class="slick-next"></div>'), _defineProperty(_slider$slick, "lazyLoad", 'progressive'), _defineProperty(_slider$slick, "responsive", [{
+        }, _defineProperty(_slider$slick, "dots", false), _defineProperty(_slider$slick, "centerMode", false), _defineProperty(_slider$slick, "adaptiveHeight", true), _defineProperty(_slider$slick, "autoplay", true), _defineProperty(_slider$slick, "prevArrow", '<div class="slick-prev"></div>'), _defineProperty(_slider$slick, "nextArrow", '<div class="slick-next"></div>'), _defineProperty(_slider$slick, "lazyLoad", 'progressive'), _defineProperty(_slider$slick, "responsive", [{
           breakpoint: 1200,
           settings: {
             slidesToShow: 3
@@ -510,6 +510,24 @@ __webpack_require__.r(__webpack_exports__);
         $("body").toggleClass("mm-open");
         e.preventDefault();
       });
+      if (window.matchMedia("(max-width: 767px)").matches) {
+        $(once('slick', '.field--name-field-quickmenu-links')).each(function () {
+          $(this).slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+            fade: true,
+            speed: 300,
+            arrows: true,
+            slidesToShow: 1,
+            dots: false,
+            centerMode: false,
+            prevArrow: '<div class="slick-prev"></div>',
+            nextArrow: '<div class="slick-next"></div>',
+            lazyLoad: 'progressive'
+          });
+        });
+      }
     }
   };
 })(jQuery, Drupal);

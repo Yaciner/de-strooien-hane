@@ -20,6 +20,14 @@ $notification-bar-height: 2.5rem;
 .has-hero.has-quickmenu {
   .paragraph--type--hero .hero__content {
     bottom: 10rem;
+
+    @include mq(l) {
+      bottom: 5rem;
+    }
+
+    @include mq(m) {
+      bottom: 2rem;
+    }
   }
 }
 

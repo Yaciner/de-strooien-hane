@@ -24,12 +24,52 @@
 
       .field--name-field-icon {
         aspect-ratio: 1/1;
-        width: 5rem;
+        width: 3.5rem;
 
         svg {
           width: 100%;
         }
       }
+    }
+  }
+
+  @include mq(xl) {
+    .field--name-field-quickmenu-links {
+      @include grid(3, '.paragraph--type--quickmenu-link', 1rem);
+      gap: 0rem;
+    }
+  }
+
+  @include mq(l) {
+    margin-top: $p_vertical_gutter;
+
+    .field--name-field-quickmenu-links {
+      @include grid(2, '.paragraph--type--quickmenu-link', 1rem);
+    }
+  }
+
+  @include mq(m) {
+    display: block;
+    margin-top: 4rem;
+
+    .field--name-field-quickmenu-links {
+      display: block;
+      margin: 0;
+      padding: 0 4rem;
+      
+
+      .paragraph--type--quickmenu-link {
+        margin: 0;
+        // padding: 0;
+      }
+    }
+
+    .slick-next {
+      right: 0;
+    }
+
+    .slick-prev {
+      left: 0;
     }
   }
 }
