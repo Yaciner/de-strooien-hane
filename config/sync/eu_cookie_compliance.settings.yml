@@ -57,7 +57,7 @@ better_support_for_screen_readers: false
 method: categories
 disabled_javascripts: ''
 automatic_cookies_removal: true
-allowed_cookies: "functional:BIGipServer#\r\nfunctional:lang\r\nfunctional:_Ifa\r\nfunctional:_Ifa_expiry\r\nfunctional:Iissc\r\nfunctional:__cfduid\r\nfunctional:cref\r\nanalytics:bcookie\r\nadvertisement:bcookie\r\n"
+allowed_cookies: "functional:BIGipServer#\r\nfunctional:lang\r\nfunctional:_Ifa\r\nfunctional:_Ifa_expiry\r\nfunctional:Iissc\r\nfunctional:__cfduid\r\nfunctional:cref\r\nanalytics:_ga\r\nanalytics:_gid\r\nanalytics:_gcl_au\r\nanalytics:_ga_4BXXKZJZTZ\r\nanalytics:_ga_8TF95LBYRV\r\nanalytics:_ga_B8SKQ9HHPZ\r\nanalytics:_ga_GJH9RGDDP5\r\nanalytics:_ga_PG3KZVYPV0\r\nanalytics:_ga_RQXSGJFQ59\r\nanalytics:_ga_X6LMX9VR0Y\r\nanalytics:bcookie\r\nadvertisement:bcookie\r\n"
 consent_storage_method: do_not_store
 withdraw_message:
   value: '<h3>We gebruiken cookies op deze site om uw gebruikerservaring te verbeteren.</h3><p><span style="-webkit-text-stroke-width:0px;color:rgb(55, 65, 81);display:inline !important;float:none;font-family:Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:pre-wrap;widows:2;word-spacing:0px;">U heeft uw toestemming gegeven voor het plaatsen van cookies.</span></p>'
