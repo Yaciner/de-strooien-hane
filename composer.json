@@ -56,6 +56,7 @@
         "drupal/pathauto": "^1.12",
         "drupal/quick_node_clone": "^1.16",
         "drupal/rabbit_hole": "2.0.0-alpha5",
+        "drupal/recaptcha_v3": "^2.0",
         "drupal/reroute_email": "^2.2",
         "drupal/simple_sitemap": "^4.1",
         "drupal/stable": "^2.0",
