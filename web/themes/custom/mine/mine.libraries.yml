@@ -15,7 +15,6 @@ global_styles:
 global_scripts:
   version: 0.1
   js:
-    dist/js/manifest.js: { }
     dist/js/scripts.js: { }
   dependencies:
     - core/jquery
