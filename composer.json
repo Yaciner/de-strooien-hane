@@ -159,6 +159,9 @@
             "drupal/mimemail": {
                 "Seeing errors when sending a mail with files attached as file contents": "https://www.drupal.org/files/issues/2023-03-24/mimemail_attachment_errors-2904611-55.patch",
                 "Return path #3089331": "patches/mimemail-return-path.patch"
+            },
+            "drupal/eu_cookie_compliance": {
+                "Elements with role='dialog' or role='alertdialog' do not have accessible names": "https://www.drupal.org/files/issues/2024-04-03/eu_cookie_compliance-dialog_accessibility-3379830-4-D9.patch"
             }
         }
     }
