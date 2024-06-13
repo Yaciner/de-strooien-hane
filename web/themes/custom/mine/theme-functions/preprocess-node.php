@@ -20,5 +20,4 @@ function mine_preprocess_node__brand_item__teaser(&$variables) {
   else {
     $variables['url'] = FALSE;
   }
-
 }

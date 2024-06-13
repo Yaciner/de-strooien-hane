@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\node\Entity\Node;
+
 function mine_preprocess_html(&$variables) {
   $path = \Drupal::service('extension.list.theme')->getPath('mine');
   $themePath = '/' . $path;
@@ -31,6 +33,10 @@ function mine_preprocess_html(&$variables) {
   $variables['attributes']['class'][] = ($node->field_paragraphs->entity->type->target_id ?? '') !== 'quickmenu' ? NULL : 'has-quickmenu';
   $variables['attributes']['class'][] = ($node->field_center_title->value ?? '') === '1' ? 'centered-title' : NULL;
 
+  $gss = Node::load(31);
+  if(!empty($gss->field_notification->value)) {
+    $variables['attributes']['class'][] = 'bar-enabled';
+  }
 
   // Taxonomy
   if(!empty($pathArgs[1] && !empty($pathArgs[2])) && !empty($pathArgs[3]) && ($pathArgs[1] == 'taxonomy') && (is_numeric($pathArgs[3]))) {

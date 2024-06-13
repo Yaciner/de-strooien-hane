@@ -35,7 +35,7 @@ $notification-bar-height: 2.5rem;
   #block-mine-page-title {
     text-align: center;
   }
-}
+} 
 
 .region-header {
   &.has-notification {
@@ -46,13 +46,41 @@ $notification-bar-height: 2.5rem;
       z-index: 10;
       top: 0;
       left: 0;
-      background-color: $primary;
+      background-color: $gold;
       color: $white;
       width: 100%;
       height: $notification-bar-height;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: rem(5) rem(40)
     }
+
+    @include mq(m) {
+      padding-top: calc($notification-bar-height + 2.5rem);
+
+      .field--name-field-notification {
+        height: calc($notification-bar-height + 1.5rem);
+        text-align: center;
+      }
+    }
+  }
+}
+
+.bar-enabled {
+  .region-off-canvas {
+    .mm-branding {
+      padding-top: calc($notification-bar-height + 1rem);
+
+      @include mq(m) {
+        padding-top: calc($notification-bar-height + 2.5rem);
+      }
+    }
+  }
+
+  &.no-hero {
+   .layout-container {
+    padding-top: rem(200);
+   } 
   }
 }
