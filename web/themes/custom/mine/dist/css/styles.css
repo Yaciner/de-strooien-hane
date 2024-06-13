@@ -4021,6 +4021,7 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   align-items: center;
   justify-content: center;
   padding: 0.3125rem 2.5rem;
+  font-size: 0.9375rem;
 }
 @media all and (max-width: 767px) {
   .region-header.has-notification {
@@ -4029,6 +4030,8 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   .region-header.has-notification .field--name-field-notification {
     height: 4rem;
     text-align: center;
+    padding: 0.3125rem 1.25rem;
+    font-size: 0.8125rem;
   }
 }
 
