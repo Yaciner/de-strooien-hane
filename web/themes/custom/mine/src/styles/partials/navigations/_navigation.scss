@@ -163,7 +163,8 @@ body:not(.logged-in).has-hero {
 
   @include mq(m) {
     bottom: .5rem;
-    right: .5rem;
+    right: 50%;
+    translate: 50% 0;
 
     .menu__list {
       .menu__item {

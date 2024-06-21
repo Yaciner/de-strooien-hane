@@ -1,0 +1,20 @@
+uuid: fa135270-6be4-449c-84ad-36ca9629c270
+langcode: nl
+status: true
+dependencies:
+  module:
+    - mine_dev
+  theme:
+    - mine
+id: mine_minedevbacktotop
+theme: mine
+region: fixed
+weight: 0
+provider: null
+plugin: mine_dev_back_to_top
+settings:
+  id: mine_dev_back_to_top
+  label: 'Mine DEV: Back to top'
+  label_display: '0'
+  provider: mine_dev
+visibility: {  }

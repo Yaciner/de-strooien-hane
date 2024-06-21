@@ -31,6 +31,45 @@
 
 /***/ }),
 
+/***/ "./src/scripts/back-to-top.js":
+/*!************************************!*\
+  !*** ./src/scripts/back-to-top.js ***!
+  \************************************/
+/***/ (function() {
+
+(function ($, Drupal) {
+  'use strict';
+
+  Drupal.behaviors.back_to_top = {
+    attach: function attach(context, settings) {
+      var backToTop = function backToTop() {
+        if ($(window).scrollTop() > 1000) {
+          $('.back-to-top').css('opacity', '1');
+          $('.back-to-top').fadeIn();
+        } else {
+          $('.back-to-top').fadeOut();
+        }
+      };
+      backToTop();
+      $(once('once', '.back-to-top')).on('click', function () {
+        $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function () {
+          $('html, body').stop();
+        });
+        $('html,body').animate({
+          scrollTop: 0
+        }, 350, 'linear', function () {
+          $("html, body").unbind("scroll mousedown DOMMouseScroll mousewheel keyup");
+        });
+      });
+      $(window).scroll(function () {
+        backToTop();
+      });
+    }
+  };
+})(jQuery, Drupal);
+
+/***/ }),
+
 /***/ "./src/scripts/brands.js":
 /*!*******************************!*\
   !*** ./src/scripts/brands.js ***!
@@ -471,6 +510,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var split_type__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! split-type */ "./node_modules/split-type/dist/index.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _back_to_top__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./back-to-top */ "./src/scripts/back-to-top.js");
+/* harmony import */ var _back_to_top__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_back_to_top__WEBPACK_IMPORTED_MODULE_13__);
+
 
 
 

@@ -11,6 +11,7 @@ import "./masonry";
 import "./custom_animations";
 import SplitType from "split-type";
 import AOS from "aos";
+import './back-to-top';
 
 (function ($, Drupal) {
   "use strict";
