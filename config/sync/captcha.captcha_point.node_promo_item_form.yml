@@ -1,0 +1,7 @@
+uuid: a4fcc3c0-582f-4654-b7a1-334cad724fc0
+langcode: en
+status: false
+dependencies: {  }
+formId: node_promo_item_form
+captchaType: default
+label: node_promo_item_form

@@ -1,0 +1,7 @@
+uuid: ab7eb890-140f-4d6b-964b-4fb59d0e75c2
+langcode: en
+status: false
+dependencies: {  }
+formId: node_social_post_form
+captchaType: default
+label: node_social_post_form

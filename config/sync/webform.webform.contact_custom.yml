@@ -15,7 +15,7 @@ template: false
 archive: false
 id: contact_custom
 title: Contact
-description: 'Basic email contact webform.'
+description: '<p>Basic email contact webform.</p>'
 categories: {  }
 elements: |-
   flexbox:
@@ -51,7 +51,7 @@ elements: |-
     '#test': 'Please ignore this email.'
   ik_verklaar_op_de_hoogte_te_zijn_van_en_akkoord_te_gaan_met_het_:
     '#type': checkbox
-    '#title': 'Ik verklaar op de hoogte te zijn van en akkoord te gaan met het <a target="_blank" href="/nl/node/5">privacybeleid</a> van Juwelier Coens'
+    '#title': 'Ik verklaar op de hoogte te zijn van en akkoord te gaan met het <a target="_blank" href="/node/5">privacybeleid</a> van Juwelier Coens'
     '#required': true
   actions:
     '#type': webform_actions
@@ -60,7 +60,7 @@ elements: |-
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
   ajax_progress_type: ''
   ajax_effect: ''
@@ -304,13 +304,14 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      reply_to: ''
+      reply_to: '[webform_submission:values:email:raw]'
       return_path: ''
       sender_mail: ''
       sender_name: ''
       subject: 'Juwelier Coens - Contact inzending'
-      body: _default
-      excluded_elements: {  }
+      body: '<p>[webform_submission:values]</p>'
+      excluded_elements:
+        ik_verklaar_op_de_hoogte_te_zijn_van_en_akkoord_te_gaan_met_het_: ik_verklaar_op_de_hoogte_te_zijn_van_en_akkoord_te_gaan_met_het_
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false

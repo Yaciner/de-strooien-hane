@@ -1,0 +1,8 @@
+uuid: 9c3c0ebf-0a64-4cb2-8c30-1087a814b478
+langcode: en
+status: true
+dependencies: {  }
+id: action
+label: Action
+threshold: 0.5
+challenge: default

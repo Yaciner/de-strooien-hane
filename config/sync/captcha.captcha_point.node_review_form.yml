@@ -1,0 +1,7 @@
+uuid: 22c7fe78-1835-4b39-9b14-61899627d791
+langcode: en
+status: false
+dependencies: {  }
+formId: node_review_form
+captchaType: default
+label: node_review_form
