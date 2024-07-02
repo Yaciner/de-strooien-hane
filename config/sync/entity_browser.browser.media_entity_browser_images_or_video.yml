@@ -5,6 +5,7 @@ dependencies:
   config:
     - media.type.image
     - media.type.remote_video
+    - media.type.video
     - views.view.media_entity_browser
   module:
     - dropzonejs_eb_widget
@@ -26,7 +27,7 @@ widgets:
   e2d4cff9-9802-4fd5-884b-51345071020a:
     id: dropzonejs_media_entity_inline_entity_form
     uuid: e2d4cff9-9802-4fd5-884b-51345071020a
-    label: 'Add video'
+    label: 'Add remote video'
     weight: -7
     settings:
       submit_text: 'Select video'
@@ -55,7 +56,7 @@ widgets:
   7e37b662-1f33-4217-8f2e-8e94bef038e3:
     id: view
     uuid: 7e37b662-1f33-4217-8f2e-8e94bef038e3
-    label: 'Select existing video'
+    label: 'Select existing remote video'
     weight: -6
     settings:
       submit_text: 'Select video'
@@ -81,3 +82,32 @@ widgets:
       thumbnail_method: contain
       media_type: image
       form_mode: default
+  b53f1753-45f3-48d2-a837-ab9249fc9ef5:
+    id: dropzonejs_media_entity_inline_entity_form
+    uuid: b53f1753-45f3-48d2-a837-ab9249fc9ef5
+    label: 'Add video'
+    weight: 5
+    settings:
+      submit_text: 'Select video'
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop your thumbnail to proceed'
+      max_filesize: 100M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: 1.0
+      resize_method: contain
+      thumbnail_method: contain
+      media_type: video
+      form_mode: default
+  cf6f0a27-e752-4114-886a-2365cba931bd:
+    id: view
+    uuid: cf6f0a27-e752-4114-886a-2365cba931bd
+    label: 'Select existing video'
+    weight: 6
+    settings:
+      submit_text: 'Select video'
+      auto_select: false
+      view: media_entity_browser
+      view_display: entity_browser_2

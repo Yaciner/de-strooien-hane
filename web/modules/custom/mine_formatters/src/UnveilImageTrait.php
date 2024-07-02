@@ -50,7 +50,7 @@ trait UnveilImageTrait {
       }
 
       // If media is a video, make #url a link to the video with lightbox.
-      if ($this->isVideo($media_items[$delta])) {
+      if ($this->isRemoteVideo($media_items[$delta])) {
         $video_id = $media_items[$delta]->field_video_id->value ?? NULL;
         $service = $media_items[$delta]->field_video_service->value ?? NULL;
         $behavior = $media_items[$delta]->field_video_behavior->value ?? NULL;
@@ -142,6 +142,7 @@ trait UnveilImageTrait {
           }
         }
       }
+      
 
       // Fancybox gallery
       if ($this->isLightBox($items->getEntity()) && isset($elements[$delta]['#url'])) {
@@ -149,8 +150,25 @@ trait UnveilImageTrait {
         $url_options['attributes']['data-fancybox'] = 'gallery-' . $items->getEntity()->id();
         $elements[$delta]['#url']->setOptions($url_options);
       }
-    }
 
+      if ($this->isVideo($media_items[$delta])) {
+        // dump($elements[$delta]);die;
+        $file_url = $this->getFileUrl($media_items[$delta]->field_media_video_file->entity);
+        $elements[$delta] = [
+          '#theme' => 'file_video',
+          '#attributes' => [
+            'controls' => FALSE,
+            'muted' => 'muted',
+            'autoplay' => 'autoplay',
+            'playsinline' => 'playsinline',
+            'loop' => 'loop',
+            'data-once' => 'data-once',
+            'preload' => 'metadata',
+            'src' => $file_url,
+          ],
+        ];
+      }
+    }
     return $elements;
   }
 
@@ -170,9 +188,15 @@ trait UnveilImageTrait {
     return $files ?? [];
   }
 
-  protected function isVideo(MediaInterface $media) {
+  protected function isRemoteVideo(MediaInterface $media) {
     return !empty($media->field_video_service->value) && !empty($media->field_video_id->value);
   }
+
+
+  protected function isVideo(MediaInterface $media) {
+    return !empty($media->field_media_video_file->entity);
+  }
+
 
   protected function getVideoUrl(MediaInterface $media) {
     $service = $media->field_video_service->value ?? NULL;
