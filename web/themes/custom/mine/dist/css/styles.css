@@ -4246,22 +4246,40 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
   background-color: #000000;
   color: #ffffff;
   padding: 0.4rem 0.6rem;
-  z-index: 2;
+  z-index: 4;
 }
 .node--type-promo-item.node--view-mode-default .field--name-field-media:after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 3;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+}
+.node--type-promo-item.node--view-mode-default .field--name-field-media .field__item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.node--type-promo-item.node--view-mode-default .field--name-field-media .field__item img {
+  scale: 1;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.node--type-promo-item.node--view-mode-default .field--name-field-media .field__item:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  filter: blur(0px);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .node--type-promo-item.node--view-mode-default .node--teaser__content {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 1rem;
-  z-index: 2;
+  z-index: 4;
 }
 .node--type-promo-item.node--view-mode-default .node--teaser__content h3, .node--type-promo-item.node--view-mode-default .node--teaser__content .paragraph--type--text-media-slider .paragraph--type--text-media-item.slick-active article .field--name-field-title, .paragraph--type--text-media-slider .paragraph--type--text-media-item.slick-active article .node--type-promo-item.node--view-mode-default .node--teaser__content .field--name-field-title {
   font-size: clamp(1.25rem, 0.56vw + 1.08rem, 1.5rem);
@@ -4269,6 +4287,13 @@ body:not(.logged-in).has-hero .main-menu > .menu__list > .menu__item.menu__item-
 }
 .node--type-promo-item.node--view-mode-default .node--teaser__content .field {
   color: #ffffff;
+}
+.node--type-promo-item.node--view-mode-default:hover .field--name-field-media .field__item:not(:first-child) {
+  opacity: 0;
+  filter: blur(20px);
+}
+.node--type-promo-item.node--view-mode-default:hover .field--name-field-media .field__item img {
+  scale: 1.05;
 }
 
 .node--type-review.node--view-mode-teaser {
@@ -6379,6 +6404,7 @@ body.loaded .region-header .container, body.loaded .region-header .paragraph--ty
   list-style: none;
   display: flex;
   gap: 0.4rem;
+  flex-wrap: wrap;
 }
 .view-promo .form-select.bef-links ul li a, .view-promo select.bef-links ul li a {
   position: relative;

@@ -9,23 +9,29 @@ import SplitType from "split-type";
       let typeSplitHero;
 
       // Simple parallax next collection
-      var nextCollection = document.querySelector(".node--view-mode-next-collection .field--name-field-next-collection");
+      var nextCollection = document.querySelector(
+        ".node--view-mode-next-collection .field--name-field-next-collection"
+      );
       new simpleParallax(nextCollection, {
         delay: 0.6,
         scale: 1.1,
-        orientation: 'right',
+        orientation: "right",
         transition: "cubic-bezier(0,0,0,1)",
       });
 
-
       // Simple parallax hero
-      var hero = document.querySelector(".paragraph--type--hero .field--name-field-media");
+      var hero = document.querySelector(
+        ".paragraph--type--hero .field--name-field-media"
+      );
       new simpleParallax(hero, {
         delay: 0.6,
         transition: "cubic-bezier(0,0,0,1)",
       });
 
-      const heroTargets = [".node-type-homepage .paragraph--type--hero h1", ".node-type-homepage .paragraph--type--hero .field--name-field-text *:not(a)"];
+      const heroTargets = [
+        ".node-type-homepage .paragraph--type--hero h1",
+        ".node-type-homepage .paragraph--type--hero .field--name-field-text *:not(a)",
+      ];
 
       function splitHero() {
         heroTargets.forEach((target) => {
@@ -43,13 +49,13 @@ import SplitType from "split-type";
       }
 
       splitHero();
-      $('.paragraph--type--hero a.btn--video').addClass('active');
-      
+      $(".paragraph--type--hero a.btn--video").addClass("active");
+
       const tl = gsap.timeline();
       tl.from(".line .word", 1, {
         y: 300,
         ease: "ease-in",
-        delay: .5,
+        delay: 0.5,
         stagger: {
           amount: 0.6,
         },
@@ -87,6 +93,10 @@ import SplitType from "split-type";
       let typeSplitQuote;
 
       function runSplit() {
+        // check if quoteTargets exist
+        if (!document.querySelector(quoteTargets)) {
+          return;
+        }
         quoteTargets.forEach((target) => {
           typeSplitQuote = new SplitType(target, {
             types: "lines, words",
@@ -97,6 +107,10 @@ import SplitType from "split-type";
       }
 
       function createAnimation() {
+        // check if quoteTargets exist
+        if (!document.querySelector(quoteTargets)) {
+          return;
+        }
         quoteTargets.forEach((target) => {
           let allMasks = $(target)
             .find(".word")

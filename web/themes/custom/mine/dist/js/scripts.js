@@ -141,7 +141,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       new (simple_parallax_js__WEBPACK_IMPORTED_MODULE_0___default())(nextCollection, {
         delay: 0.6,
         scale: 1.1,
-        orientation: 'right',
+        orientation: "right",
         transition: "cubic-bezier(0,0,0,1)"
       });
 
@@ -167,12 +167,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         });
       }
       splitHero();
-      $('.paragraph--type--hero a.btn--video').addClass('active');
+      $(".paragraph--type--hero a.btn--video").addClass("active");
       var tl = gsap.timeline();
       tl.from(".line .word", 1, {
         y: 300,
         ease: "ease-in",
-        delay: .5,
+        delay: 0.5,
         stagger: {
           amount: 0.6
         }
@@ -206,6 +206,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var quoteTargets = [".field blockquote"];
       var typeSplitQuote;
       function runSplit() {
+        // check if quoteTargets exist
+        if (!document.querySelector(quoteTargets)) {
+          return;
+        }
         quoteTargets.forEach(function (target) {
           typeSplitQuote = new split_type__WEBPACK_IMPORTED_MODULE_1__["default"](target, {
             types: "lines, words"
@@ -215,6 +219,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         createAnimation();
       }
       function createAnimation() {
+        // check if quoteTargets exist
+        if (!document.querySelector(quoteTargets)) {
+          return;
+        }
         quoteTargets.forEach(function (target) {
           var allMasks = $(target).find(".word").map(function () {
             return $(this).find(".line-mask");

@@ -9,13 +9,20 @@
   ]
 %}
 
-{% set body = content|without('field_paragraphs')|render %}
-<article{{ attributes.addClass(classes) }}>
-  {{ content.field_discount }}
-  {{ content.field_media }}
+{% set media_item = content.field_media['#items'][0] %}
+{% set image_field = media_item.entity.field_media_image %}
+{% set image_url = file_url(image_field.entity.uri.value) %}
 
-  <main{{ content_attributes.addClass('node--teaser__content') }}>
-    <h3>{{ label }}</h3>
-    {{ content|without('field_media', 'field_discount') }}
-  </main>
-</article>
+{% set body = content|without('field_paragraphs')|render %}
+<a{{attributes.addClass(classes)}} href="{{ image_url }}" data-fancybox="gallery-{{ node.id }}">
+	{{ content.field_discount }}
+
+	<div class="field field--name-field-media">
+    {{ content.field_media }}
+	</div>
+
+	<main{{content_attributes.addClass('node--teaser__content')}}>
+		<h3>{{ label }}</h3>
+		{{ content|without('field_media', 'field_discount') }}
+	</main>
+</a>

@@ -110,4 +110,4 @@ widgets:
       submit_text: 'Select video'
       auto_select: false
       view: media_entity_browser
-      view_display: entity_browser_2
+      view_display: entity_browser_1

@@ -25,6 +25,7 @@
       @include reset-list();
       display: flex;
       gap: $small-gutter;
+      flex-wrap: wrap;
 
       li {
         a {

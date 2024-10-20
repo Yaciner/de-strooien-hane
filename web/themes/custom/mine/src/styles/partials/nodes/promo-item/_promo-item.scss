@@ -9,7 +9,7 @@
       background-color: $primary;
       color: $white;
       padding: .4rem .6rem;
-      z-index: 2;
+      z-index: 4;
     }
 
     .field--name-field-media {
@@ -17,9 +17,30 @@
         content: '';
         position: absolute;
         inset: 0;
+        z-index: 3;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, .3);
+      }
+
+      .field__item {
+        position: relative;
+        display: block;
+        overflow: hidden;
+
+        img {
+          scale: 1;
+          transition: all .3s $cubic-bezier;
+        }
+        
+        &:not(:first-child) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          filter: blur(0px);
+          transition: all .3s $cubic-bezier;
+        }
       }
     }
 
@@ -28,7 +49,7 @@
       bottom: 0;
       left: 0;
       padding: 1rem;
-      z-index: 2;
+      z-index: 4;
 
       h3 {
         font-size: fluid(20px, 24px);
@@ -37,6 +58,21 @@
 
       .field {
         color: $white;
+      }
+    }
+
+    &:hover {
+      .field--name-field-media {
+        .field__item {
+          &:not(:first-child) {
+            opacity: 0;
+            filter: blur(20px);
+          }
+
+          img {
+            scale: 1.05;
+          }
+        }
       }
     }
   }
