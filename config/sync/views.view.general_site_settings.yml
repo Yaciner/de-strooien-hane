@@ -774,6 +774,13 @@ display:
               enable: false
               weight: 0
               map_center_id: client_location
+            fit_bounds:
+              enable: true
+              weight: 0
+              settings:
+                reset_zoom: false
+                min_zoom: null
+              map_center_id: fit_bounds
             fixed_boundaries:
               enable: false
               weight: 0
@@ -783,13 +790,12 @@ display:
                 north: ''
                 east: ''
               map_center_id: fixed_boundaries
-            fit_bounds:
-              enable: true
+            first_row:
+              enable: false
               weight: 0
               settings:
-                reset_zoom: false
-                min_zoom: null
-              map_center_id: fit_bounds
+                location_option_id: first_row
+              map_center_id: location_plugins
             fixed_value:
               enable: false
               weight: 0
@@ -797,12 +803,6 @@ display:
                 location_option_id: fixed_value
                 latitude: null
                 longitude: null
-              map_center_id: location_plugins
-            first_row:
-              enable: false
-              weight: 0
-              settings:
-                location_option_id: first_row
               map_center_id: location_plugins
             ipstack:
               enable: false
@@ -1017,7 +1017,7 @@ display:
                   disable_auto_pan: true
                   info_auto_display: false
                   max_width: null
-                enabled: true
+                enabled: false
               marker_label:
                 weight: 0
                 settings:
