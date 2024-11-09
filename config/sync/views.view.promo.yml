@@ -9,6 +9,7 @@ dependencies:
     - better_exposed_filters
     - node
     - taxonomy
+    - views_infinite_scroll
 id: promo
 label: Promo
 module: views
@@ -73,7 +74,7 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: infinite_scroll
         options:
           offset: 0
           items_per_page: 20
@@ -90,6 +91,10 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: true
+            initially_load_all_pages: false
       exposed_form:
         type: bef
         options:

@@ -63,6 +63,7 @@
         "drupal/stage_file_proxy": "^2.1",
         "drupal/svg_image": "^3.0",
         "drupal/twig_tweak": "^3.3",
+        "drupal/views_infinite_scroll": "^2.0",
         "drupal/webform": "6.2.0-rc2",
         "drupal/webform_xlsx_export": "^1.2",
         "drupal/weight": "^3.4",
