@@ -20,6 +20,14 @@
     background-color: $primary;
     color: $white;
   }
+
+  &.btn--video {
+    &:hover, &:focus {
+      &:before {
+        background-color: white;
+      }
+    }
+  }
 }
 
 .btn.btn--arrow {
@@ -71,21 +79,22 @@
   color: $black;
 
   position: relative;
-  display: inline-block;
+  display: inline-flex !important;
   padding: .7rem 1.6rem;
   text-decoration: none;
   border: 1px solid $white;
   border-radius: $border-radius;
   text-align: unset;
-
+  
   @include iconize($video, 'before');
+  padding-left: 3.4rem;
 
   &:after {
     display: none;
   }
 
   &:before {
-    left: .6rem;
+    left: 1.2rem;
   }
 }
 
@@ -95,7 +104,7 @@
 
   @include mq(m) {
     display: inline-block;
-    // margin-top: .5rem;
+
     margin-left: 0;
   }
 }

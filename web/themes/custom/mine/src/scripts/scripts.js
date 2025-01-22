@@ -12,6 +12,8 @@ import "./custom_animations";
 import SplitType from "split-type";
 import AOS from "aos";
 import './back-to-top';
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 
 (function ($, Drupal) {
   "use strict";
@@ -19,6 +21,8 @@ import './back-to-top';
 
   Drupal.behaviors.scripts = {
     attach: function (context, settings) {
+      const loggedIn = $('body').hasClass('logged-in');
+
       // AOS
       AOS.init({
         once: true,
@@ -34,6 +38,13 @@ import './back-to-top';
           });
         }
       );
+
+      // Lenis
+      if(!loggedIn) {
+        const lenis = new Lenis({
+          autoRaf: true,
+        });
+      }
 
       // Headroom
       let header = document.querySelector(".region-header");

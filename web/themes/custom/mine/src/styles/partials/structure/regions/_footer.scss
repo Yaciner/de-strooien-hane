@@ -88,6 +88,10 @@
 
   @include mq(m) {
     padding: $p_vertical_gutter_mobile 0;
+
+    .views-element-container {
+      width: 100%;
+    }
   }
 }
 

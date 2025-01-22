@@ -29,8 +29,7 @@ import SplitType from "split-type";
       });
 
       const heroTargets = [
-        ".node-type-homepage .paragraph--type--hero h1",
-        ".node-type-homepage .paragraph--type--hero .field--name-field-text *:not(a)",
+        ".node-type-homepage .paragraph--type--hero h1"
       ];
 
       function splitHero() {

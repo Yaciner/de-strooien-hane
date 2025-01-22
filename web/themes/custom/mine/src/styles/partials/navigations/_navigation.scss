@@ -93,9 +93,6 @@ body:not(.logged-in).has-hero {
     }
   }
 
-  .main-menu > .menu__list > .menu__item.menu__item--expanded {
-    
-  }
 
   .main-menu > .menu__list > .menu__item.menu__item--expanded > .menu__list{
     background-color: $white;
@@ -112,7 +109,7 @@ body:not(.logged-in).has-hero {
     @include reset-list;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
     
     .menu__item {
       a, span {

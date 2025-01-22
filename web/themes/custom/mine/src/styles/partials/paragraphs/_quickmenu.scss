@@ -48,19 +48,20 @@
     }
   }
 
-  @include mq(m) {
+  @include mq(s) {
     display: block;
     margin-top: 4rem;
 
     .field--name-field-quickmenu-links {
-      display: block;
+      display: flex;
+      gap: $small-gutter;
       margin: 0;
-      padding: 0 4rem;
-      
+      // padding: 0 4rem;
+      flex-direction: column;
 
       .paragraph--type--quickmenu-link {
         margin: 0;
-        // padding: 0;
+        width: 100%;
       }
     }
 
