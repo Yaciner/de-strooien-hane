@@ -9,11 +9,8 @@ import "./brands";
 import "aos/dist/aos.css";
 import "./masonry";
 import "./custom_animations";
-import SplitType from "split-type";
 import AOS from "aos";
-import './back-to-top';
-import Lenis from "lenis";
-import "lenis/dist/lenis.css";
+import "./back-to-top";
 
 (function ($, Drupal) {
   "use strict";
@@ -21,7 +18,7 @@ import "lenis/dist/lenis.css";
 
   Drupal.behaviors.scripts = {
     attach: function (context, settings) {
-      const loggedIn = $('body').hasClass('logged-in');
+      const loggedIn = $("body").hasClass("logged-in");
 
       // AOS
       AOS.init({
@@ -39,13 +36,6 @@ import "lenis/dist/lenis.css";
         }
       );
 
-      // Lenis
-      if(!loggedIn) {
-        const lenis = new Lenis({
-          autoRaf: true,
-        });
-      }
-
       // Headroom
       let header = document.querySelector(".region-header");
       let headroom = new Headroom(header);
@@ -55,24 +45,26 @@ import "lenis/dist/lenis.css";
         $("body").toggleClass("mm-open");
         e.preventDefault();
       });
-      
+
       if (window.matchMedia("(max-width: 767px)").matches) {
-        $(once('slick', '.field--name-field-quickmenu-links')).each(function () {
-          $(this).slick({
-            autoplay: true,
-            autoplaySpeed: 2000,
-            infinite: true,
-            fade: true,
-            speed: 300,
-            arrows: true,
-            slidesToShow: 1,
-            dots: false,
-            centerMode: false,
-            prevArrow: '<div class="slick-prev"></div>',
-            nextArrow: '<div class="slick-next"></div>',
-            lazyLoad: 'progressive',
-          });
-        });
+        $(once("slick", ".field--name-field-quickmenu-links")).each(
+          function () {
+            $(this).slick({
+              autoplay: true,
+              autoplaySpeed: 2000,
+              infinite: true,
+              fade: true,
+              speed: 300,
+              arrows: true,
+              slidesToShow: 1,
+              dots: false,
+              centerMode: false,
+              prevArrow: '<div class="slick-prev"></div>',
+              nextArrow: '<div class="slick-next"></div>',
+              lazyLoad: "progressive",
+            });
+          }
+        );
       }
     },
   };
