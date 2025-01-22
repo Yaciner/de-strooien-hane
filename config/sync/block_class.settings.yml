@@ -3,7 +3,20 @@ _core:
 maxlength_block_class_field: 255
 field_type: multiple_textfields
 default_case: standard
-block_classes_stored: '{"main-menu":"main-menu","branding":"branding","footer-boilerplate":"footer-boilerplate","footer-contact":"footer-contact","footer-socials":"footer-socials","footer-opening-hours":"footer-opening-hours","footer-main-menu":"footer-main-menu","bottom-menu":"bottom-menu","gss-google-maps":"gss-google-maps","fixed-menu":"fixed-menu","mm-main-menu":"mm-main-menu","mm-branding":"mm-branding","notification-bar":"notification-bar"}'
+block_classes_stored:
+  - main-menu
+  - branding
+  - footer-boilerplate
+  - footer-contact
+  - footer-socials
+  - footer-opening-hours
+  - footer-main-menu
+  - bottom-menu
+  - gss-google-maps
+  - fixed-menu
+  - mm-main-menu
+  - mm-branding
+  - notification-bar
 enable_attributes: true
 enable_auto_complete: true
 qty_classes_per_block: 10
@@ -15,7 +28,7 @@ weight_attributes: 0
 weight_class: 0
 weight_id: 0
 filter_html_clean_css_identifier: ''
-maxlength_attributes: 0
+maxlength_attributes: 255
 maxlength_id: 255
 attribute_keys_stored: '[]'
 attribute_value_stored: '[]'
