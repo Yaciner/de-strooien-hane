@@ -1,8 +1,0 @@
-uuid: 8843a781-bd49-4f03-a1cb-48bf4836f2e2
-langcode: nl
-status: true
-dependencies: {  }
-id: fixed-menu
-label: 'Fixed menu'
-description: ''
-locked: false

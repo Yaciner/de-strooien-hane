@@ -15,8 +15,6 @@ dependencies:
     - node.type.social_post
     - node.type.system_page
     - taxonomy.vocabulary.icons
-    - taxonomy.vocabulary.promo_collections
-    - taxonomy.vocabulary.tags
   module:
     - dropzonejs
     - entity_browser
@@ -77,8 +75,6 @@ permissions:
   - 'create social_post content'
   - 'create system_page content'
   - 'create terms in icons'
-  - 'create terms in promo_collections'
-  - 'create terms in tags'
   - 'delete any article content'
   - 'delete any call_to_action content'
   - 'delete any collection content'
@@ -121,8 +117,6 @@ permissions:
   - 'delete paragraph content timeline'
   - 'delete paragraph content timeline_entry'
   - 'delete terms in icons'
-  - 'delete terms in promo_collections'
-  - 'delete terms in tags'
   - 'display eu cookie compliance popup'
   - 'dropzone upload files'
   - 'edit any article content'
@@ -148,8 +142,6 @@ permissions:
   - 'edit own social_post content'
   - 'edit own system_page content'
   - 'edit terms in icons'
-  - 'edit terms in promo_collections'
-  - 'edit terms in tags'
   - 'geysir manage paragraphs from front-end'
   - 'revert article revisions'
   - 'revert call_to_action revisions'

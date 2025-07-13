@@ -2,8 +2,7 @@ fonts:
   version: VERSION
   css:
     theme:
-      fonts/FreightBigPro/style.css: {}
-      fonts/Manrope/style.css: {}
+      'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap': { type: external }
 
 global_styles:
   version: 0.1

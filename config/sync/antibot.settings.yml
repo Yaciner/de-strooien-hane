@@ -7,4 +7,6 @@ form_ids:
   - user_register_form
   - 'contact_message_*'
   - contact
+excluded_form_ids:
+  - ''
 show_form_ids: false
