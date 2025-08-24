@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.hero.field_html_title
     - field.field.paragraph.hero.field_media
     - field.field.paragraph.hero.field_style
+    - field.field.paragraph.hero.field_subtitle
     - field.field.paragraph.hero.field_text
     - paragraphs.paragraphs_type.hero
   module:
@@ -34,6 +35,7 @@ third_party_settings:
         width_breakpoint: 640
     group_text:
       children:
+        - field_subtitle
         - field_html_title
         - field_text
       label: Text
@@ -100,7 +102,7 @@ mode: default
 content:
   field_html_title:
     type: text_textarea
-    weight: 9
+    weight: 13
     region: content
     settings:
       rows: 5
@@ -127,9 +129,17 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_text:
     type: text_textarea
-    weight: 10
+    weight: 14
     region: content
     settings:
       rows: 5

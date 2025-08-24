@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.hero.field_html_title
     - field.field.paragraph.hero.field_media
     - field.field.paragraph.hero.field_style
+    - field.field.paragraph.hero.field_subtitle
     - field.field.paragraph.hero.field_text
     - image.style.pg_hero_large
     - paragraphs.paragraphs_type.hero
@@ -23,7 +24,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_media:
     type: unveil_image
@@ -36,6 +37,14 @@ content:
         attribute: lazy
       image_only: 0
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 0
     region: content
   field_text:
@@ -43,7 +52,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden:
   field_style: true

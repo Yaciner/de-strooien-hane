@@ -4,96 +4,19 @@
 //------------------------------------------------------------------------------
 
 .region-footer {
+  position: relative;
   background-color: $primary;
-  color: $white;
   padding: $p_vertical_gutter 0;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-
-    a {
-      color: $white;
-      text-decoration: none;
-
-      &:after, &:before {
-        background: $white;
-      }
-    }
-
-    .block-title {
-      position: relative;
-      font-size: rem(17);
-      color: $white;
-      padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
-      font-family: $system-font-family;
-
-      &:after {
-        content: '';
-        position: absolute;
-        width: 3rem;
-        height: rem(1);
-        background-color: $white;
-        left: 0;
-        bottom: 0;
-      }
-    }
-    
-    .footer-boilerplate {
-      width: rem(400);
-      padding-top: 6rem;
-      background-image: url(../svg/layout/logo--neg.svg);
-      background-repeat: no-repeat;
-      background-position: top left;
-
-      .view {
-        max-width: rem(400);
-      }
-    }
-
-    .footer-main-menu {
-      .menu__list {
-        @include reset-list();
-
-        a.btn {
-          padding: 0;
-        }
-      }
-    }
-
-    .footer-socials {
-      padding-right: 3rem;
-      .views-row {
-        display: flex;
-        gap: .5rem;
-        align-items: center;
-      }
-    }
-
-    @include mq(xl) {
-      flex-wrap: wrap;
-
-      .footer-boilerplate {
-        max-width: 100%;
-        width: 100%;
-
-        .view {
-          max-width: rem(500);
-        }
-      }
-    }
-  }
-
-  @include mq(m) {
-    padding: $p_vertical_gutter_mobile 0;
-
-    .views-element-container {
-      width: 100%;
-    }
+  .slogan {
+    position: absolute;
+    left: 0;
+    bottom: -5vw;
+    font-size: 14vw;
+    z-index: 1;
+    font-weight: bolder;
+    font-family: $heading;
+    line-height: 1;
+    color: $white;
   }
 }
-
-
-

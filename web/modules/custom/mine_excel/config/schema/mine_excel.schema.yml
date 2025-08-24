@@ -1,0 +1,22 @@
+mine_excel.block:
+  type: mapping
+  label: 'Excel Table Block settings'
+  mapping:
+    file_path:
+      type: string
+      label: 'Excel file path'
+    worksheet:
+      type: string
+      label: 'Worksheet name (leave blank for first)'
+    header_row:
+      type: integer
+      label: 'Header row number (0 for none)'
+    start_cell:
+      type: string
+      label: 'Start cell (e.g. A1)'
+    end_cell:
+      type: string
+      label: 'End cell (e.g. G100 or leave blank)'
+    trim_empty:
+      type: boolean
+      label: 'Trim empty trailing rows/cols'

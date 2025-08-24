@@ -16,8 +16,7 @@
 {% block content %}
   {% if site_logo %}
     <a href="{{ path('<front>') }}" rel="home">
-      <img width="240" height="100%" class="negative" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-      <img width="240" height="100%" class="positive" src="/themes/custom/mine/logo.svg" alt="{{ 'Home'|t }}" />
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
     </a>
   {% endif %}
   {% if site_name %}

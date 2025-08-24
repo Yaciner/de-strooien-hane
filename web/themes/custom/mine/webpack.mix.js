@@ -21,7 +21,7 @@ mix
   })
   .sourceMaps(true, 'source-map')
   .browserSync({
-    proxy: 'dsh.lndo.site',
+    proxy: 'strooienhane.lndo.site',
     files: ['dist/js/*.js', 'dist/css/*.css'],
     open: false,
   })

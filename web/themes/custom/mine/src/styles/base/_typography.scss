@@ -6,8 +6,8 @@
 h1 {
   margin-top: 0;
   color: $body;
-  font-size: fluid(36px, 80px);
-  font-weight: 700;
+  font-size: fluid(36px, 74px);
+  font-weight: 300;
   line-height: 1.2;
   margin-bottom: 1rem;
   font-family: $heading;
@@ -76,12 +76,6 @@ a {
   font-weight: 400;
 }
 
-.block-title {
-  position: relative;
-  display: inline-block;
-  @extend h2;
-}
-
 .phone, .mail {
   display: inline-block;
   position: relative;
@@ -97,81 +91,18 @@ a {
   @include iconize($mail, 'before');
 }
 
-.search-fail {
-  font-size: rem(30);
-  font-weight: bold;
-}
-
-.field {
-  blockquote {
-    font-size: fluid(36px, 38px);
-    font-weight: 900;
-    position: relative;
-    text-align: center;
-    padding-top: 5rem;
-
-    &.animate {
-      .word {
-        position: relative;
-      }
+.highlight {
+  position: relative;
+  z-index: 10;
   
-      .line-mask {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: white;
-        opacity: 0.8;
-        height: 100%;
-        width: 100%;
-        z-index: 2;
-      }
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0rem;
-      left: 50%;
-      translate: -50% 0;
-      mask-image: url(../svg/icons/quote.svg);
-      background-color: $primary;
-      width: 5rem;
-      aspect-ratio: 1/1;
-      mask-repeat: no-repeat;
-      mask-size: 100% auto;
-      opacity: .3;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: $secondary;
+    left: 1rem;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
   }
-}
-
-.pg-bg--primary {
-  .field {
-    blockquote {
-      &.animate {
-        .line-mask {
-          background-color: $primary;
-        }
-      }
-      &:before {
-        background-color: $white;
-      }   
-    }
-  }
-}
-
-.pg-bg--secondary {
-  .field {
-    blockquote {
-      &.animate {
-        .line-mask {
-          background-color: $secondary;
-        }
-      }
-    }
-  }
-}
-
-.word-wrapper {
-  display: inline-block;
-  overflow-y: hidden;
 }

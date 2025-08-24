@@ -15,7 +15,7 @@ third_party_settings:
 id: mine_mainnavigation
 theme: mine
 region: footer
-weight: -6
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

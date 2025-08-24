@@ -54,11 +54,11 @@ body {
   background: white;
 }
 
-body.no-hero {
-  .layout-container {
-    padding-top: $header-size;
-  }
-}
+// body.no-hero {
+//   .layout-container {
+//     padding-top: $header-size;
+//   }
+// }
 
 .off-canvas {}
 
@@ -66,7 +66,7 @@ body.no-hero {
 %inner {
   max-width: $container-m;
   margin: 0 auto;
-  padding: 0 rem(40);
+  padding: 0 $grid-gutter-width * 2;
 
   @include mq(s){
     padding: 0 rem(20);
@@ -114,81 +114,10 @@ body.logged-out {
   
   .headroom--pinned {
     transform: translateY(0%);
-    background-color: $white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-
-    .mm-toggle {
-      &:after {
-        background-color: $body;
-      }
-    }
-
-
-    .main-menu .menu__list .menu__item a:not(.btn):not(.submit-wrapper) {
-      color: $black;
-    }
-
-    .main-menu .menu__list .menu__item.menu__item--expanded {
-      &::after {
-        background-color: $primary;
-      }
-    }
-
-    .branding {
-      .positive {
-        opacity: 1;
-      }
-
-      .negative {
-        opacity: 0;
-      }
-    }
   }
   
   .headroom--unpinned {
     transform: translateY(-100%);
-  }
-
-  &.has-hero {
-    .headroom--pinned {
-      &.headroom--top {
-        background-color: transparent;
-        box-shadow: none;
-
-        .mm-toggle {
-          &:after {
-            background-color: $white;
-          }
-        }
-
-        .main-menu > .menu__list > .menu__item.menu__item--expanded > .menu__list{
-          a:not(.btn) {
-            color: $primary;
-          }
-        }
-
-        .main-menu .menu__list .menu__item.menu__item--expanded {
-          &::after {
-            background-color: $white;
-          }
-        }
-
-        
-
-        .main-menu .menu__list .menu__item a:not(.btn):not(.submit-wrapper) {
-          color: $white;
-        }
-
-        .branding {
-          .positive {
-            opacity: 0;
-          }
-
-          .negative {
-            opacity: 1;
-          }
-        }
-      }
-    }
   }
 }

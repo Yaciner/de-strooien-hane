@@ -73,6 +73,7 @@ module:
   metatag: 0
   mimemail: 0
   mine_dev: 0
+  mine_excel: 0
   mine_formatters: 0
   mine_paragraphs: 0
   mysql: 0

@@ -1,0 +1,5 @@
+name: 'Excel spreadsheet blocks'
+type: module
+description: 'Expose Excel sheets as Drupal blocks using PhpSpreadsheet'
+core_version_requirement: ^10
+package: Custom

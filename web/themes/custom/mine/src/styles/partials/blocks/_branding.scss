@@ -1,15 +1,5 @@
 .branding {
   position: relative;
-  width: rem(220);
-
-  .positive {
-    top: 0;
-    left: 0;
-    position: absolute;
-    opacity: 0;
-  }
-
-  @include mq(l) {
-    width: rem(160);
-  }
-}
+  width: rem(300);
+  margin-right: auto;
+} 

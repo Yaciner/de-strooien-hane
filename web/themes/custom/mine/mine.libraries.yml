@@ -2,7 +2,7 @@ fonts:
   version: VERSION
   css:
     theme:
-      'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap': { type: external }
+      'https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap': { type: external }
 
 global_styles:
   version: 0.1
@@ -43,38 +43,5 @@ fancybox:
       dist/js/libs/fancybox/jquery.fancybox.min.css: { minified: true }
   js:
     dist/js/libs/fancybox/jquery.fancybox.min.js: { minified: true }
-  dependencies:
-    - core/jquery
-
-masonry:
-  version: 4.2.2
-  js:
-    dist/js/libs/masonry/masonry.min.js: { minified: true }
-  dependencies:
-    - core/jquery
-
-preloader:
-  version: 1.x
-  css:
-    theme:
-      dist/css/preload.css: {}
-  js:
-    dist/js/preload.js: {}
-  dependencies:
-    - core/jquery
-
-greensock:
-  version: 2.0.1
-  js:
-    dist/js/libs/greensock/minified/gsap.min.js: { minified: true }
-    dist/js/libs/greensock/minified/ScrollTrigger.min.js: { minified: true }
-    dist/js/libs/greensock/minified/CSSRulePlugin.min.js: { minified: true }
-  dependencies:
-    - core/jquery
-
-waypoints:
-  version: 4.0.1
-  js:
-    dist/js/libs/waypoints/jquery.waypoints.min.js: {}
   dependencies:
     - core/jquery

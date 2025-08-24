@@ -1,4 +1,4 @@
-name: dsh
+name: strooienhane
 recipe: drupal8
 config:
   webroot: web
@@ -7,7 +7,7 @@ services:
   appserver:
     overrides:
       environment:
-        DRUSH_OPTIONS_URI: 'https://dsh.lndo.site'
+        DRUSH_OPTIONS_URI: 'https://strooienhane.lndo.site'
   mailhog:
     type: mailhog:v1.0.0
     portforward: true

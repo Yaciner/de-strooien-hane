@@ -7,18 +7,20 @@
   position: relative;
   z-index: 10;
   padding: 1.6rem 0;
+  background: $black;
 
   .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    gap: $grid-gutter-width;
 
     .mm-toggle {
       display: none;
       @include iconize($menu, 'after', $white);
-      width: 2.5rem;
+      width: 2rem;
       padding: 0;
-      height: 2.5rem;
+      height: 2rem;
 
       &:after {
         position: relative;
@@ -31,21 +33,5 @@
         display: block;
       }
     }
-  }
-}
-
-body.loading {
-  .region-header .container {
-    translate: 0% -100%;
-    opacity: 0;
-    transition: all 1s $cubic-bezier;
-    transition-delay: 1s;
-  }
-}
-
-body.loaded {
-  .region-header .container {
-    translate: 0% 0%;
-    opacity: 1;
   }
 }

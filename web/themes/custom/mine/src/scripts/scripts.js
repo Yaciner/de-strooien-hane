@@ -1,7 +1,4 @@
 import Headroom from "headroom.js";
-import "./image-slider";
-import "./text-image-slider";
-import "./fancybox";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
