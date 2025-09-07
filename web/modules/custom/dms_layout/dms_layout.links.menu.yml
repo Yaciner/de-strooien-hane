@@ -1,0 +1,5 @@
+dms_layout.collection:
+  title: Layouts
+  description: View all layouts
+  parent: dms_core.system
+  route_name: entity.layout.collection

@@ -1,0 +1,21 @@
+uuid: 05581369-8a82-4e75-8d0b-4331ac2b27a9
+langcode: nl
+status: true
+dependencies:
+  module:
+    - block_class
+    - dms_layout
+  theme:
+    - mine
+id: mine_footer
+theme: mine
+region: footer
+weight: 0
+provider: null
+plugin: 'layout:footer'
+settings:
+  id: 'layout:footer'
+  label: Footer
+  label_display: '0'
+  provider: dms_layout
+visibility: {  }

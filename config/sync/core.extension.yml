@@ -24,6 +24,7 @@ module:
   dblog: 0
   disable_language: 0
   dms_animations: 0
+  dms_layout: 0
   dropzonejs: 0
   dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
@@ -62,6 +63,7 @@ module:
   jquery_ui_slider: 0
   jquery_ui_touch_punch: 0
   language: 0
+  layout_discovery: 0
   link: 0
   linkit: 0
   mailsystem: 0
@@ -73,7 +75,6 @@ module:
   metatag: 0
   mimemail: 0
   mine_dev: 0
-  mine_excel: 0
   mine_formatters: 0
   mine_paragraphs: 0
   mysql: 0

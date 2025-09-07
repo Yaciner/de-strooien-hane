@@ -1,5 +1,9 @@
 .branding {
-  position: relative;
-  width: rem(300);
   margin-right: auto;
-} 
+
+  a {
+    position: relative;
+    display: block;
+    width: rem(300);
+  }
+}

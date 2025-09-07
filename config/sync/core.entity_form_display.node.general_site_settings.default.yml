@@ -29,7 +29,7 @@ third_party_settings:
       label: 'General site settings'
       region: content
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: tabs
       format_settings:
         classes: ''
@@ -88,6 +88,7 @@ third_party_settings:
         required_fields: true
     group_general:
       children:
+        - title
         - field_notification
       label: General
       region: content
@@ -144,7 +145,7 @@ content:
     third_party_settings: {  }
   field_notification:
     type: string_textfield
-    weight: 28
+    weight: 1
     region: content
     settings:
       size: 60
@@ -166,6 +167,14 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
   langcode: true
@@ -174,6 +183,5 @@ hidden:
   simple_sitemap: true
   status: true
   sticky: true
-  title: true
   translation: true
   uid: true

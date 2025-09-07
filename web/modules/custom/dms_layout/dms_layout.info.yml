@@ -1,0 +1,8 @@
+name: DMS Layout
+description: Layout
+package: DMS
+type: module
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+dependencies:
+  - drupal:layout_discovery
+  - entity:entity

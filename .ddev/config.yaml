@@ -1,0 +1,15 @@
+name: destrooienhane
+type: drupal8
+docroot: web
+php_version: 8.1
+router_http_port: "80"
+router_https_port: "443"
+xdebug_enabled: false
+database:
+  type: mysql
+  version: "8.0"
+web_environment:
+  - DRUSH_OPTIONS_URI=http://destrooienhane.ddev.site
+additional_services:
+  - mailhog
+  - node

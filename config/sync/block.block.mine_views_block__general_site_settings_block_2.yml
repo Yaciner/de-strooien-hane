@@ -14,7 +14,7 @@ third_party_settings:
     classes: footer-contact
 id: mine_views_block__general_site_settings_block_2
 theme: mine
-region: footer
+region: block_reference
 weight: -9
 provider: null
 plugin: 'views_block:general_site_settings-block_2'

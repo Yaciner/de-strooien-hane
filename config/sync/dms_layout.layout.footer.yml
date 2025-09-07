@@ -1,0 +1,19 @@
+uuid: 94d15e70-49d8-40ce-8f21-9df056263afb
+langcode: nl
+status: true
+dependencies: {  }
+id: footer
+label: Footer
+layout: layout_twocol
+regions:
+  top: {  }
+  first:
+    - mine_site_branding
+  second:
+    - mine_views_block__general_site_settings_block_1
+    - mine_views_block__general_site_settings_block_2
+    - mine_views_block__general_site_settings_block_4
+    - mine_mainnavigation_2
+  bottom: {  }
+plugin:
+  label: ''

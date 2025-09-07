@@ -1,0 +1,7 @@
+{
+    "name": "dms-online/dms_layout",
+    "type": "drupal-module",
+    "require": {
+        "drupal/entity": "^1.1"
+    }
+}

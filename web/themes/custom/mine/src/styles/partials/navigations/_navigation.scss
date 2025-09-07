@@ -10,6 +10,7 @@
     display: flex;
     justify-content: flex-end;
     gap: $grid-gutter-width;
+    align-items: center;
 
     .menu__item {
       a:not(.btn) {
@@ -34,6 +35,13 @@
             height: .2rem;
             z-index: -1;
           }
+        }
+      }
+
+      &:last-child {
+        a {
+          @extend .btn;
+          @extend .btn--white;
         }
       }
     }

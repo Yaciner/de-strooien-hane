@@ -6,7 +6,7 @@
 h1 {
   margin-top: 0;
   color: $body;
-  font-size: fluid(36px, 74px);
+  font-size: fluid(36px, 68px);
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -38,6 +38,14 @@ h4 {
   &:first-child {
     margin-top: 0;
   }
+}
+
+h6 {
+  margin-bottom: 0
+}
+
+h6 + p {
+  margin-top: rem(8);
 }
 
 .nav__title,

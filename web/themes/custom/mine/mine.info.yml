@@ -41,4 +41,5 @@ regions:
   bottom: 'Bottom'
   off_canvas: 'Off canvas'
   paragraph_blocks: 'Blocks allowed for Paragraph UI embedding'
+  block_reference: 'References'
   fixed: 'Fixed'

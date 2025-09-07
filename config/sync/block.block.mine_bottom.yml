@@ -14,8 +14,8 @@ third_party_settings:
     classes: bottom-menu
 id: mine_bottom
 theme: mine
-region: footer
-weight: -5
+region: bottom
+weight: 0
 provider: null
 plugin: 'system_menu_block:bottom'
 settings:

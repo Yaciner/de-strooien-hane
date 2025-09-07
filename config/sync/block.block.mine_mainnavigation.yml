@@ -14,7 +14,7 @@ third_party_settings:
     classes: footer-main-menu
 id: mine_mainnavigation
 theme: mine
-region: footer
+region: block_reference
 weight: -7
 provider: null
 plugin: 'system_menu_block:main'

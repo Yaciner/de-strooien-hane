@@ -21,6 +21,7 @@ settings:
       - bulletedList
       - numberedList
       - '|'
+      - insertTable
       - blockQuote
       - drupalInsertImage
       - '|'
@@ -61,23 +62,35 @@ settings:
     ckeditor5_style:
       styles:
         -
+          label: Subtitle
+          element: '<span class="subtitle">'
+        -
+          label: 'Subtitle with line'
+          element: '<span class="lined-subtitle">'
+        -
           label: 'Black button'
           element: '<a class="btn">'
         -
-          label: 'Primary button'
-          element: '<a class="btn-primary">'
+          label: 'Black bordered button'
+          element: '<a class="btn bordered">'
         -
-          label: 'Light button'
-          element: '<a class="btn btn-light">'
+          label: 'White button'
+          element: '<a class="btn btn--white">'
+        -
+          label: 'White bordered button'
+          element: '<a class="btn btn--white bordered">'
+        -
+          label: 'Arrowed button'
+          element: '<a class="btn btn--arrowed">'
+        -
+          label: 'Video button'
+          element: '<a class="btn--video lightbox">'
         -
           label: 'Phone icon'
           element: '<a class="phone">'
         -
           label: 'Mail icon'
           element: '<a class="mail">'
-        -
-          label: Highlight
-          element: '<span class="highlight">'
     editor_advanced_link_link:
       enabled_attributes:
         - target
